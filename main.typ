@@ -48,17 +48,18 @@
 // --- Textteil -----------------------------------------------------------------
 #include "content/01-einleitung.typ"
 #include "content/02-grundlagen.typ"
-#include "content/03-analyse.typ"
-#include "content/04-fazit.typ"
+#include "content/03-methodik.typ"
+#include "content/04-analyse.typ"
+#include "content/05-fazit.typ"
 
 // --- Anhang (optional, Leitfaden 2.8) ------------------------------------------
 #anhang[
-  #anhang-abschnitt([Interviewleitfaden])[
-    Hier können umfangreiche Materialien wie Fragebögen, Transkripte oder
-    Berechnungen abgelegt werden. Jeder Bestandteil wird getrennt bezeichnet
-    und erscheint im Inhaltsverzeichnis.
+  #anhang-abschnitt([Kategoriensystem der Literaturanalyse])[
+    Das Kategoriensystem wurde deduktiv aus dem theoretischen Bezugsrahmen
+    abgeleitet und induktiv am Material verfeinert. Hauptkategorien:
+    Autonomie, soziale Einbindung, technische Ausstattung, Entgrenzung.
   ]
-  #anhang-abschnitt([Deskriptive Datenauswertungen])[
+  #anhang-abschnitt([Übersicht der ausgewerteten Quellen])[
     Alle Abbildungen, Tabellen und Formeln im Anhang werden wie im Textteil
     beschriftet und mit Quellen belegt.
   ]
