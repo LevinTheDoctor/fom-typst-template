@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" default-locale="de-DE" demote-non-dropping-particle="sort-only" page-range-format="expanded">
+  <!-- ==========================================================================
+       FOM Harvard-Zitation (Kurzbeleg im Fließtext)
+       nach: FOM-Leitfaden zur formalen Gestaltung von Seminar- und
+       Abschlussarbeiten (Stand Januar 2024), Kapitel 3.2
+
+       Kurzbeleg:            Theisen, 2021[, S. 155]
+       Literaturverzeichnis: Scholz, Christian (2014a):
+                             Personalmanagement, 6. Aufl., München: Vahlen, 2014
+
+       Beim Harvard-Style entfällt das Stichwort (Leitfaden Fn. 51, 55);
+       gleiche Verfasser-Jahr-Kombinationen erhalten stets Buchstabenzusätze.
+       Die Klammern sowie das "vgl." setzen die Template-Funktionen
+       #vgl und #zit. Einträge im Literaturverzeichnis enden ohne Punkt.
+       ========================================================================== -->
+  <info>
+    <title>FOM Harvard-Zitation (Kurzbeleg im Text)</title>
+    <id>https://github.com/fom-typst-template/fom-harvard</id>
+    <link href="https://github.com/fom-typst-template" rel="self"/>
+    <category citation-format="author-date"/>
+    <updated>2026-07-13T00:00:00+00:00</updated>
+  </info>
+
+  <!-- Verfasser im Kurzbeleg: nur Nachname; ab 3 Verfassern "et al./u. a." -->
+  <macro name="autoren-kurz">
+    <names variable="author">
+      <name form="short" delimiter=", " et-al-min="3" et-al-use-first="1"/>
+      <substitute>
+        <names variable="editor">
+          <name form="short" delimiter=", " et-al-min="3" et-al-use-first="1"/>
+        </names>
+        <text value="o. V."/>
+      </substitute>
+    </names>
+  </macro>
+
+  <!-- Verfasser im Literaturverzeichnis: vollständige Nennung aller Namen -->
+  <macro name="autoren-voll">
+    <names variable="author">
+      <name name-as-sort-order="all" sort-separator=", " delimiter=", "/>
+      <substitute>
+        <text macro="herausgeber"/>
+        <text value="o. V."/>
+      </substitute>
+    </names>
+  </macro>
+
+  <macro name="herausgeber">
+    <names variable="editor" suffix=" (Hrsg.)">
+      <name name-as-sort-order="all" sort-separator=", " delimiter=", "/>
+    </names>
+  </macro>
+
+  <!-- Jahr mit Buchstaben-Zusatz (a, b, ...) bei gleichem Jahr, sonst "o. J." -->
+  <macro name="jahr">
+    <choose>
+      <if variable="issued">
+        <group>
+          <date variable="issued">
+            <date-part name="year"/>
+          </date>
+          <text variable="year-suffix"/>
+        </group>
+      </if>
+      <else>
+        <group>
+          <text value="o. J."/>
+          <text variable="year-suffix"/>
+        </group>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="jahr-ohne-suffix">
+    <choose>
+      <if variable="issued">
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </if>
+      <else>
+        <text value="o. J."/>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="auflage">
+    <choose>
+      <if is-numeric="edition">
+        <group delimiter=". ">
+          <number variable="edition"/>
+          <text value="Aufl."/>
+        </group>
+      </if>
+      <else>
+        <text variable="edition"/>
+      </else>
+    </choose>
+  </macro>
+
+  <macro name="verlagsangabe">
+    <group delimiter=": ">
+      <text variable="publisher-place"/>
+      <text variable="publisher"/>
+    </group>
+  </macro>
+
+  <macro name="seiten">
+    <group delimiter=" ">
+      <text value="S."/>
+      <text variable="page"/>
+    </group>
+  </macro>
+
+  <macro name="online-datum">
+    <date variable="issued" delimiter="-" prefix="(" suffix=")">
+      <date-part name="year"/>
+      <date-part name="month" form="numeric-leading-zeros"/>
+      <date-part name="day" form="numeric-leading-zeros"/>
+    </date>
+  </macro>
+
+  <macro name="zugriff">
+    <date variable="accessed" delimiter="-" prefix="[Zugriff " suffix="]">
+      <date-part name="year"/>
+      <date-part name="month" form="numeric-leading-zeros"/>
+      <date-part name="day" form="numeric-leading-zeros"/>
+    </date>
+  </macro>
+
+  <!-- Internetquellen ans Ende des Literaturverzeichnisses (Leitfaden 2.6) -->
+  <macro name="typ-rang">
+    <choose>
+      <if type="webpage post-weblog post" match="any">
+        <text value="2"/>
+      </if>
+      <else>
+        <text value="1"/>
+      </else>
+    </choose>
+  </macro>
+
+  <!-- Kurzbeleg: Theisen, 2021, S. 155 -->
+  <citation disambiguate-add-year-suffix="true">
+    <layout delimiter="; ">
+      <group delimiter=", ">
+        <text macro="autoren-kurz"/>
+        <text macro="jahr"/>
+        <text variable="locator"/>
+      </group>
+    </layout>
+  </citation>
+
+  <!-- Literaturverzeichnis (wie Chicago, jedoch ohne Stichwort) -->
+  <bibliography hanging-indent="true" entry-spacing="1" line-spacing="1">
+    <sort>
+      <key macro="typ-rang"/>
+      <key macro="autoren-voll"/>
+      <key variable="issued" sort="ascending"/>
+    </sort>
+    <layout>
+      <group delimiter=" ">
+        <group delimiter=" ">
+          <text macro="autoren-voll"/>
+          <text macro="jahr" prefix="(" suffix="):"/>
+        </group>
+        <choose>
+          <if type="chapter paper-conference entry-encyclopedia entry-dictionary" match="any">
+            <group delimiter=", ">
+              <text variable="title"/>
+              <group delimiter=" ">
+                <text value="in:"/>
+                <text macro="herausgeber"/>
+              </group>
+              <text variable="container-title"/>
+              <text macro="auflage"/>
+              <text macro="jahr-ohne-suffix"/>
+              <text macro="seiten"/>
+            </group>
+          </if>
+          <else-if type="article-journal article-magazine article-newspaper" match="any">
+            <group delimiter=", ">
+              <text variable="title"/>
+              <group delimiter=" ">
+                <text value="in:"/>
+                <text variable="container-title"/>
+              </group>
+              <group delimiter=" ">
+                <number variable="volume"/>
+                <date variable="issued" prefix="(" suffix=")">
+                  <date-part name="year"/>
+                </date>
+              </group>
+              <group delimiter=" ">
+                <text value="Nr."/>
+                <number variable="issue"/>
+              </group>
+              <text macro="seiten"/>
+            </group>
+          </else-if>
+          <else-if type="webpage post-weblog post" match="any">
+            <group delimiter=" ">
+              <group delimiter=", ">
+                <text variable="title"/>
+                <text variable="URL" prefix="&lt;" suffix="&gt;"/>
+              </group>
+              <text macro="online-datum"/>
+              <text macro="zugriff"/>
+            </group>
+          </else-if>
+          <else-if type="thesis report" match="any">
+            <group delimiter=", ">
+              <text variable="title"/>
+              <text variable="genre"/>
+              <text macro="verlagsangabe"/>
+              <text macro="jahr-ohne-suffix"/>
+            </group>
+          </else-if>
+          <else>
+            <group delimiter=", ">
+              <text variable="title"/>
+              <text macro="auflage"/>
+              <text macro="verlagsangabe"/>
+              <text macro="jahr-ohne-suffix"/>
+            </group>
+          </else>
+        </choose>
+      </group>
+    </layout>
+  </bibliography>
+</style>

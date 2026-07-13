@@ -1,0 +1,19 @@
+{
+  // Dev-Container für das FOM-Typst-Template:
+  // Typst-CLI + Node.js (für die Doku-Webseite) + VS-Code-Erweiterungen.
+  // Öffnen mit VS Code: "Dev Containers: Reopen in Container"
+  "name": "FOM Typst Template",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
+  "postCreateCommand": "bash .devcontainer/typst-installieren.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Tinymist: Sprachunterstützung + Live-Vorschau für Typst
+        "myriad-dreamin.tinymist"
+      ],
+      "settings": {
+        "tinymist.fontPaths": ["${workspaceFolder}/fonts"]
+      }
+    }
+  }
+}

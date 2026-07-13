@@ -1,0 +1,18 @@
+# Erzeugte Dateien
+thesis.pdf
+*.pdf
+!2024_Leitfaden-WManagement-GuS-WRecht.pdf
+
+# Doku-Webseite
+docs-app/node_modules/
+docs-app/dist/
+
+# Betriebssystem / Editoren
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# TypeScript-Build-Cache
+docs-app/tsconfig.tsbuildinfo

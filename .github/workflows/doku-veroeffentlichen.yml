@@ -1,0 +1,59 @@
+# ==============================================================================
+# CI: Baut die Dokumentations-Webseite (/docs-app) und veröffentlicht sie
+# auf GitHub Pages. In den Repository-Einstellungen unter "Pages" muss als
+# Quelle "GitHub Actions" gewählt sein.
+# ==============================================================================
+name: Doku veröffentlichen
+
+on:
+  push:
+    branches: [main]
+    paths: ["docs-app/**", ".github/workflows/doku-veroeffentlichen.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: docs-app/package-lock.json
+
+      - name: Abhängigkeiten installieren
+        working-directory: docs-app
+        run: npm ci
+
+      - name: Webseite bauen
+        working-directory: docs-app
+        run: npm run build
+
+      - name: Pages-Artefakt hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs-app/dist
+
+  veroeffentlichen:
+    needs: bauen
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Auf GitHub Pages veröffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v4

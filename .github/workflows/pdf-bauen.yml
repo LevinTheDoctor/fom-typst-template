@@ -1,0 +1,39 @@
+# ==============================================================================
+# CI: Kompiliert die Arbeit bei jedem Push/PR und stellt das PDF als
+# Artefakt bereit. Bricht bei Fehlern UND Warnungen ab.
+# ==============================================================================
+name: PDF bauen
+
+on:
+  push:
+    branches: [main, example-thesis, minimal]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  typst:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Typst installieren
+        uses: typst-community/setup-typst@v4
+
+      # Times New Roman (ms-corefonts) für originalgetreue Ausgabe; die im
+      # Repository liegende Liberation Serif dient sonst als Fallback.
+      - name: Times New Roman installieren
+        run: |
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ttf-mscorefonts-installer fontconfig
+          sudo fc-cache -f
+
+      - name: Kompilieren (Warnungen gelten als Fehler)
+        run: make check
+
+      - name: PDF als Artefakt hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: thesis
+          path: thesis.pdf
