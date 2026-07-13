@@ -9,6 +9,7 @@ import Ki from "./inhalte/Ki";
 import Pipeline from "./inhalte/Pipeline";
 import Faq from "./inhalte/Faq";
 
+
 interface Route {
   slug: string;
   titel: string;
@@ -89,9 +90,7 @@ export default function App() {
           </button>
           <a href="#/" className="flex items-center gap-2.5 no-underline">
             {/* Logomarke: A4-Miniatur */}
-            <span className="inline-block h-7 w-7 rounded bg-petrol p-[5px]">
-              <span className="block h-full w-full bg-papier" style={{ marginLeft: 2, width: 12 }} />
-            </span>
+            <img className="h-7 w-7" src={`${import.meta.env.BASE_URL}fom-logo.svg`} alt="FOM Logo" />
             <span className="font-display text-lg font-bold tracking-tight">
               FOM-Typst-Template
             </span>
@@ -106,7 +105,7 @@ export default function App() {
               Typst
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/LevinTheDoctor/fom-typst-template"
               target="_blank"
               rel="noreferrer"
               className="rounded-md border border-blattgrau px-3 py-1.5 font-medium text-tinte hover:border-petrol hover:text-petrol-dunkel"
