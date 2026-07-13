@@ -129,11 +129,12 @@ in eine Testdatei und kompilieren.
 ## Doku-Webseite (`docs-app/`)
 
 Vite + React 19 + TypeScript + Tailwind 4 (`@tailwindcss/vite`). Kein Router-Paket:
-Hash-Routing in `App.tsx` (funktioniert mit `base: "./"` überall, auch GitHub Pages).
+Hash-Routing in `App.tsx` (funktioniert mit `base: "./"` überall, auf jedem Static-Host).
 Seiten unter `src/inhalte/`, Bausteine unter `src/komponenten/` (CodeBlock mit
 Kopieren-Button, Tabs für OS-Anleitungen, Callout, Seite mit Leitfaden-Eyebrow,
 Satzspiegel-Hero). Design-Token in `src/index.css` (`@theme`): Papier/Tinte/Petrol.
-Deployment: GitHub Actions → Pages (`doku-veroeffentlichen.yml`).
+Deployment: Cloudflare Workers (Static Assets, eigenständig konfiguriert – der
+Build über `npm run build` → `dist/` bleibt unverändert).
 
 ## Stil-Konventionen
 

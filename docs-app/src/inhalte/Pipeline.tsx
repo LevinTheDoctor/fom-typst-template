@@ -79,11 +79,12 @@ export default function Pipeline() {
         </li>
       </ul>
 
-      <h2>Doku-Webseite auf GitHub Pages</h2>
+      <h2>Doku-Webseite auf Cloudflare Workers</h2>
       <p>
-        <code>.github/workflows/doku-veroeffentlichen.yml</code> baut diese Webseite und
-        veröffentlicht sie auf GitHub Pages. Einmalig aktivieren: Repository-Einstellungen →{" "}
-        <strong>Pages</strong> → Source: <strong>„GitHub Actions“</strong>.
+        Diese Webseite wird aus <code>docs-app/</code> gebaut (<code>npm run build</code> →{" "}
+        <code>dist/</code>) und über Cloudflare Workers (Static Assets) ausgeliefert. Da{" "}
+        <code>base: "./"</code> zusammen mit dem Hash-Routing nutzt, läuft das gleiche{" "}
+        <code>dist/</code>-Verzeichnis ohne Anpassungen auf jedem Static-Host.
       </p>
 
       <h2>Docker & Dev-Container</h2>
