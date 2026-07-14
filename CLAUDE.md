@@ -92,6 +92,10 @@ template/csl/fom-harvard.csl    Autor-Jahr + FOM-Bibliographie ohne Stichwort
 8. **Formel-Nummern:** eigene figure-kind `"fom-formel"`; die Nummer wird im Body
    per `counter(figure.where(kind: "fom-formel")).get()` gelesen (nach dem Step der
    Figure). `zusatz: "a"` dekrementiert den Zähler für Umformungen (1 → 1a).
+9. **Titelblatt papiermittig:** Der Satzspiegel ist asymmetrisch (links 4 cm,
+   rechts 2 cm) – „zentriert“ läge sonst 1 cm rechts der Blattmitte. Der
+   zentrierte Teil des Thesis-Titelblatts steckt deshalb in `pad(right: 2cm)`
+   (`titelblatt.typ`); der Gutachter-Block unten bleibt am linken Textrand.
 
 ## Build & Tests
 
@@ -121,14 +125,21 @@ in eine Testdatei und kompilieren.
 
 ## Branch-Strategie
 
-- `main`: Basis-Template + kompakte Beispielkapitel (jede Funktion einmal gezeigt).
+- `main`: Basis-Template + kompakte Beispielkapitel (jede Funktion einmal gezeigt);
+  hier findet die Entwicklung statt.
 - `template`: wie `main`, aber ohne `docs-app/` (und ohne docs-Makefile-Ziele) –
   schlanker Klon fürs eigene Schreiben; Template-Code identisch zu `main`.
 - `example-thesis`: vollständige Musterarbeit (von main abgeleitet, nur `content/`
   und `main.typ` unterscheiden sich).
-- `minimal`: Grundgerüst ohne Beispieltexte, ohne `docs-app/`.
+- `minimal`: Grundgerüst ohne Beispieltexte, ohne `docs-app/` – **GitHub-Default-
+  Branch** (Klonen bzw. „Use this template“ liefert das leere Grundgerüst).
 - Template-Änderungen immer zuerst auf `main`, dann per Merge/Cherry-Pick in die
   anderen Branches nachziehen.
+- Die CI committet nach jedem Push das gebaute `thesis.pdf` in den jeweiligen
+  Branch (github-actions[bot], `[skip ci]`; `paths-ignore` verhindert Schleifen).
+  Vor lokalen Folge-Arbeiten daher `git pull`. Merge-Konflikte in `thesis.pdf`
+  mit beliebiger Seite auflösen (z. B. `git checkout --ours thesis.pdf`) – die
+  CI baut nach dem Push ohnehin neu.
 
 ## Doku-Webseite (`docs-app/`)
 

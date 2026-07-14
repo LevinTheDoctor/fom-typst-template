@@ -98,17 +98,17 @@ sowie die Zielsetzung der Arbeit.#vgl(<theisen2021>, seite: "136")`}
           </thead>
           <tbody>
             <tr>
-              <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">main</td>
+              <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">minimal</td>
               <td className="border border-blattgrau px-3 py-2">
-                Basis-Template mit kompakten Beispielkapiteln, die jede Funktion einmal zeigen –
-                der empfohlene Startpunkt.
+                Leeres Grundgerüst ohne Beispieltexte – der Standard-Branch beim Klonen:
+                direkt losschreiben.
               </td>
             </tr>
             <tr>
               <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">template</td>
               <td className="border border-blattgrau px-3 py-2">
-                Wie <code>main</code>, aber ohne die Doku-Webseite – zum schlanken Klonen
-                fürs eigene Schreiben.
+                Basis-Template mit kompakten Beispielkapiteln, die jede Funktion einmal zeigen –
+                zum Lernen und Nachschlagen beim Schreiben.
               </td>
             </tr>
             <tr>
@@ -121,9 +121,10 @@ sowie die Zielsetzung der Arbeit.#vgl(<theisen2021>, seite: "136")`}
               </td>
             </tr>
             <tr>
-              <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">minimal</td>
+              <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">main</td>
               <td className="border border-blattgrau px-3 py-2">
-                Leeres Grundgerüst ohne Beispieltexte und ohne Doku-Webseite – direkt losschreiben.
+                Wie <code>template</code>, zusätzlich mit dem Quellcode dieser Doku-Webseite –
+                hier findet die Entwicklung statt.
               </td>
             </tr>
           </tbody>
