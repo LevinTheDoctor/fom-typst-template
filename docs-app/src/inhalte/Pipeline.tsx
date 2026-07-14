@@ -81,10 +81,11 @@ export default function Pipeline() {
 
       <h2>Doku-Webseite auf Cloudflare Workers</h2>
       <p>
-        Diese Webseite wird aus <code>docs-app/</code> gebaut (<code>npm run build</code> →{" "}
-        <code>dist/</code>) und über Cloudflare Workers (Static Assets) ausgeliefert. Da{" "}
-        <code>base: "./"</code> zusammen mit dem Hash-Routing nutzt, läuft das gleiche{" "}
-        <code>dist/</code>-Verzeichnis ohne Anpassungen auf jedem Static-Host.
+        Diese Webseite (<a href="https://fom-typst.levin-dev.de">fom-typst.levin-dev.de</a>) wird
+        aus <code>docs-app/</code> gebaut (<code>npm run build</code> → <code>dist/</code>) und
+        über Cloudflare Workers (Static Assets) ausgeliefert. Da <code>base: "./"</code> zusammen
+        mit dem Hash-Routing nutzt, läuft das gleiche <code>dist/</code>-Verzeichnis ohne
+        Anpassungen auf jedem Static-Host.
       </p>
 
       <h2>Docker & Dev-Container</h2>
