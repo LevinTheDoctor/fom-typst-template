@@ -99,8 +99,9 @@ template/csl/fom-harvard.csl    Autor-Jahr + FOM-Bibliographie ohne Stichwort
 make check    # kompiliert, Warnungen = Fehler (lokal wie in CI Pflicht vor Commit)
 make build    # thesis.pdf
 make watch    # Live-Vorschau
-cd docs-app && npm run build   # Doku-Webseite (tsc + vite)
 ```
+(Die Doku-Webseite `docs-app/` liegt nur auf `main` – dieser Branch ist der
+schlanke Klon ohne Web-Doku.)
 
 Visuelle Verifikation: `typst compile --font-path fonts --ppi 150 main.typ "seite-{0p}.png"`
 und Seiten gegen den Leitfaden prüfen (Ränder, Kopfzeilen-Seitenzahl, Verzeichnisse).
