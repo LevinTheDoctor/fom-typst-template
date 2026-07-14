@@ -1,0 +1,61 @@
+# ==============================================================================
+# CI: Kompiliert die Arbeit bei jedem Push/PR, committet das fertige
+# thesis.pdf zurück auf den Branch und stellt es zusätzlich als Artefakt
+# bereit. Bricht bei Fehlern UND Warnungen ab.
+# ==============================================================================
+name: PDF bauen
+
+on:
+  push:
+    branches: [main, template, example-thesis, minimal]
+    # Änderungen nur am committeten PDF lösen keinen neuen Lauf aus.
+    paths-ignore: ["thesis.pdf"]
+  pull_request:
+  workflow_dispatch:
+
+# Nötig, damit der Workflow das gebaute PDF zurückpushen darf.
+permissions:
+  contents: write
+
+jobs:
+  typst:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Typst installieren
+        uses: typst-community/setup-typst@v4
+
+      # Times New Roman (ms-corefonts) für originalgetreue Ausgabe; die im
+      # Repository liegende Liberation Serif dient sonst als Fallback.
+      - name: Times New Roman installieren
+        run: |
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ttf-mscorefonts-installer fontconfig
+          sudo fc-cache -f
+
+      - name: Kompilieren (Warnungen gelten als Fehler)
+        run: make check
+
+      # Bei Pushes (nicht bei PRs) landet das fertige PDF direkt im Repository,
+      # sodass auf jedem Branch immer ein aktuelles thesis.pdf liegt.
+      - name: PDF im Repository ablegen
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f thesis.pdf
+          if git diff --cached --quiet; then
+            echo "thesis.pdf unverändert – kein Commit nötig."
+          else
+            git commit -m "CI: thesis.pdf aktualisieren [skip ci]"
+            git push origin "HEAD:${{ github.ref_name }}"
+          fi
+
+      - name: PDF als Artefakt hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: thesis
+          path: thesis.pdf

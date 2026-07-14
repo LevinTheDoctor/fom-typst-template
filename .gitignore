@@ -1,0 +1,18 @@
+# Erzeugte Dateien
+thesis.pdf
+*.pdf
+
+# Doku-Webseite
+docs-app/node_modules/
+docs-app/dist/
+docs-app/.vite/
+
+# Betriebssystem / Editoren
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# TypeScript-Build-Cache
+docs-app/tsconfig.tsbuildinfo

@@ -1,0 +1,6 @@
+{
+  // VS Code schlägt diese Erweiterungen beim Öffnen des Projekts vor.
+  "recommendations": [
+    "myriad-dreamin.tinymist"
+  ]
+}
