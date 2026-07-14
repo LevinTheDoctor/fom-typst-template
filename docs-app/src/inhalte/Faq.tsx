@@ -22,9 +22,10 @@ export default function Faq() {
 
       <h3>Wie bekomme ich das FOM-Logo auf das Titelblatt?</h3>
       <p>
-        Das Logo ist markenrechtlich geschützt und liegt dem Open-Source-Template deshalb nicht
-        bei. Für Abschlussarbeiten stellt die FOM das offizielle Titelblatt ohnehin im
-        Online-Campus bereit. Wer ein eigenes Logo einbinden darf:
+        Das Logo liegt unter <code>abbildungen/fom-logo.svg</code> bei und ist in{" "}
+        <code>main.typ</code> bereits eingebunden. Es ist markenrechtlich geschützt (nicht Teil
+        der MIT-Lizenz) und darf nur für Arbeiten an der FOM verwendet werden. Ein anderes Logo
+        einbinden:
       </p>
       <CodeBlock datei="main.typ" code={`logo: image("abbildungen/logo.png", width: 3.5cm),`} />
 

@@ -23,8 +23,8 @@
   // semester: "3",
   // modul: "Wissenschaftliches Arbeiten",
   //
-  // Eigenes Logo (das FOM-Logo ist geschützt und wird nicht mitgeliefert):
-  // logo: image("abbildungen/logo.png", width: 3.5cm),
+  // Logo auf dem Titelblatt (Anhang 4 des Leitfadens zeigt es mittig oben):
+  logo: image("abbildungen/fom-logo.svg", width: 2.2cm),
 
   // --- Formale Konfiguration --------------------------------------------------
   zitierweise: "chicago", // "chicago" (Fußnoten) oder "harvard" (im Text)

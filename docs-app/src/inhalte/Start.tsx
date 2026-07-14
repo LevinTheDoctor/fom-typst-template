@@ -105,6 +105,13 @@ sowie die Zielsetzung der Arbeit.#vgl(<theisen2021>, seite: "136")`}
               </td>
             </tr>
             <tr>
+              <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">template</td>
+              <td className="border border-blattgrau px-3 py-2">
+                Wie <code>main</code>, aber ohne die Doku-Webseite – zum schlanken Klonen
+                fürs eigene Schreiben.
+              </td>
+            </tr>
+            <tr>
               <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">
                 example-thesis
               </td>
