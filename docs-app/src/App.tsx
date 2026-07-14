@@ -89,8 +89,6 @@ export default function App() {
             ☰
           </button>
           <a href="#/" className="flex items-center gap-2.5 no-underline">
-            {/* Logomarke: A4-Miniatur */}
-            <img className="h-7 w-7" src={`${import.meta.env.BASE_URL}fom-logo.svg`} alt="FOM Logo" />
             <span className="font-display text-lg font-bold tracking-tight">
               FOM-Typst-Template
             </span>

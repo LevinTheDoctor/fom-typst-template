@@ -82,9 +82,13 @@ typst --version`}
       </p>
       <CodeBlock
         datei="Terminal"
-        code={`git clone https://github.com/DEIN-BENUTZERNAME/fom-typst-template.git meine-thesis
-cd meine-thesis`}
+        code={`git clone -b template https://github.com/LevinTheDoctor/fom-typst-template.git meine-arbeit
+cd meine-arbeit`}
       />
+      <p>
+        Der Branch <code>template</code> enthält alles fürs Schreiben, aber nicht den
+        Quellcode dieser Doku-Webseite – der Klon bleibt schlank.
+      </p>
       <Callout titel="Ohne Git?">
         <p>
           Auf GitHub unter <strong>Code → Download ZIP</strong> lässt sich das Template auch ohne

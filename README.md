@@ -61,8 +61,7 @@ Pages online).
 ├── fonts/                    # Liberation Serif (Fallback, SIL OFL)
 ├── docs-app/                 # Dokumentations-Webseite (Vite + React)
 ├── scripts/                  # build.sh / build.ps1
-├── Makefile · Dockerfile · .devcontainer/ · .github/workflows/
-└── 2024_Leitfaden-….pdf      # der zugrunde liegende FOM-Leitfaden
+└── Makefile · Dockerfile · .devcontainer/ · .github/workflows/
 ```
 
 ## 🌿 Branches
@@ -70,11 +69,13 @@ Pages online).
 | Branch | Zweck |
 |---|---|
 | **`main`** | Basis-Template mit kompakten Beispielkapiteln, die jede Funktion einmal zeigen – empfohlener Startpunkt |
+| **`template`** | Wie `main`, aber ohne die Doku-Webseite (`docs-app/`) – zum schlanken Klonen fürs eigene Schreiben |
 | **`example-thesis`** | Vollständig ausgefüllte Musterarbeit zum Nachschlagen |
 | **`minimal`** | Leeres Grundgerüst ohne Beispieltexte und Doku-Webseite |
 
 ```bash
-git switch example-thesis   # bzw. minimal
+git clone -b template https://github.com/LevinTheDoctor/fom-typst-template.git meine-arbeit
+# oder in einem bestehenden Klon: git switch template (bzw. example-thesis, minimal)
 ```
 
 ## 🧪 Qualitätssicherung

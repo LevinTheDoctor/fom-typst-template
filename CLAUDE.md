@@ -8,8 +8,10 @@ weiterarbeiten können.
 
 Ein GitHub-Template-Repository für wissenschaftliche Arbeiten an der FOM Hochschule
 auf Basis von **Typst** (getestet mit Typst 0.15). Es setzt den *Leitfaden zur
-formalen Gestaltung von Seminar- und Abschlussarbeiten* (Stand Januar 2024) um; die
-Quell-PDF liegt im Repo-Root (`2024_Leitfaden-WManagement-GuS-WRecht.pdf`, 73 Seiten).
+formalen Gestaltung von Seminar- und Abschlussarbeiten* (Stand Januar 2024) um. Die
+Quell-PDF (`2024_Leitfaden-WManagement-GuS-WRecht.pdf`, 73 Seiten) liegt aus
+urheberrechtlichen Gründen nicht im Repository; sie ist im FOM Online-Campus
+verfügbar.
 
 **Der Leitfaden ist die Spezifikation.** Jede Layoutregel im Code trägt einen
 Kommentar mit Kapitelverweis (z. B. „Leitfaden 1.2 Nr. 9“). Bei Unklarheiten immer
@@ -120,6 +122,8 @@ in eine Testdatei und kompilieren.
 ## Branch-Strategie
 
 - `main`: Basis-Template + kompakte Beispielkapitel (jede Funktion einmal gezeigt).
+- `template`: wie `main`, aber ohne `docs-app/` (und ohne docs-Makefile-Ziele) –
+  schlanker Klon fürs eigene Schreiben; Template-Code identisch zu `main`.
 - `example-thesis`: vollständige Musterarbeit (von main abgeleitet, nur `content/`
   und `main.typ` unterscheiden sich).
 - `minimal`: Grundgerüst ohne Beispieltexte, ohne `docs-app/`.
