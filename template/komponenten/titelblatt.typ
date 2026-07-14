@@ -38,35 +38,43 @@
   set align(center)
   set par(justify: false)
 
-  if logo != none {
-    logo
-    v(1em)
-  }
-  text(size: 14pt, weight: "bold")[#hochschule]
+  // Optische Zentrierung auf die Blattmitte: Der Satzspiegel ist wegen des
+  // Bundstegs asymmetrisch (links 4 cm, rechts 2 cm, Leitfaden 1.2 Nr. 2),
+  // seine Mittelachse liegt also 1 cm rechts der Papiermitte. pad(right: 2cm)
+  // verschmälert den zentrierten Bereich, sodass Logo, Hochschule, Titel usw.
+  // papiermittig stehen. Der Block unten (Erstgutachter …) bleibt bewusst am
+  // linken Textrand (Anhang 4).
+  pad(right: 2cm)[
+    #if logo != none {
+      logo
+      v(1em)
+    }
+    #text(size: 14pt, weight: "bold")[#hochschule]
 
-  v(3.5em)
-  text(weight: "bold")[#typ]
-  if studiengang != none {
-    linebreak()
-    [im Studiengang #studiengang]
-  }
+    #v(3.5em)
+    #text(weight: "bold")[#typ]
+    #if studiengang != none {
+      linebreak()
+      [im Studiengang #studiengang]
+    }
 
-  if grad != none {
-    v(3em)
-    [zur Erlangung des Grades eines]
-    linebreak()
-    text(size: 13pt)[#grad]
-  }
+    #if grad != none {
+      v(3em)
+      [zur Erlangung des Grades eines]
+      linebreak()
+      text(size: 13pt)[#grad]
+    }
 
-  v(3em)
-  [über das Thema]
-  v(1em)
-  block(text(size: 14pt, weight: "bold")[#titel])
+    #v(3em)
+    über das Thema
+    #v(1em)
+    #block(text(size: 14pt, weight: "bold")[#titel])
 
-  v(3.5em)
-  [von]
-  v(0.5em)
-  block[#autor]
+    #v(3.5em)
+    von
+    #v(0.5em)
+    #block[#autor]
+  ]
 
   v(1fr)
   align(left)[
