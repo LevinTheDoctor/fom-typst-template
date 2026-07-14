@@ -22,7 +22,7 @@ sind vorkonfiguriert: Du schreibst nur noch.
 | 🤖 **KI-Deklaration (Leitfaden 1.6/2.9)** | `#ki-nachweis(...)` für lokale Nachweise + fertiges KI-Hilfsmittelverzeichnis |
 | 🔗 **Zotero & Mendeley** | BibTeX-Export in `literatur/literatur.bib` – mit Better BibTeX vollautomatisch; eigene CSL-Stile im exakten FOM-Format |
 | 🛠 **Cross-Platform-Builds** | Makefile, Bash-/PowerShell-Skripte, Docker, Dev-Container, GitHub Actions (PDF als Artefakt bei jedem Push) |
-| 📖 **Moderne Dokumentation** | React-Webseite in [`/docs-app`](docs-app) mit Schritt-für-Schritt-Anleitungen für Windows, macOS und Linux |
+| 📖 **Moderne Dokumentation** | React-Webseite mit Schritt-für-Schritt-Anleitungen für Windows, macOS und Linux (Quellcode in [`docs-app/` auf `main`](https://github.com/LevinTheDoctor/fom-typst-template/tree/main/docs-app)) |
 
 ## 🚀 Schnellstart
 
@@ -33,7 +33,7 @@ winget install --id Typst.Typst        # Windows
 # Linux: https://github.com/typst/typst/releases
 
 # 2. Template holen (oder auf GitHub: "Use this template")
-git clone https://github.com/DEIN-BENUTZERNAME/fom-typst-template.git meine-thesis
+git clone -b template https://github.com/LevinTheDoctor/fom-typst-template.git meine-thesis
 cd meine-thesis
 
 # 3. Kompilieren
@@ -43,8 +43,8 @@ make watch          # Live-Vorschau beim Schreiben
 
 Danach in [`main.typ`](main.typ) Titel, Name, Studiengang und Zitierweise eintragen
 und in [`content/`](content) losschreiben. Die vollständige Anleitung liefert die
-**Dokumentations-Webseite**: `make docs-dev` (oder nach dem Aktivieren von GitHub
-Pages online).
+**Dokumentations-Webseite** (Quellcode auf dem Branch `main`, dort lokal startbar
+mit `make docs-dev`).
 
 ## 📁 Projektstruktur
 
@@ -59,10 +59,8 @@ Pages online).
 │   ├── komponenten/          # Titelblatt, Verzeichnisse, Zitieren, KI, …
 │   └── csl/                  # FOM-Zitierstile (Chicago & Harvard)
 ├── fonts/                    # Liberation Serif (Fallback, SIL OFL)
-├── docs-app/                 # Dokumentations-Webseite (Vite + React)
 ├── scripts/                  # build.sh / build.ps1
-├── Makefile · Dockerfile · .devcontainer/ · .github/workflows/
-└── 2024_Leitfaden-….pdf      # der zugrunde liegende FOM-Leitfaden
+└── Makefile · Dockerfile · .devcontainer/ · .github/workflows/
 ```
 
 ## 🌿 Branches
@@ -70,11 +68,13 @@ Pages online).
 | Branch | Zweck |
 |---|---|
 | **`main`** | Basis-Template mit kompakten Beispielkapiteln, die jede Funktion einmal zeigen – empfohlener Startpunkt |
+| **`template`** | Wie `main`, aber ohne die Doku-Webseite (`docs-app/`) – zum schlanken Klonen fürs eigene Schreiben |
 | **`example-thesis`** | Vollständig ausgefüllte Musterarbeit zum Nachschlagen |
 | **`minimal`** | Leeres Grundgerüst ohne Beispieltexte und Doku-Webseite |
 
 ```bash
-git switch example-thesis   # bzw. minimal
+git clone -b template https://github.com/LevinTheDoctor/fom-typst-template.git meine-arbeit
+# oder in einem bestehenden Klon: git switch template (bzw. example-thesis, minimal)
 ```
 
 ## 🧪 Qualitätssicherung
@@ -96,5 +96,6 @@ Pull Requests sind ausdrücklich willkommen – siehe
 
 [MIT](LICENSE) – frei verwendbar für Studium, Lehre und eigene Vorlagen.
 Die Schriften im Ordner [`fonts/`](fonts) stehen unter der
-[SIL Open Font License](fonts/LICENSE). Das FOM-Logo ist markenrechtlich geschützt
-und nicht Bestandteil dieses Repositories.
+[SIL Open Font License](fonts/LICENSE). Das FOM-Logo
+([`abbildungen/fom-logo.svg`](abbildungen/fom-logo.svg)) ist markenrechtlich
+geschützt, nicht Teil der MIT-Lizenz und nur für Arbeiten an der FOM bestimmt.

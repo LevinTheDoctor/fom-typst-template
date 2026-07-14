@@ -22,6 +22,9 @@
   // Für Seminararbeiten zusätzlich:
   // semester: "3",
   // modul: "Wissenschaftliches Arbeiten",
+  //
+  // Logo auf dem Titelblatt (Anhang 4 des Leitfadens zeigt es mittig oben):
+  logo: image("abbildungen/fom-logo.svg", width: 2.2cm),
 
   // --- Formale Konfiguration --------------------------------------------------
   zitierweise: "chicago", // "chicago" (Fußnoten) oder "harvard" (im Text)
