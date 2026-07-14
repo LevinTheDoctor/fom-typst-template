@@ -9,9 +9,10 @@
 //   - Seminararbeit nach Anhang 3 – linksbündig, von Studierenden selbst
 //     zu erstellen.
 //
-// Das FOM-Logo ist markenrechtlich geschützt und wird deshalb nicht
-// mitgeliefert. Über den Parameter `logo` kann eine eigene Bilddatei
-// eingebunden werden, z. B. logo: image("abbildungen/fom-logo.png", width: 3cm).
+// Das FOM-Logo (abbildungen/fom-logo.svg) ist markenrechtlich geschützt und
+// nur für Arbeiten an der FOM bestimmt. Über den Parameter `logo` kann eine
+// beliebige Bilddatei eingebunden werden,
+// z. B. logo: image("abbildungen/fom-logo.svg", width: 2.2cm).
 
 #let _datum-formatieren(datum) = {
   if type(datum) == datetime {

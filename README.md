@@ -33,7 +33,7 @@ winget install --id Typst.Typst        # Windows
 # Linux: https://github.com/typst/typst/releases
 
 # 2. Template holen (oder auf GitHub: "Use this template")
-git clone https://github.com/DEIN-BENUTZERNAME/fom-typst-template.git meine-thesis
+git clone -b template https://github.com/LevinTheDoctor/fom-typst-template.git meine-thesis
 cd meine-thesis
 
 # 3. Kompilieren
@@ -43,8 +43,7 @@ make watch          # Live-Vorschau beim Schreiben
 
 Danach in [`main.typ`](main.typ) Titel, Name, Studiengang und Zitierweise eintragen
 und in [`content/`](content) losschreiben. Die vollständige Anleitung liefert die
-**Dokumentations-Webseite**: `make docs-dev` (oder nach dem Aktivieren von GitHub
-Pages online).
+**Dokumentations-Webseite** (`make docs-dev` startet sie lokal).
 
 ## 📁 Projektstruktur
 
@@ -97,5 +96,6 @@ Pull Requests sind ausdrücklich willkommen – siehe
 
 [MIT](LICENSE) – frei verwendbar für Studium, Lehre und eigene Vorlagen.
 Die Schriften im Ordner [`fonts/`](fonts) stehen unter der
-[SIL Open Font License](fonts/LICENSE). Das FOM-Logo ist markenrechtlich geschützt
-und nicht Bestandteil dieses Repositories.
+[SIL Open Font License](fonts/LICENSE). Das FOM-Logo
+([`abbildungen/fom-logo.svg`](abbildungen/fom-logo.svg)) ist markenrechtlich
+geschützt, nicht Teil der MIT-Lizenz und nur für Arbeiten an der FOM bestimmt.
