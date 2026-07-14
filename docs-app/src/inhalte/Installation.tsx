@@ -82,12 +82,13 @@ typst --version`}
       </p>
       <CodeBlock
         datei="Terminal"
-        code={`git clone -b template https://github.com/LevinTheDoctor/fom-typst-template.git meine-arbeit
+        code={`git clone https://github.com/LevinTheDoctor/fom-typst-template.git meine-arbeit
 cd meine-arbeit`}
       />
       <p>
-        Der Branch <code>template</code> enthält alles fürs Schreiben, aber nicht den
-        Quellcode dieser Doku-Webseite – der Klon bleibt schlank.
+        Standardmäßig landet der Branch <code>minimal</code> im Klon: das leere Grundgerüst
+        ohne Beispieltexte – direkt losschreiben. Wer lieber mit kommentierten
+        Beispielkapiteln startet, hängt <code>-b template</code> an den Befehl.
       </p>
       <Callout titel="Ohne Git?">
         <p>

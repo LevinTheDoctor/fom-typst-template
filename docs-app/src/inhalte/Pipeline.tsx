@@ -68,14 +68,20 @@ export default function Pipeline() {
       <h2>GitHub Actions: PDF bei jedem Push</h2>
       <p>
         Der Workflow <code>.github/workflows/pdf-bauen.yml</code> kompiliert die Arbeit bei jedem
-        Push und Pull Request. Das fertige PDF hängt als Artefakt „thesis“ am Workflow-Lauf –
-        praktisch, um Zwischenstände mit der Betreuung zu teilen, ohne PDFs zu verschicken.
+        Push und Pull Request. Nach jedem Push committet er das fertige{" "}
+        <code>thesis.pdf</code> direkt in den Branch – im Repository liegt also immer der
+        aktuelle Stand als PDF, teilbar per Link, ohne Dateien zu verschicken. Zusätzlich hängt
+        das PDF als Artefakt „thesis“ am Workflow-Lauf.
       </p>
       <ul>
         <li>Installiert Typst und Times New Roman automatisch auf dem Build-Server.</li>
         <li>
           Nutzt <code>make check</code>: Schon eine Warnung (kaputter Verweis, fehlende Datei)
           lässt den Build rot werden, bevor es der Gutachter merkt.
+        </li>
+        <li>
+          Nach dem Push kurz warten und <code>git pull</code> ausführen, damit das von der CI
+          committete PDF auch lokal ankommt.
         </li>
       </ul>
 

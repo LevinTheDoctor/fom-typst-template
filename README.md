@@ -21,7 +21,7 @@ sind vorkonfiguriert: Du schreibst nur noch.
 | 🗂 **Alle Verzeichnisse automatisch** | Inhalts-, Abbildungs-, Tabellen-, Formel-, Symbol- und Abkürzungsverzeichnis (nur tatsächlich verwendete Abkürzungen) |
 | 🤖 **KI-Deklaration (Leitfaden 1.6/2.9)** | `#ki-nachweis(...)` für lokale Nachweise + fertiges KI-Hilfsmittelverzeichnis |
 | 🔗 **Zotero & Mendeley** | BibTeX-Export in `literatur/literatur.bib` – mit Better BibTeX vollautomatisch; eigene CSL-Stile im exakten FOM-Format |
-| 🛠 **Cross-Platform-Builds** | Makefile, Bash-/PowerShell-Skripte, Docker, Dev-Container, GitHub Actions (PDF als Artefakt bei jedem Push) |
+| 🛠 **Cross-Platform-Builds** | Makefile, Bash-/PowerShell-Skripte, Docker, Dev-Container, GitHub Actions (legt das fertige `thesis.pdf` bei jedem Push direkt im Repository ab) |
 | 📖 **Moderne Dokumentation** | [fom-typst.levin-dev.de](https://fom-typst.levin-dev.de) – Schritt-für-Schritt-Anleitungen für Windows, macOS und Linux (Quellcode in [`/docs-app`](docs-app)) |
 
 ## 🚀 Schnellstart
@@ -33,8 +33,10 @@ winget install --id Typst.Typst        # Windows
 # Linux: https://github.com/typst/typst/releases
 
 # 2. Template holen (oder auf GitHub: "Use this template")
-git clone -b template https://github.com/LevinTheDoctor/fom-typst-template.git meine-thesis
+#    Der Standard-Branch ist `minimal`: ein leeres Grundgerüst zum Losschreiben.
+git clone https://github.com/LevinTheDoctor/fom-typst-template.git meine-thesis
 cd meine-thesis
+# Lieber mit Beispielkapiteln starten? git clone -b template …
 
 # 3. Kompilieren
 make build          # oder: typst compile --font-path fonts main.typ thesis.pdf
@@ -68,22 +70,22 @@ und in [`content/`](content) losschreiben. Die vollständige Anleitung liefert d
 
 | Branch | Zweck |
 |---|---|
-| **`main`** | Basis-Template mit kompakten Beispielkapiteln, die jede Funktion einmal zeigen – empfohlener Startpunkt |
-| **`template`** | Wie `main`, aber ohne die Doku-Webseite (`docs-app/`) – zum schlanken Klonen fürs eigene Schreiben |
+| **`minimal`** | Leeres Grundgerüst ohne Beispieltexte und Doku-Webseite – **Standard-Branch**, direkt losschreiben |
+| **`template`** | Basis-Template mit kompakten Beispielkapiteln, die jede Funktion einmal zeigen – ohne Doku-Webseite |
 | **`example-thesis`** | Vollständig ausgefüllte Musterarbeit zum Nachschlagen |
-| **`minimal`** | Leeres Grundgerüst ohne Beispieltexte und Doku-Webseite |
+| **`main`** | Wie `template`, zusätzlich mit dem Quellcode der Doku-Webseite (`docs-app/`) – hier findet die Entwicklung statt |
 
 ```bash
-git clone -b template https://github.com/LevinTheDoctor/fom-typst-template.git meine-arbeit
-# oder in einem bestehenden Klon: git switch template (bzw. example-thesis, minimal)
+git clone https://github.com/LevinTheDoctor/fom-typst-template.git meine-arbeit   # liefert minimal
+# oder in einem bestehenden Klon: git switch template (bzw. example-thesis, main)
 ```
 
 ## 🧪 Qualitätssicherung
 
 * `make check` kompiliert streng: **Warnungen gelten als Fehler**.
 * Die GitHub Action [`pdf-bauen.yml`](.github/workflows/pdf-bauen.yml) baut bei jedem
-  Push und hängt das PDF als Artefakt an – ideal, um Zwischenstände mit der Betreuung
-  zu teilen.
+  Push, committet das fertige `thesis.pdf` direkt in den Branch und hängt es
+  zusätzlich als Artefakt an – ideal, um Zwischenstände mit der Betreuung zu teilen.
 * Bekannte (unkritische) Abweichungen vom Leitfaden sind transparent in der
   Doku-Webseite unter [„FAQ & bekannte
   Abweichungen“](https://fom-typst.levin-dev.de/#/faq) dokumentiert.
