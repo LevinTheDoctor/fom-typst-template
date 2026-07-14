@@ -22,7 +22,7 @@ sind vorkonfiguriert: Du schreibst nur noch.
 | 🤖 **KI-Deklaration (Leitfaden 1.6/2.9)** | `#ki-nachweis(...)` für lokale Nachweise + fertiges KI-Hilfsmittelverzeichnis |
 | 🔗 **Zotero & Mendeley** | BibTeX-Export in `literatur/literatur.bib` – mit Better BibTeX vollautomatisch; eigene CSL-Stile im exakten FOM-Format |
 | 🛠 **Cross-Platform-Builds** | Makefile, Bash-/PowerShell-Skripte, Docker, Dev-Container, GitHub Actions (PDF als Artefakt bei jedem Push) |
-| 📖 **Moderne Dokumentation** | React-Webseite mit Schritt-für-Schritt-Anleitungen für Windows, macOS und Linux (Quellcode in [`docs-app/` auf `main`](https://github.com/LevinTheDoctor/fom-typst-template/tree/main/docs-app)) |
+| 📖 **Moderne Dokumentation** | [fom-typst.levin-dev.de](https://fom-typst.levin-dev.de) – Schritt-für-Schritt-Anleitungen für Windows, macOS und Linux (Quellcode in [`docs-app/` auf `main`](https://github.com/LevinTheDoctor/fom-typst-template/tree/main/docs-app)) |
 
 ## 🚀 Schnellstart
 
@@ -43,8 +43,8 @@ make watch          # Live-Vorschau beim Schreiben
 
 Danach in [`main.typ`](main.typ) Titel, Name, Studiengang und Zitierweise eintragen
 und in [`content/`](content) losschreiben. Die vollständige Anleitung liefert die
-**Dokumentations-Webseite** (Quellcode auf dem Branch `main`, dort lokal startbar
-mit `make docs-dev`).
+**Dokumentations-Webseite**: [fom-typst.levin-dev.de](https://fom-typst.levin-dev.de)
+(Quellcode auf dem Branch `main`).
 
 ## 📁 Projektstruktur
 
@@ -84,7 +84,8 @@ git clone -b template https://github.com/LevinTheDoctor/fom-typst-template.git m
   Push und hängt das PDF als Artefakt an – ideal, um Zwischenstände mit der Betreuung
   zu teilen.
 * Bekannte (unkritische) Abweichungen vom Leitfaden sind transparent in der
-  Doku-Webseite unter „FAQ & bekannte Abweichungen“ dokumentiert.
+  Doku-Webseite unter [„FAQ & bekannte
+  Abweichungen“](https://fom-typst.levin-dev.de/#/faq) dokumentiert.
 
 ## 🤝 Mitwirken
 

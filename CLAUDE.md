@@ -139,7 +139,8 @@ Seiten unter `src/inhalte/`, Bausteine unter `src/komponenten/` (CodeBlock mit
 Kopieren-Button, Tabs für OS-Anleitungen, Callout, Seite mit Leitfaden-Eyebrow,
 Satzspiegel-Hero). Design-Token in `src/index.css` (`@theme`): Papier/Tinte/Petrol.
 Deployment: Cloudflare Workers (Static Assets, eigenständig konfiguriert – der
-Build über `npm run build` → `dist/` bleibt unverändert).
+Build über `npm run build` → `dist/` bleibt unverändert). Live unter
+<https://fom-typst.levin-dev.de>. GitHub Pages wird bewusst nicht genutzt.
 
 ## Stil-Konventionen
 
