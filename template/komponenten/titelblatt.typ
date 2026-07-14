@@ -136,7 +136,7 @@
       columns: (auto, auto),
       column-gutter: 2.5em,
       row-gutter: 1em,
-      [Erstgutachter:], [#erstgutachter],
+      [Betreuer(in):], [#betreuer],
       [Matrikelnummer:], [#matrikelnummer],
       [Abgabedatum:], [#_datum-formatieren(abgabedatum)],
     )
