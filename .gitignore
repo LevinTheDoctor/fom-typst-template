@@ -1,11 +1,11 @@
 # Erzeugte Dateien
 thesis.pdf
 *.pdf
-!2024_Leitfaden-WManagement-GuS-WRecht.pdf
 
 # Doku-Webseite
 docs-app/node_modules/
 docs-app/dist/
+docs-app/.vite/
 
 # Betriebssystem / Editoren
 .DS_Store

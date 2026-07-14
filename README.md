@@ -96,5 +96,6 @@ Pull Requests sind ausdrücklich willkommen – siehe
 
 [MIT](LICENSE) – frei verwendbar für Studium, Lehre und eigene Vorlagen.
 Die Schriften im Ordner [`fonts/`](fonts) stehen unter der
-[SIL Open Font License](fonts/LICENSE). Das FOM-Logo ist markenrechtlich geschützt
-und nicht Bestandteil dieses Repositories.
+[SIL Open Font License](fonts/LICENSE). Das FOM-Logo
+([`abbildungen/fom-logo.svg`](abbildungen/fom-logo.svg)) ist markenrechtlich
+geschützt, nicht Teil der MIT-Lizenz und nur für Arbeiten an der FOM bestimmt.
