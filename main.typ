@@ -55,6 +55,18 @@
 #ki-hilfsmittelverzeichnis(
   (
     // (tool: "ChatGPT", version: "4o", nutzung: "…", teile: "Kapitel …"),
+    (
+      tool: "Claude Webseite",
+      version: "Opus 4.8",
+      nutzung: "Rechtschreibung: Groß und Kleinschreibung, sowie Punkt und Kommasetzung",
+      teile: "Gesamt",
+    ),
+    (
+      tool: "Claude Webseite",
+      version: "Opus 4.7",
+      nutzung: "Suche von Quellen",
+      teile: "Finden von Primär Quellen wie Brain of the Firm von Strafford Beer",
+    ),
   ),
 )
 
