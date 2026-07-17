@@ -11,20 +11,19 @@
 
 #show: fom-arbeit.with(
   // --- Titelblatt (Leitfaden 2.1) --------------------------------------------
-  titel: [Titel der Arbeit],
-  autor: "Vorname Nachname",
-  typ: "Bachelor-Thesis", // "Master-Thesis", "Seminararbeit", "Hausarbeit"
-  studiengang: "Business Administration",
-  grad: "Bachelor of Arts (B.A.)",
-  erstgutachter: "Prof. Dr. …",
-  matrikelnummer: "000000",
-  abgabedatum: "TT.MM.JJJJ",
-  // Für Seminararbeiten zusätzlich:
-  // semester: "3",
-  // modul: "Wissenschaftliches Arbeiten",
-  //
-  // Logo auf dem Titelblatt (Anhang 4 des Leitfadens zeigt es mittig oben):
-  logo: image("abbildungen/fom-logo.svg", width: 2.2cm),
+  titel: [Inwieferen sind Konzepte die bei dem Cybersyn zu verwaltung einer wirtschaft angewendet
+    wurde in moderne Monitoring- und Decision-Support-Systeme kontexten
+    übertragbar.],
+  autor: "Levin Rüßmann",
+  typ: "Seminararbeit", // "Master-Thesis", "Seminararbeit", "Hausarbeit"
+  studiengang: "Informatik",
+  erstgutachter: "Prof. Dr. Peter Vatter", // bei Seminararbeiten: Betreuer(in)
+  matrikelnummer: "838791",
+  abgabedatum: "31.8.2026", // Zeichenkette oder datetime(...)
+  semester: "2", // nur Seminararbeit
+  modul: "Wissenschaftliches Arbeiten", // nur Seminararbeit: "Seminararbeit in <modul>"
+  hochschule: "FOM Hochschule für Oekonomie & Management",
+  logo: image("./abbildungen/fom-logo.svg", width: 2.2cm), // z. B. image("abbildungen/logo.png", width: 3cm)
 
   // --- Formale Konfiguration --------------------------------------------------
   zitierweise: "chicago", // "chicago" (Fußnoten) oder "harvard" (im Text)
@@ -38,7 +37,11 @@
 
 // --- Textteil -----------------------------------------------------------------
 #include "content/01-einleitung.typ"
-#include "content/02-hauptteil.typ"
+#include "content/02-grundlagen-der-management-kybernetik.typ"
+#include "content/03-das-cybersyn-project.typ"
+#include "content/04-moderne-monitoring-und-desision-support-systeme.typ"
+#include "content/05-gegenuberstellung-und-erkennetnid-aus-dem-cybersyn-projekt.typ"
+#include "content/06-zusammenfassung-und-ausblick.typ"
 
 // --- Anhang (optional, Leitfaden 2.8) ------------------------------------------
 // #anhang[
@@ -49,9 +52,11 @@
 #literaturverzeichnis(datei: "/literatur/literatur.bib")
 
 // --- KI-Hilfsmittelverzeichnis (Leitfaden 2.9) ---------------------------------
-#ki-hilfsmittelverzeichnis((
-  // (tool: "ChatGPT", version: "4o", nutzung: "…", teile: "Kapitel …"),
-))
+#ki-hilfsmittelverzeichnis(
+  (
+    // (tool: "ChatGPT", version: "4o", nutzung: "…", teile: "Kapitel …"),
+  ),
+)
 
 // --- Eigenständigkeitserklärung (Leitfaden 2.10, ohne Seitenzahl) --------------
 #eigenstaendigkeitserklaerung(ort: "Ort", datum: "TT.MM.JJJJ")

@@ -20,14 +20,14 @@
 #import "styles.typ": *
 #import "komponenten/abkuerzungen.typ": abk, abk-definiere
 #import "komponenten/zitieren.typ": vgl, zit, zitat, zitierweise-setze
-#import "komponenten/elemente.typ": abbildung, tabelle, formel
-#import "komponenten/ki.typ": ki-nachweis, ki-hilfsmittelverzeichnis
+#import "komponenten/elemente.typ": abbildung, formel, tabelle
+#import "komponenten/ki.typ": ki-hilfsmittelverzeichnis, ki-nachweis
 #import "komponenten/erklaerungen.typ" as erklaerungen
 #import "komponenten/erklaerungen.typ": eigenstaendigkeitserklaerung
 #import "komponenten/titelblatt.typ": titelblatt-abschlussarbeit, titelblatt-seminararbeit
 #import "komponenten/verzeichnisse.typ": (
-  abbildungsverzeichnis, abkuerzungsverzeichnis, formelverzeichnis, inhaltsverzeichnis,
-  symbolverzeichnis, tabellenverzeichnis,
+  abbildungsverzeichnis, abkuerzungsverzeichnis, formelverzeichnis, inhaltsverzeichnis, symbolverzeichnis,
+  tabellenverzeichnis,
 )
 #import "komponenten/nachspann.typ": anhang, anhang-abschnitt, literaturverzeichnis
 

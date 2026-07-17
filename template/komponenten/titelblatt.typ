@@ -131,14 +131,16 @@
   block(text(weight: "bold")[#titel])
 
   v(1fr)
-  grid(
-    columns: (auto, auto),
-    column-gutter: 2.5em,
-    row-gutter: 1em,
-    [Betreuer(in):], [#betreuer],
-    [Autor(in):], [#autor],
-    [Matrikelnr.:], [#matrikelnummer],
-    [Abgabedatum:], [#_datum-formatieren(abgabedatum)],
-  )
+  v(1fr)
+  align(left)[
+    #grid(
+      columns: (auto, auto),
+      column-gutter: 2.5em,
+      row-gutter: 1em,
+      [Betreuer(in):], [#betreuer],
+      [Autor(in):], [#autor],
+      [Matrikelnr.:], [#matrikelnummer],
+      [Abgabedatum:], [#_datum-formatieren(abgabedatum)],
+    )]
   pagebreak()
 }
