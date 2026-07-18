@@ -1,2 +1,2 @@
 #import "../template/fom.typ": *
-= Gegenubesretllung und erkennetis aus dem Cybersyn projekt
+= Gegenüberstellung und Erkenntnisse aus dem Cybersyn-Projekt

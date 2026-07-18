@@ -11,9 +11,7 @@
 
 #show: fom-arbeit.with(
   // --- Titelblatt (Leitfaden 2.1) --------------------------------------------
-  titel: [Inwieferen sind Konzepte die bei dem Cybersyn zu verwaltung einer wirtschaft angewendet
-    wurde in moderne Monitoring- und Decision-Support-Systeme kontexten
-    übertragbar.],
+  titel: [Inwiefern sind Konzepte, die bei Cybersyn zur Verwaltung einer Wirtschaft angewendet wurden, auf moderne Monitoring- und Decision-Support-System-Kontexte übertragbar?],
   autor: "Levin Rüßmann",
   typ: "Seminararbeit", // "Master-Thesis", "Seminararbeit", "Hausarbeit"
   studiengang: "Informatik",
@@ -58,31 +56,37 @@
     (
       tool: "Claude Webseite",
       version: "Opus 4.8",
-      nutzung: "Rechtschreibung: Groß und Kleinschreibung, sowie Punkt und Kommasetzung",
+      nutzung: "Rechtschreibung: Groß- und Kleinschreibung, sowie Punkt- und Kommasetzung",
       teile: "Gesamt",
     ),
     (
       tool: "Claude Webseite",
       version: "Opus 4.7",
-      nutzung: "Suche von Quellen: Finden von Primär Quellen wie Brain of the Firm von Strafford Beer",
+      nutzung: "Suche von Quellen: Finden von Primärquellen wie Brain of the Firm von Stafford Beer",
       teile: "Kapitel 2",
     ),
     (
-      tool: "Goolge Scholar Labs",
-      version: "Genutzt am 18.Juli.2027",
-      nutzung: "Suche von Quellen: Definntion Descion Support Systeme und moderen Kybernetik Defention",
+      tool: "Google Scholar Labs",
+      version: "Genutzt am 18. Juli 2026",
+      nutzung: "Suche von Quellen: Definition Decision Support Systeme und moderne Kybernetik Definition",
       teile: "Kapitel 2",
     ),
     (
       tool: "Gemini",
       version: "Gemini 3.5 Flash",
-      nutzung: "Korrektur von Rechtschreibung, Bewertung ob die Ausdrucksweise formlirung Wissenschaftlich sind oder zu Umgangsprachlich",
+      nutzung: "Korrektur von Rechtschreibung, Bewertung ob die Ausdrucksweise Formulierung wissenschaftlich sind oder zu umgangssprachlich",
       teile: "Gesamt",
     ),
     (
       tool: "Deepl",
       version: "Deepl Translate",
-      nutzung: "Über Setzung von unbekannten Wörte von Qullen.",
+      nutzung: "Übersetzung von unbekannten Wörtern von Quellen.",
+      teile: "Gesamt",
+    ),
+    (
+      tool: "Claude Code",
+      version: "Opus 4.8",
+      nutzung: "Korrektur der Rechtschreibung im KI-Hilfsmittelverzeichnis",
       teile: "Gesamt",
     ),
   ),
