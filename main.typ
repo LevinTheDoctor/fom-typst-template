@@ -93,4 +93,4 @@
 )
 
 // --- Eigenständigkeitserklärung (Leitfaden 2.10, ohne Seitenzahl) --------------
-#eigenstaendigkeitserklaerung(ort: "Ort", datum: "TT.MM.JJJJ")
+#eigenstaendigkeitserklaerung(ort: "Unna", datum: "18.07.2026")
