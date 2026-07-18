@@ -27,7 +27,7 @@
 
   // --- Formale Konfiguration --------------------------------------------------
   zitierweise: "chicago", // "chicago" (Fußnoten) oder "harvard" (im Text)
-  schriftart: "Times New Roman", // "Arial" setzt automatisch 11,5 pt
+  schriftart: "Arial", // "Arial" setzt automatisch 11,5 pt
   abkuerzungen: (
     // "HRM": "Human Resource Management",
   ),
@@ -64,8 +64,20 @@
     (
       tool: "Claude Webseite",
       version: "Opus 4.7",
-      nutzung: "Suche von Quellen",
-      teile: "Finden von Primär Quellen wie Brain of the Firm von Strafford Beer",
+      nutzung: "Suche von Quellen: Finden von Primär Quellen wie Brain of the Firm von Strafford Beer",
+      teile: "Kapitel 2",
+    ),
+    (
+      tool: "Goolge Schoolar Labs",
+      version: "Genutzt am 18.Juli.2027",
+      nutzung: "Suche von Quellen: Definntion Descion Support Systeme und moderen Kybernetik Defention",
+      teile: "Kapitel 2",
+    ),
+    (
+      tool: "Deepl",
+      version: "Deepl Translate",
+      nutzung: "Über Setzung von unbekannten Wörte von Qullen.",
+      teile: "Gesamt",
     ),
   ),
 )

@@ -1,3 +1,4 @@
+#import "../template/fom.typ": *
 = Einleitung
 == Problemstellung
 In den frühen 1970er-Jahren gab es in Chile, unter der Regierung von Salvador Allende,
