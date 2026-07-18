@@ -68,10 +68,16 @@
       teile: "Kapitel 2",
     ),
     (
-      tool: "Goolge Schoolar Labs",
+      tool: "Goolge Scholar Labs",
       version: "Genutzt am 18.Juli.2027",
       nutzung: "Suche von Quellen: Definntion Descion Support Systeme und moderen Kybernetik Defention",
       teile: "Kapitel 2",
+    ),
+    (
+      tool: "Gemini",
+      version: "Gemini 3.5 Flash",
+      nutzung: "Korrektur von Rechtschreibung, Bewertung ob die Ausdrucksweise formlirung Wissenschaftlich sind oder zu Umgangsprachlich",
+      teile: "Gesamt",
     ),
     (
       tool: "Deepl",
