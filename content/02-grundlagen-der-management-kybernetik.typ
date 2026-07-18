@@ -12,7 +12,7 @@ Bei der Management-Kybernetik wird versucht, durch kybernetische Methoden ein Un
 === Viable System Model
 Um Beers Ideen besser zu verstehen, muss man auch ein besonderes Modell von Beer verstehen, nämlich das #emph()[Viable System Model] zu deutsch Modell des lebensfähigen Systems. Beer entwarf das Modell nach einem Gespräch mit Fernando Flores, sie wollten ein System haben, in dem sie die Wirtschaft Chiles steuern können. Das #emph()[Viable System Model] versteht ein Unternehmen, eine Wirtschaft aber auch einen Körper als System. Das #emph()[Viable System Model] ist ein Gegenentwurf zu den herkömmlichen hierarchischen Aufbauten.
 #abbildung(
-  align(center)[image("../abbildungen/VSM-Modell.png", width: 60%)],
+  align(center, image("../abbildungen/VSM-Modell.png", width: 60%)),
   titel: [Aufbau des Viable System Modell],
   quelle: "Eigen Erstellte Grafik Basierend auf Abbildung von Beer in Brain Of The Firm und Sekundär Qullen",
 ) <abb-vsm>
