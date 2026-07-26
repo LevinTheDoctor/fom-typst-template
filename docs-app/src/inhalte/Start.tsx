@@ -57,7 +57,7 @@ export default function Start() {
             },
             {
               titel: "Zitieren ohne Handarbeit",
-              text: "Chicago-Fußnoten mit Stichwort oder Harvard im Text: #vgl(...) genügt. Das Literaturverzeichnis entsteht automatisch aus Zotero- oder Mendeley-Exporten.",
+              text: "Chicago-Fußnoten mit Stichwort, Harvard oder APA 7 im Text: #vgl(...) genügt. Das Literaturverzeichnis entsteht automatisch aus Zotero- oder Mendeley-Exporten.",
             },
             {
               titel: "KI transparent deklariert",

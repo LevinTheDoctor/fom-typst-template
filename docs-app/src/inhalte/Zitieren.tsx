@@ -7,15 +7,24 @@ export default function Zitieren() {
     <Seite
       leitfaden="Leitfaden Kapitel 3 · Zitieren"
       titel="Zitieren"
-      einleitung="Der Leitfaden erlaubt zwei Zitierweisen: Chicago (Kurzbeleg in der Fußnote) und Harvard (Kurzbeleg in Klammern im Text). Du wählst einmal in main.typ – das Template erledigt Formatierung, Nummerierung und Literaturverzeichnis."
+      einleitung="Der Leitfaden erlaubt zwei Zitierweisen: Chicago (Kurzbeleg in der Fußnote) und Harvard (Kurzbeleg in Klammern im Text). Als dritte, optionale Variante steht APA 7 bereit. Du wählst einmal in main.typ – das Template erledigt Formatierung, Nummerierung und Literaturverzeichnis."
     >
       <h2>Zitierweise wählen</h2>
       <CodeBlock
         datei="main.typ"
         code={`zitierweise: "chicago",   // Fußnoten (Standard)
-// oder
-zitierweise: "harvard",   // Klammern im Fließtext`}
+zitierweise: "harvard",   // Klammern im Fließtext
+zitierweise: "apa",       // Klammern im Text nach APA 7`}
       />
+      <Callout titel="APA ist eine Zugabe, kein Leitfaden-Stil">
+        <p>
+          Der FOM-Leitfaden kennt nur Chicago und Harvard (Kap. 3.2). <code>"apa"</code> ist
+          eine zusätzliche Option nach APA 7th Edition – technisch verhält sie sich wie Harvard
+          (Klammerbeleg im Text), formatiert Beleg und Literaturverzeichnis aber nach APA:
+          Klammer-Jahr direkt hinter dem Verfasser, kursive Werktitel, „&“ vor dem letzten
+          Verfasser, Vornamen als Initialen. Stimme sie vorab mit deinem Erstgutachter ab.
+        </p>
+      </Callout>
       <Callout art="achtung" titel="Einmal entscheiden, konsequent bleiben">
         <p>
           Der Leitfaden verlangt, die gewählte Technik in der gesamten Arbeit beizubehalten und
@@ -119,9 +128,9 @@ stehen keine Auslassungspunkte."#zit(<theisen2021>, seite: "155")`}
         </li>
       </ul>
 
-      <Callout titel="Harvard-Feinheit">
+      <Callout titel="Harvard-/APA-Feinheit">
         <p>
-          Bei Harvard steht der Beleg <em>vor</em> dem Satzpunkt: „… erhöht werden{" "}
+          Bei Harvard und APA steht der Beleg <em>vor</em> dem Satzpunkt: „… erhöht werden{" "}
           <code>#vgl(&lt;x&gt;, seite: "12")</code>.“ Bei Chicago folgt die Fußnote{" "}
           <em>nach</em> dem Satzzeichen. Die Beispielkapitel im Branch <code>main</code> sind für
           Chicago gesetzt.

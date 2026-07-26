@@ -42,7 +42,7 @@ export default function Schnellstart() {
   matrikelnummer: "123456",
   abgabedatum: "25.01.2027",
 
-  zitierweise: "chicago",       // oder "harvard"
+  zitierweise: "chicago",       // oder "harvard" / "apa"
   abkuerzungen: (
     "HRM": "Human Resource Management",
   ),
