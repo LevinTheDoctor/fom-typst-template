@@ -2,7 +2,9 @@
 // FOM-Template: Zitieren (Leitfaden Kapitel 3 "Zitieren")
 // =============================================================================
 // Der Leitfaden erlaubt zwei Zitierweisen (Leitfaden 3.2), die vorab gewählt
-// und konsequent beibehalten werden müssen:
+// und konsequent beibehalten werden müssen. Zusätzlich – nicht Teil des
+// Leitfadens, aber als dritte Option ergänzt – steht "apa" (APA 7th Edition)
+// zur Verfügung:
 //
 //   "chicago" (Standard): Kurzbeleg in der Fußnote
 //       indirekt:  Vgl. Mayer, D., Finanzinvestitionen, 2019, S. 438.
@@ -11,6 +13,11 @@
 //   "harvard": Kurzbeleg in Klammern im Fließtext
 //       indirekt:  (vgl. Mayer, 2019, S. 438)
 //       direkt:    (Mayer, 2019, S. 438)
+//
+//   "apa": Kurzbeleg in Klammern im Fließtext (wie Harvard, aber "&" vor
+//   dem letzten Verfasser und Literaturverzeichnis nach APA-7-Regeln)
+//       indirekt:  (vgl. Mayer & Schmidt, 2019, S. 438)
+//       direkt:    (Mayer & Schmidt, 2019, S. 438)
 //
 // Verwendung im Text:
 //   #vgl(<mayer2019>, seite: "438")    -> indirektes Zitat
@@ -22,7 +29,7 @@
 
 // Wird vom Template beim Dokumentstart aufgerufen.
 #let zitierweise-setze(stil) = {
-  assert(stil in ("chicago", "harvard"), message: "zitierweise muss 'chicago' oder 'harvard' sein.")
+  assert(stil in ("chicago", "harvard", "apa"), message: "zitierweise muss 'chicago', 'harvard' oder 'apa' sein.")
   _zitierweise.update(stil)
 }
 
@@ -42,6 +49,8 @@
 
 // Indirektes Zitat ("Vgl."). Über `praefix` lässt sich z. B. "S. dazu"
 // (entfernte Anlehnung, Leitfaden 3.2) setzen.
+// Sowohl "harvard" als auch "apa" setzen den Kurzbeleg in Klammern im
+// Fließtext; nur "chicago" verwendet Fußnoten.
 #let vgl(quelle, seite: none, praefix: "Vgl.") = context {
   if _zitierweise.get() == "chicago" {
     footnote[#praefix #zitat(quelle, seite: seite).]

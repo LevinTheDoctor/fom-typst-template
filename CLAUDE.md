@@ -60,6 +60,7 @@ template/komponenten/
   nachspann.typ                 #anhang/#anhang-abschnitt/#literaturverzeichnis
 template/csl/fom-chicago.csl    Kurzbeleg mit Stichwort + FOM-Bibliographie
 template/csl/fom-harvard.csl    Autor-Jahr + FOM-Bibliographie ohne Stichwort
+template/csl/fom-apa.csl        Autor-Jahr nach APA 7th Edition (kein Leitfaden-Stil, s. u.)
 ```
 
 ### Zentrale Design-Entscheidungen (bitte nicht ohne Grund ändern)

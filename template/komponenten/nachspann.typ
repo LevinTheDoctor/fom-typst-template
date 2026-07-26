@@ -31,8 +31,9 @@
 
 // Literaturverzeichnis (Leitfaden 2.6).
 //   - Format der Einträge über die mitgelieferten CSL-Stile
-//     (template/csl/fom-chicago.csl bzw. fom-harvard.csl), passend zur in
-//     main.typ gewählten Zitierweise.
+//     (template/csl/fom-chicago.csl, fom-harvard.csl bzw. fom-apa.csl),
+//     passend zur in main.typ gewählten Zitierweise. "apa" (APA 7th Edition)
+//     ist kein Bestandteil des Leitfadens, sondern eine zusätzliche Option.
 //   - Einfacher Zeilenabstand innerhalb der Einträge, Abstand zwischen den
 //     Einträgen, hängender Einzug ab der zweiten Zeile.
 //   - Internetquellen werden automatisch ans Ende sortiert (Leitfaden 2.6:
@@ -51,6 +52,8 @@
     let zitierweise = if stil == auto { _zitierweise.get() } else { stil }
     let csl = if zitierweise == "harvard" {
       "/template/csl/fom-harvard.csl"
+    } else if zitierweise == "apa" {
+      "/template/csl/fom-apa.csl"
     } else {
       "/template/csl/fom-chicago.csl"
     }
