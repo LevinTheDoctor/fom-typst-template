@@ -8,13 +8,13 @@ Wieners Definition beschreibt Kybernetik als ein Forschungsfeld, welches die For
 == Management-Kybernetik
 Stafford Beer, die Schlüsselfigur und der Architekt hinter dem Cybersyn-Projekt #vgl(<medinaCyberneticRevolutinaries2014>, seite: 20), ist bekannt für seine Arbeit in einer besonderen Ausprägung der Kybernetik, nämlich der Management-Kybernetik. Beer wurde auch als Vater der Management-Kybernetik bezeichnet.#vgl(<medinaCyberneticRevolutinaries2014>, seite: 23) Die Management-Kybernetik ist ein integraler Bestandteil des Cybersyn-Projekts, da diese der Grundbaustein für das Cybersyn-Projekt ist. Viele der Ideen, die in Kapitel 3 später besprochen werden, sind lediglich Versuche, Management-Kybernetik in der realen Welt umzusetzen.
 === Definition von Management-Kybernetik
-Bei der Management-Kybernetik wird versucht, durch kybernetische Methoden ein Unternehmen oder sogar – wie im Projekt Cybersyn – eine Wirtschaft eines ganzen Landes zu steuern und zu optimieren, eben durch aus der Kybernetik stammende Feedback-Loops und Kommunikation. Beer versteht eine Wirtschaft als ein System, vergleichbar mit einem Organismus. Beers Fokus bei der Management-Kybernetik ist Handeln, anstatt Modellierung von Daten wie bei der Kybernetik nach Wiener #vgl(<medinaCyberneticRevolutinaries2014>, seite: 34)
+Bei der Management-Kybernetik wird versucht, durch kybernetische Methoden ein Unternehmen oder sogar – wie im Projekt Cybersyn – eine Wirtschaft eines ganzen Landes zu steuern und zu optimieren, eben durch aus der Kybernetik stammende Feedback-Loops und Kommunikation. Beer versteht eine Wirtschaft als ein System, vergleichbar mit einem Organismus. Beers Fokus bei der Management-Kybernetik ist Handeln, anstatt Modellierung von Daten wie bei der Kybernetik nach Wiener #vgl(<medinaCyberneticRevolutinaries2014>, seite: 34).
 === Viable System Model
-Um Beers Ideen besser zu verstehen, muss man auch ein besonderes Modell von Beer verstehen, nämlich das #emph()[Viable System Model] zu deutsch Modell des lebensfähigen Systems. Beer entwarf das Modell nach einem Gespräch mit Fernando Flores, sie wollten ein System haben, in dem sie die Wirtschaft Chiles steuern können. Das #emph()[Viable System Model] versteht ein Unternehmen, eine Wirtschaft aber auch einen Körper als System. Das #emph()[Viable System Model] ist ein Gegenentwurf zu den herkömmlichen hierarchischen Aufbauten.
+Um Beers Ideen besser zu verstehen, muss man auch ein besonderes Modell von Beer verstehen, nämlich das #emph()[Viable System Model] zu deutsch Modell des lebensfähigen Systems. Beer entwarf das Modell über mehrere Jahre iterativ. In dem Buch #emph()[Brain Of The Firm] aus dem Jahr 1981 erstmals in seiner finalen Form erklärt. Auch wenn dies Jahre nach Cybersyn war, handelt Beer auch während des Cybersyn-Projekts mit dem Verständnis, dass eine komplexe Organisation – egal ob Unternehmen oder die Wirtschaft eines Landes – nicht streng hierarchisch sein sollte, sondern so operieren sollte, dass schnell und organisch auf Änderung in der Umwelt reagiert werden soll. Die Mechanismen, um adaptiv zu handeln und zu kontrollieren, sind der Kern des #emph()[Viable System Model], Teile dieser Kernideen wurden bei Cybersyn bereits verwendet, daher dient die Erklärung des Modells in dieser Arbeit nur dazu, das Projekt besser zu verstehen.
 #abbildung(
   align(center, image("../abbildungen/VSM-Modell.png", width: 60%)),
   titel: [Aufbau des Viable System Modell],
-  quelle: "Eigen Erstellte Grafik Basierend auf Abbildung von Beer in Brain Of The Firm und Sekundär Qullen",
+  quelle: "Eigen erstellte Grafik basierend auf Abbildung von Beer in Brain Of The Firm und mehreren sekundär Quellen",
 ) <abb-vsm>
 Wie in der Abbildung zu erkennen, besteht das Modell aus drei großen Teilen.
 #table(
@@ -29,4 +29,3 @@ Wie in der Abbildung zu erkennen, besteht das Modell aus drei großen Teilen.
   [Metasystem],
   [Die Metasysteme erhalten Daten aus den unterliegenden Systemen und versuchen, darauf Entscheidungen zu treffen. Sie versuchen, durch Berechnung und Statistik die Zukunft zu prognostizieren und basierend auf der Prognose Entscheidungen und Vorgaben für die unterliegenden Systeme zu treffen.],
 )
-*Hier kommt später noch mehr!*
