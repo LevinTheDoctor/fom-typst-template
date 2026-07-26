@@ -16,7 +16,7 @@ Um Beers Ideen besser zu verstehen, muss man auch ein besonderes Modell von Beer
   titel: [Aufbau des Viable System Modell],
   quelle: "Eigen erstellte Grafik basierend auf Abbildung von Beer in Brain Of The Firm und mehreren sekundär Quellen",
 ) <abb-vsm>
-Wie in der Abbildung basierend auf Grafiken Aus Brain of The Firm #zitat(<brain-of-the-firm>, seite: "130") zu erkennen, besteht das Modell aus drei großen Teilen.
+Wie in der Abbildung basierend auf Grafiken Aus Brain of The Firm #zitat(<brain-of-the-firm>, seite: 130) zu erkennen, besteht das Modell aus drei großen Teilen.
 #table(
   columns: 2,
   [Bestandteil], [Erklärung],
