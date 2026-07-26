@@ -30,13 +30,14 @@
 }
 
 // Literaturverzeichnis (Leitfaden 2.6).
-//   - Format der Einträge über die mitgelieferten CSL-Stile
-//     (template/csl/fom-chicago.csl bzw. fom-harvard.csl), passend zur in
+//   - Format der Einträge über die mitgelieferten CSL-Stile (fom-chicago.csl,
+//     fom-harvard.csl bzw. fom-apa.csl in template/csl/), passend zur in
 //     main.typ gewählten Zitierweise.
 //   - Einfacher Zeilenabstand innerhalb der Einträge, Abstand zwischen den
 //     Einträgen, hängender Einzug ab der zweiten Zeile.
-//   - Internetquellen werden automatisch ans Ende sortiert (Leitfaden 2.6:
-//     "am Ende des Literaturverzeichnisses separat aufzuführen").
+//   - Internetquellen werden bei Chicago/Harvard automatisch ans Ende sortiert
+//     (Leitfaden 2.6: "am Ende des Literaturverzeichnisses separat aufzuführen").
+//     Bei "apa" entfällt diese Sonderregel (keine APA-Vorgabe).
 // `datei` kann ein einzelner Pfad oder eine Liste von Pfaden sein –
 // Pfade mit führendem "/" beziehen sich auf das Projektverzeichnis.
 #let literaturverzeichnis(
@@ -51,6 +52,8 @@
     let zitierweise = if stil == auto { _zitierweise.get() } else { stil }
     let csl = if zitierweise == "harvard" {
       "/template/csl/fom-harvard.csl"
+    } else if zitierweise == "apa" {
+      "/template/csl/fom-apa.csl"
     } else {
       "/template/csl/fom-chicago.csl"
     }

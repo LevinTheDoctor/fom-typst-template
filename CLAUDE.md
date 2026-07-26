@@ -60,6 +60,7 @@ template/komponenten/
   nachspann.typ                 #anhang/#anhang-abschnitt/#literaturverzeichnis
 template/csl/fom-chicago.csl    Kurzbeleg mit Stichwort + FOM-Bibliographie
 template/csl/fom-harvard.csl    Autor-Jahr + FOM-Bibliographie ohne Stichwort
+template/csl/fom-apa.csl        Autor-Jahr nach APA 7 (zusätzlich, NICHT Leitfaden)
 ```
 
 ### Zentrale Design-Entscheidungen (bitte nicht ohne Grund ändern)
@@ -71,11 +72,18 @@ template/csl/fom-harvard.csl    Autor-Jahr + FOM-Bibliographie ohne Stichwort
    Seitenanfang** auf – `counter(page).update(1)` nach dem Umbruch greift zu spät.
    Lösung in `fom.typ`: `counter(page).update(0)` **vor** `set page(numbering: "1")`
    (der Umbruch zählt dann auf 1).
-3. **CSL-Klasse „in-text“ für beide Stile:** Auch Chicago ist als in-text-Stil
+3. **CSL-Klasse „in-text“ für alle Stile:** Auch Chicago ist als in-text-Stil
    definiert; die Fußnote samt „Vgl.“ und Schlusspunkt erzeugen die Helfer
    `#vgl`/`#zit`. So bleibt „Vgl.“ steuerbar (CSL kennt kein bedingtes Präfix) und
    es gibt keine verschachtelten Fußnoten. Konsequenz: bloßes `@key` erzeugt nur
    den nackten Kurzbeleg – dokumentiert, Helfer verwenden.
+   **APA (`zitierweise: "apa"`, `fom-apa.csl`)** ist eine dritte, optionale
+   Zitierweise außerhalb des Leitfadens (der nur Chicago/Harvard zulässt). Sie
+   verhält sich technisch wie Harvard (Klammerbeleg im Text, `else`-Zweig in
+   `#vgl`/`#zit`/`#ki-nachweis`), folgt aber APA 7: Klammer-Jahr direkt hinter
+   den Verfassern, kursive Werktitel, „&“ vor dem letzten Verfasser, kein
+   Verlagsort, DOI/URL am Eintragsende, Vornamen nur als Initialen und keine
+   Sonder-Sortierung der Internetquellen ans Ende.
 4. **Stichwort = `title-short`:** CSL `<text variable="title" form="short"/>` fällt
    automatisch auf den vollen Titel zurück, wenn `shorttitle` fehlt (Mendeley).
    Zotero/Better BibTeX exportiert das Zotero-Feld „Kurztitel“ als `shorttitle` –

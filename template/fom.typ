@@ -50,7 +50,7 @@
   logo: none, // z. B. image("abbildungen/logo.png", width: 3cm)
   // --- Formale Konfiguration --------------------------------------------------
   sprache: "de",
-  zitierweise: "chicago", // "chicago" (Fußnoten) oder "harvard" (im Text)
+  zitierweise: "chicago", // "chicago"/"harvard" (Leitfaden) oder "apa" (zusätzlich)
   schriftart: "Times New Roman", // "Arial" setzt automatisch 11,5 pt
   seitenzahl-position: "mitte", // "mitte" oder "rechts" (Leitfaden 1.2 Nr. 10)
   verzeichnis-tiefe: 3,

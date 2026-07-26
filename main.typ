@@ -27,7 +27,7 @@
   logo: image("abbildungen/fom-logo.svg", width: 2.2cm),
 
   // --- Formale Konfiguration --------------------------------------------------
-  zitierweise: "chicago", // "chicago" (Fußnoten) oder "harvard" (im Text)
+  zitierweise: "chicago", // "chicago" (Fußnoten), "harvard" oder "apa" (im Text)
   schriftart: "Times New Roman", // "Arial" setzt automatisch 11,5 pt
   abkuerzungen: (
     // "HRM": "Human Resource Management",
