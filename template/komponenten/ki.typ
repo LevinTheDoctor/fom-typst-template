@@ -6,10 +6,10 @@
 // 1. LOKALER NACHWEIS im Text für unverändert oder überarbeitet übernommene
 //    KI-Inhalte (Textgenerierung, Paraphrasierung, Übersetzung) mit System,
 //    Version und Datum der Kommunikation – je nach Zitierweise als Fußnote
-//    (Chicago) oder in Klammern im Fließtext (Harvard):
+//    (Chicago) oder in Klammern im Fließtext (Harvard/APA):
 //      #ki-nachweis(system: "ChatGPT", version: "3.5", datum: "01.11.2023")
-//        Chicago:  Fußnote "Vgl. ChatGPT, Version 3.5, Zugriff am 01.11.2023."
-//        Harvard:  "(vgl. ChatGPT, Version 3.5, Zugriff am 01.11.2023)"
+//        Chicago:      Fußnote "Vgl. ChatGPT, Version 3.5, Zugriff am 01.11.2023."
+//        Harvard/APA:  "(vgl. ChatGPT, Version 3.5, Zugriff am 01.11.2023)"
 //      Für originalgetreue Übernahmen: `vgl: false` (ohne "Vgl.").
 //
 // 2. SUMMARISCHES KI-HILFSMITTELVERZEICHNIS als Bestandteil der Arbeit

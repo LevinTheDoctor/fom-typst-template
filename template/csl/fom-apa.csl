@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" default-locale="de-DE" demote-non-dropping-particle="sort-only" page-range-format="expanded">
+  <!-- ==========================================================================
+       FOM APA-7-Zitation (Kurzbeleg im Fließtext)
+
+       Kurzbeleg:            (Theisen, 2021[, S. 155])
+                              (Mayer & Schmidt, 2019)   – 2 Verfasser: "&"
+                              (Mayer et al., 2019)      – ab 3 Verfassern
+       Literaturverzeichnis: Scholz, C. (2014a). Personalmanagement
+                              (6. Aufl.). Vahlen.
+
+       Kein Bestandteil des FOM-Leitfadens (der nur Chicago/Harvard zulässt,
+       Kap. 3.2) – als dritte, zusätzliche Option nach APA 7th Edition ergänzt.
+       Struktur/Interpunktion folgen APA 7 (Klammer-Jahr direkt nach den
+       Verfassern, kursive Werktitel, "&" vor dem letzten Verfasser, kein
+       Erscheinungsort bei Büchern (von der APA 7 gestrichen), DOI/URL am
+       Ende jedes Eintrags). Abkürzungen ("Hrsg.", "Aufl.", "S.", "in:",
+       "o. V.", "o. J.") bleiben zwecks Konsistenz mit fom-chicago.csl/
+       fom-harvard.csl deutsch, wie im übrigen Dokument. Anders als beim
+       Leitfaden-Harvard werden Vornamen im Literaturverzeichnis nur als
+       Initialen geführt (APA-Vorgabe) und Internetquellen nicht separat ans
+       Ende sortiert (keine APA-Regel, sondern eine Leitfaden-Besonderheit).
+       Die Klammern sowie das "vgl." setzen die Template-Funktionen
+       #vgl und #zit.
+       ========================================================================== -->
+  <info>
+    <title>FOM APA-7-Zitation (Kurzbeleg im Text)</title>
+    <id>https://github.com/fom-typst-template/fom-apa</id>
+    <link href="https://github.com/fom-typst-template" rel="self"/>
+    <category citation-format="author-date"/>
+    <updated>2026-07-26T00:00:00+00:00</updated>
+  </info>
+
+  <!-- Verfasser im Kurzbeleg: Nachname; "&" vor dem letzten bei 2 Verfassern,
+       ab 3 Verfassern "et al." (APA 7: bereits ab der ersten Nennung) -->
+  <macro name="autoren-kurz">
+    <names variable="author">
+      <name form="short" and="symbol" delimiter=", " delimiter-precedes-last="never" et-al-min="3" et-al-use-first="1"/>
+      <substitute>
+        <names variable="editor">
+          <name form="short" and="symbol" delimiter=", " delimiter-precedes-last="never" et-al-min="3" et-al-use-first="1"/>
+        </names>
+        <text value="o. V."/>
+      </substitute>
+    </names>
+  </macro>
+
+  <!-- Verfasser im Literaturverzeichnis: Initialen statt vollem Vornamen
+       (APA-Vorgabe); ab 21 Verfassern werden die ersten 19 sowie der letzte
+       genannt, dazwischen "…" (APA 7). -->
+  <macro name="autoren-voll">
+    <names variable="author">
+      <name
+        name-as-sort-order="all"
+        sort-separator=", "
+        initialize-with=". "
+        and="symbol"
+        delimiter=", "
+        delimiter-precedes-last="always"
+        et-al-min="21"
+        et-al-use-first="19"
+        et-al-use-last="true"
+      />
+      <substitute>
+        <text macro="herausgeber"/>
+        <text value="o. V."/>
+      </substitute>
+    </names>
+  </macro>
+
+  <macro name="herausgeber">
+    <names variable="editor" suffix=" (Hrsg.)">
+      <name
+        name-as-sort-order="all"
+        sort-separator=", "
+        initialize-with=". "
+        and="symbol"
+        delimiter=", "
+        delimiter-precedes-last="always"
+      />
+    </names>
+  </macro>
+
+  <!-- Jahr mit Buchstaben-Zusatz (a, b, ...) bei gleichem Jahr, sonst "o. J." -->
+  <macro name="jahr">
+    <choose>
+      <if variable="issued">
+        <group>
+          <date variable="issued">
+            <date-part name="year"/>
+          </date>
+          <text variable="year-suffix"/>
+        </group>
+      </if>
+      <else>
+        <group>
+          <text value="o. J."/>
+          <text variable="year-suffix"/>
+        </group>
+      </else>
+    </choose>
+  </macro>
+
+  <!-- Auflage direkt hinter dem Werktitel in Klammern: "(2. Aufl.)" -->
+  <macro name="auflage-klammer">
+    <choose>
+      <if is-numeric="edition">
+        <group prefix="(" suffix=")" delimiter=". ">
+          <number variable="edition"/>
+          <text value="Aufl."/>
+        </group>
+      </if>
+      <else-if variable="edition">
+        <text variable="edition" prefix="(" suffix=")"/>
+      </else-if>
+    </choose>
+  </macro>
+
+  <!-- Seiten eines Sammelwerk-Beitrags in Klammern: "(S. 45–67)" -->
+  <macro name="seiten-klammer">
+    <group prefix="(" suffix=")" delimiter=" ">
+      <text value="S."/>
+      <text variable="page"/>
+    </group>
+  </macro>
+
+  <!-- Kein Erscheinungsort: APA 7 hat den Verlagsort bei Büchern gestrichen -->
+  <macro name="verlag">
+    <text variable="publisher"/>
+  </macro>
+
+  <macro name="online-datum">
+    <date variable="issued" delimiter="-" prefix="(" suffix=")">
+      <date-part name="year"/>
+      <date-part name="month" form="numeric-leading-zeros"/>
+      <date-part name="day" form="numeric-leading-zeros"/>
+    </date>
+  </macro>
+
+  <macro name="zugriff">
+    <date variable="accessed" delimiter="-" prefix="[Zugriff " suffix="]">
+      <date-part name="year"/>
+      <date-part name="month" form="numeric-leading-zeros"/>
+      <date-part name="day" form="numeric-leading-zeros"/>
+    </date>
+  </macro>
+
+  <!-- DOI (bevorzugt) oder URL, an das Ende jedes Eintrags angehängt -->
+  <macro name="doi-oder-url">
+    <choose>
+      <if variable="DOI">
+        <text variable="DOI" prefix="https://doi.org/"/>
+      </if>
+      <else-if variable="URL">
+        <text variable="URL"/>
+      </else-if>
+    </choose>
+  </macro>
+
+  <!-- Kurzbeleg: (Theisen, 2021, S. 155) / (Mayer & Schmidt, 2019) -->
+  <citation disambiguate-add-year-suffix="true">
+    <layout delimiter="; ">
+      <group delimiter=", ">
+        <text macro="autoren-kurz"/>
+        <text macro="jahr"/>
+        <text variable="locator"/>
+      </group>
+    </layout>
+  </citation>
+
+  <!-- Literaturverzeichnis: alphabetisch nach Verfasser, keine gesonderte
+       Sortierung von Internetquellen ans Ende (keine APA-Vorgabe) -->
+  <bibliography hanging-indent="true" entry-spacing="1" line-spacing="1">
+    <sort>
+      <key macro="autoren-voll"/>
+      <key variable="issued" sort="ascending"/>
+    </sort>
+    <layout>
+      <group delimiter=" ">
+        <group delimiter=" ">
+          <text macro="autoren-voll"/>
+          <text macro="jahr" prefix="(" suffix=")."/>
+        </group>
+        <choose>
+          <!-- Aufsätze in Sammelwerken, Kommentaren, Festschriften -->
+          <if type="chapter paper-conference entry-encyclopedia entry-dictionary" match="any">
+            <group delimiter=" ">
+              <text variable="title" suffix="."/>
+              <group delimiter=" " suffix=".">
+                <text value="in:"/>
+                <group delimiter=", ">
+                  <text macro="herausgeber"/>
+                  <group delimiter=" ">
+                    <text variable="container-title" font-style="italic"/>
+                    <text macro="seiten-klammer"/>
+                  </group>
+                </group>
+              </group>
+              <text macro="verlag" suffix="."/>
+            </group>
+          </if>
+          <!-- Zeitschriften- und Zeitungsartikel -->
+          <else-if type="article-journal article-magazine article-newspaper" match="any">
+            <group delimiter=" ">
+              <text variable="title" suffix="."/>
+              <group delimiter=" " suffix=".">
+                <text value="in:"/>
+                <group delimiter=", ">
+                  <text variable="container-title" font-style="italic"/>
+                  <group>
+                    <number variable="volume" font-style="italic"/>
+                    <text variable="issue" prefix="(" suffix=")"/>
+                  </group>
+                  <text variable="page"/>
+                </group>
+              </group>
+            </group>
+          </else-if>
+          <!-- Internetquellen -->
+          <else-if type="webpage post-weblog post" match="any">
+            <group delimiter=" " suffix=".">
+              <text variable="title" font-style="italic"/>
+              <text macro="online-datum"/>
+              <text macro="zugriff"/>
+            </group>
+          </else-if>
+          <!-- Hochschulschriften -->
+          <else-if type="thesis report" match="any">
+            <group delimiter=" ">
+              <group delimiter=" " suffix=".">
+                <text variable="title" font-style="italic"/>
+                <text variable="genre" prefix="[" suffix="]"/>
+              </group>
+              <text macro="verlag" suffix="."/>
+            </group>
+          </else-if>
+          <!-- Monographien und Sammelwerke -->
+          <else>
+            <group delimiter=" ">
+              <group delimiter=" " suffix=".">
+                <text variable="title" font-style="italic"/>
+                <text macro="auflage-klammer"/>
+              </group>
+              <text macro="verlag" suffix="."/>
+            </group>
+          </else>
+        </choose>
+        <text macro="doi-oder-url"/>
+      </group>
+    </layout>
+  </bibliography>
+</style>

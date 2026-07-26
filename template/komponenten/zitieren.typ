@@ -12,6 +12,12 @@
 //       indirekt:  (vgl. Mayer, 2019, S. 438)
 //       direkt:    (Mayer, 2019, S. 438)
 //
+//   "apa": Kurzbeleg in Klammern im Fließtext nach APA 7 (zusätzliche Option,
+//          NICHT Teil des Leitfadens, der nur Chicago/Harvard zulässt – siehe
+//          template/csl/fom-apa.csl). Verhält sich wie "harvard" (im Text):
+//       indirekt:  (vgl. Mayer, 2019, S. 438)
+//       direkt:    (Mayer, 2019, S. 438)
+//
 // Verwendung im Text:
 //   #vgl(<mayer2019>, seite: "438")    -> indirektes Zitat
 //   #zit(<mayer2019>, seite: "438")    -> direktes (wörtliches) Zitat
@@ -22,7 +28,7 @@
 
 // Wird vom Template beim Dokumentstart aufgerufen.
 #let zitierweise-setze(stil) = {
-  assert(stil in ("chicago", "harvard"), message: "zitierweise muss 'chicago' oder 'harvard' sein.")
+  assert(stil in ("chicago", "harvard", "apa"), message: "zitierweise muss 'chicago', 'harvard' oder 'apa' sein.")
   _zitierweise.update(stil)
 }
 
