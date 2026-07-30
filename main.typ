@@ -89,6 +89,12 @@
       nutzung: "Korrektur der Rechtschreibung im KI-Hilfsmittelverzeichnis",
       teile: "Gesamt",
     ),
+    (
+      tool: "Claude Code",
+      version: "Opus 5",
+      nutzung: "Korrektur von Rechtschreibung, Zeichensetzung und Groß- und Kleinschreibung; Einfügen von Querverweisen auf die Abbildung des Viable System Model",
+      teile: "Kapitel 2 und 3",
+    ),
   ),
 )
 
