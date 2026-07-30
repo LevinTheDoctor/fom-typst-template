@@ -14,7 +14,7 @@
   titel: [Inwiefern sind Konzepte, die bei Cybersyn zur Verwaltung einer Wirtschaft angewendet wurden, auf moderne Monitoring- und Decision-Support-System-Kontexte übertragbar?],
   autor: "Levin Rüßmann",
   typ: "Seminararbeit", // "Master-Thesis", "Seminararbeit", "Hausarbeit"
-  studiengang: "Bachlor of Science Informatik",
+  studiengang: "Bachelor of Science Informatik",
   erstgutachter: "Prof. Dr. Peter Vatter", // bei Seminararbeiten: Betreuer(in)
   matrikelnummer: "838791",
   abgabedatum: "31.8.2026", // Zeichenkette oder datetime(...)
@@ -56,7 +56,7 @@
     (
       tool: "Claude Webseite",
       version: "Opus 4.8",
-      nutzung: "Rechtschreibung: Groß- und Kleinschreibung, sowie Punkt- und Kommasetzung",
+      nutzung: "Rechtschreibung: Groß- und Kleinschreibung sowie Punkt- und Kommasetzung",
       teile: "Gesamt",
     ),
     (
@@ -68,19 +68,19 @@
     (
       tool: "Google Scholar Labs",
       version: "Genutzt am 18. Juli 2026",
-      nutzung: "Suche von Quellen: Definition Decision Support Systeme und moderne Kybernetik Definition",
+      nutzung: "Suche von Quellen: Definition Decision-Support-Systeme und moderne Kybernetik-Definition",
       teile: "Kapitel 2",
     ),
     (
       tool: "Gemini",
       version: "Gemini 3.5 Flash",
-      nutzung: "Korrektur von Rechtschreibung, Bewertung ob die Ausdrucksweise Formulierung wissenschaftlich sind oder zu umgangssprachlich",
+      nutzung: "Korrektur von Rechtschreibung, Bewertung, ob Ausdrucksweise und Formulierung wissenschaftlich sind oder zu umgangssprachlich",
       teile: "Gesamt",
     ),
     (
-      tool: "Deepl",
-      version: "Deepl Translate",
-      nutzung: "Übersetzung von unbekannten Wörtern von Quellen.",
+      tool: "DeepL",
+      version: "DeepL Translate",
+      nutzung: "Übersetzung von unbekannten Wörtern aus Quellen",
       teile: "Gesamt",
     ),
     (
