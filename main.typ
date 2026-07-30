@@ -14,7 +14,7 @@
   titel: [Inwiefern sind Konzepte, die bei Cybersyn zur Verwaltung einer Wirtschaft angewendet wurden, auf moderne Monitoring- und Decision-Support-System-Kontexte übertragbar?],
   autor: "Levin Rüßmann",
   typ: "Seminararbeit", // "Master-Thesis", "Seminararbeit", "Hausarbeit"
-  studiengang: "Informatik",
+  studiengang: "Bachlor of Science Informatik",
   erstgutachter: "Prof. Dr. Peter Vatter", // bei Seminararbeiten: Betreuer(in)
   matrikelnummer: "838791",
   abgabedatum: "31.8.2026", // Zeichenkette oder datetime(...)

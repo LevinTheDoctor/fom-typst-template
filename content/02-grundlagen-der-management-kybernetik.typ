@@ -32,5 +32,5 @@ Wie in @abb-vsm zu erkennen, besteht das Modell aus drei großen Teilen und fün
     [Die Metasysteme erhalten Daten aus den unterliegenden Systemen und versuchen, darauf Entscheidungen zu treffen. System 3 hat dabei die Aufgabe, System 1 sowie die Informationen aus System 2 zu überwachen. System 4 ist dabei der Punkt, an dem System 5 in die Entscheidungen der unterliegenden Systeme eingreifen kann, indem es System 5 gefilterte Informationen aus den unterliegenden Systemen sowie der Umwelt und statistische Prognosen für die Zukunft bietet. System 5 soll dabei keine strikten Vorgaben geben, sondern Informationen vergleichen und Informationskonflikte lösen],
   ),
   titel: [Aufgaben der Bestandteile des VSM-Modell],
-  quelle: [Eigene Darstellung basierend auf der VSM Grafik und Brain Of The Firm #zitat(<brain-of-the-firm>, seite: 130)  und Dem Buch Cybernetic Revolutionaries #zitat(<medinaCyberneticRevolutinaries2014>, seite: 46) ],
+  quelle: [Eigene Darstellung basierend auf der VSM Grafik und Brain Of The Firm #zitat(<brain-of-the-firm>, seite: 130)  und Dem Buch Cybernetic Revolutionaries #zitat(<medinaCyberneticRevolutinaries2014>, seite: 46)],
 ) <tab-vsm-aufbau>
