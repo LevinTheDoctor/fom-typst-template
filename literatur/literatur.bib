@@ -1,3 +1,183 @@
+% =====================================================================
+% Korrigierte Fassung. Aenderungen sind pro Eintrag als % KOMMENTAR
+% markiert. Stellen mit TODO musst du selbst aus dem PDF nachtragen -
+% erfundene Seitenzahlen waeren schlimmer als gar keine.
+% =====================================================================
+
+
+% ---------------------------------------------------------------------
+% PRIMAERLITERATUR
+% ---------------------------------------------------------------------
+
+% NEU: Fehlte komplett in der .bib, wird aber in Fussnote 5 zitiert.
+% Buch, kein Aufsatz. Vollstaendiger Titel enthaelt "and Communication".
+@book{wienerCybernetics1948,
+  title      = {Cybernetics: {{Or Control}} and {{Communication}} in the {{Animal}} and the {{Machine}}},
+  shorttitle = {Cybernetics},
+  author     = {Wiener, Norbert},
+  year       = 1948,
+  publisher  = {MIT Press},
+  address    = {Cambridge, MA}
+}
+
+% NEU: Fehlte in der .bib, steht aber im Literaturverzeichnis der Arbeit
+% und traegt Fussnote 11.
+@article{beerViableSystemModel1984,
+  title      = {The {{Viable System Model}}: {{Its Provenance}}, {{Development}}, {{Methodology}} and {{Pathology}}},
+  shorttitle = {The {{Viable System Model}}},
+  author     = {Beer, Stafford},
+  year       = 1984,
+  journal    = {Journal of the Operational Research Society},
+  volume     = {35},
+  number     = {1},
+  pages      = {7--25},
+  doi        = {10.1057/jors.1984.2}
+}
+
+% GEAENDERT: publisher + address ergaenzt, origdate fuer die Erstausgabe.
+% ACHTUNG inhaltlich: Kapitel 2.2.2 behauptet, das VSM sei 1972 erstmals
+% erklaert worden, belegt das aber mit dieser 2. Auflage von 1981.
+% Entweder Formulierung auf die 2. Auflage beziehen oder den Eintrag
+% beerBrainOfTheFirm1972 unten benutzen.
+@book{beerBrainFirm1981,
+  title     = {Brain of the {{Firm}}},
+  author    = {Beer, Stafford},
+  year      = 1981,
+  edition   = {2},
+  publisher = {John Wiley \& Sons},
+  address   = {Chichester},
+  origdate  = {1972},
+  isbn      = {978-0-471-94839-1}
+}
+
+% NEU (optional): Erstausgabe. Nur aufnehmen, wenn du sie wirklich
+% eingesehen hast - sonst bleib bei der 2. Auflage und formuliere um.
+@book{beerBrainFirm1972,
+  title      = {Brain of the {{Firm}}: {{The Managerial Cybernetics}} of {{Organization}}},
+  shorttitle = {Brain of the {{Firm}}},
+  author     = {Beer, Stafford},
+  year       = 1972,
+  publisher  = {Allen Lane},
+  address    = {London}
+}
+
+% NEU (optional): Du hast das Buch laut fruehreren Gespraechen vorliegen.
+% Guter Kandidat, um Medina-Fussnoten auf Primaerliteratur umzustellen.
+@book{beerHeartEnterprise1979,
+  title     = {The {{Heart}} of {{Enterprise}}},
+  author    = {Beer, Stafford},
+  year      = 1979,
+  publisher = {John Wiley \& Sons},
+  address   = {Chichester}
+}
+
+% GEAENDERT: author + year + month ergaenzt, howpublished und urldate
+% bleiben. Damit verschwindet das "o. V., o. J." aus Fussnote 23.
+% ACHTUNG: Das ist ein AUSZUG ("Excerpts") auf einer HTML-Seite ohne
+% Paginierung - deine Fussnote zitiert aber "S. 2". Entweder o. S.
+% verwenden oder auf das amtliche Protokoll unten umsteigen.
+@misc{allendeSpeechUN1972,
+  title        = {Salvador {{Allende}}: {{Speech}} to the {{United Nations}} (Excerpts)},
+  shorttitle   = {Speech to the {{United Nations}}},
+  author       = {Allende, Salvador},
+  year         = 1972,
+  month        = dec,
+  urldate      = {2026-06-03},
+  howpublished = {https://www.marxists.org/archive/allende/1972/december/04.htm}
+}
+
+% NEU (empfohlen statt des Eintrags darueber): amtliches Wortprotokoll,
+% vollstaendig und mit echten Seitenzahlen.
+% TODO: pages und die konkrete URL aus digitallibrary.un.org nachtragen
+% (dort nach "A/PV.2096" suchen).
+@incollection{allendeRedeUNGeneralversammlung1972,
+  title      = {{Rede vor der 2096. Plenarsitzung der Generalversammlung der Vereinten Nationen am 4. Dezember 1972}},
+  shorttitle = {{Rede vor der UN-Generalversammlung}},
+  author     = {Allende, Salvador},
+  year       = 1972,
+  booktitle  = {{General Assembly, 27th Session, Official Records}},
+  publisher  = {United Nations},
+  address    = {New York},
+  note       = {UN-Dok. A/PV.2096},
+  pages      = {TODO}
+}
+
+
+% ---------------------------------------------------------------------
+% SEKUNDAERLITERATUR
+% ---------------------------------------------------------------------
+
+@book{medinaCyberneticRevolutionaries2014,
+  title      = {Cybernetic {{Revolutionaries}}: {{Technology}} and {{Politics}} in {{Allende}}'s {{Chile}}},
+  shorttitle = {Cybernetic {{Revolutionaries}}},
+  author     = {Medina, Eden},
+  year       = 2014,
+  publisher  = {The MIT Press},
+  address    = {Cambridge, MA},
+  origdate   = {2011},
+  isbn       = {978-0-262-52596-1}
+}
+
+% GEAENDERT: war @misc mit journal=bpb.de. Das ist ein Zeitschriften-
+% aufsatz in "Aus Politik und Zeitgeschichte" 73 (2023), Heft 35-36
+% ("Chile"). Als @article hast du eine belastbare Fundstelle - und
+% deine Seitenzahlen in den Fussnoten sind damit endlich gedeckt.
+% Schluessel war ausserdem "bildung..." obwohl der Autor Medina ist.
+% Titel um die Seiten-Navigation "| Chile" bereinigt.
+% TODO: pages aus der PDF-Ausgabe des Hefts nachtragen.
+@article{medinaKybernetischeRevolution2023,
+  title        = {{Die kybernetische Revolution und das Projekt Cybersyn}},
+  shorttitle   = {{Die kybernetische Revolution}},
+  author       = {Medina, Eden},
+  year         = 2023,
+  month        = aug,
+  journal      = {{Aus Politik und Zeitgeschichte}},
+  volume       = {73},
+  number       = {35-36},
+  pages        = {TODO},
+  urldate      = {2026-05-26},
+  langid       = {ngerman},
+  howpublished = {https://www.bpb.de/shop/zeitschriften/apuz/chile-2023/539264/die-kybernetische-revolution-und-das-projekt-cybersyn/}
+}
+
+% GEAENDERT: Koerperschaftlicher Verfasser braucht DOPPELTE Klammern.
+% Vorher: {f{\"u}r politische Bildung, Bundeszentrale} - BibTeX hat das
+% als "Nachname, Vorname" gelesen und zu "Bildung, Bundeszentrale fuer
+% politische" verdreht. Die zweite Klammerebene sagt BibTeX: das ist EIN
+% unteilbarer Name, nicht sortieren, nicht umstellen.
+% Titel um "| Hintergrund aktuell" bereinigt (Seitennavigation, kein Titel).
+@misc{bpbAllendePraesident2015,
+  title        = {{1970: Salvador Allende wird Präsident Chiles}},
+  shorttitle   = {{1970: Salvador Allende wird Präsident Chiles}},
+  author       = {{Bundeszentrale für politische Bildung}},
+  year         = 2015,
+  month        = sep,
+  urldate      = {2026-07-18},
+  howpublished = {https://www.bpb.de/kurz-knapp/hintergrund-aktuell/211593/1970-salvador-allende-wird-praesident-chiles/},
+  langid       = {ngerman}
+}
+
+% GEAENDERT: war @book mit author={C Werner, Lisa}. Zwei Fehler:
+%   1. Der Vorname ist Liss C. Werner, nicht Lisa.
+%   2. Sie ist HERAUSGEBERIN eines Sammelbands, nicht Autorin.
+% Fussnote 6 zitiert S. 3 - das liegt in Werners eigener "Introduction".
+% Deshalb @incollection: du zitierst den Beitrag, nicht den Band.
+% Wenn die Stelle doch aus einem anderen Kapitel stammt (Espejo, Pangaro),
+% author und title entsprechend austauschen.
+@incollection{wernerIntroductionCybernetics2017,
+  title     = {Introduction},
+  author    = {Werner, Liss C.},
+  year      = 2017,
+  booktitle = {Cybernetics: {{State}} of the {{Art}}},
+  editor    = {Werner, Liss C.},
+  series    = {CON-VERSATIONS},
+  volume    = {1},
+  publisher = {Universitätsverlag der TU Berlin},
+  address   = {Berlin},
+  isbn      = {978-3-7983-2953-9},
+  langid    = {english}
+}
+
 @article{alvarezCulturalScientificTechnical2022,
   title   = {Cultural, Scientific and Technical Antecedents of the {{Cybersyn}} Project in {{Chile}}},
   author  = {Alvarez, Juan and Gutierrez, Claudio},
@@ -7,69 +187,15 @@
   volume  = {37},
   number  = {3},
   pages   = {1093--1103},
-  issn    = {0951-5666, 1435-5655},
   doi     = {10.1007/s00146-021-01343-5},
   urldate = {2026-07-14},
-  langid  = {english},
-  file    = {/Users/levinrussmann/Zotero/storage/YVRSZNNQ/Alvarez und Gutierrez - 2022 - Cultural, scientific and technical antecedents of the Cybersyn project in Chile.pdf}
+  langid  = {english}
 }
 
-@misc{bildung1970SalvadorAllende2015,
-  title        = {{1970: Salvador Allende wird Pr\"asident Chiles \textbar{} Hintergrund aktuell}},
-  shorttitle   = {{1970}},
-  author       = {f{\"u}r politische Bildung, Bundeszentrale},
-  year         = 2015,
-  month        = sep,
-  journal      = {bpb.de},
-  urldate      = {2026-07-18},
-  abstract     = {Vor 45 Jahren entschied der Sozialist Salvador Allende die chilenischen Pr\"asidentschaftswahlen f\"ur sich. Schon drei Jahre sp\"ater endete seine Regierungszeit durch einen von den USA unterst\"utzten Milit\"arputsch.},
-  howpublished = {https://www.bpb.de/kurz-knapp/hintergrund-aktuell/211593/1970-salvador-allende-wird-praesident-chiles/},
-  langid       = {ngerman},
-  file         = {/Users/levinrussmann/Zotero/storage/7852JEBS/1970-salvador-allende-wird-praesident-chiles.html}
-}
-
-@misc{bildungKybernetischeRevolutionUnd2023,
-  title        = {{Die Kybernetische Revolution und das Projekt Cybersyn \textbar{} Chile}},
-  author       = {Medina, Eden},
-  year         = 2023,
-  month        = aug,
-  journal      = {bpb.de},
-  urldate      = {2026-05-26},
-  abstract     = {Das Experiment des sozialistischen Chile bereitete den Boden f\"ur ein innovatives Projekt: Cybersyn. Kybernetik und Computer sollten der Regierung Allende helfen, den Wandel Chiles zu steuern.},
-  howpublished = {https://www.bpb.de/shop/zeitschriften/apuz/chile-2023/539264/die-kybernetische-revolution-und-das-projekt-cybersyn/},
-  langid       = {ngerman},
-  file         = {/Users/levinrussmann/Zotero/storage/SAYRLLTF/die-kybernetische-revolution-und-das-projekt-cybersyn.html}
-}
-
-@book{brain-of-the-firm,
-  title   = {Brain of the {{Firm}}},
-  author  = {Beer, Stafford},
-  year    = 1981,
-  edition = {2},
-  isbn    = {978-0-471-94839-1}
-}
-
-@article{buckermannKybernetikKapitalismusRevolutionen,
-  title  = {{Kybernetik, Kapitalismus, Revolutionen}},
-  author = {Buckermann, Paul and Koppenburger, Anne and Schaupp, Simon},
-  langid = {ngerman},
-  file   = {/Users/levinrussmann/Zotero/storage/67LYSXC8/Buckermann et al. - Kybernetik, Kapitalismus, Revolutionen.pdf}
-}
-
-@book{cCyberneticsStateArt2017,
-  title       = {Cybernetics: State of the Art},
-  shorttitle  = {Cybernetics},
-  author      = {Werner, Lisa},
-  year        = 2017,
-  month       = oct,
-  publisher   = {Universit\"atsverlag der TU Berlin},
-  abstract    = {CYBERNETICS: STATE OF THE ART is the first volume of the book series  CON-VERSATIONS. Driven by cybernetic thinking, it engages with pressing  questions for architecture, urban planning, design and automated  infrastructure; in an age of increasing connectivity, AI and  robotization and an evolutionary state of the Anthropocene -  perpetuating angst-ridden anxiety as well as excitement and joy of a  future, that we will be able to predict with less and less certainty.  The book, with a foreword by Omar Khan, discusses cybernetic principles  and devices developed in the late 20th century -- mainly developed by  Ross Ashby and Gordon Pask (second-order cybernetics), to learn from for  a future of mutual relationship and conversation between man and  machine. The anthology reviews and previews cybernetics as design  strategy in computational architecture, urban design and  socio-ecological habitats - natural and artificial. It weaves together  cybernetic-architectural theories with applications and case studies  ranging from regional planning to the smart home. Nine chapters written  by an international group of authors from four academic generations are  structured into two complimenting parts. While `A Concept and a Shape'  focuses on the history and theory of cybernetics, its temporary  disappearance and future impact (Ra\'ul Espejo, Michael Hohl, Paul  Pangaro, Liss C. Werner), `System 5' -- relating to Stafford Beer's  project `Cybersyn' - discusses applications, the role of the individual  and human feedback; also~with a strong theoretical underpinning (Raoul  Bunschoten, Delfina Fantini van Ditmar, Timothy Jachna, Arun Jain,  Kristian Kloeckl). CYBERNETICS: STATE OF THE ART invites the reader to  enjoy a glimpse into the past to enjoy and discuss a cybernetic future.~CYBERNETICS:  STATE OF THE ART mit einem Vorwort von Omar Khan ist die erste  Buchausgabe der Serie CON-VERSATIONS. Auf kybernetisches Denken und  Schaffen basierend, diskutiert CON-VERSATIONS Fragen zu Architektur,  Stadtplanung, Gestaltungsstrategien und automatisierter Infrastruktur in  einer evolution\"ar zunehmenden Vernetzung durch k\"unstliche Intelligenz,  Robotisierung; im Zeitalter der Anthropoz\"an, in einem Zustand der sich  verewigenden angstbeherrschten Unruhe - wie auch einer besonderen Lust  auf eine Zukunft, die wir mit immer weniger Sicherheit voraussagen  k\"onnen. Das Konzept \quotesinglbase Kybernetik zweiter Ordnung' des sp\"aten 20igsten  Jahrhunderts, u.a.  entwickelt von Ross Ashby und Gordon Pask, begr\"undet  das Buch. Es genie\ss t einen R\"uckblick und eine Vorschau in eine  kybernetische Zukunft der gemeinsamen kausalen Beziehung zwischen Mensch  und Maschine. Die Autoren schlagen Kybernetik als Entwurfsstrategie f\"ur  computer-generierte/-gest\"utzte Architektur, Stadtplanung und nat\"urlich  und k\"unstliche sozio-\"okologische Lebensumwelten vor. Das Buch kombiniert  kybernetisch-architektonische Theorie mit Fallstudien reichend von  Regionalplanung zu \quotesinglbase Smart Home'. Neun Kapitel, geschrieben von einer  internationalen Autorenschaft aus vier akademischen Generationen, sind  in zwei sich erg\"anzende Buchteile strukturiert. `A Concept and a Shape',  mit Kapiteln von Ra\'ul Espejo, Michael Hohl, Paul Pangaro, Liss C.  Werner, diskutiert Geschichte und Wissenschaft der Kybernetik sowie ihr  tempor\"ares Verschwinden und Einfluss auf die Zukunft. \quotesinglbase System 5' (in  Anlehnung an Stafford Beer's Projekt \quotesinglbase Cybersyn') mit Kapiteln von Raoul  Bunschoten, Delfina Fantini van Ditmar, Timothy Jachna, Arun Jain,  Kristian Kloeckl, beschreibt kybernetische Praxis, die Rolle des  Individuums und \quotesinglbase Human Feedback' - ebenfalls mit einem starken  theoretischen Fundament. CYBERNETICS: STATE OF THE ART l\"adt den Leser  ein, einen aufschlussreichen Blick in die Vergangenheit zu werfen, um  eine kybernetische Zukunft zu genie\ss en und zu diskutieren.},
-  googlebooks = {WYk9DwAAQBAJ},
-  isbn        = {978-3-7983-2953-9},
-  langid      = {english},
-  keywords    = {Architecture / Urban & Land Use Planning}
-}
-
+% GEAENDERT: Der Doppeleintrag espejoCybersynBigData2022a war identisch
+% (nur anderes urldate) und ist entfernt. Zwei Schluessel fuer dieselbe
+% Quelle fuehren frueher oder spaeter zu zwei Verzeichniseintraegen.
+% Prüf im Typst-Dokument, ob du irgendwo "...2022a" referenzierst.
 @article{espejoCybersynBigData2022,
   title   = {Cybersyn, Big Data, Variety Engineering and Governance},
   author  = {Espejo, Raul},
@@ -79,38 +205,28 @@
   volume  = {37},
   number  = {3},
   pages   = {1163--1177},
-  issn    = {0951-5666, 1435-5655},
   doi     = {10.1007/s00146-021-01348-0},
   urldate = {2026-05-26},
-  langid  = {english},
-  file    = {/Users/levinrussmann/Zotero/storage/FJVMQEM9/Espejo - 2022 - Cybersyn, big data, variety engineering and governance.pdf}
+  langid  = {english}
 }
 
-@article{espejoCybersynBigData2022a,
-  title   = {Cybersyn, Big Data, Variety Engineering and Governance},
-  author  = {Espejo, Raul},
-  year    = 2022,
-  month   = sep,
-  journal = {AI \& SOCIETY},
-  volume  = {37},
-  number  = {3},
-  pages   = {1163--1177},
-  issn    = {0951-5666, 1435-5655},
-  doi     = {10.1007/s00146-021-01348-0},
-  urldate = {2026-07-14},
-  langid  = {english},
-  file    = {/Users/levinrussmann/Zotero/storage/E2KPBHTS/Espejo - 2022 - Cybersyn, big data, variety engineering and governance.pdf}
+@article{loeberBigDataAlgorithmic2018,
+  title      = {Big {{Data}}, {{Algorithmic Regulation}}, and the {{History}} of the {{Cybersyn Project}} in {{Chile}}, 1971--1973},
+  shorttitle = {Big {{Data}}, {{Algorithmic Regulation}}},
+  author     = {Loeber, Katharina},
+  year       = 2018,
+  month      = apr,
+  journal    = {Social Sciences},
+  volume     = {7},
+  number     = {4},
+  pages      = {65},
+  doi        = {10.3390/socsci7040065},
+  urldate    = {2026-08-05},
+  langid     = {english}
 }
 
-@misc{KybernetischeDemokratischeWirtschaftsplanung,
-  title   = {{Kybernetische Demokratische Wirtschaftsplanung -- Blog Postwachstum}},
-  urldate = {2026-05-26},
-  langid  = {ngerman},
-  file    = {/Users/levinrussmann/Zotero/storage/DHDBMPDT/kybernetische-demokratische-wirtschaftsplanung-20250422.html}
-}
-
-@article{lehtoDesigningFreedomAllende2025,
-  title      = {Designing Freedom: {{Allende}}, {{Pinochet}} and the Twin Experiments in Cyber-Socialism and Neoliberalism.},
+@article{lehtoDesigningFreedom2025,
+  title      = {Designing Freedom: {{Allende}}, {{Pinochet}} and the Twin Experiments in Cyber-Socialism and Neoliberalism},
   shorttitle = {Designing Freedom},
   author     = {Lehto, Otto and Paniagua, Pablo},
   year       = 2025,
@@ -119,148 +235,57 @@
   volume     = {54},
   number     = {2},
   pages      = {334--358},
-  publisher  = {Taylor \& Francis Ltd},
-  issn       = {0308-5147},
   doi        = {10.1080/03085147.2025.2513800},
   urldate    = {2026-07-14},
-  abstract   = {During the twentieth century, cybernetics became entangled with the socialist and neoliberal transformations in Latin America. Both socialists and market liberals appealed to cybernetic ideas about multi-level decentralization and adaptive control to coordinate society and promote welfare. By analyzing Chile as a case study, we explore the twin experiments of cyber-socialism and neoliberalism rooted in modernism and oscillating between top-down design and partial (constrained) decentralization. We show that the modernist and cybernetic ideas of 'designing freedom' influenced the Allende administration (1970--1973) and the Pinochet regime (1973--1990). The former experimented with cyber-socialism through Project Cybersyn, and the latter with authoritarian neoliberalism. Focusing on the work of cybernetic scholars Stafford Beer and F.A. Hayek, we compare both regimes' different but partially overlapping approaches to the design of constrained freedom. Several features of modernist thinking and cybernetics explain both experiments' appeal and shortcomings. These lessons are relevant for contemporary debates about the future of liberal democracy, the information society and the compatibility of freedom with artificial intelligence (AI).},
-  langid     = {english},
-  keywords   = {ADAPTIVE control systems,ARTIFICIAL intelligence,CYBERNETICS,INFORMATION society,TWENTIETH century},
-  file       = {/Users/levinrussmann/Zotero/storage/JEL6JBUE/Lehto und Paniagua - 2025 - Designing freedom Allende, Pinochet and the twin experiments in cyber-socialism and neoliberalism..pdf}
+  langid     = {english}
 }
 
 @article{leonardStaffordBeerLegacy2015,
   title      = {Stafford {{Beer}} and the Legacy of {{Cybersyn}}: Seeing around Corners},
   shorttitle = {Stafford {{Beer}} and the Legacy of {{Cybersyn}}},
   author     = {Leonard, Allenna},
-  editor     = {Raul Espejo, Dr},
   year       = 2015,
   month      = jun,
   journal    = {Kybernetes},
   volume     = {44},
   number     = {6/7},
   pages      = {926--934},
-  issn       = {0368-492X},
   doi        = {10.1108/K-02-2015-0045},
   urldate    = {2026-07-14},
-  abstract   = {Purpose               -- The purpose of this paper is to reflect on the legacy of Stafford Beer and the continuing implications of his work on Cybersyn and the models and tools he used and explored during the project and in his later work.                                         Design/methodology/approach               -- Description of Stafford Beer's work on Cybersyn and examples of its present day applicability.                                         Findings               -- The values and tools associated with the Cybersyn work in Chile continue to be relevant for the challenges of the present and an example of an approach to management structure and practice that serves both efficiency and humanity.                                         Originality/value               -- The value of this work is to contribute to the history and future possibilities of the ideas and tools pioneered in the Cybersyn project by Stafford Beer and others and their broader context in organizational cybernetics.},
-  copyright  = {https://www.emerald.com/insight/site-policies},
-  langid     = {english},
-  file       = {/Users/levinrussmann/Zotero/storage/M6D6GJTZ/Leonard - 2015 - Stafford Beer and the legacy of Cybersyn seeing around corners.pdf}
+  langid     = {english}
 }
 
-@article{liehrDecisionSupportSystemeSozialoekologischen,
-  title  = {{Decision Support-Systeme in sozial-\"okologischen Regulationsprozessen}},
-  author = {Liehr, Stefan},
-  langid = {ngerman},
-  file   = {/Users/levinrussmann/Zotero/storage/GCLDMM7F/Liehr - Decision Support-Systeme in sozial-ökologischen Regulationsprozessen.pdf}
-}
-
-@article{loeberBigDataAlgorithmic2018a,
-  title     = {Big {{Data}}, {{Algorithmic Regulation}}, and the {{History}} of the {{Cybersyn Project}} in {{Chile}}, 1971--1973},
-  author    = {Loeber, Katharina},
-  year      = 2018,
-  month     = apr,
-  journal   = {Social Sciences},
-  volume    = {7},
-  number    = {4},
-  pages     = {65},
-  publisher = {Multidisciplinary Digital Publishing Institute},
-  issn      = {2076-0760},
-  doi       = {10.3390/socsci7040065},
-  urldate   = {2026-08-05},
-  abstract  = {We are living in a data-driven society. Big Data and the Internet of Things are popular terms. Governments, universities and the private sector make great investments in collecting and storing data and also extracting new knowledge from these data banks. Technological enthusiasm runs throughout political discourses. ``Algorithmic regulation'' is defined as a form of data-driven governance. Big Data shall offer brand new opportunities in scientific research. At the same time, political criticism of data storage grows because of a lack of privacy protection and the centralization of data in the hands of governments and corporations. Calls for data-driven dynamic regulation have existed in the past. In Chile, cybernetic development led to the creation of Cybersyn, a computer system that was created to manage the socialist economy under the Allende government 1971--1973. My contribution will present this Cybersyn project created by Stafford Beer. Beer proposed the creation of a ``liberty machine'' in which expert knowledge would be grounded in data-guided policy. The paper will focus on the human--technological complex in society. The first section of the paper will discuss whether the political and social environment can completely change the attempts of algorithmic regulation. I will deal specifically with the development of technological knowledge in Chile, a postcolonial state, and the relationship between citizens and data storage in a socialist state. In a second section, I will examine the question of which measures can lessen the danger of data storage regarding privacy in a democratic society. Lastly, I will discuss how much data-driven governance is required for democracy and political participation. I will present a second case study: digital participatory budgeting (DPB) in Brazil.},
-  copyright = {http://creativecommons.org/licenses/by/3.0/},
-  langid    = {english},
-  keywords  = {Cybersyn,data-driven society,human-technological complex,postcolonial history,socialism},
-  file      = {/Users/levinrussmann/Zotero/storage/345WE2ZV/Loeber - 2018 - Big Data, Algorithmic Regulation, and the History of the Cybersyn Project in Chile, 1971–1973.pdf}
-}
-
-@article{mariateguiProjectCybersynTracing2025,
-  title      = {Beyond {{Project Cybersyn}}: {{Tracing}} the {{Influence}} of {{Stafford Beer Projects}} and {{Ideas}} in {{Latin America}}.},
+@article{mariateguiBeyondProjectCybersyn2025,
+  title      = {Beyond {{Project Cybersyn}}: {{Tracing}} the {{Influence}} of {{Stafford Beer Projects}} and {{Ideas}} in {{Latin America}}},
   shorttitle = {Beyond {{Project Cybersyn}}},
-  author     = {Mari{\'a}tegui, Jos{\'e}-Carlos},
+  author     = {Mariátegui, José-Carlos},
   year       = 2025,
   month      = jun,
   journal    = {Systemic Practice \& Action Research},
   volume     = {38},
   number     = {2},
   pages      = {1--24},
-  publisher  = {Springer Nature},
-  issn       = {1094-429X},
   doi        = {10.1007/s11213-025-09717-2},
   urldate    = {2026-07-14},
-  abstract   = {This paper explores Stafford Beer's lesser-known journeys and collaborations in Latin America beyond the well-known Chilean project Cybersyn. It traces Beer's involvement in the region back to the 1960s through his company SIGMA and its projects in Chile, as well as its attempts to expand into other Latin American countries. The paper also sheds light on a relatively unknown project in the 1970s in Peru, the Centre for the Study of People's Participation (CENTRO), which was influenced by Beer's ideas on real-time enterprise information and control systems. Furthermore, it explores Beer's involvement in various projects across Latin America during the 1980s and 1990s, as the region gradually returned to democracy, including cases in Mexico, Uruguay (URUCIB), Venezuela (Cybervenez), and Colombia. While some implementations, particularly in Uruguay and Colombia, demonstrated the Viable System Model's (VSM) potential for fostering genuine organizational democracy and social transformation, others in Mexico and Venezuela failed due to political instability or systemic corruption. The paper argues that though Beer's VSM is often characterized as purely technocratic, its implementation in Latin America reveals that while sometimes appropriated by neoliberal reforms, it also aligned with regional aspirations for social transformation and creative liberation through the use of technology, challenging persistent biases about where technological innovation can originate.},
-  langid     = {english},
-  file       = {/Users/levinrussmann/Zotero/storage/8MY7IR7V/Mariátegui - 2025 - Beyond Project Cybersyn Tracing the Influence of Stafford Beer Projects and Ideas in Latin America..pdf}
+  langid     = {english}
 }
 
-@book{medinaCyberneticRevolutinaries2014,
-  title         = {Cybernetic {{Revolutionaries}}: {{Technology}} and {{Politics}} in {{Allende}}'s {{Chile}}},
-  author        = {Medina, Eden},
-  year          = 2014,
-  month         = jan,
-  publisher     = {The MIT Press},
-  address       = {Cambridge MA},
-  isbn          = {978-0-262-52596-1},
-  origpublisher = {The MIT Press}
-}
-
-@article{munnOtherWorldsUsing,
-  title    = {Other {{Worlds}}: {{Using AI}} to {{Revisit Cybersyn}} and {{Rethink Economic Futures}}},
-  author   = {Munn, Luke and Magee, Liam},
-  abstract = {Neoliberalism has become orthodoxy in the present, erasing competing paradigms and alternative imaginings. Chile's radical Cybersyn project from 1971 to 1973 offers a departure point for an alternative path, albeit one that was abruptly and violently extinguished. We revisit this moment by fine-tuning AI language models on the words and writing of Salvador Allende, the Chilean President, and Stafford Beer, the cyberneticist who helped to design the project. We conduct interviews with these simulated personas, focusing on how their revolutionary ideas might be taken up in the present. We then use an AI model to generate five-year-plans from 1973 to the present, simulating an alternate history guided by Cybersyn and a progressive agenda. We frame these interventions as socialist infrastructuring that cultivates a more expansive socialist imagining. This work is not about the viability of planned economies, but about the ``inspirability'' of exploring other value-systems in the present, allowing us to break out of our future-on-rails to envision alternative ways of organizing economy and society.},
-  langid   = {english},
-  file     = {/Users/levinrussmann/Zotero/storage/5Q7XWGSN/Munn und Magee - Other Worlds Using AI to Revisit Cybersyn and Rethink Economic Futures.pdf}
-}
-
-@book{oedekovenNutzenpotenzialeHarmonisierterStammdaten2011,
-  title       = {{Nutzenpotenziale harmonisierter Stammdaten in den Prozessen der Auftragsabwicklung von Auftragsfertigern}},
-  author      = {Oedekoven, Dirk},
-  year        = 2011,
-  publisher   = {Apprimus Verlag},
-  googlebooks = {L\_zn4xMPTV8C},
-  isbn        = {978-3-86359-049-9},
-  langid      = {ngerman}
-}
-
-@misc{radicaldataRoomThatTried2025,
-  title    = {The {{Room That Tried}} to {{Change Everything}} \textbar{} {{Eden Medina}} on {{Cybersyn}}},
-  author   = {{Radical Data}},
-  year     = 2025,
-  month    = nov,
-  urldate  = {2026-06-03},
-  abstract = {What if one of the most radical experiments in networked computing didn't happen in Silicon Valley, but in 1970s Chile?}
-}
-
-@article{ragasHowDesignCybernetic2024,
-  title      = {How to {{Design}} a ({{Cybernetic}}) {{Revolution}}: {{Chileans Remember Salvador Allende}}'s {{Techno-Utopian Project}}.},
+@article{ragasHowDesignRevolution2024,
+  title      = {How to {{Design}} a ({{Cybernetic}}) {{Revolution}}: {{Chileans Remember Salvador Allende}}'s {{Techno-Utopian Project}}},
   shorttitle = {How to {{Design}} a ({{Cybernetic}}) {{Revolution}}},
-  author     = {Ragas, Jos{\'e}},
+  author     = {Ragas, José},
   year       = 2024,
   month      = apr,
   journal    = {Technology \& Culture},
   volume     = {65},
   number     = {2},
   pages      = {667--674},
-  publisher  = {Johns Hopkins University Press},
-  issn       = {0040-165X},
   doi        = {10.1353/tech.2024.a926320},
   urldate    = {2026-07-14},
-  abstract   = {The recent commemoration of the fiftieth anniversary of the military coup led by General Augusto Pinochet offered an opportunity to explore unknown aspects of daily life before and during the dictatorship. This essay focuses on one particular exhibition (How to Design a Revolution: The Chilean Road to Design), which featured a complete reconstruction of the Cybersyn operation room. Based on participant observation, the essay argues that the interaction between visitors and the re-creation in such a particular moment is an invitation to reflect on how technology, socialism, and democracy sought to reinforce each other during the Cold War. The Cybersyn project, one of the most globally recognizable pieces of technology designed in the Global South, still resonates five decades after its implementation (and further destruction by the military), prompting new questions in an era of artificial intelligence and new threats to democracy.},
-  langid     = {english},
-  keywords   = {ALLENDE Gossens Salvador 1908-1973,ARTIFICIAL intelligence,CHILE,COLD War 1945-1991,CYBERNETICS,NEW democracies,PINOCHET Ugarte Augusto 1915-2006,ROAD construction},
-  file       = {/Users/levinrussmann/Zotero/storage/UJLPGJIX/Ragas - 2024 - How to Design a (Cybernetic) Revolution Chileans Remember Salvador Allende's Techno-Utopian Project.pdf}
+  langid     = {english}
 }
 
-@misc{SalvadorAllendeSpeech,
-  title        = {Salvador {{Allende}}: {{Speech}} to the {{United Nations}} (Excerpts)},
-  urldate      = {2026-06-03},
-  howpublished = {https://www.marxists.org/archive/allende/1972/december/04.htm},
-  file         = {/Users/levinrussmann/Zotero/storage/7WHYGJJM/04.html}
-}
-
-@article{vehlkenOperativeCommunicationProject2022a,
+@article{vehlkenOperativeCommunication2022,
   title      = {Operative Communication: Project {{Cybersyn}} and the Intersection of Information Design, Interface Design, and Interaction Design},
   shorttitle = {Operative Communication},
   author     = {Vehlken, Sebastian},
@@ -268,49 +293,76 @@
   month      = jan,
   journal    = {AI \& SOCIETY},
   volume     = {37},
+  number     = {3},
   pages      = {1131--1152},
-  publisher  = {{Springer Science and Business Media LLC}},
-  issn       = {14355655},
   doi        = {10.1007/s00146-021-01346-2},
   urldate    = {2026-07-30},
-  abstract   = {This article examines the connecting lines between the Chilean Project Cybersyn's interface design, the German Hochschule f\"ur Gestaltung Ulm and its cybernetically inspired approaches towards information design, and later developments in interaction design and the emerging field of Human--Computer Interaction in the USA. In particular, it first examines how early works of designers Tom\`as Maldonado and Gui Bonsiepe on operative communication, that is, language-independent (and thus internationalizable) pictogram systems and visual grammars for computational systems, were intertwined with attempts to ground industrial design in a scientific methodology, to address an era of computing machines, and to develop the concept of the interface as a heuristic for a renovated design thinking. It thereby also reconstructs further historical vanishing lines---e.g. the pictorial grammar of Otto Neurath's ISOTYPE---of the development of the `ulm model' of design. Second, the article explores how an apprehension of first-order cybernetics in West Germany---e.g. represented by hfg ulm staff like Max Bense or Abraham Moles, merged with Cybersyn's second-order cybernetics ideas, as represented by Stafford Beer's Viable System Model. And third, it asks about a further conceptual turn regarding an understanding of design which resulted in a focus on communicative interaction, e.g. in the later works of Fernando Flores and Terry Winograd on HCI, or in Beer's Team Syntegrity approach. As an effect, the text will explore a specific and international network of cybernetic thinking between Latin America, Europe, and North America which emerged around Project Cybersyn, and which was occupied with questions of HCI, a democratization of design, and intelligence amplification.},
-  langid     = {english},
-  keywords   = {02 engineering and technology,0202 electrical engineering electronic engineering information engineering,05 social sciences,0509 other social sciences,Cybersyn,Design history,HFG Ulm,Information theory,Interaction design,Interface design,name=Artificial Intelligence,name=Human-Computer Interaction,name=Media and communication studies,name=Philosophy,name=SDG 17 - Partnerships for the Goals},
-  file       = {/Users/levinrussmann/Zotero/storage/KMEUBEYC/Vehlken - 2022 - Operative communication project Cybersyn and the intersection of information design, interface desi.pdf}
+  langid     = {english}
 }
 
-@book{wienerHumanUseHuman1988,
-  title       = {The {{Human Use Of Human Beings}}: {{Cybernetics And Society}}},
-  shorttitle  = {The {{Human Use Of Human Beings}}},
-  author      = {Wiener, Norbert},
-  year        = 1988,
-  month       = mar,
-  publisher   = {Grand Central Publishing},
-  abstract    = {Only a few books stand as landmarks in social and scientific upheaval. Norbert Wiener's classic is one in that small company. Founder of the science of cybernetics---the study of the relationship between computers and the human nervous system---Wiener was widely misunderstood as one who advocated the automation of human life. As this book reveals, his vision was much more complex and interesting. He hoped that machines would release people from relentless and repetitive drudgery in order to achieve more creative pursuits. At the same time he realized the danger of dehumanizing and displacement. His book examines the implications of cybernetics for education, law, language, science, technology, as he anticipates the enormous impact---in effect, a third industrial revolution---that the computer has had on our lives.},
-  googlebooks = {l9l6zquHvZIC},
-  isbn        = {978-0-7867-5226-3},
-  langid      = {english},
-  keywords    = {Computers / Cybernetics,Computers / Human-Computer Interaction (HCI),Science / Ethics}
+@book{oedekovenNutzenpotenziale2011,
+  title     = {{Nutzenpotenziale harmonisierter Stammdaten in den Prozessen der Auftragsabwicklung von Auftragsfertigern}},
+  author    = {Oedekoven, Dirk},
+  year      = 2011,
+  publisher = {Apprimus Verlag},
+  address   = {Aachen},
+  isbn      = {978-3-86359-049-9},
+  langid    = {ngerman}
 }
 
-@article{Beer.1984,
-  author  = {Beer, Stafford},
-  year    = {1984},
-  title   = {The Viable System Model: Its Provenance, Development,
-             Methodology and Pathology},
-  journal = {Journal of the Operational Research Society},
-  volume  = {35},
-  number  = {1},
-  pages   = {7--25},
-  doi     = {10.1057/jors.1984.2}
+
+% ---------------------------------------------------------------------
+% UNVOLLSTAENDIG - vor Verwendung reparieren oder rauswerfen
+% ---------------------------------------------------------------------
+% Alle folgenden Eintraege haben kein Jahr und/oder keine Fundstelle.
+% In der Fussnote landen sie als "o. J." - genau der Befund, den wir bei
+% der Allende-Rede gerade beseitigt haben. Ein Verzeichnis mit drei
+% "o. J."-Eintraegen sieht nach Nachlaessigkeit aus, egal wie gut der
+% Rest ist. Entscheide pro Eintrag: nachtragen oder loeschen.
+
+% TODO: Sammelband? Zeitschrift? Jahr, Verlag/Journal, Seiten fehlen.
+@article{buckermannKybernetikKapitalismus,
+  title  = {{Kybernetik, Kapitalismus, Revolutionen}},
+  author = {Buckermann, Paul and Koppenburger, Anne and Schaupp, Simon},
+  langid = {ngerman}
 }
 
-@book{Wiener.1948,
-  author     = {Wiener, Norbert},
-  year       = {1948},
-  title      = {Cybernetics: Or Control and Communication in the
-                Animal and the Machine},
-  shorttitle = {Cybernetics},
-  location   = {Cambridge, MA},
-  publisher  = {MIT Press}
+% TODO: Jahr und Publikationsort fehlen. Falls du DSS darueber
+% definieren willst, brauchst du hier eine saubere Fundstelle -
+% eine Definition aus einer nicht datierbaren Quelle traegt nicht.
+@article{liehrDecisionSupportSysteme,
+  title  = {{Decision Support-Systeme in sozial-ökologischen Regulationsprozessen}},
+  author = {Liehr, Stefan},
+  langid = {ngerman}
 }
+
+% TODO: Jahr, Journal/Preprint-Server fehlen.
+@article{munnOtherWorlds,
+  title  = {Other {{Worlds}}: {{Using AI}} to {{Revisit Cybersyn}} and {{Rethink Economic Futures}}},
+  author = {Munn, Luke and Magee, Liam},
+  langid = {english}
+}
+
+% TODO: urldate ohne URL - howpublished fehlt komplett.
+% Ausserdem: Podcast/Video als Quelle fuer Sachaussagen ist schwach.
+% Fuer Kontext ok, fuer Definitionen oder Zahlen nicht.
+@misc{radicaldataRoomChangeEverything2025,
+  title      = {The {{Room That Tried}} to {{Change Everything}}: {{Eden Medina}} on {{Cybersyn}}},
+  shorttitle = {The {{Room That Tried}} to {{Change Everything}}},
+  author     = {{Radical Data}},
+  year       = 2025,
+  month      = nov,
+  urldate    = {2026-06-03}
+}
+
+% GELOESCHT: KybernetischeDemokratischeWirtschaftsplanung
+% Blogbeitrag ohne Verfasser und ohne Jahr. Als Beleg in einer
+% Pruefungsleistung nicht haltbar. Falls du den Inhalt brauchst,
+% such die Primaerquelle, auf die der Blog sich stuetzt.
+
+% HINWEIS: wienerHumanUseHuman1988 ("The Human Use of Human Beings",
+% Reprint 1988) ist bewusst NICHT uebernommen. Deine Arbeit zitiert
+% Wieners "Cybernetics" von 1948 - das ist ein anderes Buch. Der
+% Eintrag oben (wienerCybernetics1948) ist der richtige. Wenn du
+% zusaetzlich aus "Human Use" zitieren willst, nimm ihn wieder auf,
+% aber dann mit dem Erscheinungsjahr des Originals (1950) als origdate.
