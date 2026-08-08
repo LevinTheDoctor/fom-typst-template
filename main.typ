@@ -66,6 +66,12 @@
       teile: "Kapitel 2",
     ),
     (
+      tool: "Claude Webseite",
+      version: "Opus 5",
+      nutzung: "Zusammenfassung der Kapitel zum Cybersyn-Projekt aus Stafford Beers Brain of the Firm sowie Herausfiltern der zentralen Aussagen",
+      teile: "Kapitel 2",
+    ),
+    (
       tool: "Google Scholar Labs",
       version: "Genutzt am 18. Juli 2026",
       nutzung: "Suche von Quellen: Definition Decision-Support-Systeme und moderne Kybernetik-Definition",
