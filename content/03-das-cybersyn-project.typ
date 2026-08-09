@@ -26,8 +26,8 @@ Schon im November 1971 gab es ein klares ziel für das Projekt Cybersyn, sie sol
 \ Beer hat bereits das Viable System Model entwickelt und gab den Mitarbeiter*innen an dem Projekt die Manuskripte für #emph()[Brain of the Firm] #vgl(<brain-of-the-firm>, seite: 248)
 Flores war von Beers Modell überzeugt. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 62) Beer hat in seinem buche im noveber zwei bereichte erstellt,der erste bericht heiß #emph()[Cybernetic Notes on The Effective Organisation of the State with Particular Reference to Indutrial Control]. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 77) In deisem wendet Beer das VSM auf den chilenischen staat an.
 #abbildung(
-  align(center, image("../abbildungen/VSM-Rekursion-Beer.png", width: 100%)),
-  titel: [Beers Rekusiver Aufbau Chiles aus dem bericht #emph()[Cybernetic Notes on The Effective Organisation of the State with Particular Reference to Indutrial Control]],
+  align(center, image("../abbildungen/VSM-Rekursion-Beer.png", width: 75%)),
+  titel: [Beers Rekusiver Aufbau Chiles],
   quelle: [Eigene Darstellung in Anlehnung an Beer Auszugen aus dem Bericht #emph()[Cybernetic Notes on The Effective Organisation of the State with Particular Reference to Indutrial Control]  #zitat(<brain-of-the-firm>, seite: 249)],
 )<abb-beer-chile-mappin>
 
