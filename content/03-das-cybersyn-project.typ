@@ -8,7 +8,7 @@ Das Projekt Cybersyn fand von 1971 bis 1973 statt #vgl(<medinaCyberneticRevoluti
 \ Das andere Problem ist für den Start des Cybersyn-Projekts viel relevanter. Nachdem Allendes Regierung die Industrie verstaatlicht hatte, stand sie vor dem Problem, die Unternehmen samt ihrer Mitarbeiter zu steuern. Um diese Probleme zu lösen, kam #emph()[Fernando Flores], der technischer Generaldirektor der CORFO – die chilenische Staatsentwicklungsbehörde #vgl(<medinaCyberneticRevolutinaries2014>, seite: 10) – während Allendes Regierung, auf die Idee, den britischen Kybernetiker #emph()[Stafford Beer] zu kontaktieren. Stafford Beer hat zwolf Jahr zuvor ein Buch über Management-Kybernetik namens #emph()[Cybernetics and Management] geschrieben. Flores hat das Buch gelesen und hatte Hoffnungen, dass die Wirtschaft Chiles durch Kybernetik erleichtert werden könnte. #vgl(<bildungKybernetischeRevolutionUnd2023>, seite: 2)
 \
 #abbildung(
-  align(center, image("../abbildungen/CORFO-Hierachie.svg", width: 100%)),
+  align(center, image("../abbildungen/CORFO-Hierachie2.png", width: 100%)),
   titel: [Hierarchie der Verstaatlichung durch die CORFO vor Cybersyn],
   quelle: [Eigene Darstellung in Anlehnung an Texte aus Cybernetic Revolutionaries #zitat(<medinaCyberneticRevolutinaries2014>, seite: 54)],
 )<abb-hCvCnsy>
@@ -26,7 +26,7 @@ Schon im November 1971 gab es ein klares ziel für das Projekt Cybersyn, sie sol
 \ Beer hat bereits das Viable System Model entwickelt und gab den Mitarbeiter*innen an dem Projekt die Manuskripte für #emph()[Brain of the Firm] #vgl(<brain-of-the-firm>, seite: 248)
 Flores war von Beers Modell überzeugt. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 62) Beer hat in seinem buche im noveber zwei bereichte erstellt,der erste bericht heiß #emph()[Cybernetic Notes on The Effective Organisation of the State with Particular Reference to Indutrial Control]. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 77) In deisem wendet Beer das VSM auf den chilenischen staat an.
 #abbildung(
-  align(center, image("../abbildungen/VSM-Rekursion-Beer.svg", width: 100%)),
+  align(center, image("../abbildungen/VSM-Rekursion-Beer.png", width: 100%)),
   titel: [Beers Rekusiver Aufbau Chiles aus dem bericht #emph()[Cybernetic Notes on The Effective Organisation of the State with Particular Reference to Indutrial Control]],
   quelle: [Eigene Darstellung in Anlehnung an Beer Auszugen aus dem Bericht #emph()[Cybernetic Notes on The Effective Organisation of the State with Particular Reference to Indutrial Control]  #zitat(<brain-of-the-firm>, seite: 249)],
 )<abb-beer-chile-mappin>
