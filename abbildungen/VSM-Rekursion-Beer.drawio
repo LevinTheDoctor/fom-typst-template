@@ -1,0 +1,169 @@
+<mxfile host="65bd71144e">
+    <diagram id="vsm-rekursion" name="VSM-Rekursion-Beer">
+        <mxGraphModel dx="3860" dy="2070" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="2240" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="caption" value="&lt;span style=&quot;font-style: normal;&quot;&gt;&lt;b&gt;VSM-Rekursion nach Beer: Anwendung auf den chilenischen Staat&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=22;fontStyle=2;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="20" width="700" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl0-title" value="Staat" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=32;fontColor=#000000;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="80" width="480" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl0-sys5" value="System 5: Präsident" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=24;fontColor=#000000;fontStyle=0;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="160" width="480" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-lvl0-title-lvl0-sys5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;endFill=0;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl0-title" target="lvl0-sys5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rek-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2.5;endArrow=block;endFill=1;endSize=8;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl0-sys5" target="lvl1-title" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl-rek-0" value="operative Systeme (System 1): Ministerien (Gesundheit, Bildung, Wirtschaft, Industrie*)" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=18;fontColor=#333333;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="228" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl1-title" value="Ministerium: Industrie" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=28;fontColor=#000000;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="330" width="480" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl1-sys5" value="System 5: Wirtschaftsminister" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=24;fontColor=#000000;fontStyle=0;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="410" width="480" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-lvl1-title-lvl1-sys5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;endFill=0;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl1-title" target="lvl1-sys5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rek-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2.5;endArrow=block;endFill=1;endSize=8;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl1-sys5" target="lvl2-title" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl-rek-1" value="operative Systeme (System 1): Wirtschaftssektoren" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=18;fontColor=#333333;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="478" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl2-title" value="Sektor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=28;fontColor=#000000;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="580" width="480" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl2-sys5" value="System 5: Komitee" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=24;fontColor=#000000;fontStyle=0;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="660" width="480" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-lvl2-title-lvl2-sys5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;endFill=0;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl2-title" target="lvl2-sys5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="icon2" value="" style="group;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="665" width="56" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="icon2-l" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="icon2" vertex="1">
+                    <mxGeometry y="10" width="20" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="icon2-r" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="icon2" vertex="1">
+                    <mxGeometry x="36" y="10" width="20" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="icon2-m" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="icon2" vertex="1">
+                    <mxGeometry x="16" width="24" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rek-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2.5;endArrow=block;endFill=1;endSize=8;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl2-sys5" target="lvl3-title" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl-rek-2" value="operative Systeme (System 1): Unternehmen" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=18;fontColor=#333333;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="728" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl3-title" value="Unternehmen" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=28;fontColor=#000000;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="830" width="480" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl3-sys5" value="System 5: Interventor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=24;fontColor=#000000;fontStyle=0;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="910" width="480" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-lvl3-title-lvl3-sys5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;endFill=0;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl3-title" target="lvl3-sys5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="icon3" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="637" y="910" width="42" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rek-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2.5;endArrow=block;endFill=1;endSize=8;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl3-sys5" target="lvl4-title" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl-rek-3" value="operative Systeme (System 1): Betriebe" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=18;fontColor=#333333;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="978" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl4-title" value="Betrieb" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=28;fontColor=#000000;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="1080" width="480" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl4-sys5" value="System 5: Betriebsleiter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=24;fontColor=#000000;fontStyle=0;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="1160" width="480" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-lvl4-title-lvl4-sys5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;endFill=0;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl4-title" target="lvl4-sys5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rek-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2.5;endArrow=block;endFill=1;endSize=8;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl4-sys5" target="lvl5-title" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl-rek-4" value="operative Systeme (System 1): Abteilungen" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=18;fontColor=#333333;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="1228" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl5-title" value="Abteilung" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=28;fontColor=#000000;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="1330" width="480" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl5-sys5" value="System 5: Abteilungsleiter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=24;fontColor=#000000;fontStyle=0;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="1410" width="480" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-lvl5-title-lvl5-sys5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;endFill=0;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl5-title" target="lvl5-sys5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rek-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2.5;endArrow=block;endFill=1;endSize=8;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl5-sys5" target="lvl6-title" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl-rek-5" value="operative Systeme (System 1): Arbeitsgruppen" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=18;fontColor=#333333;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="1478" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl6-title" value="Arbeitsgruppe" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=28;fontColor=#000000;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="1580" width="480" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl6-sys5" value="System 5: Vorarbeiter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;fontSize=24;fontColor=#000000;fontStyle=0;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="1660" width="480" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-lvl6-title-lvl6-sys5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;endFill=0;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl6-title" target="lvl6-sys5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lvl-leaf" value="Arbeiter (elementare Einheit, kein weiteres VSM)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;strokeWidth=2;dashed=1;fontFamily=Times New Roman;fontSize=22;fontColor=#333333;fontStyle=3;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="1830" width="480" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rek-last" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2.5;endArrow=block;endFill=1;endSize=8;jumpStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="lvl6-sys5" target="lvl-leaf" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl-rek-last" value="operative Systeme (System 1): Arbeiter (Individuum)" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;fontSize=18;fontColor=#333333;fontStyle=2;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="1728" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="legende" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="1970" width="840" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-komitee" value="" style="group;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="1995" width="56" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-komitee-l" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="lg-komitee" vertex="1">
+                    <mxGeometry y="10" width="20" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-komitee-r" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="lg-komitee" vertex="1">
+                    <mxGeometry x="36" y="10" width="20" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-komitee-m" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="lg-komitee" vertex="1">
+                    <mxGeometry x="16" width="24" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-komitee-t" value="Komitee — System 5 auf Sektor-Ebene" style="text;html=1;align=left;verticalAlign=middle;fontFamily=Times New Roman;fontSize=20;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="1990" width="500" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-interv" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="158" y="2050" width="42" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-interv-t" value="Interventor — System 5 auf Unternehmens-Ebene" style="text;html=1;align=left;verticalAlign=middle;fontFamily=Times New Roman;fontSize=20;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="2055" width="500" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-linie" style="html=1;strokeColor=#000000;strokeWidth=2.5;endArrow=block;endFill=1;endSize=8;dashed=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="150" y="2135" as="sourcePoint"/>
+                        <mxPoint x="215" y="2135" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lg-text-linie" value="Operative Systeme (System 1) werden zur naechsten Rekursionsebene&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;fontFamily=Times New Roman;fontSize=20;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="2112" width="420" height="46" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -8,12 +8,12 @@ Das Projekt Cybersyn fand von 1971 bis 1973 statt #vgl(<medinaCyberneticRevoluti
 \ Das andere Problem ist für den Start des Cybersyn-Projekts viel relevanter. Nachdem Allendes Regierung die Industrie verstaatlicht hatte, stand sie vor dem Problem, die Unternehmen samt ihrer Mitarbeiter zu steuern. Um diese Probleme zu lösen, kam #emph()[Fernando Flores], der technischer Generaldirektor der CORFO – die chilenische Staatsentwicklungsbehörde #vgl(<medinaCyberneticRevolutinaries2014>, seite: 10) – während Allendes Regierung, auf die Idee, den britischen Kybernetiker #emph()[Stafford Beer] zu kontaktieren. Stafford Beer hat zwolf Jahr zuvor ein Buch über Management-Kybernetik namens #emph()[Cybernetics and Management] geschrieben. Flores hat das Buch gelesen und hatte Hoffnungen, dass die Wirtschaft Chiles durch Kybernetik erleichtert werden könnte. #vgl(<bildungKybernetischeRevolutionUnd2023>, seite: 2)
 \
 #abbildung(
-  align(center, image("../abbildungen/CORFO-Hierachie.png")),
+  align(center, image("../abbildungen/CORFO-Hierachie.svg", width: 100%)),
   titel: [Hierarchie der Verstaatlichung durch die CORFO vor Cybersyn],
-  quelle: [Eigene Darstellung in Anlehnung Texten aus Cybernetic Revolutionaries #zitat(<medinaCyberneticRevolutinaries2014>, seite: 54)],
+  quelle: [Eigene Darstellung in Anlehnung an Texte aus Cybernetic Revolutionaries #zitat(<medinaCyberneticRevolutinaries2014>, seite: 54)],
 )<abb-hCvCnsy>
 
-Vor dem Kontakt zu Beer hatte die CORFO bereits Bemühung gemacht die verstaatlichen Firmen zu steuern. Wie in der Abbildung @abb-hCvCnsy zu sehen wurde die Wirtschaft in 4 Zweige unterteilt
+Vor dem Kontakt zu Beer hatte die CORFO bereits Bemühung gemacht die verstaatlichen Firmen zu steuern. Wie in der Abbildung @abb-hCvCnsy zu sehen wurde die Wirtschaft in 4 Zweige – auch #emph()[ramas] genannt #vgl(<brain-of-the-firm>, seite: 250) - unterteilt
 + Konsumgüter
 + Leichtindustrie
 + Baumaterialien
@@ -22,9 +22,18 @@ Vor dem Kontakt zu Beer hatte die CORFO bereits Bemühung gemacht die verstaatli
 Das Problem dabei war dass die Komitees und auch die Interventoren keine klaren Rollen hatten. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 60) Zusätzlich gab es zu wenig qualifizierte Interventoren in manchen Sektoren #vgl(<medinaCyberneticRevolutinaries2014>, seite: 60) Daraus erfolgt erst die Managementprobleme weshalb Flores Beer kontaktierte.
 \ Beer erhielt 1971 den Brief von Fernando Flores. #vgl(<bildungKybernetischeRevolutionUnd2023>, seite: 2) Beer war zu der Zeit als Berater in England tätig und konnte daher nicht direkt nach Chile. Für Beer war die Einladung unwiderstehlich, da er so seine Idee auf einer nationalen Ebene testen konnte. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 19) Beer ließ seine Beraterverträge auslaufen und kam vier Monate – an dem 4. November 1971, gleichzeitig auch den ersten Jahrestag Allendes Regierung – nach der Einladung von Flores nach Chile, um seine Arbeit an dem Projekt zu beginnen.
 == Architektur und Entstehung
-Beer hat bereits das Viable System Model entwickelt und gab den Mitarbeiter*innen an dem Projekt die Manuskripte für #emph()[Brain of the Firm] #vgl(<brain-of-the-firm>, seite: 248)
-Flores war von Beers Modell überzeugt. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 62)
-\ Um das VSM anzuwenden wollte Beer ein dezentrales Computernetzwerk nutzen um die untereinander kommunizieren um Live-Daten auszutauschen #vgl(<medinaCyberneticRevolutinaries2014>, seite: 70) dabei inspirierte er sich am ARPANET #vgl(<medinaCyberneticRevolutinaries2014>, seite: 71), dem Vorläufer des heutigen Internet. Allerdings gab es dabei eine technische Hürden 1971 hatte die chilenische Regierung nur 4 Mainframes #vgl(<medinaCyberneticRevolutinaries2014>, seite: 63) trotzdem hat Chile schon viel Erfahrung mit Computer und die Regierung war im Besitz von weiteren 50 Computern. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 68) Die Computer sowie die Mainframes waren von IBM. IBM hatte sich aus Chile zurückgezogen nachdem Allende gewählt wurde und handelt nicht mehr mit der chilenischen Regierung #vgl(<medinaCyberneticRevolutinaries2014>, seite: 72)
+Schon im November 1971 gab es ein klares ziel für das Projekt Cybersyn, sie sollten bis zu dem ersten märz 1972 eine vorlaufig version des Cybersyn projektes installiren welche die fähigkeiten von Mangement Kybernetik aufzeigt #vgl(<brain-of-the-firm>, seite: 252)
+\ Beer hat bereits das Viable System Model entwickelt und gab den Mitarbeiter*innen an dem Projekt die Manuskripte für #emph()[Brain of the Firm] #vgl(<brain-of-the-firm>, seite: 248)
+Flores war von Beers Modell überzeugt. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 62) Beer hat in seinem buche im noveber zwei bereichte erstellt,der erste bericht heiß #emph()[Cybernetic Notes on The Effective Organisation of the State with Particular Reference to Indutrial Control]. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 77) In deisem wendet Beer das VSM auf den chilenischen staat an.
+#abbildung(
+  align(center, image("../abbildungen/VSM-Rekursion-Beer.svg", width: 100%)),
+  titel: [Beers Rekusiver Aufbau Chiles aus dem bericht #emph()[Cybernetic Notes on The Effective Organisation of the State with Particular Reference to Indutrial Control]],
+  quelle: [Eigene Darstellung in Anlehnung an Beer Auszugen aus dem Bericht #emph()[Cybernetic Notes on The Effective Organisation of the State with Particular Reference to Indutrial Control]  #zitat(<brain-of-the-firm>, seite: 249)],
+)<abb-beer-chile-mappin>
 
+
+Dort legt Beer Fest das das System 5 des Staats der President ist und die Operativen Systeme die Ministerein für gesundheit, bildung, witschaft, industire. Die einzelne Mistereien sind für beer auch nochmla ein einges VSM. Eer nimmt als beispel das Industire minsterium und dort ist der Wirschafts minster das System 5 und die enzeln wirschaft sektoren wären die operativen systeme. Wie auch schon vorher in dem Chiolenischen ansatz gibt es für jeden sektor ein commite welche in der Rekusiven eben auch ein System 5 bilden und die einzeln untenrmen als System 1. Die Letze Rekusive eben wäre ein Inteventor als System 5 mit betreiben als oiperativen systemen. In dem betreiben gibt es die Abteilung in der Abteilung arbeits gruppen und innerhalb der gruppe dien einzelnen arbeiter. #vgl(<brain-of-the-firm>, seite: 249)
+\ Um das VSM anzuwenden wollte Beer ein dezentrales Computernetzwerk nutzen um die untereinander kommunizieren um Live-Daten auszutauschen #vgl(<medinaCyberneticRevolutinaries2014>, seite: 70) dabei inspirierte er sich am ARPANET #vgl(<medinaCyberneticRevolutinaries2014>, seite: 71), dem Vorläufer des heutigen Internet. Allerdings gab es dabei eine technische Hürden 1971 hatte die chilenische Regierung nur 4 Mainframes #vgl(<medinaCyberneticRevolutinaries2014>, seite: 63) trotzdem hat Chile schon viel Erfahrung mit Computer und die Regierung war im Besitz von weiteren 50 Computern. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 68) Die Computer sowie die Mainframes waren von IBM. IBM hatte sich aus Chile zurückgezogen nachdem Allende gewählt wurde.  #vgl(<medinaCyberneticRevolutinaries2014>, seite: 72)
 == Anwendung und Verlauf
+
 == Ende des Projekts
