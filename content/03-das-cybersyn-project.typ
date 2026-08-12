@@ -33,7 +33,7 @@ Beer hat während seines besuch im November 1971 zwei Berichte erstellt, der ers
 Der Zweite Bereicht war ein plan und projekt antrag für das vorlaufer projekt von Cybersyn, mit dem namen Cyberstride.#vgl(<medinaCyberneticRevolutinaries2014>, seite: 78) Cyberstride war eine Softwaerpaket, entwickelt von dem  Nationale Computerzentrum Chiles  und der britschen unternmens beratung Athur Andersen.#vgl(<bildungKybernetischeRevolutionUnd2023>, seite: 4)
 *Hier Kommt noch was zu Cyberstride*
 
-
+*Das ist Cybernet*
 \ Um das VSM anzuwenden, wollte Beer ein dezentrales Computernetzwerk nutzen, dessen Rechner untereinander kommunizieren, um Live-Daten auszutauschen. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 70) Dabei ließ er sich vom ARPANET #vgl(<medinaCyberneticRevolutinaries2014>, seite: 71), dem Vorläufer des heutigen Internets, inspirieren. Allerdings gab es dabei technische Hürden: 1971 hatte die chilenische Regierung nur vier Mainframes. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 63) Trotzdem hatte Chile schon viel Erfahrung mit Computern und die Regierung war im Besitz von weiteren 50 Computern. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 68) Die Computer sowie die Mainframes waren von IBM. IBM hatte sich aus Chile zurückgezogen, nachdem Allende gewählt worden war. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 72)
 == Anwendung und Verlauf
 
