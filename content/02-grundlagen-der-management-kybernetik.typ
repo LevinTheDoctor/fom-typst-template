@@ -16,7 +16,7 @@ Um Beers Ideen besser zu verstehen, muss man auch ein besonderes Modell von Beer
   titel: [Aufbau des Viable System Model],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 130)],
 ) <abb-vsm>
-Wie in @abb-vsm zu erkennen, besteht das Modell aus drei großen Teilen und fünf rekursiven Systemen – rekursiv sind sie deshalb, weil jedes System intern auch den Aufbau des #emph()[Viable System Model] hat. Beer hat sich dabei von Zellen eines Organismus inspirieren lassen, welche immer die Blaupause für den gesamten Organismus in sich tragen #vgl(<brain-of-the-firm>, seite: 156). Anhand von @abb-vsm kann man erkennen, dass die Systeme vertikal sowie horizontal miteinander kommunizieren.
+Wie in @abb-vsm zu erkennen, besteht das Modell aus drei großen Teilen und fünf rekursiven Systemen – rekursiv sind sie deshalb, weil jedes System 1 intern auch den Aufbau des VSM hat. Beer hat sich dabei von Zellen eines Organismus inspirieren lassen, welche immer die Blaupause für den gesamten Organismus in sich tragen #vgl(<brain-of-the-firm>, seite: 156). Anhand von @abb-vsm kann man erkennen, dass die Systeme vertikal sowie horizontal miteinander kommunizieren.
 
 #tabelle(
   table(
