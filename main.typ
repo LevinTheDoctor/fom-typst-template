@@ -31,6 +31,7 @@
     "CORFO": "Corporación de Fomento de la Producción",
     "ECOM": "Empresa Nacional de Computación e Informática",
     "CII": "Compagnie Internationale pour l'Informatique",
+    "INTEC": "Instituto de Investigaciones Tecnológicas",
   ),
   // symbole: ("m²": "Quadratmeter"),
   // sperrvermerk: (ort: "Essen", datum: "TT.MM.JJJJ"),
@@ -71,8 +72,14 @@
     (
       tool: "Claude Webseite",
       version: "Opus 5",
-      nutzung: "Zusammenfassung der Kapitel zum Cybersyn-Projekt aus Stafford Beers Brain of the Firm sowie Herausfiltern der zentralen Aussagen",
-      teile: "Kapitel 2",
+      nutzung: "Zusammenfassung von Stafford Beers Brain of the Firm",
+      teile: "Kapitel 2, 3",
+    ),
+    (
+      tool: "Claude Webseite",
+      version: "Opus 5",
+      nutzung: "Zusammenfassung der Kapitel zum Operationsraum aus Stafford Beers Brain of the Firm",
+      teile: "Kapitel 3",
     ),
     (
       tool: "Google Scholar Labs",
@@ -108,4 +115,4 @@
 )
 
 // --- Eigenständigkeitserklärung (Leitfaden 2.10, ohne Seitenzahl) --------------
-#eigenstaendigkeitserklaerung(ort: "Unna", datum: "18.07.2026")
+#eigenstaendigkeitserklaerung(ort: "Unna", datum: "31.08.2026")

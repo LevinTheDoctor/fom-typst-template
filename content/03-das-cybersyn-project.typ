@@ -45,9 +45,33 @@ In @abb-telex-aufbau ist aufgezeigt wie die Kommunikation über das Telexnetzwer
 Während der Entwicklung der Cyberstride-Software kam Beer auf die Idee nicht nur statistische Berechnung für das Tagesgeschäft zu erstellen, sondern auch eine Wirtschaftssimulation für tiefergehende Zukunftsvorhersagen. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 89) So entstand #emph()[Checo] kurz für Chilean Economy Simulator.#vgl(<medinaCyberneticRevolutinaries2014>, seite: 94) Beer sah Checo als eine Implementierung des Systems 4. Wie in @abb-vsm dargestellt hat System 4 zwei Aufgaben: die Kommunikation zwischen System 3 und 5 – als eine Art Mediator #vgl(<brain-of-the-firm>, seite: 266) – und die Betrachtung der Zukunft. #vgl(<brain-of-the-firm>, seite: 264) System 5 war wie in @abb-beer-chile-mappin aufgezeigt die Regierung. Checo war laut Beer ein experimentelles Labor für die Regierung. Das Labor sollte die Regierung bei Entscheidungen unterstützen, da sie Prognosen hatte, welche Auswirkungen ihre Entscheidungen auf die Wirtschaft haben würden. #vgl(<medinaCyberneticRevolutinaries2014>, seite: 89)
 \ Beer wollte mit Checo keine einfache Input-Output-Analyse schaffen.#vgl(<medinaCyberneticRevolutinaries2014>, seite: 89) Aus Beers Sicht waren diese strukturarm, stochastische Elemente kaum einführbar und statisch, daher waren sie für das #abk("VSM") ungeeignet. Zusätzlich wurden für Input- und Output-Modelle große Datenmengen benötigt, die zunächst gesammelt werden mussten. Dies war durch die Deadline des Projekts März 1972 nicht umsetzbar. Beer nutzte deshalb die Sprache DYNAMO, erschaffen von J. W. Forrester. Mit dieser hatte Beer auch schon Vorerfahrung gesammelt.#vgl(<brain-of-the-firm>, seite: 266) Im September 1972 war bereits eine kleine Version des Modells fertiggestellt, allerdings waren die Daten oft nicht zuverlässig weshalb es große Schwankungen bei dem Modell gab.#vgl(<brain-of-the-firm>, seite: 267) Eine Idee die Beer für Checo vorgesehen hatte war es jeden Tag eine Simulation bis zu 10 Jahre in die Zukunft laufen zu lassen. Dies wurde nie umgesetzt.#vgl(<brain-of-the-firm>, seite: 268)
 === Der Operationsraum
-Der Operationsraum kam erst im März 1972 zu dem Projekt hinzu, als aus dem Vorläuferprojekt Cyberstride das Projekt Cybersyn wurde. Das Ziel von Projekt Cybersyn war es die vorherigen Elemente also die Programme Cyberstride, Cybernet und Checo miteinander zu verbinden und über den Operationsraum zu steuern. Dies sollte bis November 1972 umgesetzt sein.#vgl(<medinaCyberneticRevolutinaries2014>, seite: 96) Der Operationsraum war von War Rooms aus dem 2. Weltkrieg inspiriert. In War Rooms gab es einen Balkon in dem hochrangige Offiziere saßen, aus dem Balkon blickten sie auf einen großen Tisch auf welchem sich eine Karte des Schlachtfelds befand. Die unterschiedlichen Truppen wurden durch Figuren dargestellt. Diese wurden basierend auf Live-Daten bewegt. So konnten die Offiziere nicht nur aus der Ferne Entscheidungen treffen sondern hatten auch einen dauerhaften Überblick über die wichtigsten Daten. #vgl(<brain-of-the-firm>, seite: 193)
+Der Operationsraum kam erst im März 1972 zu dem Projekt hinzu, als aus dem Vorläuferprojekt Cyberstride das Projekt Cybersyn wurde. Das Ziel von Projekt Cybersyn war es die vorherigen Elemente also die Programme Cyberstride, Cybernet und Checo miteinander zu verbinden und über den Operationsraum zu steuern. Dies sollte bis November 1972 umgesetzt sein.#vgl(<medinaCyberneticRevolutinaries2014>, seite: 96)
+\ Der Operationsraum war von #emph()[War Rooms] aus dem 2. Weltkrieg inspiriert. In #emph()[War Rooms] gab es einen Balkon in dem hochrangige Offiziere saßen, aus dem Balkon blickten sie auf einen großen Tisch auf welchem sich eine Karte des Schlachtfelds befand. Die unterschiedlichen Truppen wurden durch Figuren dargestellt. Diese wurden basierend auf Live-Daten bewegt. So konnten die Offiziere nicht nur aus der Ferne Entscheidungen treffen sondern hatten auch einen dauerhaften Überblick über die wichtigsten Daten. #vgl(<brain-of-the-firm>, seite: 193)
+#abbildung(
+  align(center, image("../abbildungen/Ops-Room.png")),
+  titel: [Aufbau des Operationsraum],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) und 3D Reder von #zitat(<ProjectCybersyn2026>)],
+)<abb-opsroom>
+Das design des Operationsraum kam von der #abk("INTEC") unter der leitung von #emph()[Gui Bonsiepe].#vgl(<brain-of-the-firm>, seite: 268) In @abb-opsroom ist das desinges des Raums aufgezeigt. Zu erkennen ist die Hexagonal form mit einem durchmesser von 10 Meter. Troz der 6 Wande wurden 5 benutzt.#vgl(<brain-of-the-firm>, seite: 268)
+#tabelle(
+  table(
+    columns: 2,
+    [Wand], [Inhalt],
+    [1], [Animiert Anzeige des #abk("VSM")],
+    [2],
+    [Alarm-Bildschirme System 3-4-5: Ein Bildschirm für Warnung auf der eingen ebene, Ein Monitor für Signale aus den unterliegenden Systemen],
 
-*Genauer Aufbau wird noch erklärt*
+    [3], [Datafeed: bestehend aus 3 Informationsbildschirme und ein lexikalischer Bildschirm ],
+
+    [4],
+    [Checo-Simulationsbildschirme: animierte Dynamo-Darstellung des Wirtschaftsmodells mit veränderbaren, flexiblen Linien],
+
+    [5], [Eine Kreide Tafel und eine weiter Tür],
+  ),
+  titel: [Verteilung der Wände innerhalb des Operationsraum],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) ],
+)<tab-opsroom-wand>
+Die mitte des Raums Hinderniss los.#vgl(<brain-of-the-firm>, seite: 268) Um die Mitte des Raums waren 7 Stühle in einem Kreis angeordnet.
 #abbildung(
   align(center, image("../abbildungen/Opsroom_Stuhl.png", width: 65%)),
   titel: [Stuhl innerhalb des Operationsraums],
