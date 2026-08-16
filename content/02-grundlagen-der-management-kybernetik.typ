@@ -26,7 +26,7 @@ Wie in @abb-vsm zu erkennen, besteht das Modell aus drei großen Teilen und fün
     [Die Umwelt ist der Kontext, mit dem sich ein System auseinandersetzt. Die grau schraffierten Flächen sind Überschneidungen aus mehreren Kontexten. Die Zukunft basiert auf statistischen Hochrechnungen von aktuellen und vergangenen Ereignissen.],
 
     [Operatives System],
-    [Das operative System ist die ausführende Ebene mit einer klaren Aufgabe. Die operativen Systeme (System 1) handeln meist autonom, aber kommunizieren mit den Metasystemen und erhalten von ihnen Ziele aus den überleigenden System über System 2 als übermittler.],
+    [Das operative System ist die ausführende Ebene mit einer klaren Aufgabe. Die operativen Systeme (System 1) handeln meist autonom, aber kommunizieren mit den Metasystemen und werden koordieniert von System 2.],
 
     [Metasystem],
     [Die Metasysteme erhalten Daten aus den unterliegenden Systemen und versuchen, darauf Entscheidungen zu treffen. System 3 hat dabei die Aufgabe, System 1 sowie die Informationen aus System 2 zu überwachen. System 4 ist dabei der Punkt, an dem System 5 in die Entscheidungen der unterliegenden Systeme eingreifen kann, indem es System 5 gefilterte Informationen aus den unterliegenden Systemen sowie der Umwelt und statistische Prognosen für die Zukunft bietet. System 5 soll dabei keine strikten Vorgaben geben, sondern Informationen vergleichen und Informationskonflikte lösen.],
