@@ -50,34 +50,35 @@ Der Operationsraum kam erst im März 1972 zu dem Projekt hinzu, als aus dem Vorl
 #abbildung(
   align(center, image("../abbildungen/Ops-Room.png")),
   titel: [Aufbau des Operationsraum],
-  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) und 3D Reder von #zitat(<ProjectCybersyn2026>)],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) und 3D Render von #zitat(<ProjectCybersyn2026>)],
 )<abb-opsroom>
-Das design des Operationsraum kam von der #abk("INTEC") unter der leitung von #emph()[Gui Bonsiepe].#vgl(<brain-of-the-firm>, seite: 268) In @abb-opsroom ist das desinges des Raums aufgezeigt. Zu erkennen ist die Hexagonal form mit einem durchmesser von 10 Meter. Troz der 6 Wande wurden 5 benutzt.#vgl(<brain-of-the-firm>, seite: 268)
+Das Design des Operationsraums kam vom #abk("INTEC") unter der Leitung von #emph()[Gui Bonsiepe].#vgl(<brain-of-the-firm>, seite: 268) In @abb-opsroom ist das Design des Raums aufgezeigt. Zu erkennen ist die hexagonale Form mit einem Durchmesser von 10 Metern. Trotz der 6 Wände wurden 5 benutzt.#vgl(<brain-of-the-firm>, seite: 268)
 #tabelle(
   table(
     columns: 2,
     [Wand], [Inhalt],
-    [1], [Animiert Anzeige des #abk("VSM")],
+    [1], [Animierte Anzeige des #abk("VSM")],
     [2],
-    [Alarm-Bildschirme System 3-4-5: Ein Bildschirm für Warnung auf der eingen ebene, Ein Monitor für Signale aus den unterliegenden Systemen],
+    [Alarm-Bildschirme System 3-4-5: Ein Bildschirm für Warnung auf der eigenen Ebene, Ein Monitor für Signale aus den unterliegenden Systemen],
 
-    [3], [Datafeed: bestehend aus 3 Informationsbildschirme und ein lexikalischer Bildschirm ],
+    [3], [Datafeed: bestehend aus 3 Informationsbildschirmen und ein lexikalischer Bildschirm ],
 
     [4],
     [Checo-Simulationsbildschirme: animierte Dynamo-Darstellung des Wirtschaftsmodells mit veränderbaren, flexiblen Linien],
 
-    [5], [Eine Kreide Tafel und eine weiter Tür],
+    [5], [Eine Kreidetafel und eine weitere Tür],
   ),
   titel: [Verteilung der Wände innerhalb des Operationsraum],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) ],
 )<tab-opsroom-wand>
-Die mitte des Raums Hinderniss los.#vgl(<brain-of-the-firm>, seite: 268) Um die Mitte des Raums waren 7 Stühle in einem Kreis angeordnet.
+Die Mitte des Raums war hindernislos.#vgl(<brain-of-the-firm>, seite: 268) Um die Mitte des Raums waren 7 Stühle in einem Kreis angeordnet.
+
 #abbildung(
   align(center, image("../abbildungen/Opsroom_Stuhl.png", width: 65%)),
   titel: [Stuhl innerhalb des Operationsraums],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<Arnold20202140>, seite: 31)],
 )<abb-opsroom-stuhl>
-In @abb-opsroom-stuhl ist ein Stuhl innerhalb des Operationsraums abgebildet. Die linke Lehne des Stuhls beinhaltete die Bedienung. Die drei quadratischen Knöpfe oben auf der linken Armlehne in @abb-opsroom-stuhl steuerten die drei unterschiedlichen Data-Feed-Bildschirme. Die rechteckige Taste diente zur Bestätigung.#vgl(<brain-of-the-firm>, seite: 269) Die 5 darunterliegenden geometrischen Knöpfe wurden genutzt um zwischen den Datensätzen zu navigieren. Aufgebaut waren diese nach einer 5-Bit-Logik, also gab es 32 Möglichkeiten wie man diese bedienen konnte. Das Bedienfeld des Operationsraums war explizit auf Arbeiter\*innen zugeschnitten. Die Steuerung sollte leicht bedienbar sein. Beer nannte es auch #emph()[Big Hand Control] da die Knöpfe zusätzlich sehr robust waren. #vgl(<brain-of-the-firm>, seite: 270) Die restlichen Knöpfe sind nicht klar dokumentiert. Bei der rechten Armlehne war ein Aschenbecher eingebaut. #vgl(<Arnold20202140>, seite: 31)
+Die linke Lehne des Stuhls beinhaltete die Bedienung. Die drei quadratischen Knöpfe oben auf der linken Armlehne in @abb-opsroom-stuhl steuerten die drei unterschiedlichen Data-Feed-Bildschirme. Die rechteckige Taste diente zur Bestätigung.#vgl(<brain-of-the-firm>, seite: 269) Die 5 darunterliegenden geometrischen Knöpfe wurden genutzt um zwischen den Datensätzen zu navigieren. Aufgebaut waren diese nach einer 5-Bit-Logik, also gab es 32 Möglichkeiten wie man diese bedienen konnte. Das Bedienfeld des Operationsraums war explizit auf Arbeiter\*innen zugeschnitten. Die Steuerung sollte leicht bedienbar sein. Beer nannte es auch #emph()[Big Hand Control] da die Knöpfe zusätzlich sehr robust waren. #vgl(<brain-of-the-firm>, seite: 270) Die restlichen Knöpfe sind nicht klar dokumentiert. Bei der rechten Armlehne war ein Aschenbecher eingebaut. #vgl(<Arnold20202140>, seite: 31)
 
 == Anwendung und Verlauf
 
