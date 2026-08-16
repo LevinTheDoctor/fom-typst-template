@@ -27,7 +27,10 @@
   zitierweise: "chicago", // "chicago" (Fußnoten), "harvard" oder "apa" (im Text)
   schriftart: "Times New Roman", // "Arial" setzt automatisch 11,5 pt
   abkuerzungen: (
-    // "HRM": "Human Resource Management",
+    "VSM": "Viable System Model",
+    "CORFO": "Corporación de Fomento de la Producción",
+    "ECOM": "Empresa Nacional de Computación e Informática",
+    "CII": "Compagnie Internationale pour l'Informatique",
   ),
   // symbole: ("m²": "Quadratmeter"),
   // sperrvermerk: (ort: "Essen", datum: "TT.MM.JJJJ"),
