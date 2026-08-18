@@ -2,9 +2,9 @@
 = Das Cybersyn-Projekt
 In diesem Kapitel wird das Projekt Cybersyn tiefer behandelt. Erst wird der historische Kontext dargestellt, da dieser wichtig ist, gerade um das abrupte Ende des Projekts zu verstehen. Daraufhin wird der technische Aufbau des Projektes Cybersyn erläutert sowie, wie Cybersyn genutzt wurde und was noch geplant war. Zum Abschluss des Kapitels wird aufgezeigt, wie das Projekt gescheitert ist.
 == Historischer Hintergrund und Rahmenbedingungen
-Das Projekt Cybersyn fand von 1971 bis 1973 statt #vgl(<medinaCyberneticRevolutinaries2014>, seite: 15). Den historischen Kontext zu kennen, ist wichtig um zu verstehen warum das Cybersyn-Projekt ins Leben gerufen wurde.
-\ Bei der Präsidentschaftswahl am 4. September 1970 in Chile gewann die Unidad Popular – ein ehemaliger Zusammenschluss von linken, sozialistischen und kommunistischen Parteien – mit dem Kandidaten #emph()[Salvador Allende]#vgl(<bildung1970SalvadorAllende2015>, seite: 1) und 1,3 % Vorsprung gegenüber dem ehemaligen Präsidenten Chiles #emph()[Jorge Alessandri] #vgl(<medinaCyberneticRevolutinaries2014>, seite: 51). Allende war ein Sozialist und hatte das Ziel, die Industrie im Besitz von multinationalen Konzernen und der chilenischen Oligarchie zu verstaatlichen #vgl(<bildung1970SalvadorAllende2015>, seite: 2) und Chile durch Reformen zu einem sozialistischen Staat zu formen, der allerdings alle demokratischen Institutionen aufrechterhält. Durch die Unterschiede zu der Umsetzung des Sozialismus wurde Allendes Ansatz bekannt als „chilenischer Weg zum Sozialismus“. #vgl(<bildungKybernetischeRevolutionUnd2023>, seite: 1)
-\ Ein Grund für die Verstaatlichung der Industrie hängt mit den USA zusammen. In einer Rede vor den Vereinten Nationen am 4. Dezember 1972 erwähnte Allende, dass in den letzten 42 Jahren US-amerikanische Konzerne mit einem Investment von 30 Millionen in der chilenischen Industrie Einnahmen von 4 Milliarden generieren konnten, während Teile der chilenischen Bevölkerung sich nicht vernünftig ernähren konnten. #vgl(<SalvadorAllendeSpeech>, seite: 2) Die USA wiederum haben von 1962 bis 1969 im Rahmen des #emph()[Alliance for Progress]-Programms über eine Milliarde US-Dollar an Hilfen an Chile gesendet,#vgl(<CovertActionChile>, seite: 151) mit dem Ziel, den Lebensstandard in Chile anzuheben und die chilenische Bevölkerung von dem Kommunismus abzuwenden. #vgl(<bildungKybernetischeRevolutionUnd2023>, seite: 1) Die Verstaatlichung hat der chilenischen Regierung so zwei Probleme eingebracht. Die US-Regierung wollte den sozialistischen Weg der Allende-Regierung verhindern; dafür startete sie eine verdeckte Operation, indem sie Oppositionsparteien und Medien finanzierte. #vgl(<bildungKybernetischeRevolutionUnd2023>, seite: 2)
+Das Projekt Cybersyn fand von 1971 bis 1973 statt #vgl(<medinaCyberneticRevolutinaries2014>, seite: 15).
+\ Bei der Präsidentschaftswahl am 4. September 1970 in Chile gewann die #abk("UP") – ein ehemaliger Zusammenschluss von linken, sozialistischen und kommunistischen Parteien – mit dem Kandidaten #emph()[Salvador Allende]#vgl(<bildung1970SalvadorAllende2015>, seite: 1) und 1,3 % Vorsprung gegenüber dem ehemaligen Präsidenten Chiles #emph()[Jorge Alessandri] #vgl(<medinaCyberneticRevolutinaries2014>, seite: 51). Allende war ein Sozialist und hatte das Ziel, die Industrie im Besitz von multinationalen Konzernen und der chilenischen Oligarchie zu verstaatlichen #vgl(<bildung1970SalvadorAllende2015>, seite: 2) und Chile durch Reformen zu einem sozialistischen Staat zu formen, der allerdings alle demokratischen Institutionen aufrechterhält. Durch die Unterschiede zu der Umsetzung des Sozialismus wurde Allendes Ansatz bekannt als „chilenischer Weg zum Sozialismus“. #vgl(<bildungKybernetischeRevolutionUnd2023>, seite: 1)
+\ Ein Grund für die Verstaatlichung der Industrie hängt mit den #abk("USA") zusammen. In einer Rede vor den Vereinten Nationen am 4. Dezember 1972 erwähnte Allende, dass in den letzten 42 Jahren Konzerne aus den #abk("USA") mit einem Investment von 30 Millionen in der chilenischen Industrie Einnahmen von 4 Milliarden generieren konnten, während Teile der chilenischen Bevölkerung sich nicht vernünftig ernähren konnten. #vgl(<SalvadorAllendeSpeech>, seite: 2) Die #abk("USA")  wiederum haben von 1962 bis 1969 im Rahmen des #emph()[Alliance for Progress]-Programms über eine Milliarde US-Dollar an Hilfen an Chile gesendet,#vgl(<CovertActionChile>, seite: 151) mit dem Ziel, den Lebensstandard in Chile anzuheben und die chilenische Bevölkerung von dem Kommunismus abzuwenden. #vgl(<bildungKybernetischeRevolutionUnd2023>, seite: 1) Die Verstaatlichung hat der chilenischen Regierung so zwei Probleme eingebracht. Die US-Regierung wollte den sozialistischen Weg der Allende-Regierung verhindern; dafür startete sie eine verdeckte Operation, indem sie Oppositionsparteien und Medien finanzierte. #vgl(<bildungKybernetischeRevolutionUnd2023>, seite: 2)
 \ Das andere Problem ist für den Start des Cybersyn-Projekts viel relevanter. Nachdem Allendes Regierung die Industrie verstaatlicht hatte, stand sie vor dem Problem, die Unternehmen samt ihrer Mitarbeiter zu steuern. Um diese Probleme zu lösen, kam #emph()[Fernando Flores], der während Allendes Regierung technischer Generaldirektor der #abk("CORFO") – der chilenischen Staatsentwicklungsbehörde #vgl(<medinaCyberneticRevolutinaries2014>, seite: 10) – war, auf die Idee, den britischen Kybernetiker #emph()[Stafford Beer] zu kontaktieren. Stafford Beer hatte zwölf Jahre zuvor ein Buch über Management-Kybernetik namens #emph()[Cybernetics and Management] geschrieben. Flores hatte das Buch gelesen und hoffte, dass die Steuerung der Wirtschaft Chiles durch Management-Kybernetik erleichtert werden könnte. #vgl(<bildungKybernetischeRevolutionUnd2023>, seite: 2)
 #abbildung(
   align(center, image("../abbildungen/CORFO-Hierachie2.png", width: 100%)),
@@ -55,31 +55,38 @@ Der Operationsraum kam erst im März 1972 zu dem Projekt hinzu, als aus dem Vorl
 Das Design des Operationsraums kam vom #abk("INTEC") unter der Leitung von #emph()[Gui Bonsiepe].#vgl(<brain-of-the-firm>, seite: 268) In @abb-opsroom ist das Design des Raums aufgezeigt. Zu erkennen ist die hexagonale Form mit einem Durchmesser von 10 Metern. Trotz der 6 Wände wurden 5 benutzt.#vgl(<brain-of-the-firm>, seite: 268)
 #tabelle(
   table(
-    columns: 2,
-    [Wand], [Inhalt],
-    [1], [Animierte Anzeige des #abk("VSM")],
-    [2],
-    [Alarm-Bildschirme System 3-4-5: Ein Bildschirm für Warnung auf der eigenen Ebene, Ein Monitor für Signale aus den unterliegenden Systemen],
+    columns: 3,
+    [Gerät], [Aufbau], [Aufgabe],
+    [Animiertes #abk("VSM")],
+    [Ein Zwei Meter Hoher Schrank in dem rotierende Polarisationsscheiben – eine möglcihkeit für meachnische animation – das #abk("VSM") an eine Wand im Schrank Projezierte so das es von außen sichtbar ist.],
+    [Die Polarisationsscheiben konnten beschrift werden, die beschriftung wurden für jedes Meeting angepasst so das man das aktuell mapping des #abk("VSM") sehen konnte.],
 
-    [3], [Datafeed: bestehend aus 3 Informationsbildschirmen und ein lexikalischer Bildschirm ],
+    [Alarm Bildschirme],
+    [Es gab zwei Bildschirm welche von handbedien werden mussten.],
+    [Die Arlam bildschrimen zeigt warnungen für System 3,4 und 5 falls abweichungen eintreten.],
 
-    [4],
-    [Checo-Simulationsbildschirme: animierte Dynamo-Darstellung des Wirtschaftsmodells mit veränderbaren, flexiblen Linien],
+    [Alegdonsiche Warnleuchte],
+    [Wurde durch blinken zweier Roter leuchten signalsiret.],
+    [Alegdonisch ist ein von Beer Geschaffener begriff er setzt sich aus dem Griechischen: algos (Schmerz) + hedone (Lust/Vergnügen). Es bezeichnet ein Signal, für eine abweichung ohne zusatz infomrationen.#vgl(<brain-of-the-firm>, seite: 401) Die Lampen leuchten bei abweichung  von unterleigeden systemen – also 1 und 2 – der Live daten zu den Berechnungen aus der Checo Simulation.],
 
-    [5], [Eine Kreidetafel und eine weitere Tür],
+    [Data Feed],
+    [Der Data Feed bestand aus 3 bildschrimen mit je 5 Rückprojektoree, diese wurden eiengestz um das flackern eines rühen bildschrims zu vermeden. Zusatlich gab es eine Wieter Bildschirm der von nur einem Rückprojektore betreiben wurde um eine Legende der Elemente anzuzeigen],
+    [Der Data Feed war eine Anzeige des Daten aus dem Cyberstride program welche über die Kontrollen der Stühle Navigeirt werden könnte.],
+
+    [Checo Simulation],
+    [Die Simulation sollte durch eine Hybrid Rechner – welcher nie zustande kam – basiert auf einegaben berechnet werden. Staatdessen wurden Ruckprojektoren wie bei dem Data Feed genutzt.],
+    [Durch die Simulation sollte geprüft werden ob eine entschediug einen postiven oder eine nergative auswirkung auf die wirtschaft hat.],
   ),
-  titel: [Verteilung der Wände innerhalb des Operationsraum],
-  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) ],
-)<tab-opsroom-wand>
-Die Mitte des Raums war hindernislos.#vgl(<brain-of-the-firm>, seite: 268) Um die Mitte des Raums waren 7 Stühle in einem Kreis angeordnet.
-
+  titel: [Bestandteile des Operationsraum],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>) Seite 268 - 270],
+) <tab-opsroom-aufbau>
+Die Mitte des Raums war hindernislos.#vgl(<brain-of-the-firm>, seite: 268) Um die Mitte des Raums waren 7 Stühle in einem Kreis angeordnet. Die Stühle wurde extra so angeordnet dass Arbeiter\*innen aus jedem stuhl – welche drehfüße besaßen – alles im blickt hatten. Die Stühle in @abb-opsroom sind sehr Pregnant, diese Beisitzen ein bedienfeld die funktion des stühle werden in @abb-opsroom-stuhl genauer aufgeschlusselt
 #abbildung(
   align(center, image("../abbildungen/Opsroom_Stuhl.png", width: 65%)),
   titel: [Stuhl innerhalb des Operationsraums],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<Arnold20202140>, seite: 31)],
 )<abb-opsroom-stuhl>
-Die linke Lehne des Stuhls beinhaltete die Bedienung. Die drei quadratischen Knöpfe oben auf der linken Armlehne in @abb-opsroom-stuhl steuerten die drei unterschiedlichen Data-Feed-Bildschirme. Die rechteckige Taste diente zur Bestätigung.#vgl(<brain-of-the-firm>, seite: 269) Die 5 darunterliegenden geometrischen Knöpfe wurden genutzt um zwischen den Datensätzen zu navigieren. Aufgebaut waren diese nach einer 5-Bit-Logik, also gab es 32 Möglichkeiten wie man diese bedienen konnte. Das Bedienfeld des Operationsraums war explizit auf Arbeiter\*innen zugeschnitten. Die Steuerung sollte leicht bedienbar sein. Beer nannte es auch #emph()[Big Hand Control] da die Knöpfe zusätzlich sehr robust waren. #vgl(<brain-of-the-firm>, seite: 270) Die restlichen Knöpfe sind nicht klar dokumentiert. Bei der rechten Armlehne war ein Aschenbecher eingebaut. #vgl(<Arnold20202140>, seite: 31)
-
+Die linke Lehne des Stuhls beinhaltete die Bedienung. Die drei quadratischen Knöpfe oben in @abb-opsroom-stuhl steuerten die drei unterschiedlichen Data-Feed-Bildschirme. Die rechteckige Taste diente zur Bestätigung.#vgl(<brain-of-the-firm>, seite: 269) Die 5 darunterliegenden geometrischen Knöpfe wurden genutzt um zwischen den Datensätzen zu navigieren. Aufgebaut waren diese nach einer 5-Bit-Logik – es gab 5 Knopfe die etwender an oder aus sein konnten – so konnten 32 unterschiedliche Kombination gedrückt werden. Das Bedienfeld des Operationsraums war explizit auf Arbeiter\*innen zugeschnitten. Die Steuerung sollte leicht bedienbar sein. Beer nannte es auch #emph()[Big Hand Control] da die Knöpfe zusätzlich sehr robust waren. #vgl(<brain-of-the-firm>, seite: 270) Die restlichen Knöpfe sind nicht klar dokumentiert. Bei der rechten Armlehne war ein Aschenbecher sowie eine Glasablage eingebaut. #vgl(<Arnold20202140>, seite: 31)
 == Anwendung und Verlauf
 
 == Ende des Projekts

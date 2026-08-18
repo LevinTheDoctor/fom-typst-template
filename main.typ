@@ -32,6 +32,8 @@
     "ECOM": "Empresa Nacional de Computación e Informática",
     "CII": "Compagnie Internationale pour l'Informatique",
     "INTEC": "Instituto de Investigaciones Tecnológicas",
+    "UP": "Unidad Popular",
+    "USA": "Vereinigten Staaten von Amerika",
   ),
   // symbole: ("m²": "Quadratmeter"),
   // sperrvermerk: (ort: "Essen", datum: "TT.MM.JJJJ"),
@@ -110,6 +112,12 @@
       version: "Opus 5",
       nutzung: "Korrektur von Rechtschreibung, Zeichensetzung und Groß- und Kleinschreibung; Einfügen von Querverweisen auf die Abbildung des Viable System Model",
       teile: "Kapitel 1, 2 und 3",
+    ),
+    (
+      tool: "Claude Code",
+      version: "Opus 5",
+      nutzung: "Überarbeitung der Drawio Datein so das sie einen einhaltlichen style haben. Sowie eine Legende.",
+      teile: "Abbildung 1,2,3,4,5",
     ),
   ),
 )
