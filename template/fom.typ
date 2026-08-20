@@ -95,6 +95,9 @@
   set figure.caption(position: top, separator: ": ")
   show figure: set align(left)
   show figure: set block(above: abstand-vor-ueberschrift, below: abstand-nach-ueberschrift, breakable: false)
+  // Tabellen dürfen länger als eine Seite sein (z. B. Tabelle 2 in Kapitel 3) –
+  // ohne diese Ausnahme überlagert Typst den Seitenumbruch mit der Quellenzeile.
+  show figure.where(kind: table): set block(breakable: true)
   show figure.caption: set align(left)
   show figure.caption: set text(weight: "bold")
   show figure.caption: set par(justify: false)
