@@ -34,6 +34,7 @@
     "INTEC": "Instituto de Investigaciones Tecnológicas",
     "UP": "Unidad Popular",
     "USA": "Vereinigten Staaten von Amerika",
+    "LKW": "Last Kraft Wagen",
   ),
   // symbole: ("m²": "Quadratmeter"),
   // sperrvermerk: (ort: "Essen", datum: "TT.MM.JJJJ"),
