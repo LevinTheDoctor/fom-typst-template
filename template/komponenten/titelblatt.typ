@@ -103,7 +103,7 @@
   abgabedatum: none,
   logo: none,
 ) = {
-  set align(center)
+  set align(left)
   set par(justify: false)
 
   if logo != none {
