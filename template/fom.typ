@@ -19,15 +19,15 @@
 
 #import "styles.typ": *
 #import "komponenten/abkuerzungen.typ": abk, abk-definiere
-#import "komponenten/zitieren.typ": vgl, zit, zitat, zitierweise-setze
-#import "komponenten/elemente.typ": abbildung, tabelle, formel
-#import "komponenten/ki.typ": ki-nachweis, ki-hilfsmittelverzeichnis
+#import "komponenten/zitieren.typ": vgl, zit, zitat, vgl-nach, zit-nach, zitat-nach, zitierweise-setze
+#import "komponenten/elemente.typ": abbildung, formel, tabelle
+#import "komponenten/ki.typ": ki-hilfsmittelverzeichnis, ki-nachweis
 #import "komponenten/erklaerungen.typ" as erklaerungen
 #import "komponenten/erklaerungen.typ": eigenstaendigkeitserklaerung
 #import "komponenten/titelblatt.typ": titelblatt-abschlussarbeit, titelblatt-seminararbeit
 #import "komponenten/verzeichnisse.typ": (
-  abbildungsverzeichnis, abkuerzungsverzeichnis, formelverzeichnis, inhaltsverzeichnis,
-  symbolverzeichnis, tabellenverzeichnis,
+  abbildungsverzeichnis, abkuerzungsverzeichnis, formelverzeichnis, inhaltsverzeichnis, symbolverzeichnis,
+  tabellenverzeichnis,
 )
 #import "komponenten/nachspann.typ": anhang, anhang-abschnitt, literaturverzeichnis
 
@@ -50,7 +50,7 @@
   logo: none, // z. B. image("abbildungen/logo.png", width: 3cm)
   // --- Formale Konfiguration --------------------------------------------------
   sprache: "de",
-  zitierweise: "chicago", // "chicago"/"harvard" (Leitfaden) oder "apa" (zusätzlich)
+  zitierweise: "chicago", // "chicago" (Fußnoten), "harvard" oder "apa" (im Text)
   schriftart: "Times New Roman", // "Arial" setzt automatisch 11,5 pt
   seitenzahl-position: "mitte", // "mitte" oder "rechts" (Leitfaden 1.2 Nr. 10)
   verzeichnis-tiefe: 3,
@@ -95,6 +95,9 @@
   set figure.caption(position: top, separator: ": ")
   show figure: set align(left)
   show figure: set block(above: abstand-vor-ueberschrift, below: abstand-nach-ueberschrift, breakable: false)
+  // Tabellen dürfen länger als eine Seite sein (z. B. Tabelle 2 in Kapitel 3) –
+  // ohne diese Ausnahme überlagert Typst den Seitenumbruch mit der Quellenzeile.
+  show figure.where(kind: table): set block(breakable: true)
   show figure.caption: set align(left)
   show figure.caption: set text(weight: "bold")
   show figure.caption: set par(justify: false)
