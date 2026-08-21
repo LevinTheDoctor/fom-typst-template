@@ -64,3 +64,30 @@
     [(#zitat(quelle, seite: seite))]
   }
 }
+// Nackter Kurzbeleg für Sekundärzitate – Baustein wie `zitat`.
+// `original`   = die Quelle, aus der der Inhalt stammt
+// `sekundaer`  = das Werk, in dem du sie gefunden hast
+// `seite`      = Seite im Original, `seite-sek` = Seite in der Sekundärquelle
+#let zitat-nach(original, sekundaer, seite: none, seite-sek: none) = [
+  #zitat(original, seite: seite), zitiert nach #zitat(sekundaer, seite: seite-sek)
+]
+
+// Interner Baustein: nimmt den fertigen Beleg und entscheidet Fußnote vs. Klammer.
+// `praefix: none` = direktes Zitat (kein "Vgl."), sonst indirektes Zitat.
+#let _huelle-nach(beleg, praefix) = context {
+  if _zitierweise.get() == "chicago" {
+    if praefix == none { footnote[#beleg.] } else { footnote[#praefix #beleg.] }
+  } else {
+    if praefix == none { [(#beleg)] } else { [(#lower(praefix) #beleg)] }
+  }
+}
+
+// Indirektes Sekundärzitat: Vgl. Original, S. X, zitiert nach Sekundärquelle, S. Y.
+#let vgl-nach(original, sekundaer, seite: none, seite-sek: none, praefix: "Vgl.") = {
+  _huelle-nach(zitat-nach(original, sekundaer, seite: seite, seite-sek: seite-sek), praefix)
+}
+
+// Direktes (wörtliches) Sekundärzitat – ohne "Vgl.".
+#let zit-nach(original, sekundaer, seite: none, seite-sek: none) = {
+  _huelle-nach(zitat-nach(original, sekundaer, seite: seite, seite-sek: seite-sek), none)
+}
