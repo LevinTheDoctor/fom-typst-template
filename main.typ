@@ -118,7 +118,7 @@
       tool: "Claude Code",
       version: "Opus 5",
       nutzung: "Überarbeitung der Drawio Datein so das sie einen einhaltlichen style haben. Sowie eine Legende.",
-      teile: "Abbildung 1,2,3,4,5,7",
+      teile: "Abbildung 1,2,3,4,5",
     ),
     (
       tool: "Ollama Desktop App Chat ",

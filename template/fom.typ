@@ -19,7 +19,10 @@
 
 #import "styles.typ": *
 #import "komponenten/abkuerzungen.typ": abk, abk-definiere
-#import "komponenten/zitieren.typ": vgl, vgl-kap, vgl-nach, zit, zit-nach, zitat, zitat-nach, zitierweise-setze
+#import "komponenten/zitieren.typ": (
+  vgl, vgl-kap, vgl-nach, vgl-nach-kap, zit, zit-kap, zit-nach, zit-nach-kap, zitat, zitat-kap, zitat-nach,
+  zitat-nach-kap, zitierweise-setze,
+)
 #import "komponenten/elemente.typ": abbildung, formel, tabelle
 #import "komponenten/ki.typ": ki-hilfsmittelverzeichnis, ki-nachweis
 #import "komponenten/erklaerungen.typ" as erklaerungen

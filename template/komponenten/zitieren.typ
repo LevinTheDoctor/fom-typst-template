@@ -24,6 +24,19 @@
 //   #zit(<mayer2019>, seite: "438")    -> direktes (wörtliches) Zitat
 //   #zitat(<mayer2019>, seite: "438")  -> nur der Kurzbeleg (z. B. für eigene
 //                                         Fußnoten mit mehreren Quellen)
+//
+// Für E-Book-Quellen ohne verlagsgetreue Seiten tritt `kap:` an die Stelle
+// von `seite:` (Kapitel statt Seite):
+//   #vgl-kap(<mayer2019>, kap: "3.2")  -> indirektes Zitat mit Kapitelangabe
+//   #zit-kap(<mayer2019>, kap: "3.2")  -> direktes Zitat mit Kapitelangabe
+//
+// Sekundärzitate (Zitat aus zweiter Hand) kombinieren Original- und
+// Sekundärquelle; `-nach-kap` deckt zusätzlich den Fall ab, dass eine der
+// beiden Quellen (oder beide) keine Seitenzahlen hat – `seite`/`seite-sek`
+// und `kap`/`kap-sek` lassen sich beliebig mischen:
+//   #vgl-nach(<original>, <sekundaer>, seite: "12", seite-sek: "88")
+//   #vgl-nach-kap(<original>, <sekundaer>, seite: "12", kap-sek: "5")
+//   #vgl-nach-kap(<original>, <sekundaer>, kap: "2", kap-sek: "5")
 
 #let _zitierweise = state("fom-zitierweise", "chicago")
 
@@ -47,26 +60,35 @@
   cite(quelle, supplement: zusatz)
 }
 
-// Indirektes Zitat ("Vgl."). Über `praefix` lässt sich z. B. "S. dazu"
-// (entfernte Anlehnung, Leitfaden 3.2) setzen.
-// Sowohl "harvard" als auch "apa" setzen den Kurzbeleg in Klammern im
-// Fließtext; nur "chicago" verwendet Fußnoten.
-#let vgl(quelle, seite: none, praefix: "Vgl.") = context {
+// Nackter Kurzbeleg mit Kapitel- statt Seitenangabe – für E-Book-Quellen ohne
+// verlagsgetreue Seiten; sonst identisch zu `zitat`.
+#let zitat-kap(quelle, kap: none) = cite(quelle, supplement: [Kap. #kap])
+
+// Interner Baustein: nimmt den fertigen Beleg und entscheidet Fußnote vs.
+// Klammer. `praefix: none` = direktes Zitat (kein "Vgl."), sonst indirektes
+// Zitat. Sowohl "harvard" als auch "apa" setzen den Kurzbeleg in Klammern im
+// Fließtext; nur "chicago" verwendet Fußnoten. Gemeinsame Basis für alle
+// vgl-/zit-Varianten (auch die Sekundärzitat- und Kapitel-Varianten).
+#let _huelle(beleg, praefix) = context {
   if _zitierweise.get() == "chicago" {
-    footnote[#praefix #zitat(quelle, seite: seite).]
+    if praefix == none { footnote[#beleg.] } else { footnote[#praefix #beleg.] }
   } else {
-    [(#lower(praefix) #zitat(quelle, seite: seite))]
+    if praefix == none { [(#beleg)] } else { [(#lower(praefix) #beleg)] }
   }
 }
 
+// Indirektes Zitat ("Vgl."). Über `praefix` lässt sich z. B. "S. dazu"
+// (entfernte Anlehnung, Leitfaden 3.2) setzen.
+#let vgl(quelle, seite: none, praefix: "Vgl.") = _huelle(zitat(quelle, seite: seite), praefix)
+
 // Direktes (wörtliches) Zitat – Kurzbeleg ohne "Vgl.".
-#let zit(quelle, seite: none) = context {
-  if _zitierweise.get() == "chicago" {
-    footnote[#zitat(quelle, seite: seite).]
-  } else {
-    [(#zitat(quelle, seite: seite))]
-  }
-}
+#let zit(quelle, seite: none) = _huelle(zitat(quelle, seite: seite), none)
+
+// Indirektes Zitat mit Kapitel- statt Seitenangabe (E-Book ohne Seiten).
+#let vgl-kap(quelle, kap: none, praefix: "Vgl.") = _huelle(zitat-kap(quelle, kap: kap), praefix)
+
+// Direktes Zitat mit Kapitel- statt Seitenangabe.
+#let zit-kap(quelle, kap: none) = _huelle(zitat-kap(quelle, kap: kap), none)
 
 // Nackter Kurzbeleg für Sekundärzitate – Baustein wie `zitat`.
 // `original`   = die Quelle, aus der der Inhalt stammt
@@ -76,34 +98,38 @@
   #zitat(original, seite: seite), zitiert nach #zitat(sekundaer, seite: seite-sek)
 ]
 
-// Interner Baustein: nimmt den fertigen Beleg und entscheidet Fußnote vs. Klammer.
-// `praefix: none` = direktes Zitat (kein "Vgl."), sonst indirektes Zitat.
-#let _huelle-nach(beleg, praefix) = context {
-  if _zitierweise.get() == "chicago" {
-    if praefix == none { footnote[#beleg.] } else { footnote[#praefix #beleg.] }
+// Nackter Kurzbeleg für Sekundärzitate, bei denen Original und/oder
+// Sekundärquelle keine Seitenzahlen haben – Kombination aus `zitat-nach` und
+// `zitat-kap`. Pro Quelle wird `kap`/`kap-sek` verwendet, falls gesetzt,
+// sonst `seite`/`seite-sek` (siehe `zitat`).
+#let zitat-nach-kap(original, sekundaer, seite: none, kap: none, seite-sek: none, kap-sek: none) = {
+  let beleg-original = if kap != none { zitat-kap(original, kap: kap) } else { zitat(original, seite: seite) }
+  let beleg-sekundaer = if kap-sek != none {
+    zitat-kap(sekundaer, kap: kap-sek)
   } else {
-    if praefix == none { [(#beleg)] } else { [(#lower(praefix) #beleg)] }
+    zitat(sekundaer, seite: seite-sek)
   }
+  [#beleg-original, zitiert nach #beleg-sekundaer]
 }
 
 // Indirektes Sekundärzitat: Vgl. Original, S. X, zitiert nach Sekundärquelle, S. Y.
 #let vgl-nach(original, sekundaer, seite: none, seite-sek: none, praefix: "Vgl.") = {
-  _huelle-nach(zitat-nach(original, sekundaer, seite: seite, seite-sek: seite-sek), praefix)
+  _huelle(zitat-nach(original, sekundaer, seite: seite, seite-sek: seite-sek), praefix)
 }
 
 // Direktes (wörtliches) Sekundärzitat – ohne "Vgl.".
 #let zit-nach(original, sekundaer, seite: none, seite-sek: none) = {
-  _huelle-nach(zitat-nach(original, sekundaer, seite: seite, seite-sek: seite-sek), none)
+  _huelle(zitat-nach(original, sekundaer, seite: seite, seite-sek: seite-sek), none)
 }
 
-// Kapitel-Beleg für E-Book-Quellen ohne verlagsgetreue Seiten.
-// `kap` ersetzt die Seitenangabe; sonst identisch zu `vgl`.
-#let vgl-kap(quelle, kap: none, praefix: "Vgl.") = context {
-  // supplement nimmt beliebigen Inhalt – hier "Kap. X" statt "S. X"
-  let beleg = cite(quelle, supplement: [Kap. #kap])
-  if _zitierweise.get() == "chicago" {
-    footnote[#praefix #beleg.]
-  } else {
-    [(#lower(praefix) #beleg)]
-  }
+// Indirektes Sekundärzitat, bei dem Original und/oder Sekundärquelle über
+// Kapitel statt Seite belegt werden – Kombination aus `vgl-nach` und `vgl-kap`.
+#let vgl-nach-kap(original, sekundaer, seite: none, kap: none, seite-sek: none, kap-sek: none, praefix: "Vgl.") = {
+  _huelle(zitat-nach-kap(original, sekundaer, seite: seite, kap: kap, seite-sek: seite-sek, kap-sek: kap-sek), praefix)
+}
+
+// Direktes Sekundärzitat, bei dem Original und/oder Sekundärquelle über
+// Kapitel statt Seite belegt werden.
+#let zit-nach-kap(original, sekundaer, seite: none, kap: none, seite-sek: none, kap-sek: none) = {
+  _huelle(zitat-nach-kap(original, sekundaer, seite: seite, kap: kap, seite-sek: seite-sek, kap-sek: kap-sek), none)
 }
