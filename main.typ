@@ -120,6 +120,12 @@
       nutzung: "Überarbeitung der Drawio Datein so das sie einen einhaltlichen style haben. Sowie eine Legende.",
       teile: "Abbildung 1,2,3,4,5,7",
     ),
+    (
+      tool: "Ollama Desktop App Chat ",
+      version: "Kimi K3",
+      nutzung: "Screenshots von Fußnoten aus Cybernetics Revoloutioneris in Bibtex Format umwandeln",
+      teile: "Kapitel 3.3",
+    ),
   ),
 )
 
