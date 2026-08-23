@@ -9,4 +9,3 @@ Die Seminararbeit hat das Ziel, einen prägnanten Überblick über die Erkenntni
 + Aufbau des Cybersyns.
 + Ende des Cybersyn-Projekts.
 + Übertragbarkeit der Ideen aus Cybersyn auf moderne Monitoring- und Decision-Support-Systeme.
-Die Leser*innen sollen nach dem Lesen verstehen, was Cybersyn erreichen wollte und warum das Projekt nicht vollendet wurde. Zusätzlich sollen die Leser*innen einen Überblick darüber haben, welche Ideen Cybersyn hervorgebracht hat und wie sie heute angewendet werden.
