@@ -35,6 +35,7 @@
     "UP": "Unidad Popular",
     "USA": "Vereinigte Staaten von Amerika",
     "LKW": "Lastkraftwagen",
+    "CHECO": "CHilean ECOnomy",
   ),
   // symbole: ("m²": "Quadratmeter"),
   // sperrvermerk: (ort: "Essen", datum: "TT.MM.JJJJ"),
