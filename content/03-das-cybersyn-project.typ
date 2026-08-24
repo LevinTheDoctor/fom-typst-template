@@ -4,7 +4,7 @@ Die Entwicklung des Cybersyn-Projekts war der Versuch, Allendes Politik mithilfe
 #abbildung(
   align(center, image("../abbildungen/zeitstarhl.png", width: 75%)),
   titel: [Verlauf des Cybersyn-Projekts],
-  quelle: [Eigene Darstellung in Anlehnung an #zitat(<medinaCyberneticRevolutinaries2014>)],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat(<medinaCyberneticRevolutinaries2014>) und #zitat(<espejoCybersynBigData2022>, seite: 1166)],
 )<abb-zeitstarhl>
 == Allendes Politik
 Allende war Sozialist mit dem Ziel, die Industrie multinationaler Konzerne und der chilenischen Oligarchie zu verstaatlichen,#vgl(<bildung1970SalvadorAllende2015>) Chile durch Reformen in einen sozialistischen Staat umzuwandeln und alle demokratischen Institutionen zu erhalten. Dieser Ansatz wurde als „chilenischer Weg zum Sozialismus“ bekannt. Die #abk("USA") sowie die Opposition Allendes waren mit seinem Kurs nicht zufrieden. Dies führte zu den Streiks gegen die Regierung sowie dem späteren Militärputsch und dem Ende Cybersyns durch den Regierungswechsel (@abb-zeitstarhl). #vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production")
