@@ -118,11 +118,24 @@
     </group>
   </macro>
 
+  <!-- "type" im .bib-Eintrag überschreibt das Label "S." (z. B. "Art." bei
+       Zeitschriften ohne Seitenzählung, die stattdessen Artikelnummern
+       vergeben, etwa MDPI-Journale). -->
   <macro name="seiten">
-    <group delimiter=" ">
-      <text value="S."/>
-      <text variable="page"/>
-    </group>
+    <choose>
+      <if variable="genre">
+        <group delimiter=" ">
+          <text variable="genre"/>
+          <text variable="page"/>
+        </group>
+      </if>
+      <else>
+        <group delimiter=" ">
+          <text value="S."/>
+          <text variable="page"/>
+        </group>
+      </else>
+    </choose>
   </macro>
 
   <macro name="online-datum">

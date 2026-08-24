@@ -3,17 +3,17 @@
 Die Entwicklung des Cybersyn-Projekts war der Versuch, Allendes Politik mithilfe des #abk("VSM") und der Management-Kybernetik in einem technischen System abzubilden.#vgl(<espejoCybersynBigData2022>, seite: 1163) Beides wird in diesem Kapitel erörtert.
 #abbildung(
   align(center, image("../abbildungen/zeitstarhl.png", width: 75%)),
-  titel: [Verlauf des Cybersyn-Projekt],
+  titel: [Verlauf des Cybersyn-Projekts],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<medinaCyberneticRevolutinaries2014>)],
 )<abb-zeitstarhl>
 == Allendes Politik
-Allende war Sozialist mit dem Ziel, die Industrie multinationaler Konzerne und der chilenischen Oligarchie zu verstaatlichen#vgl(<bildung1970SalvadorAllende2015>), Chile durch Reformen in einen sozialistischen Staat umzuwandeln und alle demokratischen Institutionen zu erhalten. Dieser Ansatz wurde als „chilenischer Weg zum Sozialismus“ bekannt. Die #abk("USA") sowie die Opposition Allendes waren mit seinem Kurs nicht zufrieden. Dies führte zu den Streiks gegen die Regierung sowie dem späteren Militärputsch und dem Ende Cybersyns durch den Regierungswechsel (@abb-zeitstarhl). #vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production")
+Allende war Sozialist mit dem Ziel, die Industrie multinationaler Konzerne und der chilenischen Oligarchie zu verstaatlichen,#vgl(<bildung1970SalvadorAllende2015>) Chile durch Reformen in einen sozialistischen Staat umzuwandeln und alle demokratischen Institutionen zu erhalten. Dieser Ansatz wurde als „chilenischer Weg zum Sozialismus“ bekannt. Die #abk("USA") sowie die Opposition Allendes waren mit seinem Kurs nicht zufrieden. Dies führte zu den Streiks gegen die Regierung sowie dem späteren Militärputsch und dem Ende Cybersyns durch den Regierungswechsel (@abb-zeitstarhl). #vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production")
 === Umsetzung der Verstaatlichung
-Durch die Verstaatlichung stand die Regierung vor der Aufgabe, die Unternehmen samt ihrer Mitarbeiter*innen zu steuern. Die Aufgabe wurde von der #abk("CORFO"), die chilenischen Staatsentwicklungsbehörde übernommen.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")
+Durch die Verstaatlichung stand die Regierung vor der Aufgabe, die Unternehmen samt ihrer Mitarbeiter*innen zu steuern. Die Aufgabe wurde von der #abk("CORFO"), der chilenischen Staatsentwicklungsbehörde, übernommen.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")
 #abbildung(
   align(center, image("../abbildungen/CORFO-Hierachie2.png", width: 100%)),
   titel: [Hierarchie der Verstaatlichung durch die CORFO vor Cybersyn],
-  quelle: [Eigene Darstellung in Anlehnung an Texte aus Cybernetic Revolutionaries #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production")],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production")],
 )<abb-hCvCnsy>
 Die #abk("CORFO") unterteilte die Wirtschaft in vier Zweige mit untergeordneten Sektoren (@abb-hCvCnsy). #emph()[Interventoren] ersetzten die bisherigen Eigentümer und Manager und überwachten die Unternehmen der Sektoren.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production") Weder Komitees noch Interventoren hatten klare Rollen. Zudem gab es zu wenige qualifizierte Interventoren für bestimmte Sektoren.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production") Deshalb kam #emph()[Fernando Flores] auf die Idee, #emph()[Stafford Beer] zu kontaktieren, um die Steuerung der chilenischen Wirtschaft durch Management-Kybernetik zu erleichtern.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism") Beer nahm die Einladung an, da er so seine Ideen auf nationaler Ebene testen konnte.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")
 == Anwendung des VSM auf die chilenische Wirtschaft
@@ -25,7 +25,7 @@ Beer hatte das #abk("VSM") bereits bei seinem ersten Besuch entwickelt und gab d
 )<abb-beer-chile-mappin>
 Während seines ersten Besuchs beschäftigte sich Beer damit, wie der chilenische Staat im #abk("VSM") abgebildet werden könnte (@abb-beer-chile-mappin). Zusätzlich entwarf Beer einen Plan, der drei der vier später realisierten Komponenten beinhaltete.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 == Technische Umsetzung Cybersyns
-Bei seinem ersten Entwurf plante Beer die Komponenten Cyberstride, CHECO und Cybernet. Hinzu kam der Operationsraum.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network") Dieser war eine futuristische Vision, die wegen technischer Limitationen nur ein Prototyp.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "4 Constructing the Liberty Machine")
+Bei seinem ersten Entwurf plante Beer die Komponenten Cyberstride, CHECO und Cybernet. Hinzu kam der Operationsraum.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network") Dieser war als futuristische Vision geplant, blieb aber wegen technischer Limitationen ein Prototyp.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "4 Constructing the Liberty Machine")
 #tabelle(
   table(
     columns: 2,
@@ -46,50 +46,50 @@ Bei seinem ersten Entwurf plante Beer die Komponenten Cyberstride, CHECO und Cyb
   quelle: [Eigene Darstellung basierend auf #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")],
 )<tab-komp>
 @tab-komp zeigt die Komponenten Cybersyns.
-\ Für die CHECO lehnte Beer die Input-Output-Analyse ab, da er sie als strukturarm empfand und  eine große Datenmengen benötigt, welche durch die Projektfrist nicht zustande kam.#vgl(<brain-of-the-firm>, seite: 265) Beer nutzte deshalb die Sprache DYNAMO.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
+\ Für die CHECO lehnte Beer die Input-Output-Analyse ab, da er sie als strukturarm empfand und große Datenmengen benötigte, die innerhalb der Projektfrist nicht zu beschaffen waren.#vgl(<brain-of-the-firm>, seite: 265) Beer nutzte deshalb die Sprache DYNAMO.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 \ Cybernet war zunächst nur ein Spitzname des Projektteams für das Netzwerk.#vgl(<brain-of-the-firm>, seite: 252) Da in Chile zu wenige Computer vorhanden waren, griff man stattdessen auf Telex-Maschinen zurück – kurz für #emph()[Teleprinter Exchange]: Fernschreiber mit eindeutiger Nummer, die ans Telefonnetz angeschlossen waren.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 #abbildung(
   align(center, image("../abbildungen/Telex-Aufbau.png", width: 75%)),
   titel: [Einsatz des Telexnetzwerks zum Austausch von Informationen],
   quelle: [Eigene Darstellung in Anlehnung an #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")],
 )<abb-telex-aufbau>
-@abb-telex-aufbau zeigt den Ablauf der Kommunikation über Cybernet, darunter die unktion von Cyberstride (@tab-komp), Benachrichtigung der #abk("CORFO") bei Ausnahmen. Die statistischen Berichte erschwerten es Interventoren, Produktionsdaten zu fälschen.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
+@abb-telex-aufbau zeigt den Ablauf der Kommunikation über Cybernet, darunter die Funktion von Cyberstride (@tab-komp): die Benachrichtigung der #abk("CORFO") bei Ausnahmen. Die statistischen Berichte erschwerten es Interventoren, Produktionsdaten zu fälschen.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 #abbildung(
   align(center, image("../abbildungen/Ops-Room.png", height: 75%)),
   titel: [Aufbau des Operationsraums],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) und Gebäudeplan aus #zitat(<medinaCyberneticRevolutinaries2014>, seite: 125)],
 )<abb-opsroom>
-@abb-opsroom zeigt das Design des Raums.#footnote[Das Design des Operationsraums kam vom #abk("INTEC") unter der Leitung von #emph()[Gui Bonsiepe].#vgl(<brain-of-the-firm>, seite: 268)]
+@abb-opsroom zeigt das Design des Raums.#footnote[Das Design des Operationsraums kam vom #abk("INTEC") unter der Leitung von #emph()[Gui Bonsiepe]. Vgl. #zitat(<brain-of-the-firm>, seite: 268).]
 #tabelle(
   table(
     columns: 3,
     table.header([Gerät], [Aufbau], [Aufgabe]),
     [Animiertes #abk("VSM")],
-    [Ein zwei Meter hoher Schrank, in dem rotierende Polarisationsscheiben – eine Möglichkeit für mechanische Animation – das #abk("VSM") an eine Wand im Schrank projizierten, sodass es von außen sichtbar ist.],
+    [Ein zwei Meter hoher Schrank, in dem rotierende Polarisationsscheiben – eine Möglichkeit für mechanische Animation – das #abk("VSM") an eine Wand im Schrank projizierten, sodass es von außen sichtbar war.],
     [Die Polarisationsscheiben konnten beschriftet werden, die Beschriftung wurde für jede Besprechung angepasst, sodass man das aktuelle Mapping des #abk("VSM") sehen konnte.],
 
     [Alarmbildschirme],
     [Zwei Bildschirme, die von Hand bedient werden mussten.],
-    [Die Alarmbildschirme zeigten Warnungen für System 3, 4 und 5, falls Abweichungen eintreten.],
+    [Die Alarmbildschirme zeigten Warnungen für System 3, 4 und 5, falls Abweichungen eintraten.],
 
     [Algedonische Warnleuchte],
-    [Sie wurde durch Blinken zweier roter Leuchten signalisiert.],
-    [Die Lampen leuchteten, wenn ein Algedonische aus Cyberstride über Cybernet übermittelt wurde.],
+    [Das Signal wurde durch Blinken zweier roter Leuchten angezeigt.],
+    [Die Lampen leuchteten, wenn ein algedonisches Signal aus Cyberstride über Cybernet übermittelt wurde.],
 
     [Datafeed-Anzeigen],
-    [Der Datafeed-Anzeigen bestand aus drei Bildschirmen mit je fünf Rückprojektoren, die das Flackern eines ruhenden Bildschirms vermeiden sollten, und einem weiteren, nur von einem Rückprojektor betriebenen Bildschirm für eine Legende der Elemente.],
-    [Der Datafeed-Anzeigen zeigte Daten aus dem Cyberstride-Programm, die über die Kontrollen der Stühle navigiert werden konnten.],
+    [Der Datafeed bestand aus drei Bildschirmen mit je fünf Rückprojektoren, die das Flackern eines ruhenden Bildschirms vermeiden sollten, und einem weiteren, nur von einem Rückprojektor betriebenen Bildschirm für eine Legende der Elemente.],
+    [Der Datafeed zeigte Daten aus dem Cyberstride-Programm, die über die Kontrollen der Stühle navigiert werden konnten.],
 
-    [Panel of The Future],
-    [Das Panel of The Future war eine in Stoff gehüllte Magnetwand mit unterschiedlichen Magneten, die jeweils einen Teil der Wirtschaft darstellten.#vgl(<medinaCyberneticRevolutinaries2014>, seite: 128) ],
+    [Panel of the Future],
+    [Das Panel of the Future war eine in Stoff gehüllte Magnetwand mit unterschiedlichen Magneten, die jeweils einen Teil der Wirtschaft darstellten.#vgl(<medinaCyberneticRevolutinaries2014>, seite: 128) ],
     [Mit ihr sollte geprüft werden, ob eine Entscheidung sich positiv oder negativ auf die Wirtschaft auswirkt – so ließen sich Ideen auch ohne Rechner leicht testen.],
   ),
   titel: [Bestandteile des Operationsraums],
-  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>) Seite 268 - 270 und #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "4 Constructing the Liberty Machine")],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: "268–270") und #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "4 Constructing the Liberty Machine")],
 ) <tab-opsroom-aufbau>
-@tab-opsroom-aufbau schlüsselt die Bestandteile des Operationsraums auf. Der Aufbau der Geräte(@tab-opsroom-aufbau) zeigt dass der Raum ein Prototyp bilieb. Ein Beispiel ist das #emph()[Panel of The Future], das ursprünglich eine Simulation durch CHECO zeigen sollte – der dafür nötige Computer wurde jedoch nie fertiggestellt.#vgl(<brain-of-the-firm>, seite: 270)
-\ Die Stühle waren um die Mitte des Raums so angeordnet, dass von jedem aus alles zu sehen war. Das Bedienfeld war explizit auf Arbeiter*innen zugeschnitten, die Steuerung sollte leicht bedienbar und robust sein. Beer nannte sie #emph()[Big Hand Control].#vgl(<brain-of-the-firm>, seite: 270)
-\ Eine weiter Komponente war Cyberfolk: ein Rückkanal, über den die Bevölkerung per Regler algedonische Signale an die Regierung senden sollte. #vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
+@tab-opsroom-aufbau schlüsselt die Bestandteile des Operationsraums auf. Der Aufbau der Geräte (@tab-opsroom-aufbau) zeigt, dass der Raum ein Prototyp blieb. Ein Beispiel ist das #emph()[Panel of the Future], das ursprünglich eine Simulation durch CHECO zeigen sollte – der dafür nötige Computer wurde jedoch nie fertiggestellt.#vgl(<brain-of-the-firm>, seite: 270)
+\ Die Stühle waren um die Mitte des Raums so angeordnet, dass von jedem aus alles zu sehen war. Das Bedienfeld war explizit auf Arbeiter*innen zugeschnitten; die Steuerung sollte leicht bedienbar und robust sein. Beer nannte sie #emph()[Big Hand Control].#vgl(<brain-of-the-firm>, seite: 270)
+\ Eine weitere Komponente war Cyberfolk: ein Rückkanal, über den die Bevölkerung per Regler algedonische Signale an die Regierung senden sollte. #vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 #abbildung(
   align(center, image("../abbildungen/cyberfolk.png", height: 75%)),
   titel: [Beers Plan für Projekt Cyberfolk],
@@ -97,7 +97,7 @@ Bei seinem ersten Entwurf plante Beer die Komponenten Cyberstride, CHECO und Cyb
 )<abb-cyberfolk>
 @abb-cyberfolk zeigt, wie Beer sich die Partizipation der Bevölkerung vorstellte. Die Abstimmungen sollten anonym bleiben, damit die Regierung unzufriedene Personen nicht unterdrücken konnte.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 == Anwendung während des Oktoberstreiks
-Der Oktoberstreik gefährdete die Grundversorgung – insbesondere Nahrung, Rohmaterialien und Treibstoff.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "5 The October Strike") Da der Regierung dadurch der Machtverlust drohte, setzte sie das Militär ein, wodurch einige Fabriken weiterarbeiten konnten.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "5 The October Strike") Die Produktion lief zwar weiter, doch blieb es schwierig, die verbliebenen Fabriken zu koordinieren. Grandi und Flores kamen daher auf die Idee, dafür Cybernet zu nutzen und so die Grundversorgung zu sichern.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "5 The October Strike") Dazu wurden eine zentrale Kommandozentrale im Präsidentenpalast und spezialisierte Kommandozentralen für Transport, Industrie, Energie, Banken, Landwirtschaft, Gesundheit und Güterversorgung errichtet, die über Cybernet verbunden tagesaktuelle Daten lieferten. So flossen Informationen direkt nach oben und Befehle direkt nach unten, wodurch es nie zum Produktionsstopp kam.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "5 The October Strike") Die Regierung konnte den Streik zwar nicht unterdrücken, doch da auch die Streikenden keinen Produktionsstopp erreichten, kam es zum Patt (@abb-zeitstarhl): Der Streik endete, Allende blieb Präsident, und General Carlos Prats wurde als Innenminister sein Stellvertreter. Um einen Konflikt mit dem Militär zu vermeiden, stimmten die Streikenden dem zu.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "5 The October Strike")
+Der Oktoberstreik, ein Streik der #abk("LKW")-Fahrer, gefährdete die Grundversorgung – insbesondere Nahrungsmittel, Rohmaterialien und Treibstoff.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "5 The October Strike") Da der Regierung dadurch der Machtverlust drohte, setzte sie das Militär ein, wodurch einige Fabriken weiterarbeiten konnten.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "5 The October Strike") Die Produktion lief zwar weiter, doch blieb es schwierig, die verbliebenen Fabriken zu koordinieren. #emph()[Mario Grandi], der Leiter des CHECO-Teams, und Flores kamen daher auf die Idee, dafür Cybernet zu nutzen und so die Grundversorgung zu sichern.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "5 The October Strike") Dazu wurden eine zentrale Kommandozentrale im Präsidentenpalast und spezialisierte Kommandozentralen für Transport, Industrie, Energie, Banken, Landwirtschaft, Gesundheit und Güterversorgung errichtet, die über Cybernet verbunden waren und tagesaktuelle Daten lieferten. So flossen Informationen direkt nach oben und Befehle direkt nach unten, wodurch es nie zum Produktionsstopp kam.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "5 The October Strike") Die Regierung konnte den Streik zwar nicht unterdrücken, doch da auch die Streikenden keinen Produktionsstopp erreichten, kam es zum Patt (@abb-zeitstarhl): Der Streik endete, Allende blieb Präsident, und General Carlos Prats wurde als Innenminister sein Stellvertreter. Um einen Konflikt mit dem Militär zu vermeiden, stimmten die Streikenden dem zu.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "5 The October Strike")
 == Ende des Projekts
-Das Ende des Projekts begann mit einem zweiten #abk("LKW")-Streik. Bei dem Streik wurde Cybernet wieder verwendet, doch dieses Mal waren die Proteste gewaltvoller.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "6 Cybersyn Goes Public") Am 3. September 1973 veröffentlichte die rechte chilenische Zeitung #emph()[Qué Pasa] einen Artikel, der Cybersyn als Kontrollwaffe der Regierung darstellte.#vgl-nach-kap(<quepasa1973cyberstride>, <medinaCyberneticRevolutinaries2014>, kap-sek: "6 Cybersyn Goes Public") Der Artikel hatte das Ziel, Misstrauen zu schüren und öffentliche Unterstützung für einen Militärputsch zu erzeugen.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "6 Cybersyn Goes Public") Der Militärputsch fand am 11. September 1973 statt. Bei dem Putsch kam Allende ums Leben, Flores wurde verhaftet und das Militär übernahm die Regierung.#vgl-nach-kap(<guzman2004salvador>, <medinaCyberneticRevolutinaries2014>, kap-sek: "6 Cybersyn Goes Public") Nachdem das Militär an die Macht gekommen war, wurde nicht mehr an dem Projekt gearbeitet und die meisten Dokumente und Gegenstände des Projekts wurden zerstört.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "7 Conclusion: Technology, Politics, History")
+Das Ende des Projekts begann mit einem zweiten #abk("LKW")-Streik. Bei dem Streik wurde Cybernet wieder verwendet, doch dieses Mal waren die Proteste gewaltsamer.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "6 Cybersyn Goes Public") Am 3. September 1973 veröffentlichte die rechte chilenische Zeitung #emph()[Qué Pasa] einen Artikel, der Cybersyn als Kontrollwaffe der Regierung darstellte.#vgl-nach-kap(<quepasa1973cyberstride>, <medinaCyberneticRevolutinaries2014>, kap-sek: "6 Cybersyn Goes Public") Der Artikel hatte das Ziel, Misstrauen zu schüren und öffentliche Unterstützung für einen Militärputsch zu erzeugen.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "6 Cybersyn Goes Public") Der Militärputsch fand am 11. September 1973 statt. Bei dem Putsch kam Allende ums Leben, Flores wurde verhaftet und das Militär übernahm die Regierung.#vgl-nach-kap(<guzman2004salvador>, <medinaCyberneticRevolutinaries2014>, kap-sek: "6 Cybersyn Goes Public") Nachdem das Militär an die Macht gekommen war, wurde nicht mehr an dem Projekt gearbeitet und die meisten Dokumente und Gegenstände des Projekts wurden zerstört.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "7 Conclusion: Technology, Politics, History")
 
