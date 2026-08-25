@@ -19,19 +19,19 @@ Die #abk("CORFO") unterteilte die Wirtschaft in vier Zweige mit untergeordneten 
 == Anwendung des VSM auf die chilenische Wirtschaft
 Beer hatte das #abk("VSM") bereits bei seinem ersten Besuch entwickelt und gab den Mitarbeiter*innen am Projekt die Manuskripte für #emph()[Brain of the Firm].#vgl(<brain-of-the-firm>, seite: 248)
 #abbildung(
-  align(center, image("../abbildungen/VSM-Rekursion-Beer.png", width: 65%)),
+  align(center, image("../abbildungen/VSM-Rekursion-Beer.png", height: 71%)),
   titel: [VSM-Rekursion nach Beer: Anwendung auf den chilenischen Staat],
   quelle: [Eigene Darstellung in Anlehnung an Auszüge aus Beers Bericht #emph()[Cybernetic Notes on the Effective Organisation of the State with Particular Reference to Industrial Control] #zitat(<brain-of-the-firm>, seite: 249)],
 )<abb-beer-chile-mappin>
 Während seines ersten Besuchs beschäftigte sich Beer damit, wie der chilenische Staat im #abk("VSM") abgebildet werden könnte (@abb-beer-chile-mappin). Zusätzlich entwarf Beer einen Plan, der drei der vier später realisierten Komponenten beinhaltete.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 == Technische Umsetzung Cybersyns
-Bei seinem ersten Entwurf plante Beer die Komponenten Cyberstride, CHECO und Cybernet. Hinzu kam der Operationsraum.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network") Dieser war als futuristische Vision geplant, blieb aber wegen technischer Limitationen ein Prototyp.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "4 Constructing the Liberty Machine")
+Bei seinem ersten Entwurf plante Beer die Komponenten Cyberstride, CHECO und Cybernet.#footnote[Beer hat bei dem Projekt einen Großteil der Planung der Komponenten Cybersyns übernommen, sowie die theoretische Grundlage mit dem #abk("VSM") geliefert. Allerdings sollte ihm das Projekt nicht vollständig zugeschrieben werden, da die Implementierung der Komponenten von anderen übernommen wurde. Cyberstride wurde von der #abk("ECOM") und dem Londoner Büro der US-amerikanischen Unternehmensberatung Arthur Andersen übernommen. Vgl. #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network"). CHECO wurde von Ron Anderton und Mario Grandi entwickelt. Vgl. #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network"). Der Operationsraum wurde von #abk("INTEC") unter der Leitung von #emph[Gui Bonsiepe] entworfen. Vgl. #zitat(<brain-of-the-firm>, seite: 268). Die Projektleitung übernahm Raúl Espejo. Vgl. #zitat(<espejoCybersynBigData2022>). Da der Fokus der Arbeit aber auf die Funktion und Theorie hinter dem Projekt eingeht, findet es später wenig Erwähnung.] Hinzu kam der Operationsraum.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network") Dieser war als futuristische Vision geplant, blieb aber wegen technischer Limitationen ein Prototyp.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "4 Constructing the Liberty Machine")
 #tabelle(
   table(
     columns: 2,
     table.header([Komponente], [Funktion]),
     [Cyberstride],
-    [Statistik-Software, die basierend auf Live-Produktionsdaten System 1-3 überwacht und bei Abweichungen algedonische Signale an System 4 und 5 sendet. So konnte auf Ereignisse wie Rohmaterialknappheit besser reagiert werden, da Komitees die Interventoren gezielter beraten und Probleme leichter identifizieren konnten.#vgl(<brain-of-the-firm>, seite: 261) ],
+    [Statistik-Software, die basierend auf Produktionsdaten System 1-3 überwacht und bei Abweichungen algedonische Signale an System 4 und 5 sendet. So konnte auf Ereignisse wie Rohmaterialknappheit besser reagiert werden, da Komitees die Interventoren gezielter beraten und Probleme leichter identifizieren konnten.#vgl(<brain-of-the-firm>, seite: 261) ],
 
     [CHECO],
     [#abk("CHECO") war eine Simulation der chilenischen Wirtschaft, die der Regierung als Labor zur Prognose von Entscheidungsauswirkungen dienen sollte. Für Beer war es eine Implementierung des Systems 4.#vgl(<brain-of-the-firm>, seite: 266)],
@@ -59,7 +59,7 @@ Bei seinem ersten Entwurf plante Beer die Komponenten Cyberstride, CHECO und Cyb
   titel: [Aufbau des Operationsraums],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) und Gebäudeplan aus #zitat(<medinaCyberneticRevolutinaries2014>, seite: 125)],
 )<abb-opsroom>
-@abb-opsroom zeigt das Design des Raums.#footnote[Das Design des Operationsraums kam vom #abk("INTEC") unter der Leitung von #emph()[Gui Bonsiepe]. Vgl. #zitat(<brain-of-the-firm>, seite: 268).]
+@abb-opsroom zeigt das Design des Raums.
 #tabelle(
   table(
     columns: 3,

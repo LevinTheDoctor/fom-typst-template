@@ -11,7 +11,7 @@
 
 #show: fom-arbeit.with(
   // --- Titelblatt (Leitfaden 2.1) --------------------------------------------
-  titel: [Inwiefern sind Konzepte, die bei Cybersyn zur Verwaltung einer Wirtschaft angewendet wurden, auf moderne Monitoring- und Decision-Support-System-Kontexte übertragbar?],
+  titel: [Inwiefern sind Konzepte, die bei Cybersyn zur Verwaltung einer Wirtschaft angewendet wurden, auf moderne Monitoring- und Decision-Support-System Kontexte übertragbar?],
   autor: "Levin Rüßmann",
   typ: "Seminararbeit", // "Master-Thesis", "Seminararbeit", "Hausarbeit"
   studiengang: "Bachelor of Science Informatik",
@@ -37,6 +37,8 @@
     "LKW": "Lastkraftwagen",
     "CHECO": "CHilean ECOnomy",
     "DSS": "Decision-Support-System",
+    "MS": "Monitoring System",
+    "K8s": "Kubernetes",
   ),
   // symbole: ("m²": "Quadratmeter"),
   // sperrvermerk: (ort: "Essen", datum: "TT.MM.JJJJ"),
