@@ -37,7 +37,7 @@
     "LKW": "Lastkraftwagen",
     "CHECO": "CHilean ECOnomy",
     "DSS": "Decision-Support-System",
-    "MS": "Monitoring System",
+    "MS": "Monitoring-System",
     "K8s": "Kubernetes",
   ),
   // symbole: ("m²": "Quadratmeter"),
@@ -119,7 +119,7 @@
       tool: "Claude Code",
       version: "Opus 5",
       nutzung: "Korrektur von Rechtschreibung, Zeichensetzung und Groß- und Kleinschreibung; Einfügen von Querverweisen auf die Abbildung des Viable System Model",
-      teile: "Kapitel 1, 2 und 3",
+      teile: "Kapitel 1, 2, 3 und 4",
     ),
     (
       tool: "Claude Code",

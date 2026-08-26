@@ -9,7 +9,7 @@ Die Entwicklung des Cybersyn-Projekts war der Versuch, Allendes Politik mithilfe
 == Allendes Politik
 Allende war Sozialist mit dem Ziel, die Industrie multinationaler Konzerne und der chilenischen Oligarchie zu verstaatlichen,#vgl(<bildung1970SalvadorAllende2015>) Chile durch Reformen in einen sozialistischen Staat umzuwandeln und alle demokratischen Institutionen zu erhalten. Dieser Ansatz wurde als „chilenischer Weg zum Sozialismus“ bekannt. Die #abk("USA") sowie die Opposition Allendes waren mit seinem Kurs nicht zufrieden. Dies führte zu den Streiks gegen die Regierung sowie dem späteren Militärputsch und dem Ende Cybersyns durch den Regierungswechsel (@abb-zeitstarhl). #vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production")
 === Umsetzung der Verstaatlichung
-Durch die Verstaatlichung stand die Regierung vor der Aufgabe, die Unternehmen samt ihrer Mitarbeiter*innen zu steuern. Die Aufgabe wurde von der #abk("CORFO"), der chilenischen Staatsentwicklungsbehörde, übernommen.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")
+Durch die Verstaatlichung stand die Regierung vor der Aufgabe, die Unternehmen samt ihren Mitarbeiter*innen zu steuern. Die Aufgabe wurde von der #abk("CORFO"), der chilenischen Staatsentwicklungsbehörde, übernommen.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")
 #abbildung(
   align(center, image("../abbildungen/CORFO-Hierachie2.png", width: 100%)),
   titel: [Hierarchie der Verstaatlichung durch die CORFO vor Cybersyn],
@@ -46,7 +46,7 @@ Bei seinem ersten Entwurf plante Beer die Komponenten Cyberstride, CHECO und Cyb
   quelle: [Eigene Darstellung basierend auf #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")],
 )<tab-komp>
 @tab-komp zeigt die Komponenten Cybersyns.
-\ Für die CHECO lehnte Beer die Input-Output-Analyse ab, da er sie als strukturarm empfand und große Datenmengen benötigte, die innerhalb der Projektfrist nicht zu beschaffen waren.#vgl(<brain-of-the-firm>, seite: 265) Beer nutzte deshalb die Sprache DYNAMO.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
+\ Für CHECO lehnte Beer die Input-Output-Analyse ab, da er sie als strukturarm empfand und große Datenmengen benötigte, die innerhalb der Projektfrist nicht zu beschaffen waren.#vgl(<brain-of-the-firm>, seite: 265) Beer nutzte deshalb die Sprache DYNAMO.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 \ Cybernet war zunächst nur ein Spitzname des Projektteams für das Netzwerk.#vgl(<brain-of-the-firm>, seite: 252) Da in Chile zu wenige Computer vorhanden waren, griff man stattdessen auf Telex-Maschinen zurück – kurz für #emph()[Teleprinter Exchange]: Fernschreiber mit eindeutiger Nummer, die ans Telefonnetz angeschlossen waren.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 #abbildung(
   align(center, image("../abbildungen/Telex-Aufbau.png", width: 75%)),
@@ -93,7 +93,7 @@ Bei seinem ersten Entwurf plante Beer die Komponenten Cyberstride, CHECO und Cyb
 #abbildung(
   align(center, image("../abbildungen/cyberfolk.png", height: 75%)),
   titel: [Beers Plan für Projekt Cyberfolk],
-  quelle: [Eigene Darstellung in Anlehnung an Zeichnung von Beer aus  #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")],
+  quelle: [Eigene Darstellung in Anlehnung an Zeichnung von Beer aus #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")],
 )<abb-cyberfolk>
 @abb-cyberfolk zeigt, wie Beer sich die Partizipation der Bevölkerung vorstellte. Die Abstimmungen sollten anonym bleiben, damit die Regierung unzufriedene Personen nicht unterdrücken konnte.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 == Anwendung während des Oktoberstreiks
