@@ -57,7 +57,7 @@ Bei seinem ersten Entwurf plante Beer die Komponenten Cyberstride, CHECO und Cyb
 #abbildung(
   align(center, image("../abbildungen/Ops-Room.png", height: 75%)),
   titel: [Aufbau des Operationsraums],
-  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) und Gebäudeplan aus #zitat(<medinaCyberneticRevolutinaries2014>, seite: 125)],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) und Gebäudeplan aus #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "4 Constructing the Liberty Machine")],
 )<abb-opsroom>
 @abb-opsroom zeigt das Design des Raums.
 #tabelle(
@@ -81,7 +81,7 @@ Bei seinem ersten Entwurf plante Beer die Komponenten Cyberstride, CHECO und Cyb
     [Der Datafeed zeigte Daten aus dem Cyberstride-Programm, die über die Kontrollen der Stühle navigiert werden konnten.],
 
     [Panel of the Future],
-    [Das Panel of the Future war eine in Stoff gehüllte Magnetwand mit unterschiedlichen Magneten, die jeweils einen Teil der Wirtschaft darstellten.#vgl(<medinaCyberneticRevolutinaries2014>, seite: 128) ],
+    [Das Panel of the Future war eine in Stoff gehüllte Magnetwand mit unterschiedlichen Magneten, die jeweils einen Teil der Wirtschaft darstellten.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "4 Constructing the Liberty Machine") ],
     [Mit ihr sollte geprüft werden, ob eine Entscheidung sich positiv oder negativ auf die Wirtschaft auswirkt – so ließen sich Ideen auch ohne Rechner leicht testen.],
   ),
   titel: [Bestandteile des Operationsraums],
