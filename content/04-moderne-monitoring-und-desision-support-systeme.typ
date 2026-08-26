@@ -4,8 +4,23 @@
 #abbildung(
   align(center, image("../abbildungen/DSSundMS.png", width: 90%)),
   titel: [Zusammenspiel von #abk("DSS") und #abk("MS") anhand des Beispiels einer Cloud Anwendung],
-  quelle: [Eigene Darstellung in Anlehnung an #zitat(<gluchowskiManagementSupportSysteme2008a>, seite: 70) und #zitat(<albuquerqueTracingMetricsDesign2025>)],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat(<gluchowskiManagementSupportSysteme2008a>, seite: 67), #zitat-nach(<SpragueDSS>, <gluchowskiManagementSupportSysteme2008a>, seite-sek: 67, seite: 195) und #zitat(<albuquerqueTracingMetricsDesign2025>)],
 )<abb-ms-dss-cloud>
+Das DSS in @abb-ms-dss-cloud ist Sprague-Modell #footnote[Das Sprague-Modell besteht aus Datenbank/Methodenbank/Modellbank/Reportbank/Dialogsystem#zitat-nach(<SpragueDSS>, <gluchowskiManagementSupportSysteme2008a>, seite-sek: 67, seite: 195)] aufgebaut.#vgl-nach(<SpragueDSS>, <gluchowskiManagementSupportSysteme2008a>, seite-sek: 67, seite: 195)
+#tabelle(
+  table(
+    columns: 2,
+    table.header([Komponente], [Erklärung]),
+    [Datenbank], [Zuverlässiges Verwalten von Daten über ein Datenbanksystem],
+    [Reportbank], [Speichert erstellte Berichte sowie Berichtsschablonen],
+    [Methodenbank], [Speichert Auswertungsvorgänge und algorithmische Verfahren, um diese schnell wieder zu verwenden],
+    [Modellbank], [Speichert logische Modelle und wie die Berechnung dieser funktioniert.],
+    [Dialogsystem],
+    [Ein Dialogsystem ist eine Benutzerschnittstelle, welche die Daten und Modelle verständlich aufbereitet und Interaktion ermöglicht.],
+  ),
+  titel: [Komponenten des Sprague-Modell erklärt],
+  quelle: [Eingene Darstellung in Anlehnung an #zitat-kap(<gluchowskiManagementSupportSysteme2008a>, kap: [3.2.2 Bestandteile und Aufbau der DSS])],
+)
 Damit ein #abk("DSS") funktioniert benötigt es Daten. #vgl(<gluchowskiManagementSupportSysteme2008a>, seite: 70) Diese entstehen durch Monitoring, zu Deutsch Überwachung (@abb-ms-dss-cloud). Der Aufbau eines #abk("MS") unterscheidet sich je nach zu überwachendem Bereich.
 #tabelle(
   table(
@@ -49,16 +64,16 @@ Damit ein #abk("DSS") funktioniert benötigt es Daten. #vgl(<gluchowskiManagemen
     [Es werden Metriken über die Gesundheit der Hardware innerhalb des Rechenzentrums erfasst.],
     [So kann geprüft werden, ob ein Fehler nicht an der Software, sondern an der Hardware liegt.],
   ),
-  titel: [Monitoring Metriken einer beobachtbaren Cloud Anwendung],
+  titel: [Methoden einer beobachtbaren Cloud Anwendung],
   quelle: [Eigene Darstellung in Anlehnung an #zitat-kap(<albuquerqueTracingMetricsDesign2025>, kap: "3 About the Patterns")],
 )<tab-obsr-cloud>
 
 In der Cloud werden dazu technische Daten (@tab-obsr-cloud) genutzt. Die Implementierung dieser Metriken wird auch #emph[Observability] genannt und ermöglicht Performance-Optimierung, Diagnose von Fehlern und Pflege.#vgl(<albuquerqueTracingMetricsDesign2025>, seite: 22)
 == Architektur moderner Monitoring- und Decision-Support-Systeme anhand von Azure Monitor
-Azure Monitor #footnote[In diesem Kapitel nwid die Dokumentation Azure Mointor von Mircosoft Learn als Primär Quelle genutzt, Azure Monitor ist nur ein Beispiel für #abk("MS") und #abk("DSS") in als Observability-Dienst in der Cloud] ist der #emph[Observability] Dienst der Azure Cloud.#vgl-kap(<austinmccollumAzureMonitorUebersicht>, kap: "Azure Monitor – Übersicht")  In @abb-ms-dss-cloud und @tab-obsr-cloud wurde erklärt wie #abk("MS") und #abk("DSS") in Cloud Umgebungen zusammen Arbeiten.
+Azure Monitor #footnote[In diesem Kapitel wird die Dokumentation des Azure Mointor von Mircosoft Learn als Primär Quelle genutzt, Azure Monitor ist nur ein Beispiel für #abk("MS") und #abk("DSS") in als Observability-Dienst in der Cloud] ist der #emph[Observability] Dienst der Azure Cloud.#vgl-kap(<austinmccollumAzureMonitorUebersicht>, kap: "Azure Monitor – Übersicht")  In @abb-ms-dss-cloud und @tab-obsr-cloud wurde erklärt wie #abk("MS") und #abk("DSS") in Cloud Umgebungen zusammen Arbeiten.
 #abbildung(
   align(center, image("../abbildungen/azure-monitor.png")),
   titel: [Architektur von Azure Monitor],
   quelle: [Eigene Darstellung basierend auf #zitat(<austinmccollumAzureMonitorUebersicht>) und #zitat(<bandersmsftSmartDetectionApplication>)],
 )<abb-azure-monitor>
-Azure Mointor kann in #abk("MS") und #abk("DSS") unterteilt werden (@abb-azure-monitor). Der #abk("MS")-teil sammlt Metriken, Logs und Traces diese werden von Azure zentral gespeichert.#vgl(<austinmccollumAzureMonitorUebersicht>) Der #abk("DSS") teil sind Log Analytics, Metrcis Explorer und den Insights des jeweilgen deinst.#vgl(<austinmccollumAzureMonitorUebersicht>) Zusatlich besthet die Möglichkeit diese Daten Automatisiert auf zubereiten in diensten wie Power BI, Grafana oder Workbooks.#vgl(<austinmccollumAzureMonitorUebersicht>) Bei Anomalien und Performance Probleme innerhalb der Appliaction Insight werden automatisch Warnungen als email an den zustandigen Personen gesendet (@abb-azure-monitor).#vgl(<bandersmsftSmartDetectionApplication>)
+Azure Monitor kann in #abk("MS") und #abk("DSS") unterteilt werden(@abb-azure-monitor). Der #abk("MS")-teil sammelt Metriken, Logs und Traces, diese werden von Azure zentral gespeichert.#vgl(<austinmccollumAzureMonitorUebersicht>) Der #abk("DSS")-Teil umfasst Log Analytics, Metrics Explorer und die Insights des jeweiligen Dienstes.#vgl(<austinmccollumAzureMonitorUebersicht>) Zusätzlich besteht die Möglichkeit, diese Daten automatisiert in Diensten wie Power BI, Grafana oder Workbooks aufzubereiten.#vgl(<austinmccollumAzureMonitorUebersicht>) Bei Anomalien und Performance-Problemen innerhalb von Application Insights werden automatisch Warnungen durch Smart Detection als E-Mail an die zuständigen Personen gesendet(@abb-azure-monitor).#vgl(<bandersmsftSmartDetectionApplication>)
