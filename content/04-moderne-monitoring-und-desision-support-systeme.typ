@@ -55,10 +55,10 @@ Damit ein #abk("DSS") funktioniert benötigt es Daten. #vgl(<gluchowskiManagemen
 
 In der Cloud werden dazu technische Daten (@tab-obsr-cloud) genutzt. Die Implementierung dieser Metriken wird auch #emph[Observability] genannt und ermöglicht Performance-Optimierung, Diagnose von Fehlern und Pflege.#vgl(<albuquerqueTracingMetricsDesign2025>, seite: 22)
 == Architektur moderner Monitoring- und Decision-Support-Systeme anhand von Azure Monitor
-Azure Monitor #footnote[In diesem Kapitel nutze ich die Dokumentation Azure Mointors als Primär Quelle, Azure Monitor ist nur ein Beispiel für #abk("MS") und #abk("DSS") in als Observability-Dienst in der Cloud] ist der #emph[Observability] Dienst der Azure Cloud.#vgl-kap(<austinmccollumAzureMonitorUebersicht>, kap: "Azure Monitor – Übersicht")  In @abb-ms-dss-cloud und @tab-obsr-cloud wurde erklärt wie #abk("MS") und #abk("DSS") in Cloud Umgebungen zusammen Arbeiten.
+Azure Monitor #footnote[In diesem Kapitel nwid die Dokumentation Azure Mointor von Mircosoft Learn als Primär Quelle genutzt, Azure Monitor ist nur ein Beispiel für #abk("MS") und #abk("DSS") in als Observability-Dienst in der Cloud] ist der #emph[Observability] Dienst der Azure Cloud.#vgl-kap(<austinmccollumAzureMonitorUebersicht>, kap: "Azure Monitor – Übersicht")  In @abb-ms-dss-cloud und @tab-obsr-cloud wurde erklärt wie #abk("MS") und #abk("DSS") in Cloud Umgebungen zusammen Arbeiten.
 #abbildung(
   align(center, image("../abbildungen/azure-monitor.png")),
   titel: [Architektur von Azure Monitor],
   quelle: [Eigene Darstellung basierend auf #zitat(<austinmccollumAzureMonitorUebersicht>) und #zitat(<bandersmsftSmartDetectionApplication>)],
 )<abb-azure-monitor>
-
+Azure Mointor kann in #abk("MS") und #abk("DSS") unterteilt werden (@abb-azure-monitor). Der #abk("MS")-teil sammlt Metriken, Logs und Traces diese werden von Azure zentral gespeichert.#vgl(<austinmccollumAzureMonitorUebersicht>) Der #abk("DSS") teil sind Log Analytics, Metrcis Explorer und den Insights des jeweilgen deinst.#vgl(<austinmccollumAzureMonitorUebersicht>) Zusatlich besthet die Möglichkeit diese Daten Automatisiert auf zubereiten in diensten wie Power BI, Grafana oder Workbooks.#vgl(<austinmccollumAzureMonitorUebersicht>) Bei Anomalien und Performance Probleme innerhalb der Appliaction Insight werden automatisch Warnungen als email an den zustandigen Personen gesendet (@abb-azure-monitor).#vgl(<bandersmsftSmartDetectionApplication>)

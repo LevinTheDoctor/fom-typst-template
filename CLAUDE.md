@@ -32,6 +32,10 @@ zuerst dort nachlesen.
   Abkürzungsverzeichnis → ggf. Formel-/Symbolverzeichnis → ggf. Sperrvermerk →
   Textteil → ggf. Anhang → Literaturverzeichnis → ggf. Rechtsprechungs-/
   Quellenverzeichnis → KI-Hilfsmittelverzeichnis.
+- **BibTeX/hayagriva:** Internetquellen müssen `@online` (bzw. `@electronic`/`@www`)
+  mit `url`-Feld sein. `@misc` wird auf den CSL-Typ `document` abgebildet und
+  `howpublished` komplett ignoriert – solche Einträge landen ohne URL und ohne
+  Zugriffsdatum in der Monographien-Zeile und werden nicht ans Ende sortiert.
 - **Zitieren (Kap. 3):** Chicago-Fußnote `Vgl. Nachname, V., Stichwort, Jahr, S. X.`
   (direktes Zitat ohne „Vgl.“) **oder** Harvard `(vgl. Nachname, Jahr, S. X)`.
   Ab 3 Autoren „et al./u. a.“ (nur im Kurzbeleg). Jahres-Suffixe a/b bei gleichem
@@ -82,8 +86,13 @@ template/csl/fom-apa.csl        Autor-Jahr nach APA 7th Edition (kein Leitfaden-
    Zotero/Better BibTeX exportiert das Zotero-Feld „Kurztitel“ als `shorttitle` –
    hayagriva mappt es korrekt (getestet).
 5. **Internetquellen ans Ende:** über CSL-Sortier-Makro `typ-rang` (webpage → „2“).
-   Eine echte Zwischenüberschrift „Internetquellen“ ist nicht möglich (Typst:
-   eine Bibliographie pro Dokument) – dokumentierte Abweichung.
+   Seit Typst 0.15 sind mehrere `bibliography`-Aufrufe pro Dokument erlaubt;
+   `#literaturverzeichnis(internetquellen: "…")` rendert daher optional einen
+   eigenen Abschnitt mit der Zwischenüberschrift „Internetquellen“ aus einer
+   zweiten .bib-Datei. Ohne diesen Parameter bleibt es bei einer Liste, in der
+   die Internetquellen als geschlossener Block am Ende stehen (ohne
+   Überschrift). Voraussetzung für den eigenen Abschnitt: kein Zitierschlüssel
+   in beiden Dateien.
 6. **Anhang-Nummern:** Zähler wird via `context` **in den Überschriftentext
    eingebrannt** (nicht `context display()` im Body), sonst zeigt das
    Inhaltsverzeichnis „Anhang 0“.
@@ -115,8 +124,6 @@ in eine Testdatei und kompilieren.
 
 ## Bekannte Abweichungen / offene Punkte (Roadmap)
 
-- [ ] Zwischenüberschrift „Internetquellen“ im Literaturverzeichnis (blockiert durch
-      Typst: nur eine `bibliography` pro Dokument; Alternative: eigene Rendering-Schicht).
 - [ ] Leerzeile zwischen Anfangsbuchstaben-Gruppen im Literaturverzeichnis (A → B).
 - [ ] Ersetzungsstrich „–“ bei wiederholtem Verfasser (laut Leitfaden optional).
 - [ ] Hängender Einzug exakt 1 cm (CSL/Typst rendert ~0,75 cm; fest verdrahtet).

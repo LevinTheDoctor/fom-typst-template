@@ -64,14 +64,20 @@
 // verlagsgetreue Seiten; sonst identisch zu `zitat`.
 #let zitat-kap(quelle, kap: none) = cite(quelle, supplement: [Kap. #kap])
 
+// Endet die Seitenangabe selbst auf einen Punkt – "o. S.", "o. J.", "o. O."
+// (Leitfaden 2.6) oder "12 f." –, darf der Schlusspunkt der Fußnote nicht
+// zusätzlich gesetzt werden, sonst entsteht "..., o. S..".
+#let _endet-auf-punkt(seite) = type(seite) == str and seite.trim().ends-with(".")
+
 // Interner Baustein: nimmt den fertigen Beleg und entscheidet Fußnote vs.
 // Klammer. `praefix: none` = direktes Zitat (kein "Vgl."), sonst indirektes
 // Zitat. Sowohl "harvard" als auch "apa" setzen den Kurzbeleg in Klammern im
 // Fließtext; nur "chicago" verwendet Fußnoten. Gemeinsame Basis für alle
 // vgl-/zit-Varianten (auch die Sekundärzitat- und Kapitel-Varianten).
-#let _huelle(beleg, praefix) = context {
+#let _huelle(beleg, praefix, punkt: true) = context {
+  let schluss = if punkt { [.] } else { [] }
   if _zitierweise.get() == "chicago" {
-    if praefix == none { footnote[#beleg.] } else { footnote[#praefix #beleg.] }
+    if praefix == none { footnote[#beleg#schluss] } else { footnote[#praefix #beleg#schluss] }
   } else {
     if praefix == none { [(#beleg)] } else { [(#lower(praefix) #beleg)] }
   }
@@ -79,10 +85,14 @@
 
 // Indirektes Zitat ("Vgl."). Über `praefix` lässt sich z. B. "S. dazu"
 // (entfernte Anlehnung, Leitfaden 3.2) setzen.
-#let vgl(quelle, seite: none, praefix: "Vgl.") = _huelle(zitat(quelle, seite: seite), praefix)
+#let vgl(quelle, seite: none, praefix: "Vgl.") = _huelle(
+  zitat(quelle, seite: seite),
+  praefix,
+  punkt: not _endet-auf-punkt(seite),
+)
 
 // Direktes (wörtliches) Zitat – Kurzbeleg ohne "Vgl.".
-#let zit(quelle, seite: none) = _huelle(zitat(quelle, seite: seite), none)
+#let zit(quelle, seite: none) = _huelle(zitat(quelle, seite: seite), none, punkt: not _endet-auf-punkt(seite))
 
 // Indirektes Zitat mit Kapitel- statt Seitenangabe (E-Book ohne Seiten).
 #let vgl-kap(quelle, kap: none, praefix: "Vgl.") = _huelle(zitat-kap(quelle, kap: kap), praefix)
@@ -114,22 +124,38 @@
 
 // Indirektes Sekundärzitat: Vgl. Original, S. X, zitiert nach Sekundärquelle, S. Y.
 #let vgl-nach(original, sekundaer, seite: none, seite-sek: none, praefix: "Vgl.") = {
-  _huelle(zitat-nach(original, sekundaer, seite: seite, seite-sek: seite-sek), praefix)
+  _huelle(
+    zitat-nach(original, sekundaer, seite: seite, seite-sek: seite-sek),
+    praefix,
+    punkt: not _endet-auf-punkt(seite-sek),
+  )
 }
 
 // Direktes (wörtliches) Sekundärzitat – ohne "Vgl.".
 #let zit-nach(original, sekundaer, seite: none, seite-sek: none) = {
-  _huelle(zitat-nach(original, sekundaer, seite: seite, seite-sek: seite-sek), none)
+  _huelle(
+    zitat-nach(original, sekundaer, seite: seite, seite-sek: seite-sek),
+    none,
+    punkt: not _endet-auf-punkt(seite-sek),
+  )
 }
 
 // Indirektes Sekundärzitat, bei dem Original und/oder Sekundärquelle über
 // Kapitel statt Seite belegt werden – Kombination aus `vgl-nach` und `vgl-kap`.
 #let vgl-nach-kap(original, sekundaer, seite: none, kap: none, seite-sek: none, kap-sek: none, praefix: "Vgl.") = {
-  _huelle(zitat-nach-kap(original, sekundaer, seite: seite, kap: kap, seite-sek: seite-sek, kap-sek: kap-sek), praefix)
+  _huelle(
+    zitat-nach-kap(original, sekundaer, seite: seite, kap: kap, seite-sek: seite-sek, kap-sek: kap-sek),
+    praefix,
+    punkt: kap-sek != none or not _endet-auf-punkt(seite-sek),
+  )
 }
 
 // Direktes Sekundärzitat, bei dem Original und/oder Sekundärquelle über
 // Kapitel statt Seite belegt werden.
 #let zit-nach-kap(original, sekundaer, seite: none, kap: none, seite-sek: none, kap-sek: none) = {
-  _huelle(zitat-nach-kap(original, sekundaer, seite: seite, kap: kap, seite-sek: seite-sek, kap-sek: kap-sek), none)
+  _huelle(
+    zitat-nach-kap(original, sekundaer, seite: seite, kap: kap, seite-sek: seite-sek, kap-sek: kap-sek),
+    none,
+    punkt: kap-sek != none or not _endet-auf-punkt(seite-sek),
+  )
 }

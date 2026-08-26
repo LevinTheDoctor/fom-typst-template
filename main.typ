@@ -58,12 +58,15 @@
 // ]
 
 // --- Literaturverzeichnis (Leitfaden 2.6) --------------------------------------
-#literaturverzeichnis(datei: "/literatur/literatur.bib")
+#literaturverzeichnis(
+  datei: "/literatur/literatur.bib",
+  internetquellen: "/literatur/internetquellen.bib",
+)
 
 // --- KI-Hilfsmittelverzeichnis (Leitfaden 2.9) ---------------------------------
 #ki-hilfsmittelverzeichnis(
   (
-    // (tool: "ChatGPT", version: "4o", nutzung: "…", teile: "Kapitel …"),
+    // (tool: "ChatGPT", version:  "4o", nutzung: "…", teile: "Kapitel …"),
     (
       tool: "Claude Webseite",
       version: "Opus 4.8",
@@ -121,14 +124,8 @@
     (
       tool: "Claude Code",
       version: "Opus 5",
-      nutzung: "Überarbeitung der draw.io-Dateien, sodass sie einen einheitlichen Stil und eine Legende haben.",
+      nutzung: "Überarbeitung der drawio-Dateien, sodass sie einen einheitlichen Stil und eine Legende haben.",
       teile: "Abbildung 2,3,4,5,6",
-    ),
-    (
-      tool: "Ollama Desktop App Chat ",
-      version: "Kimi K3",
-      nutzung: "Screenshots von Fußnoten aus Cybernetic Revolutionaries ins BibTeX-Format umwandeln",
-      teile: "Kapitel 3.3",
     ),
   ),
 )

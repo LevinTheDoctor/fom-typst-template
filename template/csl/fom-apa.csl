@@ -130,18 +130,21 @@
   </macro>
 
   <macro name="online-datum">
-    <date variable="issued" delimiter="-" prefix="(" suffix=")">
+    <!-- Teil-Prefixe statt eines Datums-`delimiter`: fehlen Monat/Tag (z. B.
+         Quellen, von denen nur das Jahr bekannt ist), bleibt sonst ein
+         hängender Bindestrich stehen ("(2022-)"). -->
+    <date variable="issued" prefix="(" suffix=")">
       <date-part name="year"/>
-      <date-part name="month" form="numeric-leading-zeros"/>
-      <date-part name="day" form="numeric-leading-zeros"/>
+      <date-part name="month" form="numeric-leading-zeros" prefix="-"/>
+      <date-part name="day" form="numeric-leading-zeros" prefix="-"/>
     </date>
   </macro>
 
   <macro name="zugriff">
-    <date variable="accessed" delimiter="-" prefix="[Zugriff " suffix="]">
+    <date variable="accessed" prefix="[Zugriff " suffix="]">
       <date-part name="year"/>
-      <date-part name="month" form="numeric-leading-zeros"/>
-      <date-part name="day" form="numeric-leading-zeros"/>
+      <date-part name="month" form="numeric-leading-zeros" prefix="-"/>
+      <date-part name="day" form="numeric-leading-zeros" prefix="-"/>
     </date>
   </macro>
 
