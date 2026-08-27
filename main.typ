@@ -39,6 +39,7 @@
     "DSS": "Decision-Support-System",
     "MS": "Monitoring-System",
     "K8s": "Kubernetes",
+    "KPI": "key performance indicators",
   ),
   // symbole: ("m²": "Quadratmeter"),
   // sperrvermerk: (ort: "Essen", datum: "TT.MM.JJJJ"),
