@@ -3,7 +3,7 @@
 #abk("DSS") sind computergestützte Systeme, die das Urteilsvermögen von Entscheidungsträger*innen durch Modelle, Methoden und relevante Daten verbessern, um so Entscheidungsprozesse zu optimieren. #vgl(<gluchowskiManagementSupportSysteme2008a>, seite: 63)
 #abbildung(
   align(center, image("../abbildungen/DSSundMS.png", width: 90%)),
-  titel: [Zusammenspiel von #abk("DSS") und #abk("MS") anhand des Beispiels einer Cloud-Anwendung],
+  titel: [Zusammenspiel von Decision-Support- und Monitoring-System anhand des Beispiels einer Cloud-Anwendung],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<gluchowskiManagementSupportSysteme2008a>, seite: 67), #zitat-nach(<SpragueDSS>, <gluchowskiManagementSupportSysteme2008a>, seite-sek: 67, seite: 195) und #zitat(<albuquerqueTracingMetricsDesign2025>)],
 )<abb-ms-dss-cloud>
 Das #abk("DSS") in @abb-ms-dss-cloud ist nach dem Sprague-Modell (@tab-sp-m)#footnote[Das Sprague-Modell besteht aus Datenbank, Methodenbank, Modellbank, Reportbank und Dialogsystem. Vgl. #zitat-nach(<SpragueDSS>, <gluchowskiManagementSupportSysteme2008a>, seite-sek: 67, seite: 195).] aufgebaut.#vgl-nach(<SpragueDSS>, <gluchowskiManagementSupportSysteme2008a>, seite-sek: 67, seite: 195)
@@ -21,8 +21,8 @@ Das #abk("DSS") in @abb-ms-dss-cloud ist nach dem Sprague-Modell (@tab-sp-m)#foo
   titel: [Komponenten des Sprague-Modells],
   quelle: [Eigene Darstellung in Anlehnung an #zitat-kap(<gluchowskiManagementSupportSysteme2008a>, kap: [3.2.2 Bestandteile und Aufbau der DSS])],
 )<tab-sp-m>
-Damit ein #abk("DSS") funktioniert, benötigt es Daten. #vgl(<gluchowskiManagementSupportSysteme2008a>, seite: 70) Diese entstehen durch Monitoring, zu Deutsch Überwachung (@abb-ms-dss-cloud). Monitoring beschreibt das Sammeln und Erfassen von Echtzeitdaten zu einem System. #vgl-kap(<sreBook>, kap: "Chapter 6 - Monitoring Distributed Systems")
-Der Aufbau eines #abk("MS") unterscheidet sich je nach zu überwachendem Bereich.
+Damit ein #abk("DSS") funktioniert, benötigt es Daten. #vgl(<gluchowskiManagementSupportSysteme2008a>, seite: 70) Diese entstehen durch Monitoring, zu Deutsch Überwachung (@abb-ms-dss-cloud). Monitoring beschreibt das Sammeln und Erfassen von Echtzeitdaten zu einem System. #vgl-kap(<sreBook>, kap: "6")
+Ein #abk("MS") ist je nach zu überwachendem Bereich unterschiedlich aufgebaut.
 #tabelle(
   table(
     columns: 3,
@@ -77,4 +77,4 @@ Azure Monitor #footnote[In diesem Kapitel wird die Dokumentation des Azure Monit
   titel: [Architektur von Azure Monitor],
   quelle: [Eigene Darstellung basierend auf #zitat(<austinmccollumAzureMonitorUebersicht>) und #zitat(<bandersmsftSmartDetectionApplication>)],
 )<abb-azure-monitor>
-Azure Monitor kann in #abk("MS") und #abk("DSS") unterteilt werden (@abb-azure-monitor). Der #abk("MS")-Teil sammelt Metriken, Logs und Traces, die von Azure zentral gespeichert werden.#vgl(<austinmccollumAzureMonitorUebersicht>) Der #abk("DSS")-Teil umfasst Log Analytics, Metrics Explorer und die Insights des jeweiligen Dienstes.#vgl(<austinmccollumAzureMonitorUebersicht>) Zusätzlich besteht die Möglichkeit, diese Daten automatisiert in Diensten wie Power BI, Grafana oder Workbooks aufzubereiten.#vgl(<austinmccollumAzureMonitorUebersicht>) Bei Anomalien und Performance-Problemen innerhalb von Application Insights werden automatisch Warnungen durch Smart Detection als E-Mail an die zuständigen Personen gesendet (@abb-azure-monitor).#vgl(<bandersmsftSmartDetectionApplication>) Autoskalierungsvorhersage leifert Prognosen für CPU Auslastung, berechtet durch Maschnielles Lernen anhand vergangenen daten.#vgl(<autoscalePred>)
+Azure Monitor kann in #abk("MS") und #abk("DSS") unterteilt werden (@abb-azure-monitor). Der #abk("MS")-Teil sammelt Metriken, Logs und Traces, die von Azure zentral gespeichert werden.#vgl(<austinmccollumAzureMonitorUebersicht>) Der #abk("DSS")-Teil umfasst Log Analytics, Metrics Explorer und die Insights des jeweiligen Dienstes.#vgl(<austinmccollumAzureMonitorUebersicht>) Zusätzlich besteht die Möglichkeit, diese Daten automatisiert in Diensten wie Power BI, Grafana oder Workbooks aufzubereiten.#vgl(<austinmccollumAzureMonitorUebersicht>) Bei Anomalien und Performance-Problemen innerhalb von Application Insights werden automatisch Warnungen durch Smart Detection als E-Mail an die zuständigen Personen gesendet (@abb-azure-monitor).#vgl(<bandersmsftSmartDetectionApplication>) Die Autoskalierungsvorhersage liefert Prognosen für die CPU-Auslastung, berechnet durch maschinelles Lernen anhand vergangener Daten.#vgl(<autoscalePred>)

@@ -85,7 +85,7 @@
                 <mxCell id="39" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=4;strokeColor=light-dark(#23303e, #32a0ff);shadow=0;dashed=0;shape=mxgraph.ios7.icons.cloud;" vertex="1" parent="1">
                     <mxGeometry x="64" y="195" width="150" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="40" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 27px;&quot;&gt;Cloud Anwendung&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="40" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 27px;&quot;&gt;Cloud-Anwendung&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="30" y="300" width="227.5" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="42" value="" style="endArrow=block;html=1;endFill=1;strokeWidth=6;strokeColor=#003366;" edge="1" parent="1">

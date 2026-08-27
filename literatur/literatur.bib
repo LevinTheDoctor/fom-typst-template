@@ -159,19 +159,19 @@
   file    = {/Users/levinrussmann/Zotero/storage/6GYQ4N3Y/Espejo - 2022 - Cybersyn, big data, variety engineering and governance.pdf}
 }
 
-@incollection{gluchowskiManagementSupportSysteme2008a,
-  title     = {{Management Support Systeme und Business Intelligence --- Anwendungssysteme zur Unterst\"utzung von Managementaufgaben}},
-  booktitle = {{Management Support Systeme und Business Intelligence: Computergest\"utzte Informationssysteme f\"ur Fach- und F\"uhrungskr\"afte}},
-  editor    = {Gluchowski, Peter and Gabriel, Roland and Dittmar, Carsten},
-  year      = 2008,
-  publisher = {Springer},
-  address   = {Berlin, Heidelberg},
-  doi       = {10.1007/978-3-540-68269-1_1},
-  urldate   = {2026-08-24},
-  abstract  = {Der Einsatz von computergest\"utzten Informations- und Kommunikationssystemen ist l\"angst nicht nur auf die Unterst\"utzung der operativen Gesch\"aftsabl\"aufe beschr\"ankt, vielmehr hat sich die Nutzung derartiger Systeme l\"angst auch in den ,,Chefetagen`` etabliert, so dass verst\"arkt das Management, d. h. die Gesamtheit der Fach- und F\"uhrungskr\"afte in Organisationen mit dispositiven Aufgabenstellungen, als Anwenderkreis in den Vordergrund r\"uckt. Die Systeme, die eine Unterst\"utzungsfunktion bei Managementaufgaben liefern, stehen mit ihren unterschiedlichen historischen Auspr\"agungen, Architekturformen, verwendeten Technologien und Aufgabenfeldern im Fokus des vorliegenden Buches.},
-  isbn      = {978-3-540-68269-1},
-  langid    = {ngerman},
-  file      = {/Users/levinrussmann/Zotero/storage/3TKQ8KXR/Gluchowski et al. - 2008 - Management Support Systeme und Business Intelligence — Anwendungssysteme zur Unterstützung von Manag.pdf}
+% Monografie (nicht Sammelband): Zotero-Export hatte den Typ "Buchteil", daher
+% zuvor editor + verschachtelter booktitle + Kapitel-DOI (_1) ohne Auflage/Verlag.
+@book{gluchowskiManagementSupportSysteme2008a,
+  title      = {{Management Support Systeme und Business Intelligence: Computergest\"utzte Informationssysteme f\"ur Fach- und F\"uhrungskr\"afte}},
+  shorttitle = {{Management Support Systeme und Business Intelligence}},
+  author     = {Gluchowski, Peter and Gabriel, Roland and Dittmar, Carsten},
+  year       = 2008,
+  edition    = {2},
+  publisher  = {Springer},
+  address    = {Berlin, Heidelberg},
+  isbn       = {978-3-540-23543-9},
+  langid     = {ngerman},
+  file       = {/Users/levinrussmann/Zotero/storage/3TKQ8KXR/Gluchowski et al. - 2008 - Management Support Systeme und Business Intelligence — Anwendungssysteme zur Unterstützung von Manag.pdf}
 }
 
 @misc{guzman2004salvador,
@@ -350,7 +350,7 @@
   title     = {Building Effective Decision Support Systems},
   publisher = {Prentice-Hall},
   langid    = {english},
-  address   = {New York}
+  address   = {Englewood Cliffs, NJ}
 }
 
 @article{wurmanCoordinatingHundredsCooperative2008,
@@ -372,23 +372,22 @@
 }
 
 
-@report{albuquerqueTracingMetricsDesign2025,
-  author     = {Albuquerque, Carlos and Correia, Filipe F.},
-  shorttitle = {Monitoring Patterns},
-  title      = {Tracing and Metrics Design Patterns for Monitoring Cloud-native Applications},
-  date       = {2025-10-03},
-  url        = {https://arxiv.org/abs/2510.02991},
-  urldate    = {2026-08-24},
+% albuquerqueTracingMetricsDesign2025 steht als @online in internetquellen.bib
+% (arXiv-Preprint mit URL und Zugriffsdatum). Kein Zitierschlüssel darf in beiden
+% Dateien stehen (siehe CLAUDE.md, Design-Entscheidung 5).
+
+% Beitrag im Sammelband (nicht eigenständige Monografie): Kapitel 6 aus dem von
+% Beyer/Jones/Petoff/Murphy herausgegebenen SRE-Buch. Zitiert per Kapitel, weil
+% die frei zugängliche Online-Ausgabe (sre.google/sre-book) keine Seiten führt.
+@incollection{sreBook,
+  title      = {Monitoring Distributed Systems},
+  shorttitle = {Monitoring Distributed Systems},
+  author     = {Ewaschuk, Rob},
+  editor     = {Beyer, Betsy and Jones, Chris and Petoff, Jennifer and Murphy, Niall Richard},
+  booktitle  = {Site Reliability Engineering: How Google Runs Production Systems},
+  year       = 2016,
+  publisher  = {O'Reilly Media},
+  address    = {Sebastopol, CA},
+  isbn       = {978-1-491-92912-4},
   langid     = {english}
-}
-
-
-@book{sreBook,
-  author    = {Ewaschuk, Rob},
-  editor    = {Beyer, Betsy and Jones, Chris and Petoff, Jennifer and Murphy, Niall Richard},
-  title     = {Monitoring Distributed Systems},
-  booktitle = {Site Reliability Engineering: How Google Runs Production Systems},
-  publisher = {O'Reilly Media},
-  address   = {Sebastopol, CA},
-  year      = {2016}
 }
