@@ -141,6 +141,12 @@
       nutzung: "Behebung einer Liste konkret benannter Rechtschreib-, Zeichensetzungs- und Ausdrucksfehler (u. a. Durchkopplungen, Groß-/Kleinschreibung, gebrochene Satzkonstruktion in Kapitel 5.2, doppelte Leerzeichen vor Fußnotenziffern, verschachtelte Fußnote in Kapitel 2 aufgelöst) sowie Korrektur der Beschriftungen in den draw.io-Abbildungen 2 und 5 und eines Bibliographie-Eintrags.",
       teile: "Gesamt, Abbildungen 2 und 5, Literaturverzeichnis",
     ),
+    (
+      tool: "Claude Code",
+      version: "Sonnet 5",
+      nutzung: "Behebung einer Liste konkret benannter Fehler in Fußnoten (Groß-/Kleinschreibung, Durchkopplung „Management-Kybernetik“, Kasusfehler, Komma-Splices, Namensschreibung „Norbert Wiener“, fehlende „Vgl.“ und Schlusspunkte, unklare Formulierungen, angeglichene Wortwahl „größte Errungenschaft“).",
+      teile: "Kapitel 2 und 3",
+    ),
   ),
 )
 
