@@ -11,13 +11,13 @@
 
 #show: fom-arbeit.with(
   // --- Titelblatt (Leitfaden 2.1) --------------------------------------------
-  titel: [Inwiefern sind Konzepte, die bei Cybersyn zur Verwaltung einer Wirtschaft angewendet wurden, auf moderne Monitoring- und Decision-Support-System Kontexte übertragbar?],
+  titel: [Inwiefern sind Konzepte, die bei Cybersyn zur Verwaltung einer Wirtschaft angewendet wurden, auf moderne Monitoring- und Decision-Support-System-Kontexte übertragbar?],
   autor: "Levin Rüßmann",
   typ: "Seminararbeit", // "Master-Thesis", "Seminararbeit", "Hausarbeit"
   studiengang: "Bachelor of Science Informatik",
   erstgutachter: "Prof. Dr. Peter Vatter", // bei Seminararbeiten: Betreuer(in)
   matrikelnummer: "838791",
-  abgabedatum: "31.8.2026", // Zeichenkette oder datetime(...)
+  abgabedatum: "31.08.2026", // Zeichenkette oder datetime(...)
   semester: "2", // nur Seminararbeit
   modul: "Wissenschaftliches Arbeiten", // nur Seminararbeit: "Seminararbeit in <modul>"
   hochschule: "FOM Hochschule für Oekonomie & Management",
@@ -38,7 +38,9 @@
     "DSS": "Decision-Support-System",
     "MS": "Monitoring-System",
     "K8s": "Kubernetes",
-    "KPI": "Key Performance Indicators",
+    "KPI": "Key Performance Indicator",
+    "AWS": "Amazon Web Services",
+    "GCP": "Google Cloud Platform",
   ),
   // symbole: ("m²": "Quadratmeter"),
   // sperrvermerk: (ort: "Essen", datum: "TT.MM.JJJJ"),
@@ -118,20 +120,26 @@
     (
       tool: "Claude Code",
       version: "Opus 5",
-      nutzung: "Überarbeitung der drawio-Dateien, sodass sie einen einheitlichen Stil und eine Legende haben.",
-      teile: "Abbildung 2,3,4,5,6",
+      nutzung: "Überarbeitung der draw.io-Dateien, sodass sie einen einheitlichen Stil und eine Legende haben.",
+      teile: "Abbildungen 2–6",
     ),
     (
       tool: "Claude Code",
       version: "Opus 5",
-      nutzung: "Imports aus Better Bib Tex ordentlicher aufteilenen so das eine Unterscheidung zwischen Bücher, Artikel, Online Quellen so dass das Literatur verzeichnis sauber aufgebaut ist.",
-      teile: "BibTex / Literatur Verzeichnis",
+      nutzung: "Imports aus Better BibTeX ordentlicher aufteilen, sodass zwischen Büchern, Artikeln und Onlinequellen unterschieden wird. So ist das Literaturverzeichnis sauber aufgebaut.",
+      teile: "BibTeX / Literaturverzeichnis",
     ),
     (
       tool: "Claude Webseite",
       version: "Opus 5",
-      nutzung: "Kompiliert PDF bewerten und nach fehler suchen wie z.b. zitation.",
+      nutzung: "Kompilierte PDF bewerten und nach Fehlern suchen, z. B. in der Zitation.",
       teile: "Gesamt",
+    ),
+    (
+      tool: "Claude Code",
+      version: "Opus 5",
+      nutzung: "Behebung einer Liste konkret benannter Rechtschreib-, Zeichensetzungs- und Ausdrucksfehler (u. a. Durchkopplungen, Groß-/Kleinschreibung, gebrochene Satzkonstruktion in Kapitel 5.2, doppelte Leerzeichen vor Fußnotenziffern, verschachtelte Fußnote in Kapitel 2 aufgelöst) sowie Korrektur der Beschriftungen in den draw.io-Abbildungen 2 und 5 und eines Bibliographie-Eintrags.",
+      teile: "Gesamt, Abbildungen 2 und 5, Literaturverzeichnis",
     ),
   ),
 )

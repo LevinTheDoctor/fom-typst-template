@@ -106,6 +106,12 @@ template/csl/fom-apa.csl        Autor-Jahr nach APA 7th Edition (kein Leitfaden-
    rechts 2 cm) – „zentriert“ läge sonst 1 cm rechts der Blattmitte. Der
    zentrierte Teil des Thesis-Titelblatts steckt deshalb in `pad(right: 2cm)`
    (`titelblatt.typ`); der Gutachter-Block unten bleibt am linken Textrand.
+10. **Anmerkung aus `note`:** Alle drei CSL-Stile geben das BibTeX-Feld `note`
+    – sofern vorhanden – am Ende des Literatureintrags nach einem Gedankenstrich
+    aus (Makro `anmerkung`, z. B. „… 2014 – E-Book-Ausgabe (Apple Books)“ oder
+    „… – zitiert nach Medina“). hayagriva bildet auch `annotation`/`annote` und
+    `addendum` auf dieselbe CSL-Variable ab (Vorrang: `note`); `abstract` und
+    `keywords` bleiben unberührt. Greift für jeden Eintragstyp inkl. `@online`.
 
 ## Build & Tests
 

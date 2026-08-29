@@ -104,9 +104,12 @@
 // `original`   = die Quelle, aus der der Inhalt stammt
 // `sekundaer`  = das Werk, in dem du sie gefunden hast
 // `seite`      = Seite im Original, `seite-sek` = Seite in der Sekundärquelle
-#let zitat-nach(original, sekundaer, seite: none, seite-sek: none) = [
-  #zitat(original, seite: seite), zitiert nach #zitat(sekundaer, seite: seite-sek)
-]
+// Der Block wird bewusst einzeilig gehalten: ein Zeilenumbruch direkt nach "["
+// bzw. vor "]" erzeugt in Typst führenden/nachfolgenden Leerraum, wodurch im
+// Aufrufkontext "..., S. 67 ." statt "..., S. 67." entstünde.
+#let zitat-nach(original, sekundaer, seite: none, seite-sek: none) = {
+  [#zitat(original, seite: seite), zitiert nach #zitat(sekundaer, seite: seite-sek)]
+}
 
 // Nackter Kurzbeleg für Sekundärzitate, bei denen Original und/oder
 // Sekundärquelle keine Seitenzahlen haben – Kombination aus `zitat-nach` und

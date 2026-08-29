@@ -64,7 +64,7 @@
                 <mxCell id="41" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="34" vertex="1">
                     <mxGeometry x="-25.660000000000025" y="50" width="52.42" height="71.7" as="geometry"/>
                 </mxCell>
-                <mxCell id="43" value="Computer Experten" style="text;html=1;align=left;verticalAlign=middle;fontFamily=Times New Roman;fontSize=26;fontColor=#000000;" parent="1" vertex="1">
+                <mxCell id="43" value="Computerexperten" style="text;html=1;align=left;verticalAlign=middle;fontFamily=Times New Roman;fontSize=26;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="256.70666666666665" y="1064.3" width="286.58333333333337" height="64.4" as="geometry"/>
                 </mxCell>
                 <mxCell id="47" value="" style="group" parent="1" vertex="1" connectable="0">
