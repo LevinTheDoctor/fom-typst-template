@@ -8,6 +8,9 @@
 // vollständiges Beispiel im Branch `example-thesis`.
 
 #import "template/fom.typ": *
+#import "@preview/wordometer:0.1.5": total-words, word-count
+
+
 
 #show: fom-arbeit.with(
   // --- Titelblatt (Leitfaden 2.1) --------------------------------------------
@@ -47,12 +50,19 @@
 )
 
 // --- Textteil -----------------------------------------------------------------
-#include "content/01-einleitung.typ"
-#include "content/02-grundlagen-der-management-kybernetik.typ"
-#include "content/03-das-cybersyn-project.typ"
-#include "content/04-moderne-monitoring-und-desision-support-systeme.typ"
-#include "content/05-gegenuberstellung-und-erkennetnid-aus-dem-cybersyn-projekt.typ"
-#include "content/06-zusammenfassung-und-ausblick.typ"
+#word-count(
+  total => [
+    #include "content/01-einleitung.typ"
+    #include "content/02-grundlagen-der-management-kybernetik.typ"
+    #include "content/03-das-cybersyn-project.typ"
+    #include "content/04-moderne-monitoring-und-desision-support-systeme.typ"
+    #include "content/05-gegenuberstellung-und-erkennetnid-aus-dem-cybersyn-projekt.typ"
+    #include "content/06-zusammenfassung-und-ausblick.typ"
+
+    #metadata(total.words) <word-count>
+  ],
+  exclude: (footnote, table, figure.caption),
+)
 
 // --- Anhang (optional, Leitfaden 2.8) ------------------------------------------
 // #anhang[
@@ -152,3 +162,5 @@
 
 // --- Eigenständigkeitserklärung (Leitfaden 2.10, ohne Seitenzahl) --------------
 #eigenstaendigkeitserklaerung(ort: "Unna", datum: "31.08.2026")
+
+#word-count(total => [#metadata(total.words) <word-count>])

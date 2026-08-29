@@ -1,21 +1,10 @@
-# ==============================================================================
-# FOM-Typst-Template – Build-Pipeline (Linux/macOS; Windows: scripts/build.ps1)
-# ==============================================================================
-# Die wichtigsten Ziele:
-#   make            bzw. make build   -> thesis.pdf erzeugen
-#   make watch                        -> Live-Vorschau (bei Änderungen neu bauen)
-#   make check                        -> Kompilieren + Warnungen als Fehler
-
-
-#   make docker                       -> PDF reproduzierbar im Container bauen
-#   make clean                        -> Erzeugte Dateien entfernen
-
 TYPST     ?= typst
 INPUT     ?= main.typ
 OUTPUT    ?= thesis.pdf
 FONT_PATH ?= fonts
+WORTZAHL_LABEL ?= <word-count>
 
-.PHONY: all build watch check clean docker
+.PHONY: all build watch check clean docker wordcount
 
 all: build
 
@@ -23,6 +12,7 @@ all: build
 build:
 	$(TYPST) compile --font-path $(FONT_PATH) $(INPUT) $(OUTPUT)
 	@echo "✓ $(OUTPUT) erzeugt"
+	@$(MAKE) --no-print-directory wordcount
 
 ## Live-Vorschau: kompiliert bei jeder Änderung automatisch neu
 watch:
@@ -35,6 +25,15 @@ check:
 	if [ -n "$$ausgabe" ]; then echo "$$ausgabe"; fi; \
 	if [ $$status -ne 0 ] || [ -n "$$ausgabe" ]; then exit 1; fi
 	@echo "✓ Kompiliert ohne Fehler und Warnungen"
+	@$(MAKE) --no-print-directory wordcount
+
+## Wortzahl aus dem Dokument auslesen und ausgeben (eigenständiges Target,
+## damit build und check dieselbe Logik nutzen statt sie zu duplizieren)
+wordcount:
+	@wortanzahl=$$($(TYPST) query --font-path $(FONT_PATH) $(INPUT) "$(WORTZAHL_LABEL)" --field value 2>/dev/null); \
+	if [ -n "$$wortanzahl" ]; then \
+		echo "  Wörter: $$wortanzahl"; \
+	fi
 
 ## Reproduzierbarer Build im Docker-Container (ohne lokale Typst-Installation)
 docker:
