@@ -1,6 +1,7 @@
 #import "../template/fom.typ": *
 = Moderne Monitoring- und Decision-Support-Systeme
 #abk("DSS") sind computergestützte Systeme, die das Urteilsvermögen von Entscheidungsträger*innen durch Modelle, Methoden und relevante Daten verbessern, um so Entscheidungsprozesse zu optimieren.#vgl(<gluchowskiManagementSupportSysteme2008a>, seite: 63)
+== Sprague-Modell
 #abbildung(
   align(center, image("../abbildungen/DSSundMS.png", width: 90%)),
   titel: [Zusammenspiel von Decision-Support- und Monitoring-System anhand des Beispiels einer Cloud-Anwendung],
@@ -21,7 +22,9 @@ Das #abk("DSS") in @abb-ms-dss-cloud ist nach dem Sprague-Modell (@tab-sp-m)#foo
   titel: [Komponenten des Sprague-Modells],
   quelle: [Eigene Darstellung in Anlehnung an #zitat-kap(<gluchowskiManagementSupportSysteme2008a>, kap: [3.2.2 Bestandteile und Aufbau der DSS])],
 )<tab-sp-m>
-Damit ein #abk("DSS") funktioniert, benötigt es Daten.#vgl(<gluchowskiManagementSupportSysteme2008a>, seite: 70) Diese entstehen durch Monitoring, zu Deutsch Überwachung (@abb-ms-dss-cloud). Monitoring beschreibt das Sammeln und Erfassen von Echtzeitdaten zu einem System.#vgl-kap(<sreBook>, kap: "6")
+Damit ein #abk("DSS") funktioniert, benötigt es Daten.#vgl(<gluchowskiManagementSupportSysteme2008a>, seite: 70)
+== Observability
+Diese entstehen durch Monitoring, zu Deutsch Überwachung (@abb-ms-dss-cloud). Monitoring beschreibt das Sammeln und Erfassen von Echtzeitdaten zu einem System.#vgl-kap(<sreBook>, kap: "6")
 Ein #abk("MS") ist je nach zu überwachendem Bereich unterschiedlich aufgebaut.
 #tabelle(
   table(
@@ -70,7 +73,7 @@ Ein #abk("MS") ist je nach zu überwachendem Bereich unterschiedlich aufgebaut.
 )<tab-obsr-cloud>
 
 In der Cloud werden dazu technische Daten (@tab-obsr-cloud) genutzt. Die Implementierung dieser Metriken wird auch #emph[Observability] genannt und ermöglicht Performance-Optimierung, Diagnose von Fehlern und Pflege.#vgl(<albuquerqueTracingMetricsDesign2025>, seite: 22)
-== Architektur moderner Monitoring- und Decision-Support-Systeme anhand von Azure Monitor
+== Architektur von Azure Monitor
 Azure Monitor#footnote[In diesem Kapitel wird die Dokumentation des Azure Monitor von Microsoft Learn als Primärquelle genutzt; Azure Monitor ist nur ein Beispiel für #abk("MS") und #abk("DSS") als Observability-Dienst in der Cloud.] ist der #emph[Observability]-Dienst der Azure Cloud.#vgl(<austinmccollumAzureMonitorUebersicht>) In @abb-ms-dss-cloud und @tab-obsr-cloud wurde erklärt, wie #abk("MS") und #abk("DSS") in Cloud-Umgebungen zusammenarbeiten.
 #abbildung(
   align(center, image("../abbildungen/azure-monitor.png")),
