@@ -82,7 +82,10 @@
     }
     bibliography(datei, title: none, style: csl)
     if internetquellen != none {
-      heading(level: 2, numbering: none, outlined: true, titel-internetquellen)
+      // `outlined: false`: Die Zwischenüberschrift gliedert nur das
+      // Literaturverzeichnis selbst und gehört nicht als eigener Punkt ins
+      // Inhaltsverzeichnis (Leitfaden 2.2 kennt sie nicht als Bestandteil).
+      heading(level: 2, numbering: none, outlined: false, titel-internetquellen)
       bibliography(internetquellen, title: none, style: csl)
     }
   }
