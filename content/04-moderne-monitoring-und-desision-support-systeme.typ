@@ -46,7 +46,7 @@ Ein Monitoring-System ist je nach zu überwachendem Bereich unterschiedlich aufg
 
     [Exception Tracking],
     [Wenn eine #emph[Exception] auftritt, wird diese zentral gespeichert.],
-    [Die zentrale Speicherung verbessert die Fehlerbehebung, weil eine #emph[Exception] dadurch leichter einsehbar ist.],
+    [Die zentrale Speicherung verbessert die Fehlerbehebung, weil eine Exception dadurch leichter einsehbar ist.],
 
     [Liveness-Endpunkt],
     [Jede Anwendung erhält einen Liveness-Endpunkt, um zu prüfen, ob sie verfügbar ist.],
