@@ -4,7 +4,7 @@ Die Entwicklung des Cybersyn-Projekts war der Versuch, Allendes Politik mithilfe
 #abbildung(
   align(center, image("../abbildungen/zeitstarhl.png", width: 90%)),
   titel: [Verlauf des Cybersyn-Projekts],
-  quelle: [Eigene Darstellung in Anlehnung an #zitat(<medinaCyberneticRevolutinaries2014>) und #zitat(<espejoCybersynBigData2022>, seite: 1166), angepasst durch Claude Opus 5],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat(<medinaCyberneticRevolutinaries2014>) und #zitat(<espejoCybersynBigData2022>, seite: 1166), angepasst durch Claude Opus 5 am TT.MM.JJJJ],
 )<abb-zeitstarhl>
 == Allendes Politik
 Allende war Sozialist mit dem Ziel, die Schlüsselindustrien zu verstaatlichen,#vgl(<bildung1970SalvadorAllende2015>) Chile durch Reformen in einen sozialistischen Staat umzuwandeln und alle demokratischen Institutionen zu erhalten. Dieser Ansatz wurde als „chilenischer Weg zum Sozialismus“ bekannt. Die USA sowie die Opposition Allendes waren mit seinem Kurs nicht zufrieden.#footnote[Allende gewann die Wahl mit nur 1,3 % Vorsprung gegenüber
@@ -13,7 +13,7 @@ Allende war Sozialist mit dem Ziel, die Schlüsselindustrien zu verstaatlichen,#
 #abbildung(
   align(center, image("../abbildungen/CORFO-Hierachie.png", width: 100%)),
   titel: [Hierarchie der Verstaatlichung durch die CORFO vor Cybersyn],
-  quelle: [Eigene Darstellung in Anlehnung an #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production"), angepasst durch Claude Opus 5],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production"), angepasst durch Claude Opus 5 am TT.MM.JJJJ],
 )<abb-hCvCnsy>
 Die #abk("CORFO") unterteilte die Wirtschaft in vier Zweige mit untergeordneten Sektoren (@abb-hCvCnsy). #emph()[Interventoren] ersetzten die bisherigen Eigentümer und Manager und überwachten die Unternehmen der Sektoren.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production") Weder Komitees noch Interventoren hatten klare Rollen. Zudem gab es zu wenige qualifizierte Interventoren für bestimmte Sektoren.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production") Deshalb kam Fernando Flores#footnote[Flores war 1971 mit 28 Jahren technischer Generaldirektor der CORFO. Vgl. #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism").] auf die Idee, Stafford Beer zu kontaktieren#footnote[Flores hatte während seines Studiums Beers Buch #emph()[Cybernetics and Management] gelesen. Vgl. #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "2 Cybernetics in the Battle for Production").], um die Steuerung der chilenischen Wirtschaft durch Management-Kybernetik zu erleichtern.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism") Beer nahm die Einladung an, da er so seine Ideen auf nationaler Ebene testen konnte.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")
 == Anwendung des VSM auf die chilenische Wirtschaft
@@ -21,7 +21,7 @@ Beer hatte das #abk("VSM") bereits vor seinem ersten Besuch entwickelt und gab d
 #abbildung(
   align(center, image("../abbildungen/VSM-Rekursion-Beer.png", height: 71%)),
   titel: [VSM-Rekursion nach Beer: Anwendung auf den chilenischen Staat],
-  quelle: [Eigene Darstellung in Anlehnung an Auszüge aus Beers Bericht #emph()[Cybernetic Notes on the Effective Organisation of the State with Particular Reference to Industrial Control] #zitat(<brain-of-the-firm>, seite: 249), angepasst durch Claude Opus 5],
+  quelle: [Eigene Darstellung in Anlehnung an Auszüge aus Beers Bericht #emph()[Cybernetic Notes on the Effective Organisation of the State with Particular Reference to Industrial Control] #zitat(<brain-of-the-firm>, seite: 249), angepasst durch Claude Opus 5 am TT.MM.JJJJ],
 )<abb-beer-chile-mappin>
 Während seines ersten Besuchs beschäftigte sich Beer damit, wie der chilenische Staat im #abk("VSM") abgebildet werden könnte (@abb-beer-chile-mappin). Zusätzlich entwarf Beer einen Plan, der drei der vier später realisierten Komponenten beinhaltete.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 == Technische Umsetzung Cybersyns
@@ -51,13 +51,13 @@ Bei seinem ersten Entwurf plante Beer Cyberstride, CHECO und Cybernet.#footnote[
 #abbildung(
   align(center, image("../abbildungen/Telex-Aufbau.png", width: 75%)),
   titel: [Einsatz des Telexnetzwerks zum Austausch von Informationen],
-  quelle: [Eigene Darstellung in Anlehnung an #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network"), angepasst durch Claude Opus 5],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network"), angepasst durch Claude Opus 5 am TT.MM.JJJJ],
 )<abb-telex-aufbau>
 @abb-telex-aufbau zeigt den Ablauf der Kommunikation über Cybernet, darunter die Funktion von Cyberstride (@tab-komp): die Benachrichtigung der #abk("CORFO") bei Ausnahmen. Die statistischen Berichte erschwerten es Interventoren, Produktionsdaten zu fälschen.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "3 Designing a Network")
 #abbildung(
   align(center, image("../abbildungen/Ops-Room.png", height: 75%)),
   titel: [Aufbau des Operationsraums],
-  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) und Gebäudeplan aus #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "4 Constructing the Liberty Machine"), angepasst durch Claude Opus 5],
+  quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 269) und Gebäudeplan aus #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "4 Constructing the Liberty Machine"), angepasst durch Claude Opus 5 am TT.MM.JJJJ],
 )<abb-opsroom>
 @abb-opsroom zeigt das Design des Raums.
 #tabelle(

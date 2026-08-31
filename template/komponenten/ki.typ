@@ -37,10 +37,11 @@
 //   (
 //     tool: "ChatGPT", version: "4o",
 //     nutzung: "Paraphrasierung einzelner Textpassagen",
-//     teile: "Kapitel 2.1",
+//     teile: "Kapitel 2.1", datum: "01.11.2023",
 //   )
-// `version`, `nutzung` und `teile` sind optional; der Leitfaden verlangt
-// mindestens Tool und (falls vorhanden) Version.
+// `version`, `nutzung`, `teile` und `datum` sind optional; der Leitfaden verlangt
+// mindestens Tool und (falls vorhanden) Version; `datum` ist das Datum der
+// Kommunikation, das Leitfaden 1.6 zusätzlich zu System und Version nennt.
 #let ki-hilfsmittelverzeichnis(eintraege, titel: "KI-Hilfsmittelverzeichnis") = {
   pagebreak(weak: true)
   heading(level: 1, numbering: none, outlined: true, titel)
@@ -48,17 +49,18 @@
     [Bei der Erstellung dieser Arbeit wurden keine KI-Anwendungen eingesetzt.]
   } else {
     table(
-      columns: (1fr, auto, 1.6fr, 1fr),
+      columns: (1fr, auto, 1.6fr, 1fr, auto),
       stroke: 0.5pt,
       inset: 6pt,
       align: left + horizon,
-      table.header([*KI-Tool*], [*Version*], [*Art der Nutzung*], [*Betroffene Teile*]),
+      table.header([*KI-Tool*], [*Version*], [*Art der Nutzung*], [*Betroffene Teile*], [*Datum*]),
       ..eintraege
         .map(e => (
           [#e.at("tool", default: "")],
           [#e.at("version", default: "–")],
           [#e.at("nutzung", default: "–")],
           [#e.at("teile", default: "–")],
+          [#e.at("datum", default: "–")],
         ))
         .flatten(),
     )
