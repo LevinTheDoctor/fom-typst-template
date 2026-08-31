@@ -62,7 +62,9 @@
 
     #metadata(total.words) <word-count>
   ],
-  exclude: (footnote, table, figure.caption),
+  // Gezählt wird nur der Fließtext: Fußnoten sowie Abbildungen und Tabellen
+  // (Titel, Inhalt und Quellenzeile) bleiben außen vor.
+  exclude: (footnote, figure, table),
 )
 
 // --- Anhang (optional, Leitfaden 2.8) ------------------------------------------
