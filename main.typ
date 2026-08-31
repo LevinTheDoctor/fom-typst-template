@@ -37,7 +37,6 @@
     "CII": "Compagnie Internationale pour l'Informatique",
     "INTEC": "Instituto de Investigaciones Tecnológicas",
     "UP": "Unidad Popular",
-    "LKW": "Lastkraftwagen",
     "CHECO": "CHilean ECOnomy",
     "DSS": "Decision-Support-System",
     "MS": "Monitoring-System",
