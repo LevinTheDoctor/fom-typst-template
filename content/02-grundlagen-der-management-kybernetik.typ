@@ -2,7 +2,7 @@
 = Grundlagen der Management-Kybernetik
 Dieses Kapitel behandelt die Grundlagen der Kybernetik, die Ausprägung Management-Kybernetik und deren Begriffe.
 == Kybernetik
-Kybernetik ist nicht eindeutig definierbar, da Kybernetiker*innen dem Begriff unterschiedliche Bedeutungen zuschreiben.#vgl(<khanForewordCyberneticsStateArt2017>, seite: "viii") Die Literatur zu Cybersyn nutzt die 1948 von MIT-Mathematiker Norbert Wiener geprägte Definition aus dem Werk #emph()[„Cybernetics: Or Control and Communication in the Animal and the Machine“]. Grund dafür ist, dass Eden Medina in #emph()[Cybernetic Revolutionaries: Technology and Politics in Allende’s Chile] diese Definition mit dem Projekt Cybersyn verknüpft.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")
+Kybernetik ist nicht eindeutig definierbar, da Kybernetiker*innen dem Begriff unterschiedliche Bedeutungen zuschreiben.#vgl(<khanForewordCyberneticsStateArt2017>, seite: "viii") Die Literatur zu Cybersyn nutzt die 1948 von Norbert Wiener geprägte Definition aus dem Werk #emph()[„Cybernetics: Or Control and Communication in the Animal and the Machine“]. Grund dafür ist, dass Eden Medina diese Definition genutzt hat.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")
 \ Wieners Definition beschreibt Kybernetik als Forschungsfeld, das Kommunikationstheorie, Berechenbarkeit, Automatentheorie und Neurophysiologie vereint.#vgl(<wienerCybernetics1948>, seite: 12) Der Begriff Kybernetik leitet sich vom griechischen Wort #emph()[kubernêtês] ab.#footnote[Ein #emph()[kubernêtês] war im antiken Griechenland ein Steuermann von #emph()[Triremen], also von Kriegsschiffen. Ein #emph()[kubernêtês] musste nicht nur das Schiff steuern, sondern auch bei Seeschlachten entsprechend reagieren können. Der Begriff ist heute auch deshalb geläufig, weil der von Google entwickelte Container-Orchestrator #abk("K8s") nach ihm benannt wurde. Vgl. #zitat(<WasIstKubernetes>).] Übersetzungen sind Steuermann, Regieren, Regulation und Management.#vgl(<wernerIntroductionCyberneticsStateArt2017>, seite: 3) Diese Bedeutungen spiegeln das Ziel der Kybernetik: die Gemeinsamkeiten von Maschinen und Organismen in Kommunikation, Feedback und Steuerung zu verstehen.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")
 == Management-Kybernetik
 Management-Kybernetik versucht, ein Unternehmen mit kybernetischen Methoden – Feedback-Loops und Kommunikation aus der Kybernetik – zu steuern und zu optimieren. Beer#footnote[Beer prägte die Management-Kybernetik durch seine Werke maßgeblich. Norbert Wiener bezeichnete ihn als „Vater der Management-Kybernetik“. Vgl. #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism").] versteht eine Wirtschaft als System, vergleichbar mit einem Organismus. Beers Fokus bei der Management-Kybernetik ist Handeln.#vgl-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")
@@ -13,7 +13,7 @@ Das #abk("VSM"), zu Deutsch Modell des lebensfähigen Systems, ist Beers zentral
   titel: [Aufbau des Viable System Model],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 130)],
 ) <abb-vsm>
-Das Modell besteht aus drei großen Teilen und fünf rekursiven Systemen, die horizontal wie vertikal miteinander kommunizieren (@abb-vsm) – rekursiv, weil jedes System 1 intern denselben Aufbau des #abk("VSM") hat. Beer ließ sich dabei von Zellen eines Organismus inspirieren, die stets die Baupläne für den gesamten Organismus in sich tragen.#vgl(<brain-of-the-firm>, seite: 156)
+Das Modell besteht aus drei Teilen und fünf Systemen, die horizontal wie vertikal miteinander kommunizieren (@abb-vsm). System 1 ist rekursiv, da es intern denselben Aufbau des #abk("VSM") hat.#vgl(<brain-of-the-firm>, seite: 156)
 #tabelle(
   table(
     columns: 2,
@@ -30,7 +30,7 @@ Das Modell besteht aus drei großen Teilen und fünf rekursiven Systemen, die ho
   titel: [Aufgaben der Bestandteile des Viable System Model],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 130) und #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")],
 ) <tab-vsm-aufbau>
-@tab-vsm-aufbau erklärt die Funktion und den Aufbau der drei großen Teile des #abk("VSM").
+@tab-vsm-aufbau erklärt die Funktion und den Aufbau der drei Teile des #abk("VSM").
 === Algedonische Signale
-Der Begriff stammt von Beer und setzt sich aus dem Griechischen #emph()[algos] (Schmerz) und #emph()[hedone] (Lust/Vergnügen) zusammen. Er bezeichnet ein Signal für eine Abweichung ohne zusätzliche Informationen.#vgl(<brain-of-the-firm>, seite: 401)
+Der Begriff setzt sich aus dem Griechischen #emph()[algos] (Schmerz) und #emph()[hedone] (Lust/Vergnügen) zusammen. Er bezeichnet ein Signal für eine Abweichung ohne zusätzliche Informationen.#vgl(<brain-of-the-firm>, seite: 401)
 Diese Signale werden von den operativen Systemen (@tab-vsm-aufbau) an die Metasysteme übermittelt.

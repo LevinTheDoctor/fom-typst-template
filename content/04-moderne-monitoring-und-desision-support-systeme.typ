@@ -24,7 +24,7 @@ Das #abk("DSS") in @abb-ms-dss-cloud ist nach dem Sprague-Modell (@tab-sp-m)#foo
 )<tab-sp-m>
 Damit ein #abk("DSS") funktioniert, benötigt es Daten.#vgl(<gluchowskiManagementSupportSysteme2008a>, seite: 70)
 == Observability
-Diese entstehen durch Monitoring, zu Deutsch Überwachung (@abb-ms-dss-cloud). Monitoring beschreibt das Sammeln und Erfassen von Echtzeitdaten zu einem System.#vgl-kap(<sreBook>, kap: "6")
+Die Daten entstehen durch Monitoring (@abb-ms-dss-cloud). Monitoring beschreibt das Sammeln und Erfassen von Echtzeitdaten zu einem System.#vgl-kap(<sreBook>, kap: "6")
 Ein #abk("MS") ist je nach zu überwachendem Bereich unterschiedlich aufgebaut.
 #tabelle(
   table(
@@ -48,12 +48,12 @@ Ein #abk("MS") ist je nach zu überwachendem Bereich unterschiedlich aufgebaut.
     [Wenn eine #emph[Exception] auftritt, wird diese zentral gespeichert.],
     [Die zentrale Speicherung verbessert die Fehlerbehebung, weil eine #emph[Exception] dadurch leichter einsehbar ist.],
 
-    [Lebendigkeits-Endpunkt],
-    [Jede Anwendung erhält einen Lebendigkeits-Endpunkt, um zu prüfen, ob sie verfügbar ist.],
+    [Liveness-Endpunkt],
+    [Jede Anwendung erhält einen Liveness-Endpunkt, um zu prüfen, ob sie verfügbar ist.],
     [Ein Load Balancer prüft den Endpunkt in regelmäßigen Abständen. Schlägt der Endpunkt fehl, wird automatisch ein Signal gesendet, sodass alarmiert werden kann.],
 
-    [Bereitschafts-Endpunkt],
-    [Jede Anwendung erhält einen Bereitschafts-Endpunkt, um zu prüfen, ob sie Anfragen bearbeiten kann.],
+    [Readiness-Endpunkt],
+    [Jede Anwendung erhält einen Readiness-Endpunkt, um zu prüfen, ob sie Anfragen bearbeiten kann.],
     [Durch den Endpunkt kann ein Load Balancer entscheiden, an welche Instanz einer Anwendung eine Anfrage weitergeleitet wird.],
 
     [Synthetischer Test],
