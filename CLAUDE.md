@@ -39,7 +39,8 @@ zuerst dort nachlesen.
 - **Zitieren (Kap. 3):** Chicago-Fußnote `Vgl. Nachname, V., Stichwort, Jahr, S. X.`
   (direktes Zitat ohne „Vgl.“) **oder** Harvard `(vgl. Nachname, Jahr, S. X)`.
   Ab 3 Autoren „et al./u. a.“ (nur im Kurzbeleg). Jahres-Suffixe a/b bei gleichem
-  Autor+Jahr. „o. V.“/„o. J.“/„o. S.“ bei fehlenden Angaben.
+  Autor+Jahr. „o. V.“/„o. J.“/„o. S.“ bei fehlenden Angaben. Bei direkt
+  wiederholter Quelle „ebd.“ statt des Kurzbelegs (3.2).
 - **Literaturverzeichnis (2.6):** `Nachname, Vorname (Stichwort, Jahr): Titel,
   N. Aufl., Ort: Verlag, Jahr` – kein Schlusspunkt, keine akademischen Titel,
   hängender Einzug ~1 cm, einzeilig, Abstand zwischen Einträgen; Internetquellen
@@ -106,7 +107,23 @@ template/csl/fom-apa.csl        Autor-Jahr nach APA 7th Edition (kein Leitfaden-
    rechts 2 cm) – „zentriert“ läge sonst 1 cm rechts der Blattmitte. Der
    zentrierte Teil des Thesis-Titelblatts steckt deshalb in `pad(right: 2cm)`
    (`titelblatt.typ`); der Gutachter-Block unten bleibt am linken Textrand.
-10. **Anmerkung aus `note`:** Alle drei CSL-Stile geben das BibTeX-Feld `note`
+10. **„ebd.“ (Leitfaden 3.2):** `#vgl`/`#zit` (samt `-kap`-Varianten) ersetzen den
+    Kurzbeleg durch „ebd.“, sobald unmittelbar zuvor dieselbe Quelle belegt wurde;
+    eine abweichende Seiten-/Kapitelangabe bleibt erhalten („Vgl. ebd., S. 440.“),
+    eine identische entfällt („Vgl. ebd.“). Die Kette trägt der Zustand
+    `fom-letzter-beleg`; jede fremde Fußnote unterbricht sie über die Show-Regel
+    `kette-unterbrechen` (in `fom.typ`), Sekundärzitate über `_huelle`. Nackte
+    `#zitat`-Bausteine (Quellenzeilen, eigene Fußnoten) rühren die Kette nicht an.
+    **Falle:** Die Entscheidung darf nichts lesen, dessen Wert vom Seitenumbruch
+    abhängt – „ebd.“ ist kürzer als der Kurzbeleg, der Umbruch hängt also
+    umgekehrt an der Entscheidung. `counter(footnote)` ist genau so ein Wert
+    (Typst löst ihn im Fußnotenraum der Seite auf); ebenso liegen Zustands-Updates
+    aus einem Fußnotenkörper heraus je nach Umbruch mal vor, mal hinter den
+    folgenden Belegen. Beides ließ die Arbeit „document did not converge“ laufen.
+    Alle Lese- und Schreibzugriffe sitzen deshalb im Fließtext. Abschaltbar über
+    `fom-arbeit(ebd: false)` bzw. je Beleg `#vgl(..., ebd: false)` – etwa wenn der
+    Bezugsbeleg durch einen Seitenumbruch auf der Vorseite steht.
+11. **Anmerkung aus `note`:** Alle drei CSL-Stile geben das BibTeX-Feld `note`
     – sofern vorhanden – am Ende des Literatureintrags nach einem Gedankenstrich
     aus (Makro `anmerkung`, z. B. „… 2014 – E-Book-Ausgabe (Apple Books)“ oder
     „… – zitiert nach Medina“). hayagriva bildet auch `annotation`/`annote` und
@@ -126,7 +143,9 @@ Grundgerüst ohne Beispieltexte und ohne Web-Doku.)
 Visuelle Verifikation: `typst compile --font-path fonts --ppi 150 main.typ "seite-{0p}.png"`
 und Seiten gegen den Leitfaden prüfen (Ränder, Kopfzeilen-Seitenzahl, Verzeichnisse).
 Harvard-Regression: `sed 's/zitierweise: "chicago"/zitierweise: "harvard"/' main.typ`
-in eine Testdatei und kompilieren.
+in eine Testdatei und kompilieren. Nach Änderungen an `zitieren.typ` immer die
+ganze Arbeit bauen, nicht nur ein kleines Testdokument: Konvergenzprobleme der
+„ebd.“-Kette zeigen sich erst bei vielen Fußnoten über viele Seiten.
 
 ## Bekannte Abweichungen / offene Punkte (Roadmap)
 
@@ -136,7 +155,6 @@ in eine Testdatei und kompilieren.
 - [ ] Jahres-Suffix-Vergabe folgt Zitier- statt Bibliographie-Reihenfolge (hayagriva);
       durch Weglassen des Titel-Sortierschlüssels praktisch korrekt.
 - [ ] Rechtsprechungs-/Quellenverzeichnis als eigener Baustein (Leitfaden 2.7).
-- [ ] `ebd.`-Automatik bei direkt aufeinanderfolgenden Zitaten (Leitfaden 3.2).
 
 ## Branch-Strategie
 

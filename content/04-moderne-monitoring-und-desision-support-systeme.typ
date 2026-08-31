@@ -1,6 +1,6 @@
 #import "../template/fom.typ": *
 = Moderne Monitoring- und Decision-Support-Systeme
-#abk("DSS") sind computergestützte Systeme, die das Urteilsvermögen von Entscheidungsträger*innen durch Modelle, Methoden und relevante Daten verbessern, um so Entscheidungsprozesse zu optimieren.#vgl(<gluchowskiManagementSupportSysteme2008a>, seite: 63)
+Ein #abk("DSS") ist ein computergestütztes System, das das Urteilsvermögen von Entscheidungsträger*innen durch Modelle, Methoden und relevante Daten verbessert, um so Entscheidungsprozesse zu optimieren.#vgl(<gluchowskiManagementSupportSysteme2008a>, seite: 63)
 == Sprague-Modell
 #abbildung(
   align(center, image("../abbildungen/DSSundMS.png", width: 90%)),
@@ -12,9 +12,9 @@ Das #abk("DSS") in @abb-ms-dss-cloud ist nach dem Sprague-Modell (@tab-sp-m)#foo
   table(
     columns: 2,
     table.header([Komponente], [Erklärung]),
-    [Datenbank], [Zuverlässiges Verwalten von Daten über ein Datenbanksystem],
-    [Reportbank], [Speichert erstellte Berichte sowie Berichtsschablonen],
-    [Methodenbank], [Speichert Auswertungsvorgänge und algorithmische Verfahren, um diese schnell wieder zu verwenden],
+    [Datenbank], [Zuverlässiges Verwalten von Daten über ein Datenbanksystem.],
+    [Reportbank], [Speichert erstellte Berichte sowie Berichtsschablonen.],
+    [Methodenbank], [Speichert Auswertungsvorgänge und algorithmische Verfahren, um diese schnell wiederzuverwenden.],
     [Modellbank], [Speichert logische Modelle sowie die zugehörigen Berechnungsvorschriften.],
     [Dialogsystem],
     [Ein Dialogsystem ist eine Benutzerschnittstelle, welche die Daten und Modelle verständlich aufbereitet und Interaktion ermöglicht.],
@@ -57,7 +57,7 @@ Ein #abk("MS") ist je nach zu überwachendem Bereich unterschiedlich aufgebaut.
     [Durch den Endpunkt kann ein Load Balancer entscheiden, an welche Instanz einer Anwendung eine Anfrage weitergeleitet wird.],
 
     [Synthetischer Test],
-    [Für eine Anwendung wird eine Sammlung an Tests geschrieben, die regelmäßig an dem Produktivsystem ausgeführt werden.],
+    [Für eine Anwendung wird eine Sammlung an Tests geschrieben, die regelmäßig am Produktivsystem ausgeführt werden.],
     [So wird geprüft, ob die Produktionsumgebung wie vorgesehen reagiert.],
 
     [Anwendungsmetriken],
@@ -80,4 +80,4 @@ Azure Monitor#footnote[In diesem Kapitel wird die Dokumentation des Azure Monito
   titel: [Architektur von Azure Monitor],
   quelle: [Eigene Darstellung basierend auf #zitat(<austinmccollumAzureMonitorUebersicht>) und #zitat(<bandersmsftSmartDetectionApplication>)],
 )<abb-azure-monitor>
-Azure Monitor kann in #abk("MS") und #abk("DSS") unterteilt werden (@abb-azure-monitor). Der #abk("MS")-Teil sammelt Metriken, Logs und Traces, die von Azure zentral gespeichert werden.#vgl(<austinmccollumAzureMonitorUebersicht>) Der #abk("DSS")-Teil umfasst Log Analytics, Metrics Explorer und die Insights des jeweiligen Dienstes.#vgl(<austinmccollumAzureMonitorUebersicht>) Zusätzlich besteht die Möglichkeit, diese Daten automatisiert in Diensten wie Power BI, Grafana oder Workbooks aufzubereiten.#vgl(<austinmccollumAzureMonitorUebersicht>) Bei Anomalien und Performance-Problemen innerhalb von Application Insights werden automatisch Warnungen durch Smart Detection als E-Mail an die zuständigen Personen gesendet (@abb-azure-monitor).#vgl(<bandersmsftSmartDetectionApplication>) Die Autoskalierungsvorhersage liefert Prognosen für die CPU-Auslastung, berechnet durch maschinelles Lernen anhand vergangener Daten.#vgl(<autoscalePred>)
+Azure Monitor kann in #abk("MS") und #abk("DSS") unterteilt werden (@abb-azure-monitor). Der #abk("MS")-Teil sammelt Metriken, Logs und Traces, die von Azure zentral gespeichert werden.#vgl(<austinmccollumAzureMonitorUebersicht>) Der #abk("DSS")-Teil umfasst Log Analytics, Metrics Explorer und die Insights des jeweiligen Dienstes.#vgl(<austinmccollumAzureMonitorUebersicht>) Zusätzlich besteht die Möglichkeit, diese Daten automatisiert in Diensten wie Power BI, Grafana oder Workbooks aufzubereiten.#vgl(<austinmccollumAzureMonitorUebersicht>) Bei Anomalien und Performance-Problemen innerhalb von Application Insights werden automatisch Warnungen durch Smart Detection als E-Mail an die zuständigen Personen gesendet (@abb-azure-monitor).#vgl(<bandersmsftSmartDetectionApplication>) Die Autoskalierungsvorhersage liefert Prognosen für die CPU-Auslastung, berechnet durch maschinelles Lernen anhand vergangener Daten.#vgl(<autoscalePred>) Der Observability-Agent kann Warnungen und Issues korrelieren und automatisch untersuchen, greift aber nicht selbstständig in das System ein.#vgl(<issusAM>) Actions sind vordefinierte Reaktionen, die beim Eintritt eines bestimmten Zustands ausgeführt werden und die endgültige Entscheidung dem Cloud Engineer überlassen.#vgl(<actiongrp>)

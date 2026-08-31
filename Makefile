@@ -30,7 +30,7 @@ check:
 ## Wortzahl aus dem Dokument auslesen und ausgeben (eigenständiges Target,
 ## damit build und check dieselbe Logik nutzen statt sie zu duplizieren)
 wordcount:
-	@wortanzahl=$$($(TYPST) query --font-path $(FONT_PATH) $(INPUT) "$(WORTZAHL_LABEL)" --field value 2>/dev/null); \
+	@wortanzahl=$$($(TYPST) query --font-path $(FONT_PATH) $(INPUT) "$(WORTZAHL_LABEL)" --field value --one 2>/dev/null); \
 	if [ -n "$$wortanzahl" ]; then \
 		echo "  Wörter: $$wortanzahl"; \
 	fi

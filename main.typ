@@ -17,15 +17,16 @@
   titel: [Inwiefern sind Konzepte, die bei Cybersyn zur Verwaltung einer Wirtschaft angewendet wurden, auf moderne Monitoring- und Decision-Support-System-Kontexte übertragbar?],
   autor: "Levin Rüßmann",
   typ: "Seminararbeit", // "Master-Thesis", "Seminararbeit", "Hausarbeit"
-  studiengang: "Bachelor of Science Informatik",
+  studiengang: "Informatik",
+  grad: "Bachelor of Science (B.Sc.)",
   erstgutachter: "Prof. Dr. Peter Vatter", // bei Seminararbeiten: Betreuer(in)
   matrikelnummer: "838791",
   abgabedatum: "31.08.2026", // Zeichenkette oder datetime(...)
-  semester: "2", // nur Seminararbeit
+  wortanzahl: auto, // Wortzahl des Textteils aus der Marke <word-count> unten
   modul: "Wissenschaftliches Arbeiten", // nur Seminararbeit: "Seminararbeit in <modul>"
   hochschule: "FOM Hochschule für Oekonomie & Management",
   logo: image("./abbildungen/fom-logo.svg", width: 2.2cm), // z. B. image("abbildungen/logo.png", width: 3cm)
-
+  studienzentrum: "Hochschulzentrum Dortmund",
   // --- Formale Konfiguration --------------------------------------------------
   zitierweise: "chicago", // "chicago" (Fußnoten), "harvard" oder "apa" (im Text)
   schriftart: "Times New Roman", // "Arial" setzt automatisch 11,5 pt
@@ -153,6 +154,12 @@
     ),
     (
       tool: "Claude Code",
+      version: "Opus 5",
+      nutzung: "Neugestaltung des Titelblatts der Seminararbeit und automatische Übernahme der Wortanzahl aus dem Textteil",
+      teile: "Titelblatt",
+    ),
+    (
+      tool: "Claude Code",
       version: "Sonnet 5",
       nutzung: "Behebung einer Liste konkret benannter Fehler in Fußnoten (Groß-/Kleinschreibung, Durchkopplung „Management-Kybernetik“, Kasusfehler, Komma-Splices, Namensschreibung „Norbert Wiener“, fehlende „Vgl.“ und Schlusspunkte, unklare Formulierungen, angeglichene Wortwahl „größte Errungenschaft“).",
       teile: "Kapitel 2 und 3",
@@ -162,5 +169,3 @@
 
 // --- Eigenständigkeitserklärung (Leitfaden 2.10, ohne Seitenzahl) --------------
 #eigenstaendigkeitserklaerung(ort: "Unna", datum: "31.08.2026")
-
-#word-count(total => [#metadata(total.words) <word-count>])
