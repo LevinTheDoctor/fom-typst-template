@@ -200,7 +200,14 @@
     <layout>
       <group delimiter=" ">
         <group delimiter=" ">
-          <text macro="autoren-voll"/>
+        <!-- Autorenposition kursiv (nur im Literaturverzeichnis): der
+             alphabetisierte Name bis vor die Klammer. Gilt über `autoren-voll`
+             automatisch auch für institutionelle Verfasser, für "o. V." und für
+             Herausgeberbände, bei denen der Herausgeber an der Autorenposition
+             steht. Der Kurzbeleg (`autoren-kurz`) und der Herausgeber nach
+             "in:" im Sammelwerk-Zweig bleiben normal; die Sortierung ist
+             unberührt, weil Formatierung nicht auf <sort><key> wirkt. -->
+          <text macro="autoren-voll" font-style="italic"/>
           <group prefix="(" suffix="):" delimiter=", ">
             <text macro="stichwort"/>
             <text macro="jahr"/>
