@@ -47,6 +47,14 @@
 // Abgeschaltet wird das dokumentweit über `fom-arbeit(ebd: false)`, für einen
 // einzelnen Beleg über `#vgl(..., ebd: false)` – etwa wenn der vorangehende
 // Beleg durch einen Seitenumbruch weit entfernt steht.
+//
+// Schlusspunkt: Endet der Kurzbeleg selbst auf einen Punkt, darf die Fußnote
+// keinen zweiten setzen. Bei der Stellenangabe ("o. S.", "12 f.") erkennen die
+// Helfer das selbst; endet dagegen die *Jahres*angabe auf einen Punkt, weil die
+// Quelle kein Erscheinungsjahr hat und die CSL "o. J." einsetzt, ist das aus
+// Typst heraus nicht erkennbar – dort unterdrückt `punkt: false` den
+// Schlusspunkt:
+//   #vgl(<quelleOhneJahr>, punkt: false)  -> Vgl. AWS, CloudWatch, o. J.
 
 #let _zitierweise = state("fom-zitierweise", "chicago")
 #let _ebd-aktiv = state("fom-ebd", true)
@@ -154,8 +162,10 @@
 // Einzelbeleg aus genau einer Quelle – gemeinsame Basis von #vgl/#zit und den
 // Kapitel-Varianten. Hier entscheidet sich, ob der Kurzbeleg oder "ebd."
 // (Leitfaden 3.2) erscheint.
-#let _einzelbeleg(quelle, art, wert, praefix, ebd: true) = context {
+#let _einzelbeleg(quelle, art, wert, praefix, ebd: true, punkt: auto) = context {
   let stil = _zitierweise.get()
+  // `auto` = Schlusspunkt setzen, außer die Stellenangabe bringt schon einen mit.
+  let schlusspunkt = if punkt == auto { not _endet-auf-punkt(wert) } else { punkt }
   let vorher = _letzter-beleg.get()
   // "ebd." setzt voraus, dass unmittelbar zuvor dieselbe Quelle belegt wurde.
   // Fremde Fußnoten und Sekundärzitate dazwischen haben die Kette bereits
@@ -176,10 +186,10 @@
       // "ebd." bringt seinen Punkt selbst mit.
       _umschliessen(stil, [#wort], praefix, false)
     } else {
-      _umschliessen(stil, [#wort, #stelle], praefix, not _endet-auf-punkt(wert))
+      _umschliessen(stil, [#wort, #stelle], praefix, schlusspunkt)
     }
   } else {
-    _umschliessen(stil, _zitat-roh(quelle, art, wert), praefix, not _endet-auf-punkt(wert))
+    _umschliessen(stil, _zitat-roh(quelle, art, wert), praefix, schlusspunkt)
   }
 
   // Reihenfolge ist entscheidend: Erst der Beleg – dessen Fußnote über
@@ -191,16 +201,30 @@
 // Indirektes Zitat ("Vgl."). Über `praefix` lässt sich z. B. "S. dazu"
 // (entfernte Anlehnung, Leitfaden 3.2) setzen; `ebd: false` erzwingt den
 // vollständigen Kurzbeleg.
-#let vgl(quelle, seite: none, praefix: "Vgl.", ebd: true) = _einzelbeleg(quelle, "seite", seite, praefix, ebd: ebd)
+#let vgl(quelle, seite: none, praefix: "Vgl.", ebd: true, punkt: auto) = _einzelbeleg(
+  quelle,
+  "seite",
+  seite,
+  praefix,
+  ebd: ebd,
+  punkt: punkt,
+)
 
 // Direktes (wörtliches) Zitat – Kurzbeleg ohne "Vgl.".
-#let zit(quelle, seite: none, ebd: true) = _einzelbeleg(quelle, "seite", seite, none, ebd: ebd)
+#let zit(quelle, seite: none, ebd: true, punkt: auto) = _einzelbeleg(quelle, "seite", seite, none, ebd: ebd, punkt: punkt)
 
 // Indirektes Zitat mit Kapitel- statt Seitenangabe (E-Book ohne Seiten).
-#let vgl-kap(quelle, kap: none, praefix: "Vgl.", ebd: true) = _einzelbeleg(quelle, "kap", kap, praefix, ebd: ebd)
+#let vgl-kap(quelle, kap: none, praefix: "Vgl.", ebd: true, punkt: auto) = _einzelbeleg(
+  quelle,
+  "kap",
+  kap,
+  praefix,
+  ebd: ebd,
+  punkt: punkt,
+)
 
 // Direktes Zitat mit Kapitel- statt Seitenangabe.
-#let zit-kap(quelle, kap: none, ebd: true) = _einzelbeleg(quelle, "kap", kap, none, ebd: ebd)
+#let zit-kap(quelle, kap: none, ebd: true, punkt: auto) = _einzelbeleg(quelle, "kap", kap, none, ebd: ebd, punkt: punkt)
 
 // Kurzbeleg für Sekundärzitate ohne Nebenwirkung. Pro Quelle wird `kap`/
 // `kap-sek` verwendet, falls gesetzt, sonst `seite`/`seite-sek`.
