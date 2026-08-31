@@ -25,7 +25,7 @@ Das Modell besteht aus drei Teilen und fünf Systemen, die horizontal wie vertik
     [Das operative System ist die ausführende Ebene mit einer klaren Aufgabe. Die operativen Systeme (System 1) handeln meist autonom, kommunizieren aber mit den Metasystemen und werden von System 2 koordiniert.],
 
     [Metasystem],
-    [Die Metasysteme erhalten Daten aus den unterliegenden Systemen und treffen darauf basierend Entscheidungen. System 3 hat dabei die Aufgabe, System 1 und die Informationen aus System 2 zu überwachen. System 4 filtert Informationen für System 5 vor und ist gleichzeitig die Adaptionsfunktion, die mit der Umwelt sowie der Zukunft interagiert. System 5 überwacht die unterliegenden Systeme anhand gefilterter Informationen. Es soll keine strikten Vorgaben machen, sondern Informationen vergleichen und Informationskonflikte lösen.],
+    [Die Metasysteme erhalten Daten aus den unterliegenden Systemen und treffen darauf basierend Entscheidungen. System 3 hat dabei die Aufgabe, System 1 und die Informationen aus System 2 zu überwachen. System 4 filtert Informationen für System 5 vor und ist gleichzeitig die Adaptionsfunktion, die mit der Umwelt sowie der Zukunft interagiert. System 5 gleicht die Gegenwartssicht aus System 3 mit der Zukunftssicht aus System 4 aus und legt die Grundsätze des Systems fest. Es soll keine strikten Vorgaben machen, sondern Informationen vergleichen und Informationskonflikte lösen.],
   ),
   titel: [Aufgaben der Bestandteile des Viable System Model],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<brain-of-the-firm>, seite: 130) und #zitat-kap(<medinaCyberneticRevolutinaries2014>, kap: "1 Cybernetics and Socialism")],

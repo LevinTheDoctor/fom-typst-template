@@ -27,7 +27,7 @@ Das Ziel von Azure Monitor – das Monitoring von Azure-Diensten#vgl(<austinmcco
 
     [Algedonischer Kanal],
     [Smart Detection.],
-    [Sobald Abweichungen in den Application Insights entstehen, wird dies durch Smart Detection erfasst.],
+    [Sobald Abweichungen in den Application Insights entstehen, werden diese durch Smart Detection erfasst. Smart Detection bildet damit das Ausnahmeprinzip ab; das Signal selbst ist nicht algedonisch, da es genauere Informationen liefert.],
   ),
   titel: [Übertragung des Azure Monitor auf das VSM],
   quelle: [Eigene Darstellung basierend auf #zitat(<brain-of-the-firm>, seite: 130) und #zitat(<austinmccollumAzureMonitorUebersicht>)],
