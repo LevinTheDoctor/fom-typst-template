@@ -76,6 +76,9 @@
 #literaturverzeichnis(
   datei: "/literatur/literatur.bib",
   internetquellen: "/literatur/internetquellen.bib",
+  // Herausgeberbände zu den zitierten Sammelwerkbeiträgen: im Text nicht belegt,
+  // gehören aber ins Verzeichnis.
+  zusaetzlich: (<wernerCyberneticsStateArt2017>, <beyerSiteReliabilityEngineering2016>),
 )
 
 // --- KI-Hilfsmittelverzeichnis (Leitfaden 2.9) ---------------------------------

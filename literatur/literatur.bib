@@ -371,6 +371,23 @@
   keywords    = {Computers / Cybernetics,Computers / Human-Computer Interaction (HCI),Science / Ethics}
 }
 
+% Der Sammelband selbst (Beiträge: Khan, Espejo, Werner). Herausgeberbände stehen
+% an der Autorenposition: Ohne `author` greift im CSL der `substitute`-Zweig von
+% `autoren-voll` auf `herausgeber` zurück und setzt "Werner, Liss C. (Hrsg.)".
+% `series`/`volume` (CON-VERSATIONS Vol. 1) liest die CSL nicht und stehen deshalb
+% nicht im Eintrag. Zitiert wird der Band im Text nicht – er kommt über
+% `zusaetzlich:` in main.typ ins Literaturverzeichnis (siehe nachspann.typ).
+@book{wernerCyberneticsStateArt2017,
+  title      = {Cybernetics: {{State}} of the {{Art}}},
+  shorttitle = {Cybernetics: {{State}} of the {{Art}}},
+  editor     = {Werner, Liss C.},
+  year       = 2017,
+  publisher  = {Universit\"atsverlag der TU Berlin},
+  address    = {Berlin},
+  isbn       = {978-3-7983-2953-9},
+  langid     = {english}
+}
+
 @incollection{wernerIntroductionCyberneticsStateArt2017,
   title     = {Introduction},
   booktitle = {Cybernetics: {{State}} of the {{Art}}},
@@ -428,6 +445,20 @@
   booktitle  = {Site Reliability Engineering: How Google Runs Production Systems},
   year       = 2016,
   publisher  = {O'Reilly Media},
+  address    = {Sebastopol, CA},
+  isbn       = {978-1-491-92912-4},
+  langid     = {english}
+}
+
+% Der Sammelband selbst (Beitrag: Ewaschuk). Wie beim Werner-Band steht der
+% Herausgeber an der Autorenposition; ins Literaturverzeichnis kommt der Band
+% über `zusaetzlich:` in main.typ, weil er im Text nicht belegt wird.
+@book{beyerSiteReliabilityEngineering2016,
+  title      = {Site Reliability Engineering: How Google Runs Production Systems},
+  shorttitle = {Site Reliability Engineering},
+  editor     = {Beyer, Betsy and Jones, Chris and Petoff, Jennifer and Murphy, Niall Richard},
+  year       = 2016,
+  publisher  = {O'Reilly},
   address    = {Sebastopol, CA},
   isbn       = {978-1-491-92912-4},
   langid     = {english}

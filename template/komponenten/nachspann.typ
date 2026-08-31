@@ -49,9 +49,17 @@
 //        zweiten Datei – ein Schlüssel darf nicht in beiden Dateien liegen.
 // `datei` und `internetquellen` sind je ein einzelner Pfad oder eine Liste von
 // Pfaden – Pfade mit führendem "/" beziehen sich auf das Projektverzeichnis.
+//
+// `zusaetzlich` nimmt Zitierschlüssel auf, die im Verzeichnis stehen sollen,
+// ohne im Text belegt zu sein – typischerweise der Herausgeberband zu einem
+// zitierten Sammelwerkbeitrag. Typst nimmt sonst nur zitierte Werke auf
+// (`bibliography(full: false)` ist Vorgabe); `cite(..., form: none)` meldet den
+// Eintrag an die Bibliographie, ohne irgendetwas zu setzen. Beispiel:
+//   #literaturverzeichnis(zusaetzlich: (<wernerCyberneticsStateArt2017>,))
 #let literaturverzeichnis(
   datei: "/literatur/literatur.bib",
   internetquellen: none,
+  zusaetzlich: (),
   titel: "Literaturverzeichnis",
   titel-internetquellen: "Internetquellen",
   stil: auto,
@@ -67,6 +75,10 @@
       "/template/csl/fom-apa.csl"
     } else {
       "/template/csl/fom-chicago.csl"
+    }
+    // Setzt nichts, meldet die Werke aber an die Bibliographie an.
+    for schluessel in zusaetzlich {
+      cite(schluessel, form: none)
     }
     bibliography(datei, title: none, style: csl)
     if internetquellen != none {
