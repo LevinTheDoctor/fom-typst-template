@@ -2,12 +2,12 @@
 = Moderne Monitoring- und Decision-Support-Systeme
 Ein #abk("DSS") ist ein computergestütztes System, das das Urteilsvermögen von Entscheidungsträger*innen durch Modelle, Methoden und relevante Daten verbessert, um so Entscheidungsprozesse zu optimieren.#vgl(<gluchowskiManagementSupportSysteme2008a>, seite: 63)
 == Sprague-Modell
+Das #abk("DSS") in @abb-ms-dss-cloud ist nach dem Sprague-Modell (@tab-sp-m)#footnote[Das Sprague-Modell besteht aus Datenbank, Methodenbank, Modellbank, Reportbank und Dialogsystem. Vgl. #zitat-nach(<SpragueDSS>, <gluchowskiManagementSupportSysteme2008a>, seite-sek: 67, seite: 195).] aufgebaut.#vgl-nach(<SpragueDSS>, <gluchowskiManagementSupportSysteme2008a>, seite-sek: 67, seite: 195)
 #abbildung(
   align(center, image("../abbildungen/DSSundMS.png", width: 90%)),
   titel: [Zusammenspiel von Decision-Support- und Monitoring-System anhand des Beispiels einer Cloud-Anwendung],
   quelle: [Eigene Darstellung in Anlehnung an #zitat(<gluchowskiManagementSupportSysteme2008a>, seite: 67), #zitat-nach(<SpragueDSS>, <gluchowskiManagementSupportSysteme2008a>, seite-sek: 67, seite: 195) und #zitat(<albuquerqueTracingMetricsDesign2025>)],
 )<abb-ms-dss-cloud>
-Das #abk("DSS") in @abb-ms-dss-cloud ist nach dem Sprague-Modell (@tab-sp-m)#footnote[Das Sprague-Modell besteht aus Datenbank, Methodenbank, Modellbank, Reportbank und Dialogsystem. Vgl. #zitat-nach(<SpragueDSS>, <gluchowskiManagementSupportSysteme2008a>, seite-sek: 67, seite: 195).] aufgebaut.#vgl-nach(<SpragueDSS>, <gluchowskiManagementSupportSysteme2008a>, seite-sek: 67, seite: 195)
 #tabelle(
   table(
     columns: 2,
