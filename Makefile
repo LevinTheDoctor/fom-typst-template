@@ -18,9 +18,15 @@ build:
 watch:
 	$(TYPST) watch --font-path $(FONT_PATH) $(INPUT) $(OUTPUT)
 
-## Strenger Build für CI: bricht auch bei Warnungen ab
+## Strenger Build für CI: bricht auch bei Warnungen ab. Ausnahmen: Der
+## Fortschritts-Download von @preview-Paketen (z. B. wordometer) ist keine
+## Warnung – solche Zeilen werden herausgefiltert. grep -v liefert bei
+## vollständiger Filterung den Status 1, deshalb { grep || true; } – der
+## typst-Status bleibt über pipefail erhalten.
 check:
-	@ausgabe=$$($(TYPST) compile --font-path $(FONT_PATH) $(INPUT) $(OUTPUT) 2>&1); \
+	@set -o pipefail; \
+	ausgabe="$$($(TYPST) compile --font-path $(FONT_PATH) $(INPUT) $(OUTPUT) 2>&1 \
+	          | { grep -v '^downloading @preview/' | grep -v 'B /' || true; })"; \
 	status=$$?; \
 	if [ -n "$$ausgabe" ]; then echo "$$ausgabe"; fi; \
 	if [ $$status -ne 0 ] || [ -n "$$ausgabe" ]; then exit 1; fi
