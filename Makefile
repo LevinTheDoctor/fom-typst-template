@@ -31,16 +31,16 @@ watch:
 
 ## Strenger Build für CI: bricht auch bei Warnungen ab. Ausnahmen: Der
 ## Fortschritts-Download von @preview-Paketen (z. B. wordometer) ist keine
-## Warnung – solche Zeilen werden herausgefiltert. grep -v liefert bei
-## vollständiger Filterung den Status 1, deshalb { grep || true; } – der
-## typst-Status bleibt über pipefail erhalten.
+## Warnung – solche Zeilen werden herausgefiltert (POSIX-portabel: Status
+## des typst-Aufrufs über $? direkt nach der Zuweisung; grep -v liefert
+## bei vollständiger Filterung Status 1, deshalb || true).
 check:
-	@set -o pipefail; \
-	ausgabe="$$($(TYPST) compile --font-path $(FONT_PATH) $(INPUT) $(OUTPUT) 2>&1 \
-	          | { grep -v '^downloading @preview/' | grep -v 'B /' || true; })"; \
+	@ausgabe="$$($(TYPST) compile --font-path $(FONT_PATH) $(INPUT) $(OUTPUT) 2>&1)"; \
 	status=$$?; \
-	if [ -n "$$ausgabe" ]; then echo "$$ausgabe"; fi; \
-	if [ $$status -ne 0 ] || [ -n "$$ausgabe" ]; then exit 1; fi
+	gefiltert="$$(printf '%s\n' "$$ausgabe" | { grep -v '^downloading @preview/' | grep -v 'B /' || true; })"; \
+	if [ -n "$$gefiltert" ]; then printf '%s\n' "$$gefiltert"; fi; \
+	if [ $$status -ne 0 ] || [ -n "$$gefiltert" ]; then exit 1; fi
+	@echo "✓ Kompiliert ohne Fehler und Warnungen"
 	@$(MAKE) --no-print-directory wordcount
 	@echo "✓ Kompiliert ohne Fehler und Warnungen"
 
