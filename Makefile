@@ -14,6 +14,7 @@ INPUT     ?= main.typ
 OUTPUT    ?= thesis.pdf
 FONT_PATH ?= fonts
 WORTZAHL_LABEL ?= <word-count>
+SHELL     := /bin/bash
 
 .PHONY: all build watch check wordcount clean docker
 
