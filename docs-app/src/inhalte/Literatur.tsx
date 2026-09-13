@@ -180,6 +180,77 @@ export default function Literatur() {
           <code>.bib</code>-Datei darf also ruhig deine ganze Sammlung enthalten.
         </p>
       </Callout>
+
+      <h2>Internetquellen getrennt aufführen</h2>
+      <p>
+        Der Leitfaden verlangt Internetquellen „am Ende des Literaturverzeichnisses separat“.
+        Dafür gibt es zwei Wege:
+      </p>
+      <ul>
+        <li>
+          <strong>Alles in einer Datei:</strong> Internetquellen (<code>@online</code>) sortiert
+          der CSL-Stil automatisch ans Ende – ohne eigene Überschrift.
+        </li>
+        <li>
+          <strong>Eigene Datei (empfohlen):</strong> eine zweite <code>internetquellen.bib</code>{" "}
+          ergibt einen eigenen Abschnitt mit der Zwischenüberschrift „Internetquellen“ (ohne
+          Eintrag ins Inhaltsverzeichnis):
+        </li>
+      </ul>
+      <CodeBlock
+        datei="main.typ"
+        code={`#literaturverzeichnis(
+  datei: "/literatur/literatur.bib",
+  internetquellen: "/literatur/internetquellen.bib",
+  zusaetzlich: (<wernerCyberneticsStateArt2017>),
+)`}
+      />
+      <Callout art="achtung" titel="Ein Schlüssel, eine Datei">
+        <p>
+          Jeder BibTeX-Schlüssel darf nur in <em>einer</em> der beiden Dateien liegen. Und
+          achte auf den Eintragstyp: <code>@online</code> wird von Typsts Bibliotheks-Engine
+          (hayagriva) korrekt als Internetquelle (CSL-Typ „webpage“) erkannt –{" "}
+          <code>@misc</code> mit <code>howpublished</code> dagegen <em>nicht</em>. Letzteres
+          landet dann nicht in der Internetquellen-Sektion.
+        </p>
+      </Callout>
+
+      <h2>Werke ohne Textbeleg ins Verzeichnis: zusaetzlich</h2>
+      <p>
+        Typst nimmt nur zitierte Werke ins Literaturverzeichnis auf. Der Herausgeberband eines
+        zitierten Sammelwerk-Aufsatzes gehört aber laut Leitfaden trotzdem hinein. Der Parameter{" "}
+        <code>zusaetzlich:</code> meldet solche Schlüssel ohne Beleg an:
+      </p>
+      <CodeBlock
+        datei="main.typ"
+        code={`// Der Band zu zwei zitierten Beiträgen – im Text nie belegt,
+// gehört aber ins Verzeichnis:
+zusaetzlich: (<wernerCyberneticsStateArt2017>, <beyerSiteReliabilityEngineering2016>)`}
+      />
+
+      <h2>Feinheiten der CSL-Stile</h2>
+      <ul>
+        <li>
+          <strong>Kursive Autorennamen:</strong> Im Literaturverzeichnis (nicht im Kurzbeleg)
+          stehen Autoren kursiv – gilt auch für Institutionen, „o. V.“ und Herausgeber an der
+          Autorenposition. Nur Chicago und Harvard; APA folgt seinen eigenen Regeln.
+        </li>
+        <li>
+          <strong>Anmerkungen:</strong> Das Feld <code>note</code> hängt nach einem
+          Gedankenstrich eine freie Anmerkung an den Eintrag („– E-Book-Ausgabe (Apple
+          Books)“). Auch <code>annotation</code>/<code>annote</code>/<code>addendum</code>{" "}
+          werden erkannt.
+        </li>
+        <li>
+          <strong>Artikelnummern statt Seiten:</strong> Manche Journale (z. B. MDPI) vergeben
+          Artikelnummern statt Seitenzahlen. Das Feld <code>genre</code> überschreibt das
+          Label „S.“: <code>genre = {"{Art.}"}</code> + <code>pages = {"{65}"}</code> → „Art. 65“.
+        </li>
+        <li>
+          <strong>Nur-Jahres-Quellen:</strong> Ist von einer Online-Quelle nur das Jahr bekannt,
+          rendert das Datum korrekt als „(2022)“ statt „(2022-)“.
+        </li>
+      </ul>
     </Seite>
   );
 }

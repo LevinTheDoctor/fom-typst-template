@@ -57,7 +57,8 @@ export default function Faq() {
         Richtwerte des Leitfadens (1.2 Nr. 10): Seminararbeiten nach Modulbeschreibung (z. B.
         4.000 Worte), Bachelor-Thesis 40–60 Seiten, Master-Thesis 60–80 Seiten – jeweils
         Textteil ohne Verzeichnisse und Anhang. Verbindlich ist die Absprache mit dem
-        Erstgutachter.
+        Erstgutachter. Das Template zählt die Wörter des Textteils automatisch mit – siehe{" "}
+        <a href="#/wortzahl">Wortzahl &amp; Umfang</a>.
       </p>
 
       <h2>Bekannte Abweichungen vom Leitfaden</h2>
@@ -69,11 +70,6 @@ export default function Faq() {
         </p>
       </Callout>
       <ul>
-        <li>
-          <strong>Zwischenüberschrift „Internetquellen“:</strong> Internetquellen werden korrekt
-          ans Ende des Literaturverzeichnisses sortiert, die separate Zwischenüberschrift setzt
-          Typst derzeit nicht automatisch (nur eine Bibliographie pro Dokument).
-        </li>
         <li>
           <strong>Leerzeile zwischen Anfangsbuchstaben:</strong> Der Leitfaden wünscht eine
           Leerzeile beim Wechsel des Anfangsbuchstabens (A → B); automatisiert wird derzeit ein
@@ -89,6 +85,17 @@ export default function Faq() {
           1 cm.
         </li>
       </ul>
+
+      <Callout titel="Ehemalige Abweichungen – jetzt gelöst">
+        <p>
+          Zwei frühere Punkte sind inzwischen erledigt: Die{" "}
+          <strong>Zwischenüberschrift „Internetquellen“</strong> entsteht über den Parameter{" "}
+          <code>internetquellen:</code> (eigene <code>.bib</code>-Datei, seit Typst 0.15 sind
+          mehrere Bibliographien erlaubt). Und die <strong>ebd.-Automatik</strong> („ebd.“ bei
+          unmittelbar wiederholtem Beleg, Leitfaden 3.2) sitzt jetzt im Template – abschaltbar
+          über <code>fom-arbeit(ebd: false)</code>.
+        </p>
+      </Callout>
 
       <h2>Fehler gefunden? Frage offen?</h2>
       <p>

@@ -86,9 +86,10 @@ typst --version`}
 cd meine-arbeit`}
       />
       <p>
-        Standardmäßig landet der Branch <code>minimal</code> im Klon: das leere Grundgerüst
+        Standardmäßig landet der Branch <code>main</code> im Klon: das leere Grundgerüst
         ohne Beispieltexte – direkt losschreiben. Wer lieber mit kommentierten
-        Beispielkapiteln startet, hängt <code>-b template</code> an den Befehl.
+        Beispielkapiteln startet, hängt <code>-b webapp</code> an den Befehl; das
+        vollständige Praxisbeispiel liegt auf <code>-b example-seminararbeit</code>.
       </p>
       <Callout titel="Ohne Git?">
         <p>

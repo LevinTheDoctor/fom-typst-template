@@ -1,4 +1,5 @@
 import CodeBlock from "../komponenten/CodeBlock";
+import Callout from "../komponenten/Callout";
 import Satzspiegel from "../komponenten/Satzspiegel";
 
 export default function Start() {
@@ -88,7 +89,7 @@ sowie die Zielsetzung der Arbeit.#vgl(<theisen2021>, seite: "136")`}
           </span>
         </p>
 
-        <h2 className="font-display mt-14 text-2xl font-semibold">Drei Varianten, ein Repository</h2>
+        <h2 className="font-display mt-14 text-2xl font-semibold">Drei Branches, ein Repository</h2>
         <table className="my-5 w-full border-collapse text-sm">
           <thead>
             <tr>
@@ -98,37 +99,39 @@ sowie die Zielsetzung der Arbeit.#vgl(<theisen2021>, seite: "136")`}
           </thead>
           <tbody>
             <tr>
-              <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">minimal</td>
+              <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">main</td>
               <td className="border border-blattgrau px-3 py-2">
                 Leeres Grundgerüst ohne Beispieltexte – der Standard-Branch beim Klonen:
                 direkt losschreiben.
               </td>
             </tr>
             <tr>
-              <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">template</td>
+              <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">webapp</td>
               <td className="border border-blattgrau px-3 py-2">
-                Basis-Template mit kompakten Beispielkapiteln, die jede Funktion einmal zeigen –
-                zum Lernen und Nachschlagen beim Schreiben.
+                Basis-Template mit kompakten Beispielkapiteln, die jede Funktion einmal zeigen,
+                plus dem Quellcode dieser Doku-Webseite – hier findet die Entwicklung statt.
               </td>
             </tr>
             <tr>
               <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">
-                example-thesis
+                example-seminararbeit
               </td>
               <td className="border border-blattgrau px-3 py-2">
-                Vollständig ausgefüllte Musterarbeit zum Nachschlagen: So sieht das fertige
-                Ergebnis aus.
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-blattgrau px-3 py-2 font-mono text-[13px]">main</td>
-              <td className="border border-blattgrau px-3 py-2">
-                Wie <code>template</code>, zusätzlich mit dem Quellcode dieser Doku-Webseite –
-                hier findet die Entwicklung statt.
+                Vollständig ausgefüllte, abgegebene Seminararbeit („Project Cybersyn“) als
+                Praxisbeispiel: ebd.-Automatik, Sekundörzitate, getrennte Internetquellen und
+                Wortzählung im echten Einsatz.
               </td>
             </tr>
           </tbody>
         </table>
+        <Callout art="achtung" titel="Umbenannt: semester → studienzentrum">
+          <p>
+            Wer von einer älteren Version kommt: Der Titelblatt-Parameter{" "}
+            <code>semester</code> („3. Semester“) ist entfallen – das Seminararbeit-Titelblatt
+            ist jetzt zentriert und kennt <code>studienzentrum</code> (z. B. „Hochschulzentrum
+            Dortmund“) sowie <code>wortanzahl: auto</code> für die automatische Wortanzahl-Zeile.
+          </p>
+        </Callout>
       </section>
     </div>
   );

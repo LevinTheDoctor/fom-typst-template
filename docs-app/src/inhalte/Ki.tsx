@@ -67,18 +67,21 @@ entsprechend gekennzeichnet.#ki-nachweis(
     version: "4o",
     nutzung: "Paraphrasierung einzelner Textpassagen",
     teile: "Kapitel 3.2",
+    datum: "15.01.2027",
   ),
   (
     tool: "DeepL Write",
     version: "–",
     nutzung: "Sprachliche Überarbeitung",
     teile: "Gesamtes Dokument",
+    datum: "20.01.2027",
   ),
 ))`}
       />
       <p>
-        Der Leitfaden verlangt mindestens Tool und Version; die Spalten „Art der Nutzung“ und
-        „Betroffene Teile“ machen die Angaben für Gutachter nachvollziehbarer. Ohne KI-Einsatz:{" "}
+        Der Leitfaden verlangt mindestens Tool und Version; die Spalten „Art der Nutzung“,
+        „Betroffene Teile“ und „Datum“ (Datum der Kommunikation, Leitfaden 1.6) machen die
+        Angaben für Gutachter nachvollziehbarer. Ohne KI-Einsatz:{" "}
         <code>#ki-hilfsmittelverzeichnis(())</code> erzeugt den entsprechenden Hinweissatz.
       </p>
 

@@ -40,6 +40,16 @@ export default function Pipeline() {
           </tr>
           <tr>
             <td>
+              <code>make wordcount</code>
+            </td>
+            <td>
+              Nur die Wortzahl des Textteils auslesen (Marke{" "}
+              <code>&lt;word-count&gt;</code>, siehe{" "}
+              <a href="#/wortzahl">Wortzahl &amp; Umfang</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>
               <code>make docs</code> / <code>make docs-dev</code>
             </td>
             <td>Diese Doku-Webseite bauen bzw. lokal starten</td>
@@ -78,6 +88,10 @@ export default function Pipeline() {
         <li>
           Nutzt <code>make check</code>: Schon eine Warnung (kaputter Verweis, fehlende Datei)
           lässt den Build rot werden, bevor es der Gutachter merkt.
+        </li>
+        <li>
+          Schreibt die <strong>Wortzahl des Textteils</strong> in die Lauf-Übersicht des
+          jeweiligen Laufs (Step-Summary) – direkt in der Actions-Ansicht ablesbar.
         </li>
         <li>
           Nach dem Push kurz warten und <code>git pull</code> ausführen, damit das von der CI

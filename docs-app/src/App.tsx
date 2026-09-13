@@ -4,6 +4,7 @@ import Installation from "./inhalte/Installation";
 import Schnellstart from "./inhalte/Schnellstart";
 import Zitieren from "./inhalte/Zitieren";
 import Literatur from "./inhalte/Literatur";
+import Wortzahl from "./inhalte/Wortzahl";
 import Elemente from "./inhalte/Elemente";
 import Ki from "./inhalte/Ki";
 import Pipeline from "./inhalte/Pipeline";
@@ -34,6 +35,7 @@ const GRUPPEN: Gruppe[] = [
     name: "Schreiben",
     routen: [
       { slug: "zitieren", titel: "Zitieren", seite: <Zitieren /> },
+      { slug: "wortzahl", titel: "Wortzahl & Umfang", seite: <Wortzahl /> },
       { slug: "elemente", titel: "Abbildungen, Tabellen, Formeln", seite: <Elemente /> },
       { slug: "ki", titel: "KI-Nutzung nachweisen", seite: <Ki /> },
     ],
