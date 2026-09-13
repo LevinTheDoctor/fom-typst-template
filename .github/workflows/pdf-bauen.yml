@@ -1,13 +1,14 @@
 # ==============================================================================
 # CI: Kompiliert die Arbeit bei jedem Push/PR, committet das fertige
 # thesis.pdf zurück auf den Branch und stellt es zusätzlich als Artefakt
-# bereit. Bricht bei Fehlern UND Warnungen ab.
+# bereit. Bricht bei Fehlern UND Warnungen ab. Die Wortzahl des Textteils
+# (Marke <word-count> über wordometer) landet in der Lauf-Übersicht.
 # ==============================================================================
 name: PDF bauen
 
 on:
   push:
-    branches: [main, template, example-thesis, minimal]
+    branches: [main, webapp, example-seminararbeit]
     # Änderungen nur am committeten PDF lösen keinen neuen Lauf aus.
     paths-ignore: ["thesis.pdf"]
   pull_request:
@@ -38,6 +39,19 @@ jobs:
 
       - name: Kompilieren (Warnungen gelten als Fehler)
         run: make check
+
+      # Wortzahl des Textteils in die Lauf-Übersicht schreiben. Fehlt die
+      # Marke <word-count> (z. B. weil wordometer nicht eingebunden ist),
+      # wird das nur vermerkt – kein CI-Fehler.
+      - name: Wortzahl bestimmen
+        run: |
+          anzahl=$(typst query --font-path fonts main.typ "<word-count>" --field value --one 2>/dev/null)
+          if [ -n "$anzahl" ]; then
+            echo "### Wortzahl (Textteil): **$anzahl Wörter**" >> "$GITHUB_STEP_SUMMARY"
+            echo "Wortzahl (Textteil): $anzahl"
+          else
+            echo "### Wortzahl: keine Marke <word-count> gefunden" >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       # Bei Pushes (nicht bei PRs) landet das fertige PDF direkt im Repository,
       # sodass auf jedem Branch immer ein aktuelles thesis.pdf liegt.

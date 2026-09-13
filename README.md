@@ -17,9 +17,10 @@ sind vorkonfiguriert: Du schreibst nur noch.
 |---|---|
 | 📐 **Layout nach Leitfaden 1.2** | DIN A4, Ränder 4/2/4/2 cm, Times New Roman 12 pt (bzw. Arial 11,5 pt), 1,5-zeilig, Blocksatz, Silbentrennung, Fußnoten 10 pt einzeilig |
 | 🔢 **Seitennummerierung** | Titelblatt gezählt ohne Nummer, Verzeichnisse römisch ab II, Textteil arabisch ab 1, Eigenständigkeitserklärung ohne Nummer |
-| 📚 **Zitieren per Funktion** | `#vgl(<quelle>, seite: "12")` → „Vgl. Mayer, D., Finanzinvestitionen, 2019, S. 12.“ – wahlweise **Chicago** (Fußnoten mit Stichwort) oder **Harvard** (im Text), umschaltbar mit einer Zeile |
+| 📚 **Zitieren per Funktion** | `#vgl(<quelle>, seite: "12")` → „Vgl. Mayer, D., Finanzinvestitionen, 2019, S. 12.“ – **Chicago** (Fußnoten mit Stichwort), **Harvard** (im Text) oder **APA 7** (Zusatz), umschaltbar mit einer Zeile; inkl. `ebd.`-Automatik, Sekundärzitaten (`#vgl-nach`), Kapitelbelegen für E-Books (`#vgl-kap`) und getrennten Internetquellen |
+| 🔢 **Wortzählung** | Wortzahl des Textteils automatisch auf dem Titelblatt („Wortanzahl: …“), bei jedem Build in der Konsole und in der CI-Übersicht – Fußnoten, Abbildungen und Tabellen bleiben außen vor |
 | 🗂 **Alle Verzeichnisse automatisch** | Inhalts-, Abbildungs-, Tabellen-, Formel-, Symbol- und Abkürzungsverzeichnis (nur tatsächlich verwendete Abkürzungen) |
-| 🤖 **KI-Deklaration (Leitfaden 1.6/2.9)** | `#ki-nachweis(...)` für lokale Nachweise + fertiges KI-Hilfsmittelverzeichnis |
+| 🤖 **KI-Deklaration (Leitfaden 1.6/2.9)** | `#ki-nachweis(...)` für lokale Nachweise + fertiges KI-Hilfsmittelverzeichnis inkl. Datum der Kommunikation |
 | 🔗 **Zotero & Mendeley** | BibTeX-Export in `literatur/literatur.bib` – mit Better BibTeX vollautomatisch; eigene CSL-Stile im exakten FOM-Format |
 | 🛠 **Cross-Platform-Builds** | Makefile, Bash-/PowerShell-Skripte, Docker, Dev-Container, GitHub Actions (legt das fertige `thesis.pdf` bei jedem Push direkt im Repository ab) |
 | 📖 **Moderne Dokumentation** | [fom-typst.levin-dev.de](https://fom-typst.levin-dev.de) – Schritt-für-Schritt-Anleitungen für Windows, macOS und Linux (Quellcode in [`/docs-app`](docs-app)) |
@@ -33,12 +34,12 @@ winget install --id Typst.Typst        # Windows
 # Linux: https://github.com/typst/typst/releases
 
 # 2. Template holen (oder auf GitHub: "Use this template")
-#    Der Standard-Branch ist `minimal`: ein leeres Grundgerüst zum Losschreiben.
+#    Der Standard-Branch ist `main`: ein leeres Grundgerüst zum Losschreiben.
 git clone https://github.com/LevinTheDoctor/fom-typst-template.git meine-thesis
 cd meine-thesis
-# Lieber mit Beispielkapiteln starten? git clone -b template …
+# Lieber mit Beispielkapiteln starten? git clone -b webapp …
 
-# 3. Kompilieren
+# 3. Kompilieren (gibt die Wortzahl des Textteils mit aus)
 make build          # oder: typst compile --font-path fonts main.typ thesis.pdf
 make watch          # Live-Vorschau beim Schreiben
 ```
@@ -70,22 +71,22 @@ und in [`content/`](content) losschreiben. Die vollständige Anleitung liefert d
 
 | Branch | Zweck |
 |---|---|
-| **`minimal`** | Leeres Grundgerüst ohne Beispieltexte und Doku-Webseite – **Standard-Branch**, direkt losschreiben |
-| **`template`** | Basis-Template mit kompakten Beispielkapiteln, die jede Funktion einmal zeigen – ohne Doku-Webseite |
-| **`example-thesis`** | Vollständig ausgefüllte Musterarbeit zum Nachschlagen |
-| **`main`** | Wie `template`, zusätzlich mit dem Quellcode der Doku-Webseite (`docs-app/`) – hier findet die Entwicklung statt |
+| **`main`** | Leeres Grundgerüst ohne Beispieltexte und Doku-Webseite – **Standard-Branch**, direkt losschreiben |
+| **`webapp`** | Basis-Template mit kompakten Beispielkapiteln, die jede Funktion einmal zeigen, plus dem Quellcode der Doku-Webseite (`docs-app/`) – hier findet die Entwicklung statt |
+| **`example-seminararbeit`** | Vollständig ausgefüllte, abgegebene Seminararbeit („Project Cybersyn“) als Praxisbeispiel: zeigt ebd.-Automatik, Sekundörzitate, getrennte Internetquellen, Wortzählung im Einsatz |
 
 ```bash
-git clone https://github.com/LevinTheDoctor/fom-typst-template.git meine-arbeit   # liefert minimal
-# oder in einem bestehenden Klon: git switch template (bzw. example-thesis, main)
+git clone https://github.com/LevinTheDoctor/fom-typst-template.git meine-arbeit   # liefert main
+# oder in einem bestehenden Klon: git switch webapp (bzw. example-seminararbeit)
 ```
 
 ## 🧪 Qualitätssicherung
 
 * `make check` kompiliert streng: **Warnungen gelten als Fehler**.
 * Die GitHub Action [`pdf-bauen.yml`](.github/workflows/pdf-bauen.yml) baut bei jedem
-  Push, committet das fertige `thesis.pdf` direkt in den Branch und hängt es
-  zusätzlich als Artefakt an – ideal, um Zwischenstände mit der Betreuung zu teilen.
+  Push, committet das fertige `thesis.pdf` direkt in den Branch, hängt es
+  zusätzlich als Artefakt an und schreibt die **Wortzahl des Textteils** in die
+  Lauf-Übersicht – ideal, um Zwischenstände mit der Betreuung zu teilen.
 * Bekannte (unkritische) Abweichungen vom Leitfaden sind transparent in der
   Doku-Webseite unter [„FAQ & bekannte
   Abweichungen“](https://fom-typst.levin-dev.de/#/faq) dokumentiert.

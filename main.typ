@@ -8,6 +8,7 @@
 // liegen als Kapitel im Ordner /content, die Literatur in /literatur.
 
 #import "template/fom.typ": *
+#import "@preview/wordometer:0.1.5": total-words, word-count
 
 #show: fom-arbeit.with(
   // --- Titelblatt (Leitfaden 2.1) --------------------------------------------
@@ -20,7 +21,7 @@
   matrikelnummer: "123456",
   abgabedatum: "25.01.2027",
   // Für Seminararbeiten zusätzlich:
-  // semester: "3",
+  // studienzentrum: "Hochschulzentrum …",
   // modul: "Wissenschaftliches Arbeiten",
   //
   // Logo auf dem Titelblatt (Anhang 4 des Leitfadens zeigt es mittig oben):
@@ -46,10 +47,21 @@
 )
 
 // --- Textteil -----------------------------------------------------------------
-#include "content/01-einleitung.typ"
-#include "content/02-grundlagen.typ"
-#include "content/03-analyse.typ"
-#include "content/04-fazit.typ"
+// #word-count zählt nur den Fließtext: Fußnoten sowie Abbildungen und
+// Tabellen (Titel, Inhalt und Quellenzeile) bleiben außen vor. Das Ergebnis
+// steht über die Marke <word-count> für das Titelblatt (wortanzahl: auto)
+// und `make wordcount` bereit.
+#word-count(
+  total => [
+    #include "content/01-einleitung.typ"
+    #include "content/02-grundlagen.typ"
+    #include "content/03-analyse.typ"
+    #include "content/04-fazit.typ"
+
+    #metadata(total.words) <word-count>
+  ],
+  exclude: (footnote, figure, table),
+)
 
 // --- Anhang (optional, Leitfaden 2.8) ------------------------------------------
 #anhang[
@@ -74,12 +86,14 @@
     version: "4o",
     nutzung: "Paraphrasierung einzelner Textpassagen",
     teile: "Kapitel 3.2",
+    datum: "15.01.2027",
   ),
   (
     tool: "DeepL Write",
     version: "–",
     nutzung: "Sprachliche Überarbeitung",
     teile: "Gesamtes Dokument",
+    datum: "20.01.2027",
   ),
 ))
 

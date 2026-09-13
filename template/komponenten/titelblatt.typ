@@ -22,6 +22,35 @@
   }
 }
 
+// `wortanzahl: auto` liest die Metadaten-Marke <word-count>, die main.typ im
+// Textteil setzt (wordometer: #metadata(total.words) <word-count>). Muss
+// innerhalb von context aufgerufen werden. Ohne Marke bleibt die Zeile leer.
+#let _wortanzahl-aufloesen(wortanzahl) = {
+  if wortanzahl != auto {
+    return wortanzahl
+  }
+  let treffer = query(<word-count>)
+  if treffer.len() > 0 { treffer.first().value }
+}
+
+// Mittelteil beider Titelblätter (Anhang 3 wie Anhang 4): optionaler Grad,
+// "über das Thema" mit Titel sowie "von" mit Verfasserangabe.
+#let _thema-und-verfasser(grad: none, titel: none, autor: none) = {
+  if grad != none {
+    v(3em)
+    [zur Erlangung des Grades eines]
+    linebreak()
+    text(size: 13pt)[#grad]
+  }
+
+  v(3em)
+  [über das Thema]
+  v(1em)
+  block(text(size: 14pt, weight: "bold")[#titel])
+  [von]
+  block[#autor]
+}
+
 // Titelblatt für Abschlussarbeiten (Anhang 4).
 #let titelblatt-abschlussarbeit(
   hochschule: "FOM Hochschule für Oekonomie & Management",
@@ -58,22 +87,7 @@
       [im Studiengang #studiengang]
     }
 
-    #if grad != none {
-      v(3em)
-      [zur Erlangung des Grades eines]
-      linebreak()
-      text(size: 13pt)[#grad]
-    }
-
-    #v(3em)
-    über das Thema
-    #v(1em)
-    #block(text(size: 14pt, weight: "bold")[#titel])
-
-    #v(3.5em)
-    von
-    #v(0.5em)
-    #block[#autor]
+    #_thema-und-verfasser(grad: grad, titel: titel, autor: autor)
   ]
 
   v(1fr)
@@ -93,54 +107,73 @@
 // Titelblatt für Seminararbeiten (Anhang 3).
 #let titelblatt-seminararbeit(
   hochschule: "FOM Hochschule für Oekonomie & Management",
+  studienzentrum: none,
+  typ: "Seminararbeit",
   studiengang: none,
-  semester: none,
+  grad: none,
   modul: none,
   titel: none,
   autor: none,
   betreuer: none,
   matrikelnummer: none,
   abgabedatum: none,
+  wortanzahl: auto, // auto = aus der Marke <word-count> lesen, none = ohne Zeile
   logo: none,
 ) = {
   set align(center)
   set par(justify: false)
 
-  if logo != none {
-    logo
-    v(1.5em)
-  }
-  [#hochschule]
+  // Optische Zentrierung auf die Blattmitte wie beim Abschluss-Titelblatt
+  // (siehe Kommentar dort); der Datenblock unten bleibt am linken Textrand.
+  pad(right: 2cm)[
+    #if logo != none {
+      logo
+      v(1em)
+    }
+    #text(size: 14pt, weight: "bold")[#hochschule]
+    #if studienzentrum != none {
+      linebreak()
+      [#studienzentrum]
+    }
 
-  v(2.5em)
-  if studiengang != none {
-    [Berufsbegleitender Studiengang zum]
-    linebreak()
-    [#studiengang]
-  }
+    #v(3.5em)
+    #text(weight: "bold")[#typ]
+    #if modul != none {
+      linebreak()
+      [in #modul]
+    }
+    #if studiengang != none {
+      linebreak()
+      [im Studiengang #studiengang]
+    }
 
-  if semester != none {
-    v(2.5em)
-    [#semester. Semester]
-  }
-
-  v(5em)
-  [Seminararbeit#if modul != none [ in #modul]]
-
-  v(3em)
-  block(text(weight: "bold")[#titel])
+    #_thema-und-verfasser(grad: grad, titel: titel, autor: autor)
+  ]
 
   v(1fr)
   align(left)[
-    #grid(
-      columns: (auto, auto),
-      column-gutter: 2.5em,
-      row-gutter: 1em,
-      [Betreuer(in):], [#betreuer],
-      [Matrikelnummer:], [#matrikelnummer],
-      [Abgabedatum:], [#_datum-formatieren(abgabedatum)],
-    )
+    // Der Grid steht im context, damit die Zeile "Wortanzahl" ganz entfällt,
+    // wenn keine Zahl gesetzt bzw. keine Marke <word-count> vorhanden ist.
+    #context {
+      let zeilen = (
+        [Betreuer(in):],
+        [#betreuer],
+        [Matrikelnummer:],
+        [#matrikelnummer],
+        [Abgabedatum:],
+        [#_datum-formatieren(abgabedatum)],
+      )
+      let anzahl = _wortanzahl-aufloesen(wortanzahl)
+      if anzahl != none {
+        zeilen += ([Wortanzahl:], [#anzahl])
+      }
+      grid(
+        columns: (auto, auto),
+        column-gutter: 2.5em,
+        row-gutter: 1em,
+        ..zeilen,
+      )
+    }
   ]
   pagebreak()
 }
-

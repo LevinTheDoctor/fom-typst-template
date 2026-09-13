@@ -35,31 +35,34 @@ zuerst dort nachlesen.
 - **Zitieren (Kap. 3):** Chicago-Fußnote `Vgl. Nachname, V., Stichwort, Jahr, S. X.`
   (direktes Zitat ohne „Vgl.“) **oder** Harvard `(vgl. Nachname, Jahr, S. X)`.
   Ab 3 Autoren „et al./u. a.“ (nur im Kurzbeleg). Jahres-Suffixe a/b bei gleichem
-  Autor+Jahr. „o. V.“/„o. J.“/„o. S.“ bei fehlenden Angaben.
+  Autor+Jahr. „o. V.“/„o. J.“/„o. S.“ bei fehlenden Angaben. „ebd.“ bei
+  unmittelbar wiederholtem Beleg (Leitfaden 3.2).
 - **Literaturverzeichnis (2.6):** `Nachname, Vorname (Stichwort, Jahr): Titel,
   N. Aufl., Ort: Verlag, Jahr` – kein Schlusspunkt, keine akademischen Titel,
   hängender Einzug ~1 cm, einzeilig, Abstand zwischen Einträgen; Internetquellen
   separat am Ende; Harvard: ohne Stichwort.
 - **KI (1.6, 2.9):** lokaler Nachweis (System, Version, Zugriffsdatum) als Fußnote/
-  Klammer + summarisches KI-Hilfsmittelverzeichnis als Bestandteil der Arbeit.
+  Klammer + summarisches KI-Hilfsmittelverzeichnis (mit Datum der Kommunikation)
+  als Bestandteil der Arbeit.
 
 ## Architektur
 
 ```
-main.typ                        Nutzerkonfiguration + #include der Kapitel
+main.typ                        Nutzerkonfiguration + #include der Kapitel (+ wordometer)
 template/fom.typ                fom-arbeit(...) – Show-Template, re-exportiert alle Helfer
 template/styles.typ             ALLE Layout-Konstanten (einzige Stelle für Maße)
 template/komponenten/
-  titelblatt.typ                Anhang 3 (Seminararbeit) / Anhang 4 (Thesis)
+  titelblatt.typ                Anhang 3 (Seminararbeit) / Anhang 4 (Thesis); Wortanzahl-Zeile
   verzeichnisse.typ             ToC + Abbildungs-/Tabellen-/Formel-/Abkürzungs-/Symbolverz.
   abkuerzungen.typ              #abk() mit State-Tracking (1. Nutzung = Langform)
-  zitieren.typ                  #vgl/#zit/#zitat, State "fom-zitierweise"
+  zitieren.typ                  #vgl/#zit/#zitat + *-kap/*-nach + ebd.-Automatik + punkt:
   elemente.typ                  #abbildung/#tabelle/#formel (Caption oben, Quelle unten)
-  ki.typ                        #ki-nachweis + #ki-hilfsmittelverzeichnis
+  ki.typ                        #ki-nachweis + #ki-hilfsmittelverzeichnis (mit Datum-Spalte)
   erklaerungen.typ              Sperrvermerk + Eigenständigkeitserklärung (Wortlaut Anhang 8)
   nachspann.typ                 #anhang/#anhang-abschnitt/#literaturverzeichnis
-template/csl/fom-chicago.csl    Kurzbeleg mit Stichwort + FOM-Bibliographie
-template/csl/fom-harvard.csl    Autor-Jahr + FOM-Bibliographie ohne Stichwort
+                                (internetquellen:, zusaetzlich:)
+template/csl/fom-chicago.csl    Kurzbeleg mit Stichwort + FOM-Bibliographie (Autoren kursiv)
+template/csl/fom-harvard.csl    Autor-Jahr + FOM-Bibliographie ohne Stichwort (Autoren kursiv)
 template/csl/fom-apa.csl        Autor-Jahr nach APA 7 (zusätzlich, NICHT Leitfaden)
 ```
 
@@ -88,9 +91,14 @@ template/csl/fom-apa.csl        Autor-Jahr nach APA 7 (zusätzlich, NICHT Leitfa
    automatisch auf den vollen Titel zurück, wenn `shorttitle` fehlt (Mendeley).
    Zotero/Better BibTeX exportiert das Zotero-Feld „Kurztitel“ als `shorttitle` –
    hayagriva mappt es korrekt (getestet).
-5. **Internetquellen ans Ende:** über CSL-Sortier-Makro `typ-rang` (webpage → „2“).
-   Eine echte Zwischenüberschrift „Internetquellen“ ist nicht möglich (Typst:
-   eine Bibliographie pro Dokument) – dokumentierte Abweichung.
+5. **Internetquellen ans Ende – zwei Wege:** a) ohne `internetquellen`-Parameter
+   sortiert das CSL-Sortier-Makro `typ-rang` (webpage → „2“) Internetquellen
+   geschlossen ans Ende (ohne Überschrift); b) mit
+   `internetquellen: "/literatur/internetquellen.bib"` entsteht ein eigener
+   Abschnitt mit Zwischenüberschrift „Internetquellen“ (`outlined: false`, also
+   ohne eigenen Inhaltsverzeichnis-Eintrag) – seit Typst 0.15 sind mehrere
+   `bibliography`-Aufrufe erlaubt; ein Schlüssel darf nicht in beiden Dateien
+   liegen.
 6. **Anhang-Nummern:** Zähler wird via `context` **in den Überschriftentext
    eingebrannt** (nicht `context display()` im Body), sonst zeigt das
    Inhaltsverzeichnis „Anhang 0“.
@@ -102,52 +110,72 @@ template/csl/fom-apa.csl        Autor-Jahr nach APA 7 (zusätzlich, NICHT Leitfa
    Figure). `zusatz: "a"` dekrementiert den Zähler für Umformungen (1 → 1a).
 9. **Titelblatt papiermittig:** Der Satzspiegel ist asymmetrisch (links 4 cm,
    rechts 2 cm) – „zentriert“ läge sonst 1 cm rechts der Blattmitte. Der
-   zentrierte Teil des Thesis-Titelblatts steckt deshalb in `pad(right: 2cm)`
-   (`titelblatt.typ`); der Gutachter-Block unten bleibt am linken Textrand.
+   zentrierte Teil beider Titelblätter steckt deshalb in `pad(right: 2cm)`
+   (`titelblatt.typ`); der Datenblock unten bleibt am linken Textrand.
+10. **ebd.-Automatik (Leitfaden 3.2):** `zitieren.typ` merkt sich über den State
+    `fom-letzter-beleg` den letzten Einzelbeleg und ersetzt unmittelbare
+    Wiederholungen durch „ebd.“ (abweichende Seite bleibt: „ebd., S. 440“). Jede
+    Fußnote unterbricht die Kette (`show footnote: kette-unterbrechen` in
+    `fom.typ`), sodass sich „ebd.“ immer auf die unmittelbar vorangehende
+    Fußnote bezieht. **Konvergenz-Falle:** Der State darf ausschließlich im
+    Fließtext (nicht im Fußnotenkörper, nicht umbruchabhängig) fortgeschrieben
+    werden, sonst „document did not converge“. Abschaltbar dokumentweit über
+    `fom-arbeit(ebd: false)` oder einzeln über `#vgl(..., ebd: false)`.
+11. **Wortzählung (wordometer):** `main.typ` umschließt die Kapitel mit
+    `#word-count(..., exclude: (footnote, figure, table))` und legt die Zahl in
+    der Metadaten-Marke `<word-count>` ab. Das Titelblatt liest sie bei
+    `wortanzahl: auto` per `query(<word-count>)` (Zeile entfällt, wenn keine Marke
+    existiert); `make wordcount`/`make build` geben sie in der Konsole aus, die CI
+    schreibt sie ins Step-Summary. **Bekannte Falle:** context-basiertes `#abk()`
+    wird von wordometer nicht mitgezählt (Wörter fehlen) – im Zweifel Kürzel als
+    Literaltext schreiben. `semester` als Titelblatt-Parameter wurde durch
+    `studienzentrum` ersetzt (Breaking Change zur Seminararbeit-Optik).
+12. **CSL-Feinheiten:** Autorennamen im Literaturverzeichnis kursiv (nur
+    Chicago/Harvard, nicht APA); `note`-Feld als freie Anmerkung (Makro
+    `anmerkung`, „– E-Book-Ausgabe“); `genre` überschreibt das Seiten-Label
+    „S.“ (Art.-Nr. bei MDPI-Journalen); Datums-Teil-Prefixe statt `delimiter`
+    (verhindert „(2022-)“ bei nur-Jahres-Quellen).
 
 ## Build & Tests
 
 ```bash
 make check    # kompiliert, Warnungen = Fehler (lokal wie in CI Pflicht vor Commit)
-make build    # thesis.pdf
+make build    # thesis.pdf + Wortzahl
 make watch    # Live-Vorschau
+make wordcount # nur die Wortzahl des Textteils auslesen
 cd docs-app && npm run build   # Doku-Webseite (tsc + vite)
 ```
 
 Visuelle Verifikation: `typst compile --font-path fonts --ppi 150 main.typ "seite-{0p}.png"`
 und Seiten gegen den Leitfaden prüfen (Ränder, Kopfzeilen-Seitenzahl, Verzeichnisse).
-Harvard-Regression: `sed 's/zitierweise: "chicago"/zitierweise: "harvard"/' main.typ`
-in eine Testdatei und kompilieren.
+Harvard/APA-Regression: `sed 's/zitierweise: "chicago"/zitierweise: "harvard"/' main.typ`
+in eine Testdatei und kompilieren (analog `"apa"`).
 
 ## Bekannte Abweichungen / offene Punkte (Roadmap)
 
-- [ ] Zwischenüberschrift „Internetquellen“ im Literaturverzeichnis (blockiert durch
-      Typst: nur eine `bibliography` pro Dokument; Alternative: eigene Rendering-Schicht).
 - [ ] Leerzeile zwischen Anfangsbuchstaben-Gruppen im Literaturverzeichnis (A → B).
 - [ ] Ersetzungsstrich „–“ bei wiederholtem Verfasser (laut Leitfaden optional).
 - [ ] Hängender Einzug exakt 1 cm (CSL/Typst rendert ~0,75 cm; fest verdrahtet).
 - [ ] Jahres-Suffix-Vergabe folgt Zitier- statt Bibliographie-Reihenfolge (hayagriva);
       durch Weglassen des Titel-Sortierschlüssels praktisch korrekt.
 - [ ] Rechtsprechungs-/Quellenverzeichnis als eigener Baustein (Leitfaden 2.7).
-- [ ] `ebd.`-Automatik bei direkt aufeinanderfolgenden Zitaten (Leitfaden 3.2).
 
 ## Branch-Strategie
 
-- `main`: Basis-Template + kompakte Beispielkapitel (jede Funktion einmal gezeigt);
-  hier findet die Entwicklung statt.
-- `template`: wie `main`, aber ohne `docs-app/` (und ohne docs-Makefile-Ziele) –
-  schlanker Klon fürs eigene Schreiben; Template-Code identisch zu `main`.
-- `example-thesis`: vollständige Musterarbeit (von main abgeleitet, nur `content/`
-  und `main.typ` unterscheiden sich).
-- `minimal`: Grundgerüst ohne Beispieltexte, ohne `docs-app/` – **GitHub-Default-
+- `main`: leeres Grundgerüst ohne Beispieltexte, ohne `docs-app/` – **GitHub-Default-
   Branch** (Klonen bzw. „Use this template“ liefert das leere Grundgerüst).
-- Template-Änderungen immer zuerst auf `main`, dann per Merge/Cherry-Pick in die
+- `webapp`: Basis-Template mit kompakten Beispielkapiteln (jede Funktion einmal
+  gezeigt) + `docs-app/` – hier findet die Entwicklung statt.
+- `example-seminararbeit`: vollständig ausgefüllte, abgegebene Seminararbeit
+  („Project Cybersyn“) als Praxisbeispiel (eigene Historie aus dem Arbeits-Repo).
+- Template-Änderungen immer zuerst auf `webapp`, dann per Merge/Cherry-Pick in die
   anderen Branches nachziehen.
 - Die CI committet nach jedem Push das gebaute `thesis.pdf` in den jeweiligen
-  Branch (github-actions[bot], `[skip ci]`; `paths-ignore` verhindert Schleifen).
-  Vor lokalen Folge-Arbeiten daher `git pull`. Merge-Konflikte in `thesis.pdf`
-  mit beliebiger Seite auflösen (z. B. `git checkout --ours thesis.pdf`) – die
-  CI baut nach dem Push ohnehin neu.
+  Branch (github-actions[bot], `[skip ci]`; `paths-ignore` verhindert Schleifen)
+  und schreibt die Wortzahl des Textteils ins Step-Summary. Vor lokalen
+  Folge-Arbeiten daher `git pull`. Merge-Konflikte in `thesis.pdf` mit beliebiger
+  Seite auflösen (z. B. `git checkout --ours thesis.pdf`) – die CI baut nach dem
+  Push ohnehin neu.
 
 ## Doku-Webseite (`docs-app/`)
 
