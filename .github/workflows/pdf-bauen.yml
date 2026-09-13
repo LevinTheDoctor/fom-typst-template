@@ -7,7 +7,7 @@ name: PDF bauen
 
 on:
   push:
-    branches: [main, template, example-thesis, minimal]
+    branches: [main, webapp, example-seminararbeit]
     # Änderungen nur am committeten PDF lösen keinen neuen Lauf aus.
     paths-ignore: ["thesis.pdf"]
   pull_request:

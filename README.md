@@ -1,3 +1,25 @@
+# FOM-Typst-Template – Praxisbeispiel „Project Cybersyn“
+
+> 📚 **Dies ist der Branch `example-seminararbeit`**: eine vollständig
+> ausgefüllte, abgegebene Seminararbeit am Hochschulzentrum Dortmund
+> (Modul „Wissenschaftliches Arbeiten“, Betreuer: Prof. Dr. Peter Vatter).
+> Sie zeigt das Template im Praxiseinsatz – das leere Grundgerüst liegt auf
+> `main`, kompakte Beispielkapitel und die Doku-Webseite auf `webapp`.
+
+Die Arbeit („Inwiefern sind Konzepte, die bei Cybersyn zur Verwaltung einer
+Wirtschaft angewendet wurden, auf moderne Monitoring- und
+Decision-Support-System-Kontexte übertragbar?“) demonstriert insbesondere:
+
+- **Wortzählung** – Wortanzahl automatisch auf dem Titelblatt („Wortanzahl: 2181“)
+- **ebd.-Automatik** und **Sekundärzitate** (`#vgl-nach`, `#vgl-nach-kap`)
+- **Kapitelbelege** für E-Books ohne verlagsgetreue Seiten (`#vgl-kap`)
+- **Getrennte Internetquellen** (`internetquellen.bib` mit eigener Sektion)
+- **Herausgeberbände** im Literaturverzeichnis ohne Textbeleg (`zusaetzlich:`)
+- **Schlusspunkt-Logik** (`punkt: false` bei Quellen ohne Jahr)
+- **KI-Hilfsmittelverzeichnis** mit Datum der Kommunikation
+
+---
+
 # FOM-Typst-Template
 
 **Wissenschaftliche Arbeiten nach dem FOM-Leitfaden – ohne Formatierungsstress.**
