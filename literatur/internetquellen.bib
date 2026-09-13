@@ -1,0 +1,248 @@
+% =============================================================================
+% Internetquellen (Leitfaden 2.6, Abschnitt "Internetquellen")
+% =============================================================================
+% NOCH NICHT AKTIV: Diese Datei ist bewusst getrennt von literatur.bib und wird
+% von main.typ noch nicht eingelesen. Die Zitierschlüssel sind identisch mit den
+% bisherigen Einträgen in literatur.bib, damit später keine Stelle im Text
+% angepasst werden muss – sie dürfen deshalb nicht gleichzeitig in beiden
+% Dateien stehen (doppelte Schlüssel = Fehler beim Kompilieren).
+%
+% Aktivieren (nach dem Entfernen der Alt-Einträge aus literatur.bib):
+%   #literaturverzeichnis(datei: ("/literatur/literatur.bib",
+%                                 "/literatur/internetquellen.bib"))
+%
+% -----------------------------------------------------------------------------
+% Warum @online statt @misc?
+% -----------------------------------------------------------------------------
+% hayagriva (der Bibliographie-Parser von Typst) bildet @misc auf den CSL-Typ
+% "document" ab – solche Einträge landen im Literaturverzeichnis in der
+% Monographien-Zeile, ohne URL und ohne Zugriffsdatum, und werden nicht ans
+% Ende sortiert. Das Feld `howpublished` wird dabei komplett ignoriert.
+% @online (bzw. @electronic/@www) ergibt dagegen den CSL-Typ "webpage": nur
+% dieser Typ trifft in fom-chicago.csl / fom-harvard.csl / fom-apa.csl den
+% Zweig für Internetquellen und wird über das Makro `typ-rang` ans Ende des
+% Literaturverzeichnisses sortiert (Leitfaden 2.6).
+%
+% -----------------------------------------------------------------------------
+% Feldbelegung nach Leitfaden 2.6 (Punkte 1–6 der Internetquellen-Liste)
+% -----------------------------------------------------------------------------
+%   (1) Verfasser (Name, Blog-Titel oder Service-Anbieter)  -> author
+%       Institutionen doppelt klammern: author = {{Microsoft Learn}}
+%   (2) (Stichwort, Erscheinungsjahr):                      -> shorttitle + date
+%       Stichwort = 1–2 Wörter, in der Sprache der Quelle (Leitfaden Fn. 52/54);
+%       ohne shorttitle setzt die CSL den vollen Titel als Stichwort ein.
+%   (3) Titel,                                              -> title
+%   (4) Erscheinungsdatum/Version                           -> date
+%   (5) <URL> (Datum der Version)                           -> url + date
+%   (6) [Zugriffsdatum]                                     -> urldate
+%
+% `date` in der Form JJJJ-MM-TT (bzw. JJJJ-MM oder JJJJ) wird nach der URL als
+% "(Datum der Version)" ausgegeben; fehlt es, erscheint im Stichwort-Block
+% "o. J." und die Klammer entfällt (Leitfaden 2.6, Punkt 4).
+%
+% Zitiert wird im Text ohne Seitenzahl bzw. mit "o. S.":
+%   #vgl(<WasIstKubernetes>, seite: "o. S.")
+%   #vgl-kap(<albuquerqueTracingMetricsDesign2025>, kap: "3 About the Patterns")
+% =============================================================================
+
+
+% --- Cloud-Monitoring / Kapitel 4 --------------------------------------------
+
+
+% arXiv-Preprint. Die begutachtete Fassung erschien als EuroPLoP-2025-Beitrag in:
+% Plummer, T./Dubbert, D./Preschern, C. (Hrsg.), Pattern Languages of Programs,
+% People and Practices, LNCS 16494, Springer, 2025, S. 28–53
+% (DOI 10.1007/978-3-032-19157-1_2). Zitiert wird bewusst der Preprint – die
+% Seiten-/Kapitelangaben im Text (S. 22, Kap. 3) folgen dessen Paginierung, nicht
+% der der Druckfassung. Der Hinweis "Preprint" steht im Feld `note`; die CSL
+% hängt ihn (sofern vorhanden) mit Gedankenstrich ans Ende des Eintrags an.
+@online{albuquerqueTracingMetricsDesign2025,
+  author     = {Albuquerque, Carlos and Correia, Filipe F.},
+  shorttitle = {Monitoring Patterns},
+  title      = {Tracing and Metrics Design Patterns for Monitoring Cloud-native Applications},
+  date       = {2025-10-03},
+  url        = {https://arxiv.org/abs/2510.02991},
+  urldate    = {2026-08-24},
+  langid     = {english}
+}
+@online{synchoLinkedIn,
+  author  = {{Syncho Ltd.}},
+  title   = {{Syncho Ltd. | LinkedIn}},
+  year    = {2026},
+  url     = {https://www.linkedin.com/company/syncho-ltd./},
+  urldate = {2026-08-31}
+}
+% Verfasser bisher "austinmccollum" (GitHub-Handle des Commit-Autors) bzw.
+% "Mircosoft Learn" (Tippfehler) – vereinheitlicht auf den Service-Anbieter.
+% Datum = ms.date der Seite (Stand der Dokumentationsversion).
+@online{austinmccollumAzureMonitorUebersicht,
+  author     = {{Microsoft Learn}},
+  shorttitle = {Azure Monitor},
+  title      = {Azure Monitor – Übersicht},
+  date       = {2026-06-14},
+  url        = {https://learn.microsoft.com/de-de/azure/azure-monitor/fundamentals/overview},
+  urldate    = {2026-08-25},
+  langid     = {ngerman}
+}
+
+% Englische Fassung derselben Seite. Eigenes Stichwort, damit kein
+% Jahres-Suffix (a/b) nötig wird (Leitfaden Fn. 51).
+@online{austinmccollumAzureMonitorOverview,
+  author     = {{Microsoft Learn}},
+  shorttitle = {Azure Monitor Overview},
+  title      = {Azure Monitor overview},
+  date       = {2026-06-14},
+  url        = {https://learn.microsoft.com/en-us/azure/azure-monitor/fundamentals/overview},
+  urldate    = {2026-08-25},
+  langid     = {english}
+}
+
+@online{bandersmsftSmartDetectionApplication,
+  author     = {{Microsoft Learn}},
+  shorttitle = {Smart Detection},
+  title      = {Smart detection in Application Insights},
+  date       = {2025-07-09},
+  url        = {https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/proactive-diagnostics},
+  urldate    = {2026-08-25},
+  langid     = {english}
+}
+
+
+@online{autoscalePred,
+  author     = {{Microsoft Learn}},
+  shorttitle = {Autoskalierungsvorhersage},
+  title      = {Verwenden der Autoskalierungsvorhersage zum Aufskalieren vor Lastanforderungen in VM-Skalierungsgruppen},
+  date       = {2024-11-12},
+  url        = {https://learn.microsoft.com/de-de/azure/azure-monitor/autoscale/autoscale-predictive},
+  urldate    = {2026-08-27},
+  langid     = {ngerman}
+}
+
+@online{autoscale,
+  author     = {{Microsoft Learn}},
+  shorttitle = {Automatische Skalierung},
+  title      = {Übersicht über die Automatische Skalierung in Azure Monitor},
+  date       = {2026-08-07},
+  url        = {https://learn.microsoft.com/de-de/azure/azure-monitor/autoscale/autoscale-overview},
+  urldate    = {2026-08-27},
+  langid     = {ngerman}
+}
+
+@online{actiongrp,
+  author  = {{Microsoft Learn}},
+  title   = {Action groups},
+  date    = {2026-07-21},
+  url     = {https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups},
+  urldate = {2026-08-29},
+  langid  = {english}
+}
+
+@online{issusAM,
+  author  = {{Microsoft Learn}},
+  title   = {Azure Monitor issues},
+  date    = {2026-08-04},
+  url     = {https://learn.microsoft.com/en-us/azure/azure-monitor/aiops/issues-overview},
+  urldate = {2026-08-29},
+  langid  = {english}
+}
+
+@online{WhatAmazonCloudWatch,
+  author     = {{Amazon Web Services}},
+  shorttitle = {CloudWatch},
+  title      = {What is Amazon CloudWatch?},
+  url        = {https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html},
+  urldate    = {2026-08-24},
+  langid     = {english}
+}
+
+% Die Seite nennt keinen persönlichen Verfasser; "The Kubernetes Authors" ist
+% der im Impressum genannte Herausgeber. Datum = article:modified_time.
+@online{WasIstKubernetes,
+  author     = {{The Kubernetes Authors}},
+  shorttitle = {Kubernetes},
+  title      = {Was ist Kubernetes?},
+  date       = {2022-07-17},
+  url        = {https://kubernetes.io/de/docs/concepts/overview/what-is-kubernetes/},
+  urldate    = {2026-08-25},
+  langid     = {ngerman}
+}
+
+
+@online{gcpcm,
+  author  = {{Google Cloud}},
+  title   = {Cloud Monitoring – Übersicht},
+  url     = {https://docs.cloud.google.com/monitoring/docs/monitoring-overview?hl=de},
+  urldate = {2026-08-28},
+  langid  = {ngerman},
+  date    = {2026-08-09}
+}
+
+% --- Chile / Cybersyn ---------------------------------------------------------
+
+@online{bildung1970SalvadorAllende2015,
+  author     = {{Bundeszentrale für politische Bildung}},
+  shorttitle = {Allende 1970},
+  title      = {1970: Salvador Allende wird Präsident Chiles},
+  date       = {2015-09-03},
+  url        = {https://www.bpb.de/kurz-knapp/hintergrund-aktuell/211593/1970-salvador-allende-wird-praesident-chiles/},
+  urldate    = {2026-07-18},
+  langid     = {ngerman}
+}
+
+@online{SalvadorAllendeSpeech,
+  author     = {Allende, Salvador},
+  shorttitle = {UN Speech},
+  title      = {Salvador Allende: Speech to the United Nations (excerpts)},
+  date       = {1972-12},
+  url        = {https://www.marxists.org/archive/allende/1972/december/04.htm},
+  urldate    = {2026-06-03},
+  langid     = {english}
+}
+
+% Blogbeitrag; Verfasser laut Autorenzeile des Beitrags.
+@online{KybernetischeDemokratischeWirtschaftsplanung,
+  author     = {Zeug, Walther},
+  shorttitle = {Wirtschaftsplanung},
+  title      = {Kybernetische Demokratische Wirtschaftsplanung},
+  date       = {2025-04-22},
+  url        = {https://www.postwachstum.de/kybernetische-demokratische-wirtschaftsplanung-20250422},
+  urldate    = {2026-05-26},
+  langid     = {ngerman}
+}
+
+% Video-Interview. Nach Leitfaden 2.7 gehört Videografie streng genommen in ein
+% eigenes Quellenverzeichnis; solange es bei ein bis zwei solcher Quellen
+% bleibt, ist die Aufnahme ins Literaturverzeichnis zulässig (Leitfaden 2.7).
+@online{radicaldataRoomThatTried2025,
+  author     = {{Radical Data}},
+  shorttitle = {Medina on Cybersyn},
+  title      = {The Room That Tried to Change Everything: Eden Medina on Cybersyn},
+  date       = {2025-11-14},
+  url        = {https://www.youtube.com/watch?v=6Qrw51WPtkk},
+  urldate    = {2026-06-03},
+  langid     = {english}
+}
+
+% Senatsbericht, über Google Books bezogen; die Such-URL aus Zotero wurde auf
+% die stabile Buch-ID gekürzt.
+@online{CovertActionChile,
+  author     = {{United States Senate}},
+  shorttitle = {Covert Action},
+  title      = {Covert Action in Chile 1963–1973: Staff Report of the Select Committee to Study Governmental Operations with Respect to Intelligence Activities},
+  date       = {1975},
+  url        = {https://books.google.de/books?id=T1ULAAAAYAAJ},
+  urldate    = {2026-08-15},
+  langid     = {english}
+}
+
+% Achtung: Leitfaden 3.1 stuft Lexika ausdrücklich als nicht zitierwürdig ein –
+% Eintrag nur zur Orientierung; die Versions-ID (oldid) ist Teil der URL.
+@online{ProjectCybersyn2026,
+  author     = {{Wikipedia}},
+  shorttitle = {Project Cybersyn},
+  title      = {Project Cybersyn},
+  date       = {2026-06-08},
+  url        = {https://en.wikipedia.org/w/index.php?title=Project_Cybersyn&oldid=1358367453},
+  urldate    = {2026-08-14},
+  langid     = {english}
+}
