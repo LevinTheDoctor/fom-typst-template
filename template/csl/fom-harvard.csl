@@ -106,27 +106,52 @@
     </group>
   </macro>
 
+  <!-- "type" im .bib-Eintrag überschreibt das Label "S." (z. B. "Art." bei
+       Zeitschriften ohne Seitenzählung, die stattdessen Artikelnummern
+       vergeben, etwa MDPI-Journale). -->
   <macro name="seiten">
-    <group delimiter=" ">
-      <text value="S."/>
-      <text variable="page"/>
-    </group>
+    <choose>
+      <if variable="genre">
+        <group delimiter=" ">
+          <text variable="genre"/>
+          <text variable="page"/>
+        </group>
+      </if>
+      <else>
+        <group delimiter=" ">
+          <text value="S."/>
+          <text variable="page"/>
+        </group>
+      </else>
+    </choose>
   </macro>
 
   <macro name="online-datum">
-    <date variable="issued" delimiter="-" prefix="(" suffix=")">
+    <!-- Teil-Prefixe statt eines Datums-`delimiter`: fehlen Monat/Tag (z. B.
+         Quellen, von denen nur das Jahr bekannt ist), bleibt sonst ein
+         hängender Bindestrich stehen ("(2022-)"). -->
+    <date variable="issued" prefix="(" suffix=")">
       <date-part name="year"/>
-      <date-part name="month" form="numeric-leading-zeros"/>
-      <date-part name="day" form="numeric-leading-zeros"/>
+      <date-part name="month" form="numeric-leading-zeros" prefix="-"/>
+      <date-part name="day" form="numeric-leading-zeros" prefix="-"/>
     </date>
   </macro>
 
   <macro name="zugriff">
-    <date variable="accessed" delimiter="-" prefix="[Zugriff " suffix="]">
+    <date variable="accessed" prefix="[Zugriff " suffix="]">
       <date-part name="year"/>
-      <date-part name="month" form="numeric-leading-zeros"/>
-      <date-part name="day" form="numeric-leading-zeros"/>
+      <date-part name="month" form="numeric-leading-zeros" prefix="-"/>
+      <date-part name="day" form="numeric-leading-zeros" prefix="-"/>
     </date>
+  </macro>
+
+  <!-- Freie Anmerkung aus dem .bib-Feld `note` – wird, sofern vorhanden, nach
+       einem Gedankenstrich an den Eintrag angehängt (z. B. "– E-Book-Ausgabe
+       (Apple Books)" oder "– zitiert nach Medina"). hayagriva bildet auch die
+       BibTeX-Felder `annotation`/`annote` und `addendum` auf diese CSL-Variable
+       ab (Vorrang hat `note`); `abstract` und `keywords` bleiben unberührt. -->
+  <macro name="anmerkung">
+    <text variable="note" prefix="– "/>
   </macro>
 
   <!-- Internetquellen ans Ende des Literaturverzeichnisses (Leitfaden 2.6) -->
@@ -162,7 +187,14 @@
     <layout>
       <group delimiter=" ">
         <group delimiter=" ">
-          <text macro="autoren-voll"/>
+        <!-- Autorenposition kursiv (nur im Literaturverzeichnis): der
+             alphabetisierte Name bis vor die Klammer. Gilt über `autoren-voll`
+             automatisch auch für institutionelle Verfasser, für "o. V." und für
+             Herausgeberbände, bei denen der Herausgeber an der Autorenposition
+             steht. Der Kurzbeleg (`autoren-kurz`) und der Herausgeber nach
+             "in:" im Sammelwerk-Zweig bleiben normal; die Sortierung ist
+             unberührt, weil Formatierung nicht auf <sort><key> wirkt. -->
+          <text macro="autoren-voll" font-style="italic"/>
           <text macro="jahr" prefix="(" suffix="):"/>
         </group>
         <choose>
@@ -226,6 +258,7 @@
             </group>
           </else>
         </choose>
+        <text macro="anmerkung"/>
       </group>
     </layout>
   </bibliography>

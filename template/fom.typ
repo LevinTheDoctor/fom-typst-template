@@ -19,7 +19,10 @@
 
 #import "styles.typ": *
 #import "komponenten/abkuerzungen.typ": abk, abk-definiere
-#import "komponenten/zitieren.typ": vgl, zit, zitat, vgl-nach, zit-nach, zitat-nach, zitierweise-setze
+#import "komponenten/zitieren.typ": (
+  ebd-setze, kette-unterbrechen, vgl, vgl-kap, vgl-nach, vgl-nach-kap, zit, zit-kap, zit-nach, zit-nach-kap, zitat,
+  zitat-kap, zitat-nach, zitat-nach-kap, zitierweise-setze,
+)
 #import "komponenten/elemente.typ": abbildung, formel, tabelle
 #import "komponenten/ki.typ": ki-hilfsmittelverzeichnis, ki-nachweis
 #import "komponenten/erklaerungen.typ" as erklaerungen
@@ -40,17 +43,21 @@
   autor: "Vorname Nachname",
   typ: "Bachelor-Thesis", // "Master-Thesis", "Seminararbeit", "Hausarbeit"
   studiengang: none,
-  grad: none, // z. B. "Bachelor of Arts (B.A.)" – entfällt bei Seminararbeiten
+  grad: none, // z. B. "Bachelor of Arts (B.A.)"
   erstgutachter: none, // bei Seminararbeiten: Betreuer(in)
   matrikelnummer: none,
   abgabedatum: none, // Zeichenkette oder datetime(...)
-  semester: none, // nur Seminararbeit
+  studienzentrum: none,
+  // nur Seminararbeit: auto = Wortzahl aus der Marke <word-count> im Textteil
+  // (wordometer, siehe main.typ), none = keine Zeile, Zahl/Text = feste Angabe
+  wortanzahl: auto,
   modul: none, // nur Seminararbeit: "Seminararbeit in <modul>"
   hochschule: "FOM Hochschule für Oekonomie & Management",
   logo: none, // z. B. image("abbildungen/logo.png", width: 3cm)
   // --- Formale Konfiguration --------------------------------------------------
   sprache: "de",
   zitierweise: "chicago", // "chicago" (Fußnoten), "harvard" oder "apa" (im Text)
+  ebd: true, // "ebd." statt Kurzbeleg bei direkt wiederholter Quelle (Leitfaden 3.2)
   schriftart: "Times New Roman", // "Arial" setzt automatisch 11,5 pt
   seitenzahl-position: "mitte", // "mitte" oder "rechts" (Leitfaden 1.2 Nr. 10)
   verzeichnis-tiefe: 3,
@@ -103,6 +110,10 @@
   show figure.caption: set par(justify: false)
 
   // --- Fußnoten (Nr. 2c, 6, 7): 10 pt, einzeilig, linksbündig, Trennstrich ---
+  // Jede Fußnote unterbricht zusätzlich die "ebd."-Kette, damit sich "ebd."
+  // immer auf die unmittelbar vorangehende Fußnote bezieht (siehe
+  // komponenten/zitieren.typ).
+  show footnote: kette-unterbrechen
   show footnote.entry: set text(size: fussnoten-groesse-fuer(schriftart))
   show footnote.entry: set par(
     justify: false,
@@ -112,14 +123,16 @@
 
   // --- Zustände initialisieren ------------------------------------------------
   zitierweise-setze(zitierweise)
+  ebd-setze(ebd)
   abk-definiere(abkuerzungen)
 
   // --- Titelblatt (Seite I, ohne Seitenzahl) ----------------------------------
   if typ in ("Seminararbeit", "Hausarbeit") {
     titelblatt-seminararbeit(
       hochschule: hochschule,
+      typ: typ,
       studiengang: studiengang,
-      semester: semester,
+      grad: grad,
       modul: modul,
       titel: titel,
       autor: autor,
@@ -127,6 +140,8 @@
       matrikelnummer: matrikelnummer,
       abgabedatum: abgabedatum,
       logo: logo,
+      studienzentrum: studienzentrum,
+      wortanzahl: wortanzahl,
     )
   } else {
     titelblatt-abschlussarbeit(

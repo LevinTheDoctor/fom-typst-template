@@ -4,10 +4,11 @@
 // Kompilieren:  typst compile --font-path fonts main.typ thesis.pdf
 // oder:         make build   |   Live-Vorschau: make watch
 //
-// Ausführliche Anleitung: Doku-Webseite im Branch `main` (/docs-app) bzw.
-// vollständiges Beispiel im Branch `example-thesis`.
+// Ausführliche Anleitung: Doku-Webseite im Branch `webapp` (/docs-app) bzw.
+// vollständiges Beispiel im Branch `example-seminararbeit`.
 
 #import "template/fom.typ": *
+#import "@preview/wordometer:0.1.5": total-words, word-count
 
 #show: fom-arbeit.with(
   // --- Titelblatt (Leitfaden 2.1) --------------------------------------------
@@ -20,7 +21,7 @@
   matrikelnummer: "000000",
   abgabedatum: "TT.MM.JJJJ",
   // Für Seminararbeiten zusätzlich:
-  // semester: "3",
+  // studienzentrum: "Hochschulzentrum …",
   // modul: "Wissenschaftliches Arbeiten",
   //
   // Logo auf dem Titelblatt (Anhang 4 des Leitfadens zeigt es mittig oben):
@@ -37,8 +38,19 @@
 )
 
 // --- Textteil -----------------------------------------------------------------
-#include "content/01-einleitung.typ"
-#include "content/02-hauptteil.typ"
+// #word-count zählt nur den Fließtext: Fußnoten sowie Abbildungen und
+// Tabellen (Titel, Inhalt und Quellenzeile) bleiben außen vor. Das Ergebnis
+// steht über die Marke <word-count> für das Titelblatt (wortanzahl: auto)
+// und `make wordcount` bereit.
+#word-count(
+  total => [
+    #include "content/01-einleitung.typ"
+    #include "content/02-hauptteil.typ"
+
+    #metadata(total.words) <word-count>
+  ],
+  exclude: (footnote, figure, table),
+)
 
 // --- Anhang (optional, Leitfaden 2.8) ------------------------------------------
 // #anhang[
@@ -50,7 +62,7 @@
 
 // --- KI-Hilfsmittelverzeichnis (Leitfaden 2.9) ---------------------------------
 #ki-hilfsmittelverzeichnis((
-  // (tool: "ChatGPT", version: "4o", nutzung: "…", teile: "Kapitel …"),
+  // (tool: "ChatGPT", version: "4o", nutzung: "…", teile: "Kapitel …", datum: "TT.MM.JJJJ"),
 ))
 
 // --- Eigenständigkeitserklärung (Leitfaden 2.10, ohne Seitenzahl) --------------
